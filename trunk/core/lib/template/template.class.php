@@ -20,7 +20,6 @@ class template extends Smarty
 		$_lang = tpl_lang_vars();
 		
 		parent::assign('static','http://'.DOMAIN_NAME.'/'.'static'.DS.'rsrc.php');
-		parent::assign('public','http://'.DOMAIN_NAME.'/'.'public');
 		parent::assign('pagename',PAGE_NAME);
 		parent::assign('conf',$_conf);
 		parent::assign('lang',$_lang);

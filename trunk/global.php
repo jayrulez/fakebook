@@ -19,6 +19,7 @@ $GLOBALS['import_file'] = array();
 
 import('lib.exception.myException');
 import('lib.util.log');
+import('lib.util.input');
 import('lib.db.db');
 import('lib.template.template');
 
@@ -26,9 +27,10 @@ import('fakebook.user');
 
 start_app();
 
-$tpl  = new template();
-$db   = new db();
-$user = new user();
+$tpl   = new template();
+$input = new input();
+$db    = new db();
+$user  = new user();
 
 if(!C('SITE_OPEN'))
 {
@@ -38,16 +40,20 @@ if(!C('SITE_OPEN'))
 }
 
 /*pages that both members and guests can view*/
-$global_pages = array('terms','help'); 
+$global_pages = array(); 
 
-if(REQUIRE_USER==true)
+$islogged = $user->islogged();
+
+$tpl->assign('islogged',$islogged);
+
+if(REQUIRE_USER == true)
 {
-	if(!$user->islogged())
+	if(!$islogged)
 	{
 		redirect('signin.php');
 	}
 }else{
-	if($user->islogged($global_pages) && !in_array('',PAGE_NAME))
+	if($islogged && !in_array($global_pages,PAGE_NAME))
 	{
 		redirect('home.php');
 	}

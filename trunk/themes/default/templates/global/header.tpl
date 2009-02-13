@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="{$static}?get=/css/common.css"/>
 		<link rel="stylesheet" type="text/css" href="{$static}?get=/css/{$pagename}.css"/>
 		<link rel="stylesheet" type="text/css" href="{$static}?get=/css/crossBrowser.css"/>
-		<script type="text/javascript" src="{$public}/js/jquery-1.3.min.js"></script>
+		<script type="text/javascript" src="{$static}?get=/js/jquery-1.3.min.js"></script>
 		{literal}
 		<script type="text/css">
 		var domain = '';
