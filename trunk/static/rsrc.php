@@ -7,6 +7,16 @@ require_once(dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR.'global.php');
 
 $resource = $_REQUEST['get'];
 
+$split = explode('.',$resource);
+$parts = count($split);
+
+$_valid = array('js','css');
+
+if(!in_array($_valid,$split[$parts-1]))
+{
+	exit();
+}
+
 $file  = THEME_PATH.TMPL_NAME;
 $file .= $resource;
 $cache = COMPILE_PATH.md5($file);

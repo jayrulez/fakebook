@@ -9,7 +9,7 @@ return array
 	'SITE_OPEN'	=>	true,
 	'SIGNUP_OPEN'	=>	true,
 	'DBHOST'	=>	'localhost',
-	'DBNAME'	=>	'sns',
+	'DBNAME'	=>	'fakebook',
 	'DBUSER'	=>	'root',
 	'DBPASS'	=>	'',
 
