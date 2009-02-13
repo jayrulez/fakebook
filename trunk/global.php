@@ -30,7 +30,6 @@ import('fakebook.user');
 start_app();
 
 $tpl   = new template();
-$input = new input();
 $db    = new db();
 $user  = new user();
 
