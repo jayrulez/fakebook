@@ -12,7 +12,7 @@ $parts = count($split);
 
 $_valid = array('js','css');
 
-if(!in_array($_valid,$split[$parts-1]))
+if(!in_array($split[$parts-1],$_valid))
 {
 	exit();
 }
@@ -29,11 +29,11 @@ if(is_file($cache)&&filemtime($cache)>filemtime($file))
 	if(is_file($file))
 	{
 		$content = file_get_contents($file);
-		$content = str_replace('[:static]','http://'.DOMAIN_NAME.'themes'.TMPL_NAME,$content);
+		$content = str_replace('[:static]','http://'.URL.'themes'.TMPL_NAME,$content);
 		echo $content;
 		file_put_contents($cache,$content);
 	}else{
-		echo '/*no file*/';
+		echo $file;
 	}
 
 }
