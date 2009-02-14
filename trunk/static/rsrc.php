@@ -29,9 +29,10 @@ if(is_file($cache)&&filemtime($cache)>filemtime($file))
 	if(is_file($file))
 	{
 		$content = file_get_contents($file);
-		$content = str_replace('[:static]','http://'.URL.'themes'.TMPL_NAME,$content);
-		echo $content;
+		$content = str_replace(array('[:theme]'),array('http://'.URL.'/themes/'.TMPL_NAME),$content);
+		$content = nl2br($content);
 		file_put_contents($cache,$content);
+		echo $content;
 	}else{
 		echo $file;
 	}

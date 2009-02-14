@@ -1,0 +1,10 @@
+.ie7 .clearfix{overflow: hidden ! important;_height: 1% ! important;}
+.ff3 .submitbutton{padding-top: 1px;}
+.ie6 .submitbutton .submitbutton-a,.ie6 .submitbutton .submitbutton-b,
+.ie7 .submitbutton .submitbutton-a,.ie7 .submitbutton .submitbutton-b{padding:3px 3px 3px 5px;}
+.ff2 .submitbutton .submitbutton-a,.ff2 .submitbutton .submitbutton-b{padding:3px 6px 3px 8px;}
+.ff3 .submitbutton .submitbutton-a,.ff3 .submitbutton .submitbutton-b{padding:1px 6px 4px 8px;}
+.ie6 .submitbutton-a{background:transparent;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[:theme]/images/submitbutton_a.png', sizingMethod="crop");}
+.ie6 .submitbutton-b{background:transparent;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[:theme]/images/submitbutton_b.png', sizingMethod="crop");}
+.ie6 .submitbutton .submitbutton-a-end{background:transparent;width:250px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[:theme]/images/submitbutton_a.png', sizingMethod="crop");}
+.ie6 .submitbutton .submitbutton-b-end{background:transparent;width:250px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[:theme]/images/submitbutton_b.png', sizingMethod="crop");}

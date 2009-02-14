@@ -1,0 +1,25 @@
+a, body, br, div, fieldset, form, h1, h2, h3, h4, h5, h6, html, hr, img, input, label, legend, li, p, ul, table, tr, th, td, p, span{margin: 0px;	padding: 0px;}
+fieldset{border: 0px; background: none;}
+legend{display: none;}
+html, body {height: 100%;}
+html.auto_resize_iframe, body.auto_resize_iframe{height: auto;}
+body{font-family:"lucida grande", tahoma, verdana, arial, sans-serif; font-size: 11px;color: #444444;background-color: #ffffff;text-align: center;}
+h1, h2, h3, h4, h5, h6{font-size: 13px;}
+img{border: 0px;}
+a{cursor:pointer;-moz-outline-style:none;text-decoration:none;color:#3b5998;}
+a:hover{text-decoration: underline;}
+input, select{font-size: 11px;color: #444444;}
+select{font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-size:11px;border: solid 1px #d8dfea;padding:2px;}
+label{cursor: pointer;}
+.clearfix{display: inline-block;}
+html[xmlns] .clearfix{display: block;}
+*html .clearfix{height: 1%;}
+.clearfix:after{content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
+.submitbutton{position:relative;float:left;z-index:1;padding:0px;height:22px;}
+.submitbutton .submitbutton-a, .submitbutton .submitbutton-b{margin:0px;padding:3px 10px 3px 12px;border:0px;height:22px;color:white;font-size:11px;font-weight:bold;position:relative;cursor:pointer;float:left;}
+.submitbutton .submitbutton-a{background:transparent url('[:theme]/images/submitbutton_a.png') top left no-repeat;}
+.submitbutton .submitbutton-b{background:transparent url('[:theme]/images/submitbutton_b.png') top left no-repeat;}
+.submitbutton .submitbutton-a-end,.submitbutton .submitbutton-b-end{right:0px;top:0px;width:2px;height:27px;position:absolute;}
+.submitbutton .submitbutton-a-end{background:transparent url('[:theme]/images/submitbutton_a.png') -248px 0px no-repeat;}
+.submitbutton .submitbutton-b-end{background:transparent url('[:theme]/images/submitbutton_b.png') -248px 0px no-repeat;}
+.submitbutton .submitbutton-end{width:2px;height:22px;overflow:hidden;position:relative;float:left;}

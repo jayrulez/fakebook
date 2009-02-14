@@ -5,8 +5,8 @@ define('IS_CGI',     substr(PHP_SAPI, 0,3)=='cgi' ? 1 : 0 );
 define('IS_WIN',     strstr(PHP_OS, 'WIN') ? 1 : 0 );
 define('IS_LINUX',   strstr(PHP_OS, 'Linux') ? 1 : 0 );
 define('IS_FREEBSD', strstr(PHP_OS, 'FreeBSD') ? 1 : 0 );
-define('SECURE_PROTOCOL','https');
-define('NON_SECURE_PROTOCOL','http');
+define('SECURE_PROTOCOL','https://');
+define('NON_SECURE_PROTOCOL','http://');
 
 if(isset($_SERVER))
 {
@@ -19,8 +19,13 @@ if(isset($_SERVER))
 	define('SCRIPT_NAME',getenv('SCRIPT_NAME'));
 }
 
-define('SCRIPT_DIR','fakebook');
-define('URL',DOMAIN_NAME.'/'.SCRIPT_DIR);
+$urlTemp   = DOMAIN_NAME.SCRIPT_NAME;
+$urlSplit  = explode('/',$urlTemp);
+$urlParts  = count($urlSplit);
+$scriptUrl = str_replace($urlSplit[$urlParts-1],'',$urlTemp);
+$scriptUrl = substr($scriptUrl,0,-1);
+
+define('URL',$scriptUrl);
 
 define('LANG_PATH',      INC_PATH.'lang'.DS);
 define('THEME_PATH',     ROOT_PATH.'themes'.DS);

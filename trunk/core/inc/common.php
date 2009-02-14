@@ -48,12 +48,12 @@ function get_cookie_domain()
 
 function throw_exception($msg,$type='myException',$code=0)
 {
-	if(class_exists($type,false))
+	/*if(class_exists($type,false))
 	{
 		throw new $type($msg,$code,true);
-	}else{
+	}else{*/
 		halt($msg);
-	}
+	//}
 }
 
 function halt($error)
