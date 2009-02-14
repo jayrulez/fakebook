@@ -2,7 +2,7 @@
 
 return array
 (
-	'pagetitle'		=>	'',
+	'pagetitle'		=>	'注册',
 );
 
 ?>

@@ -2,7 +2,7 @@
 
 return array
 (
-	'pagetitle'		=>	'',
+	'pagetitle'		=>	'欢迎来到%s',
 );
 
 ?>
