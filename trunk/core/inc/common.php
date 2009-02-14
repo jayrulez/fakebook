@@ -1,5 +1,51 @@
 <?php
 
+function cssBrowserId()
+{
+	$_browser      = get_client_browser();
+	$CssBrowserId = null;
+	
+	if(stristr($_browser, 'msie 6') !== false)
+		$CssBrowserId = 'ie6';
+
+	if(stristr($_browser, 'msie 7') !== false)
+		$CssBrowserId = 'ie7';
+
+	if(stristr($_browser, 'opera') !== false)
+		$CssBrowserId = 'opera';
+
+	if(stristr($_browser, 'firefox/2') !== false)
+		$CssBrowserId = 'ff2';
+
+	if(stristr($_browser, 'firefox/3') !== false)
+		$CssBrowserId = 'ff3';
+	
+	if($CssBrowserId==null)
+		$CssBrowserId = 'general';
+		
+	return $CssBrowserId;
+}
+
+function get_client_browser()
+{
+	$browser = isset($_SERVER) ? $_SERVER['HTTP_USER_AGENT'] : getenv('HTTP_USER_AGENT');
+	return $browser;
+}
+
+function get_client_ip(){
+   if (getenv("HTTP_CLIENT_IP") && strcasecmp(getenv("HTTP_CLIENT_IP"), "unknown"))
+       $ip = getenv("HTTP_CLIENT_IP");
+   else if (getenv("HTTP_X_FORWARDED_FOR") && strcasecmp(getenv("HTTP_X_FORWARDED_FOR"), "unknown"))
+       $ip = getenv("HTTP_X_FORWARDED_FOR");
+   else if (getenv("REMOTE_ADDR") && strcasecmp(getenv("REMOTE_ADDR"), "unknown"))
+       $ip = getenv("REMOTE_ADDR");
+   else if (isset($_SERVER['REMOTE_ADDR']) && $_SERVER['REMOTE_ADDR'] && strcasecmp($_SERVER['REMOTE_ADDR'], "unknown"))
+       $ip = $_SERVER['REMOTE_ADDR'];
+   else
+       $ip = "unknown";
+   return $ip;
+}
+
 function data_conf_vars()
 {
 	return array

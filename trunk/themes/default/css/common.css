@@ -23,3 +23,27 @@ html[xmlns] .clearfix{display: block;}
 .submitbutton .submitbutton-a-end{background:transparent url('[:theme]/images/submitbutton_a.png') -248px 0px no-repeat;}
 .submitbutton .submitbutton-b-end{background:transparent url('[:theme]/images/submitbutton_b.png') -248px 0px no-repeat;}
 .submitbutton .submitbutton-end{width:2px;height:22px;overflow:hidden;position:relative;float:left;}
+#UIPage{margin: 0px auto;width: 950px;position: relative;text-align: left;}
+#globalheader{background: url('[:theme]/images/globalheader_bg.png') top left;height: 40px; width: 950px;overflow:hidden;}
+#globalheader #globalheader-inner{}
+#globalheader #globalheader-inner #logobar{float: left; width: 150px; overflow: hidden;}
+#globalheader #globalheader-inner #logobar #logobar-inner{padding: 10px;}
+#globalheader #globalheader-inner #logobar #logobar-inner .logo{display: block; width: 130px; height: 20px;}
+#globalheader #globalheader-inner #menubar{float: left; width: 800px; overflow: hidden;}
+#globalheader #globalheader-inner #menubar #menubar-inner{padding: 10px;}
+#globalheader #globalheader-inner #menubar #menubar-inner #menus{}
+#globalheader #globalheader-inner #menubar #menubar-inner #menus a{color: #ffffff;font-weight: bold;}
+#globalheader #globalheader-inner #menubar #menubar-inner #menus a:hover{text-decoration: none;}
+#globalheader #globalheader-inner #menubar #menubar-inner #menus #main-menu{float:left;width:480px;vertical-align: middle;height: 20px;}
+#globalheader #globalheader-inner #menubar #menubar-inner #menus #main-menu #main-menu-list{display: inline;text-decoration: none;vertical-align: middle;}
+#globalheader #globalheader-inner #menubar #menubar-inner #menus #main-menu #main-menu-list li{display: inline;vertical-align: middle; padding: 5px;}
+#globalheader #globalheader-inner #menubar #menubar-inner #menus #main-menu #main-menu-list li:hover{background: #6d84b4;}
+#globalheader #globalheader-inner #menubar #menubar-inner #menus #account-menu{float:right;width:300px;vertical-align: middle;height: 20px;text-align: right;}
+#globalheader #globalheader-inner #menubar #menubar-inner #menus #account-menu #account-menu-list{display: inline;text-decoration: none;vertical-align: middle;}
+#globalheader #globalheader-inner #menubar #menubar-inner #menus #account-menu #account-menu-list li{display: inline; vertical-align: middle; padding: 5px;}
+#globalheader-inner #menubar #menubar-inner #menus #account-menu #account-menu-list li:hover{background: #6d84b4;}
+#globalheader-inner #menubar #menubar-inner #menus #account-menu #account-menu-list a{font-weight: normal;}
+#globalbody{height: auto;width: 950px; overflow: hidden;}
+#globalbody #globalbody-inner{padding:20px 0px;}
+#globalfooter{height: auto;width: 950px; overflow: hidden;border-top: solid 1px #eeeeee;}
+#globalfooter #globalfooter-inner{}

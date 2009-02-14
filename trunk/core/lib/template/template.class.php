@@ -18,8 +18,10 @@ class template extends Smarty
 	{
 		$_conf = tpl_conf_vars();
 		$_lang = tpl_lang_vars();
+		$_cbid = cssBrowserId();
 		
 		parent::assign('static',NON_SECURE_PROTOCOL.URL.'/'.'static'.'/'.'rsrc.php');
+		parent::assign('cbid',$_cbid);
 		parent::assign('pagename',PAGE_NAME);
 		parent::assign('conf',$_conf);
 		parent::assign('lang',$_lang);
