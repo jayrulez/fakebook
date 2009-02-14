@@ -17,12 +17,12 @@ if(!in_array($split[$parts-1],$_valid))
 	exit();
 }
 
-/*if($split[$parts-1]=='js')
+if($split[$parts-1]=='js')
 {
 	header('Content-Type: text/javascript');
 }else{
 	header('Content-Type: text/css');
-}*/
+}
 
 $file  = THEME_PATH.TMPL_NAME;
 $file .= $resource;

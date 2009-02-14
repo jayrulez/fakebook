@@ -7,6 +7,16 @@
 	<body>
 		<div id="UIPage" class="{$cbid}">
 {include file='global/globalheader.tpl'}
+
+			<div id="globalbody">
+				<div id="globalbody-inner" class="clearfix">
+
+				</div>
+			</div>
+			
+{include file='global/globalfooter.tpl'}
+
+
 		</div>
 	</body>
 {include file='global/pgfoot.tpl'}

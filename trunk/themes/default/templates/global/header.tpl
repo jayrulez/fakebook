@@ -6,12 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="{$static}?get=/css/crossBrowser.css"/>
 		<script type="text/javascript" src="{$static}?get=/js/jquery-1.3.1.min.js"></script>
 		{literal}
-		<script type="text/css">
-		var domain = '';
-		var url    = '';
-		$(document).ready(function()
-		{
-		});
+		<script type="text/javascript">
+			var domain = '';
+			var url    = '';
+			$(document).ready(function()
+			{
+			});
 		</script>
 		{/literal}
 		<script type="text/javascript" src="{$static}?get=/js/common.js"></script>
