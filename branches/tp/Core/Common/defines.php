@@ -43,9 +43,9 @@ if(!IS_CLI) {
         if(IS_CGI) {
             //CGI/FASTCGI模式下
             $_temp  = explode('.php',$_SERVER["PHP_SELF"]);
-            define('_PHP_FILE_',  rtrim(str_replace($_SERVER["HTTP_HOST"],'',$_temp[0].'.php'),'/'));
+            define('_PHP_FILE_',  rtrim(str_replace($_SERVER["HTTP_HOST"],'',$_temp[0].'.php'),DS));
         }else {
-            define('_PHP_FILE_',    rtrim($_SERVER["SCRIPT_NAME"],'/'));
+            define('_PHP_FILE_',    rtrim($_SERVER["SCRIPT_NAME"],DS));
         }
     }
     if(!defined('WEB_URL')) {
@@ -55,7 +55,7 @@ if(!IS_CLI) {
         }else {
             $_root = dirname(_PHP_FILE_);
         }
-        define('WEB_URL',   (($_root=='/' || $_root=='\\')?'':$_root));
+        define('WEB_URL',   (($_root==DS || $_root=='\\')?'':$_root));
     }
 
     //支持的URL模式
@@ -65,35 +65,47 @@ if(!IS_CLI) {
     define('URL_COMPAT',        3);     // 兼容模式
 }
 // 目录设置
-define('CACHE_DIR',  'Cache');
-define('HTML_DIR',    'Html');
-define('CONF_DIR',    'Conf');
+define('THINK_DIR','Think');
+define('COMMON_DIR','Common');
+define('CONFIG_DIR',    'Config');
 define('LIB_DIR',        'Lib');
+define('CONTROLLER_DIR','Action');
+define('MODEL_DIR','Model');
 define('LOG_DIR',      'Logs');
+define('THEMES_DIR',     'Themes');
+define('CACHE_DIR',  'Cache');
 define('LANG_DIR',    'Lang');
-define('TEMP_DIR',    'Temp');
-define('TMPL_DIR',     'Tpl');
+define('RUNTIME_DIR',    'Runtime');
+define('MODEL_DATA_DIR','Model_Data');
+define('HTML_DIR',    'Html');
+define('UPLOAD_DIR','Uploads');
+define('PLUGIN_DIR','PlugIns');
+define('VENDOR_DIR','Vendor');
 // 路径设置
-if (!defined('ADMIN_PATH')) define('ADMIN_PATH', APP_PATH.'/../Admin/');
-define('TMPL_PATH',APP_PATH.'/'.TMPL_DIR.'/');
-define('HTML_PATH',APP_PATH.'/'.HTML_DIR.'/'); //
-define('COMMON_PATH',   APP_PATH.'/Common/'); // 项目公共目录
-define('LIB_PATH',         APP_PATH.'/'.LIB_DIR.'/'); //
-define('CACHE_PATH',   APP_PATH.'/'.CACHE_DIR.'/'); //
-define('CONFIG_PATH',  APP_PATH.'/'.CONF_DIR.'/'); //
-define('LOG_PATH',       APP_PATH.'/'.LOG_DIR.'/'); //
-define('LANG_PATH',     APP_PATH.'/'.LANG_DIR.'/'); //
-define('TEMP_PATH',      APP_PATH.'/'.TEMP_DIR.'/'); //
-define('UPLOAD_PATH', APP_PATH.'/Uploads/'); //
-define('PLUGIN_PATH', APP_PATH.'/PlugIns/'); //
-define('DATA_PATH', APP_PATH.'/Data/'); //
+define('THINK_PATH',CORE_PATH.DS.LIB_DIR.DS.THINK_DIR.DS);
+define('TMPL_PATH',APP_PATH.DS.THEMES_DIR.DS);
+define('PLUGIN_PATH', APP_PATH.DS.PLUGIN_DIR.DS);
+define('COMMON_PATH',   APP_PATH.DS.COMMON_DIR.DS); 
+define('LIB_PATH',         APP_PATH.DS.LIB_DIR.DS);
+define('CONTROLLER_PATH',  APP_PATH.DS.CONTROLLER_DIR.DS);
+define('MODEL_PATH',  APP_PATH.DS.MODEL_DIR.DS);
+define('CONFIG_PATH',  APP_PATH.DS.CONFIG_DIR.DS);
+define('LANG_PATH',     APP_PATH.DS.LANG_DIR.DS);
+
+define('LOG_PATH',       DATA_PATH.DS.LOG_DIR.DS);
+define('HTML_PATH',DATA_PATH.DS.HTML_DIR.DS);
+define('CACHE_PATH',   DATA_PATH.DS.CACHE_DIR.DS);
+define('RUNTIME_PATH',      DATA_PATH.DS.RUNTIME_DIR.DS);
+define('UPLOAD_PATH', DATA_PATH.DS.UPLOAD_DIR.DS);
+
+define('MODEL_DATA_PATH', DATA_PATH.DS.MODEL_DATA_DIR.DS);
 
 define('DATA_TYPE_OBJ',1);
 define('DATA_TYPE_ARRAY',0);
-define('VENDOR_PATH',CORE_PATH.'/Vendor/');
+define('VENDOR_PATH',CORE_PATH.DS.VENDOR_DIR.DS);
 // 为了方便导入第三方类库 设置Vendor目录到include_path
 set_include_path(get_include_path() . PATH_SEPARATOR . VENDOR_PATH);
 
 //  版本信息
-define('THINK_VERSION', '1.5.1beta');
+define('THINK_VERSION', '1.5.1beta r1086');
 ?>

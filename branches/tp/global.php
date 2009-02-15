@@ -21,17 +21,6 @@ if(version_compare(PHP_VERSION,'5.0.0','<') ) {
 //记录开始运行时间
 $GLOBALS['_beginTime'] = microtime(TRUE);
 
-// ThinkPHP系统目录定义
-if(!defined('CORE_PATH')) define('CORE_PATH', dirname(__FILE__));
-if(!defined('APP_NAME')) define('APP_NAME', md5(CORE_PATH));
-if(!defined('APP_PATH')) define('APP_PATH', dirname(CORE_PATH).'/'.APP_NAME);
-if(!defined('RUNTIME_PATH')) define('RUNTIME_PATH',APP_PATH.'/Temp/');
-
-if(is_file(RUNTIME_PATH.'~runtime.php') && filemtime(RUNTIME_PATH.'~runtime.php')>filemtime(ROOT_PATH.DS.'global.php')) {
-    // 加载框架核心缓存文件
-    // 如果有修改核心文件请删除该缓存
-    require RUNTIME_PATH.'~runtime.php';
-}else{
     // 加载系统定义文件
     require CORE_PATH."/Common/defines.php";
     // 系统函数库
@@ -39,6 +28,16 @@ if(is_file(RUNTIME_PATH.'~runtime.php') && filemtime(RUNTIME_PATH.'~runtime.php'
     // 加载编译需要的函数文件
     require CORE_PATH."/Common/runtime.php";
     // 第一次运行检查项目目录结构 如果不存在则自动创建
+	
+    if(version_compare(PHP_VERSION,'5.2.0','<') ) {
+        $content .=  $fun(CORE_PATH.'/Common/compat.php');
+    }
+
+if(is_file(RUNTIME_PATH.'~runtime.php') && filemtime(RUNTIME_PATH.'~runtime.php')>filemtime(ROOT_PATH.DS.'global.php')) {
+    // 加载框架核心缓存文件
+    // 如果有修改核心文件请删除该缓存
+    require RUNTIME_PATH.'~runtime.php';
+}else{
     if(!is_dir(RUNTIME_PATH)) {
         // 创建项目目录结构
         buildAppDir();
@@ -64,24 +63,14 @@ if(is_file(RUNTIME_PATH.'~runtime.php') && filemtime(RUNTIME_PATH.'~runtime.php'
             $fun    =   'php_strip_whitespace';
         }
         // 生成核心文件的缓存 去掉文件空白以减少大小
-        $content     =   $fun(CORE_PATH.'/Common/defines.php');
-        $content    .=   $fun(CORE_PATH.'/Common/functions.php');
-        $content    .=   $fun(CORE_PATH.'/Lib/Think/Core/Base.class.php');
+        $content    =   $fun(CORE_PATH.'/Lib/Think/Core/Base.class.php');
         $content    .=   $fun(CORE_PATH.'/Lib/Think/Exception/ThinkException.class.php');
         $content    .=   $fun(CORE_PATH.'/Lib/Think/Util/Log.class.php');
         $content    .=   $fun(CORE_PATH.'/Lib/Think/Core/App.class.php');
         $content    .=   $fun(CORE_PATH.'/Lib/Think/Core/Action.class.php');
         $content    .=   $fun(CORE_PATH.'/Lib/Think/Core/Model.class.php');
         $content    .=   $fun(CORE_PATH.'/Lib/Think/Core/View.class.php');
-    }
-    if(version_compare(PHP_VERSION,'5.2.0','<') ) {
-        // 加载兼容函数
-        require CORE_PATH.'/Common/compat.php';
-        if($cache) {
-            $content .=  $fun(CORE_PATH.'/Common/compat.php');
-        }
-    }
-    if($cache) {
+
         file_put_contents(RUNTIME_PATH.'~runtime.php',$content);
         unset($content);
     }

@@ -28,18 +28,22 @@ function buildAppDir() {
     if(is_writeable(APP_PATH)) {
         mkdirs(array(
             LIB_PATH,
+            CONTROLLER_PATH,
+            MODEL_PATH,
+			PLUGIN_PATH,
             CONFIG_PATH,
             COMMON_PATH,
             LANG_PATH,
-            CACHE_PATH,
             TMPL_PATH,
             TMPL_PATH.'default/',
+			DATA_PATH,
+            CACHE_PATH,
             LOG_PATH,
-            TEMP_PATH,
-            DATA_PATH,
-            LIB_PATH.'Model/',
-            LIB_PATH.'Action/',
-            ));
+            RUNTIME_PATH,
+            MODEL_DATA_PATH,
+			UPLOAD_PATH,
+			HTML_PATH,
+        ));
         // 目录安全写入
         if(!defined('BUILD_DIR_SECURE')) define('BUILD_DIR_SECURE',false);
         if(BUILD_DIR_SECURE) {
@@ -50,14 +54,14 @@ function buildAppDir() {
             $a = explode(',', DIR_SECURE_FILENAME);
             foreach ($a as $filename){
                 file_put_contents(LIB_PATH.$filename,$content);
-                file_put_contents(LIB_PATH.'Action/'.$filename,$content);
-                file_put_contents(LIB_PATH.'Model/'.$filename,$content);
+                file_put_contents(CONTROLLER_PATH.$filename,$content);
+                file_put_contents(MODEL_PATH.$filename,$content);
                 file_put_contents(CACHE_PATH.$filename,$content);
                 file_put_contents(LANG_PATH.$filename,$content);
-                file_put_contents(TEMP_PATH.$filename,$content);
+                file_put_contents(RUNTIME_PATH.$filename,$content);
                 file_put_contents(TMPL_PATH.$filename,$content);
                 file_put_contents(TMPL_PATH.'default/'.$filename,$content);
-                file_put_contents(DATA_PATH.$filename,$content);
+                file_put_contents(MODEL_DATA_PATH.$filename,$content);
                 file_put_contents(COMMON_PATH.$filename,$content);
                 file_put_contents(CONFIG_PATH.$filename,$content);
                 file_put_contents(LOG_PATH.$filename,$content);

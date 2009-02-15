@@ -349,9 +349,9 @@ class App extends Base
 
             // 定义当前语言
             define('LANG_SET',$langSet);
-            if(C('LANG_CACHE_ON') && is_file(TEMP_PATH.MODULE_NAME.'_'.LANG_SET.'_lang.php')) {
+            if(C('LANG_CACHE_ON') && is_file(RUNTIME_PATH.MODULE_NAME.'_'.LANG_SET.'_lang.php')) {
                 // 加载语言包缓存文件
-                L(include TEMP_PATH.MODULE_NAME.'_'.LANG_SET.'_lang.php');
+                L(include RUNTIME_PATH.MODULE_NAME.'_'.LANG_SET.'_lang.php');
             }else{
                 // 加载框架语言包
                 if (file_exists_case(CORE_PATH.'/Lang/'.LANG_SET.'.php')){
@@ -371,7 +371,7 @@ class App extends Base
                 if(C('LANG_CACHE_ON')) {
                     // 写入语言包缓存文件
                     $content  = "<?php\nreturn ".var_export(L(),true).";\n?>";
-                    file_put_contents(TEMP_PATH.MODULE_NAME.'_'.LANG_SET.'_lang.php',$content);
+                    file_put_contents(RUNTIME_PATH.MODULE_NAME.'_'.LANG_SET.'_lang.php',$content);
                 }
             }
         }else{
@@ -420,12 +420,12 @@ class App extends Base
             define('TEMPLATE_NAME',$templateSet);
             // 当前模版路径
             define('TEMPLATE_PATH',TMPL_PATH.TEMPLATE_NAME);
-            $tmplDir	=	TMPL_DIR.'/'.TEMPLATE_NAME.'/';
+            $tmplDir	=	THEMES_DIR.'/'.TEMPLATE_NAME.'/';
         }else{
             // 把模版目录直接放置项目模版文件
             // 该模式下面没有TEMPLATE_NAME常量
             define('TEMPLATE_PATH',TMPL_PATH);
-            $tmplDir	=	TMPL_DIR.'/';
+            $tmplDir	=	THEMES_DIR.'/';
         }
 
         //当前网站地址
@@ -451,9 +451,9 @@ class App extends Base
             define('__URL__',PHP_FILE.'/'.C_MODULE_NAME);
             //当前操作地址
             define('__ACTION__',__URL__.C('PATH_DEPR').$action);
-            C('TMPL_FILE_NAME',LIB_PATH.COMPONENT_NAME.'/'.TMPL_DIR.'/'.TEMPLATE_NAME.'/'.MODULE_NAME.'/'.ACTION_NAME.C('TEMPLATE_SUFFIX'));
+            C('TMPL_FILE_NAME',LIB_PATH.COMPONENT_NAME.'/'.THEMES_DIR.'/'.TEMPLATE_NAME.'/'.MODULE_NAME.'/'.ACTION_NAME.C('TEMPLATE_SUFFIX'));
             //项目模板目录
-            define('APP_TMPL_URL', $appRoot.LIB_DIR.'/'.COMPONENT_NAME.'/'.TMPL_DIR.'/'.TEMPLATE_NAME.'/');
+            define('APP_TMPL_URL', $appRoot.LIB_DIR.'/'.COMPONENT_NAME.'/'.THEMES_DIR.'/'.TEMPLATE_NAME.'/');
             define('__CURRENT__', WEB_URL.'/'.APP_NAME.'/'.LIB_DIR.'/'.$tmplDir.str_replace(C('COMPONENT_DEPR'),'/',C_MODULE_NAME));
         }else{
             // 当前模块地址

@@ -50,7 +50,7 @@ class TemplateSmarty extends Base {
             $tpl->caching = C('TMPL_CACHE_ON');
             $tpl->template_dir = TMPL_PATH;
             $tpl->compile_dir = CACHE_PATH ;
-            $tpl->cache_dir = TEMP_PATH ;
+            $tpl->cache_dir = RUNTIME_PATH ;
         }
         $tpl->assign($var);
         $tpl->display($templateFile);

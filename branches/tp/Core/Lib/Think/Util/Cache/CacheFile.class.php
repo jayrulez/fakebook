@@ -36,7 +36,7 @@ class CacheFile extends Cache
         if(!empty($options['temp'])){
             $this->options['temp'] = $options['temp'];
         }else {
-            $this->options['temp'] = TEMP_PATH;
+            $this->options['temp'] = RUNTIME_PATH;
         }
         $this->expire = isset($options['expire'])?$options['expire']:C('DATA_CACHE_TIME');
         if(substr($this->options['temp'], -1) != "/")    $this->options['temp'] .= "/";

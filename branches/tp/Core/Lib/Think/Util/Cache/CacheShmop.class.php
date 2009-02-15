@@ -39,7 +39,7 @@ class CacheShmop extends Cache
         if(!empty($options)){
             $options = array(
                 'size' => C('SHARE_MEM_SIZE'),
-                'tmp'  => TEMP_PATH,
+                'tmp'  => RUNTIME_PATH,
                 'project' => 's'
                 );
         }

@@ -1037,7 +1037,7 @@ function S($name,$value='',$expire='',$type='') {
 }
 
 // 快速文件数据读取和保存 针对简单类型数据 字符串、数组
-function F($name,$value='',$expire=-1,$path=DATA_PATH) {
+function F($name,$value='',$expire=-1,$path=MODEL_DATA_PATH) {
     static $_cache = array();
     $filename   =   $path.$name.'.php';
     if('' !== $value) {
@@ -1136,13 +1136,13 @@ function clearCache($type=0,$path=NULL) {
                 $path = CACHE_PATH;
                 break;
             case 1:// 数据缓存目录
-                $path   =   TEMP_PATH;
+                $path   =   RUNTIME_PATH;
                 break;
             case 2://  日志目录
                 $path   =   LOG_PATH;
                 break;
             case 3://  数据目录
-                $path   =   DATA_PATH;
+                $path   =   MODEL_DATA_PATH;
             }
         }
         import("ORG.Io.Dir");
