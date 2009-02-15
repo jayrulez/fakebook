@@ -2,7 +2,7 @@
 				<div id="globalheader-content" class="clearfix">
 					<div id="logobar">
 						<div id="logobar-inner">
-							<a id="home" href="home.php"></a>
+							<a class="home" href="home.php"></a>
 						</div>
 					</div>
 					<div id="menubar" class="clearfix">

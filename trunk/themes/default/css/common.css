@@ -28,8 +28,9 @@ html[xmlns] .clearfix{display: block;}
 #globalheader-bottom{background: url('[:theme]/images/globalheader_bottom_bg.png') top left no-repeat;height: 5px; width: 950px;overflow:hidden;}
 #globalheader #globalheader-content{}
 #globalheader #globalheader-content #logobar{float: left; width: 150px; overflow: hidden;}
-#globalheader #globalheader-content #logobar #logobar-inner{padding: 10px 9px 5px 9px;}
-#globalheader #globalheader-content #logobar #logobar-inner .logo{display: block; width: 130px; height: 20px;}
+#globalheader #globalheader-content #logobar #logobar-inner{padding: 10px 9px 5px 9px;vertical-align: middle;}
+#globalheader #globalheader-content #logobar #logobar-inner .home{display: block; width: 130px; height: 20px;background:url('[:theme]/images/logo.png') top left no-repeat;}
+#globalheader #globalheader-content #logobar #logobar-inner .home:hover{background:url('[:theme]/images/logo.png') bottom left no-repeat;}
 #globalheader #globalheader-content #menubar{float: right; width: 800px;}
 #globalheader #globalheader-content #menubar a{font-weight: bold; color: #ffffff;display: inline-block;padding: 5px;}
 #globalheader #globalheader-content #menubar a:hover{text-decoration: none;}
