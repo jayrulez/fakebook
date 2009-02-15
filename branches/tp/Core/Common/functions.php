@@ -171,7 +171,7 @@ function halt($error) {
             include C('EXCEPTION_TMPL_FILE');
         }else{
             // 使用默认的异常模板文件
-            include THINK_PATH.'/Tpl/ThinkException.tpl.php';
+            include CORE_PATH.'/Tpl/ThinkException.tpl.php';
         }
     }
     else
@@ -191,7 +191,7 @@ function halt($error) {
                 include C('EXCEPTION_TMPL_FILE');
             }else{
                 // 使用默认的异常模板文件
-                include THINK_PATH.'/Tpl/ThinkException.tpl.php';
+                include CORE_PATH.'/Tpl/ThinkException.tpl.php';
             }
         }
     }
@@ -611,7 +611,7 @@ function import($class,$baseUrl = '',$ext='.class.php',$subdir=false)
       elseif(in_array(strtolower($class_strut[0]),array('think','org','com'))) {
           //加载ThinkPHP基类库或者公共类库
           // think 官方基类库 org 第三方公共类库 com 企业公共类库
-          $baseUrl =  THINK_PATH.'/'.LIB_DIR.'/';
+          $baseUrl =  CORE_PATH.'/'.LIB_DIR.'/';
       }else {
           // 加载其他项目应用类库
           $class    =   substr_replace($class, '', 0,strlen($class_strut[0])+1);
@@ -1050,7 +1050,7 @@ function F($name,$value='',$expire=-1,$path=DATA_PATH) {
             return $result;
         }else{
             // 缓存数据
-            $content   =   "<?php\nif (!defined('THINK_PATH')) exit();\n//".sprintf('%012d',$expire)."\nreturn ".var_export($value,true).";\n?>";
+            $content   =   "<?php\nif (!defined('CORE_PATH')) exit();\n//".sprintf('%012d',$expire)."\nreturn ".var_export($value,true).";\n?>";
             $result  =   file_put_contents($filename,$content);
             $_cache[$name]   =   $value;
         }

@@ -69,7 +69,7 @@ class App extends Base
             define('MODULE_NAME',   $this->getModule());       // Module名称
             define('ACTION_NAME',   $this->getAction());        // Action操作
             // 不使用语言包功能，仅仅加载框架语言文件
-            L(include THINK_PATH.'/Lang/'.C('DEFAULT_LANGUAGE').'.php');
+            L(include CORE_PATH.'/Lang/'.C('DEFAULT_LANGUAGE').'.php');
         }else{
             // 设置系统时区 PHP5支持
             if(function_exists('date_default_timezone_set'))
@@ -168,7 +168,7 @@ class App extends Base
     private function build()
     {
         // 加载惯例配置文件
-        C(include THINK_PATH.'/Common/convention.php');
+        C(include CORE_PATH.'/Common/convention.php');
 
         // 加载项目配置文件
         if(file_exists_case(CONFIG_PATH.'config.php')) {
@@ -191,7 +191,7 @@ class App extends Base
         // 如果是调试模式加载调试模式配置文件
         if(C('DEBUG_MODE')) {
             // 加载系统默认的开发模式配置文件
-            C(include THINK_PATH.'/Common/debug.php');
+            C(include CORE_PATH.'/Common/debug.php');
             if(file_exists_case(CONFIG_PATH.'debug.php')) {
                 // 允许项目增加开发模式配置定义
                 C(include CONFIG_PATH.'debug.php');
@@ -354,10 +354,10 @@ class App extends Base
                 L(include TEMP_PATH.MODULE_NAME.'_'.LANG_SET.'_lang.php');
             }else{
                 // 加载框架语言包
-                if (file_exists_case(THINK_PATH.'/Lang/'.LANG_SET.'.php')){
-                    L(include THINK_PATH.'/Lang/'.LANG_SET.'.php');
+                if (file_exists_case(CORE_PATH.'/Lang/'.LANG_SET.'.php')){
+                    L(include CORE_PATH.'/Lang/'.LANG_SET.'.php');
                 }else{
-                    L(include THINK_PATH.'/Lang/'.$defaultLang.'.php');
+                    L(include CORE_PATH.'/Lang/'.$defaultLang.'.php');
                 }
 
                 // 读取项目（公共）语言包
@@ -376,7 +376,7 @@ class App extends Base
             }
         }else{
             // 不使用语言包功能，仅仅加载框架语言文件
-            L(include THINK_PATH.'/Lang/'.C('DEFAULT_LANGUAGE').'.php');
+            L(include CORE_PATH.'/Lang/'.C('DEFAULT_LANGUAGE').'.php');
         }
         return ;
     }
@@ -485,13 +485,13 @@ class App extends Base
     private function loadPlugIn()
     {
         // 加载插件必须的函数
-        include THINK_PATH.'/Common/plugin.php';
+        include CORE_PATH.'/Common/plugin.php';
         //加载有效插件文件
         if(is_file(RUNTIME_PATH.'~plugins.php')) {
             include RUNTIME_PATH.'~plugins.php';
         }else{
             // 检查插件数据
-            $common_plugins = get_plugins(THINK_PATH.'/PlugIns','Think');// 公共插件
+            $common_plugins = get_plugins(CORE_PATH.'/PlugIns','Think');// 公共插件
             $app_plugins = get_plugins();// 项目插件
             // 合并插件数据
             $plugins    = array_merge($common_plugins,$app_plugins);

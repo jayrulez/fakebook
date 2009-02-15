@@ -465,7 +465,7 @@ class View extends Base
             $_trace = auto_charset($_trace,'utf-8');
             $_title =   auto_charset('页面Trace信息','utf-8');
             // 调用Trace页面模板
-            include THINK_PATH.'/Tpl/PageTrace.tpl.php';
+            include CORE_PATH.'/Tpl/PageTrace.tpl.php';
         }
     }
 }//

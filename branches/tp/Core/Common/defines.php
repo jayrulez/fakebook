@@ -20,7 +20,7 @@
  * @version  $Id$
  +------------------------------------------------------------------------------
  */
-if (!defined('THINK_PATH')) exit();
+if (!defined('CORE_PATH')) exit();
 //   系统信息
 if(version_compare(PHP_VERSION,'6.0.0','<') ) {
     @set_magic_quotes_runtime (0);
@@ -90,7 +90,7 @@ define('DATA_PATH', APP_PATH.'/Data/'); //
 
 define('DATA_TYPE_OBJ',1);
 define('DATA_TYPE_ARRAY',0);
-define('VENDOR_PATH',THINK_PATH.'/Vendor/');
+define('VENDOR_PATH',CORE_PATH.'/Vendor/');
 // 为了方便导入第三方类库 设置Vendor目录到include_path
 set_include_path(get_include_path() . PATH_SEPARATOR . VENDOR_PATH);
 
