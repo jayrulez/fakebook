@@ -23,7 +23,7 @@ return array
 
 	'LANG_CACHE_ON'		=> 	false,
 	'LANG_SWITCH_ON'	=>	true,
-	'AUTO_DETECT_LANG'	=>	false,
+	'AUTO_DETECT_LANG'	=>	true,
 	'DEFAULT_LANG'		=>	'en-us',
 	'VAR_LANG'		=>	'l',
 	'DEFAULT_LANG_ID'	=>	'en',
