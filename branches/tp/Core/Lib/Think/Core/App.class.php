@@ -168,7 +168,7 @@ class App extends Base
     private function build()
     {
         // 加载惯例配置文件
-        C(include CORE_PATH.'/Common/convention.php');
+        C(include INC_PATH.'system.php');
 
         // 加载项目配置文件
         if(file_exists_case(CONFIG_PATH.'config.php')) {
@@ -191,7 +191,7 @@ class App extends Base
         // 如果是调试模式加载调试模式配置文件
         if(C('DEBUG_MODE')) {
             // 加载系统默认的开发模式配置文件
-            C(include CORE_PATH.'/Common/debug.php');
+            C(include INC_PATH.'debug.php');
             if(file_exists_case(CONFIG_PATH.'debug.php')) {
                 // 允许项目增加开发模式配置定义
                 C(include CONFIG_PATH.'debug.php');
