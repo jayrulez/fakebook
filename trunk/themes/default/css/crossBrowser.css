@@ -8,9 +8,11 @@
 .ie6 .submitbutton-b{background:transparent;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[:theme]/images/submitbutton_b.png', sizingMethod="crop");}
 .ie6 .submitbutton .submitbutton-a-end{background:transparent;width:250px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[:theme]/images/submitbutton_a.png', sizingMethod="crop");}
 .ie6 .submitbutton .submitbutton-b-end{background:transparent;width:250px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[:theme]/images/submitbutton_b.png', sizingMethod="crop");}
-.ie6 #globalheader{background:transparent;width:950px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[:theme]/images/globalheader_bg.png', sizingMethod="crop");}
+.ie6 #globalheader-bottom{background:transparent;width:950px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[:theme]/images/globalheader_bottom_bg.png', sizingMethod="crop");}
 
-.ie6 #welcome #welcome-inner #sidebar #sidebar-inner #quicklogin #quicklogin-top{background:transparent;height:5px;width: 200px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[:theme]/images/quicklogin_bg.png', sizingMethod="crop");}
-.ie6 #welcome #welcome-inner #sidebar #sidebar-inner #quicklogin #quicklogin-bottom{background:transparent;height:5px;width: 200px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[:theme]/images/quicklogin_bg.png', sizingMethod="crop");}
-.ie6 #welcome #welcome-inner #sidebar #sidebar-inner .sidebar-extra .sidebar-extra-top{background:transparent;height:5px;width: 200px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[:theme]/images/sidebar_extra_bg.png', sizingMethod="crop");}
-.ie6 #welcome #welcome-inner #sidebar #sidebar-inner .sidebar-extra .sidebar-extra-bottom{background:transparent;height:5px;width: 200px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[:theme]/images/sidebar_extra_bg.png', sizingMethod="crop");}
+.ie6 #welcome #welcome-inner #sidebar #sidebar-inner #quicklogin #quicklogin-top{background:transparent;height:5px;width: 200px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[:theme]/images/quicklogin_top_bg.png', sizingMethod="crop");}
+.ie6 #welcome #welcome-inner #sidebar #sidebar-inner #quicklogin #quicklogin-bottom{background:transparent;height:5px;width: 200px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[:theme]/images/quicklogin_bottom_bg.png', sizingMethod="crop");}
+.ie6 #welcome #welcome-inner #sidebar #sidebar-inner .sidebar-extra .sidebar-extra-top{background:transparent;height:5px;width: 200px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[:theme]/images/sidebar_extra_top_bg.png', sizingMethod="crop");}
+.ie6 #welcome #welcome-inner #sidebar #sidebar-inner .sidebar-extra .sidebar-extra-bottom{background:transparent;height:5px;width: 200px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[:theme]/images/sidebar_extra_bottom_bg.png', sizingMethod="crop");}
+.ie6 #welcome #welcome-inner #sidebar #sidebar-inner #quicklogin #quicklogin-content{width: 200px;}
+.ie6 #welcome #welcome-inner #sidebar #sidebar-inner .sidebar-extra .sidebar-extra-content{width: 200px;}

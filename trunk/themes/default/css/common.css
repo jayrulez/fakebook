@@ -24,15 +24,16 @@ html[xmlns] .clearfix{display: block;}
 .submitbutton .submitbutton-b-end{background:transparent url('[:theme]/images/submitbutton_b.png') -248px 0px no-repeat;}
 .submitbutton .submitbutton-end{width:2px;height:22px;overflow:hidden;position:relative;float:left;}
 #UIPage{margin: 0px auto;width: 950px;position: relative;text-align: left;}
-#globalheader{background: url('[:theme]/images/globalheader_bg.png') top left;height: 40px; width: 950px;overflow:hidden;}
+#globalheader{width: 950px;overflow:hidden;background: #3b5998;/*border-left:solid 1px #;border-right:solid 1px #;*/}
+#globalheader-bottom{background: url('[:theme]/images/globalheader_bottom_bg.png') top left no-repeat;height: 5px; width: 950px;overflow:hidden;}
 #globalheader #globalheader-content{}
 #globalheader #globalheader-content #logobar{float: left; width: 150px; overflow: hidden;}
-#globalheader #globalheader-content #logobar #logobar-inner{padding: 10px;}
+#globalheader #globalheader-content #logobar #logobar-inner{padding: 10px 9px 5px 9px;}
 #globalheader #globalheader-content #logobar #logobar-inner .logo{display: block; width: 130px; height: 20px;}
 #globalheader #globalheader-content #menubar{float: right; width: 800px;}
 #globalheader #globalheader-content #menubar a{font-weight: bold; color: #ffffff;display: inline-block;padding: 5px;}
 #globalheader #globalheader-content #menubar a:hover{text-decoration: none;}
-#globalheader #globalheader-content #menubar #menubar-inner{padding: 10px;}
+#globalheader #globalheader-content #menubar #menubar-inner{padding: 10px 9px 5px 9px;}
 #globalheader #globalheader-content #menubar #menubar-inner #main-menu{float: left; width: 480px;}
 #globalheader #globalheader-content #menubar #menubar-inner #main-menu #main-menu-list{float: left;display: inline;text-decoration: none;vertical-align: middle;list-style-type: none;}
 #globalheader #globalheader-content #menubar #menubar-inner #main-menu #main-menu-list li{display: inline-block; vertical-align: middle;position: relative;float: left;}

@@ -1,16 +1,16 @@
-#welcome{width: 950px;}
+#welcome{}
 #welcome #welcome-inner{padding: 0px 15px;}
 #welcome #welcome-inner #sidebar{float: left; overflow: hidden; width: 200px;}
 #welcome #welcome-inner #sidebar #sidebar-inner{}
 #welcome #welcome-inner #sidebar #sidebar-inner #quicklogin{width: 200px;}
-#welcome #welcome-inner #sidebar #sidebar-inner #quicklogin #quicklogin-top{overflow:hidden;width: 200px;height: 5px;background:url('[:theme]/images/quicklogin_bg.png') top left no-repeat;}
+#welcome #welcome-inner #sidebar #sidebar-inner #quicklogin #quicklogin-top{overflow:hidden;width: 200px;height: 5px;background:url('[:theme]/images/quicklogin_top_bg.png') top left no-repeat;}
 #welcome #welcome-inner #sidebar #sidebar-inner #quicklogin #quicklogin-content{width: 198px; border-left:solid 1px #b8d4e8;border-right:solid 1px #b8d4e8;background:#f0f5f8;overflow: hidden;}
 #welcome #welcome-inner #sidebar #sidebar-inner #quicklogin #quicklogin-content-inner{padding: 15px 19px; width: 160px;}
-#welcome #welcome-inner #sidebar #sidebar-inner #quicklogin #quicklogin-bottom{overflow:hidden;width: 200px;height: 5px;background:url('[:theme]/images/quicklogin_bg.png') bottom left no-repeat;}
+#welcome #welcome-inner #sidebar #sidebar-inner #quicklogin #quicklogin-bottom{overflow:hidden;width: 200px;height: 5px;background:url('[:theme]/images/quicklogin_bottom_bg.png') top left no-repeat;}
 #welcome #welcome-inner #sidebar #sidebar-inner .sidebar-extra{width: 200px;margin-top: 10px;}
-#welcome #welcome-inner #sidebar #sidebar-inner .sidebar-extra .sidebar-extra-top{overflow:hidden;width: 200px;height: 5px;background:url('[:theme]/images/sidebar_extra_bg.png') top left no-repeat;}
+#welcome #welcome-inner #sidebar #sidebar-inner .sidebar-extra .sidebar-extra-top{overflow:hidden;width: 200px;height: 5px;background:url('[:theme]/images/sidebar_extra_top_bg.png') top left no-repeat;}
 #welcome #welcome-inner #sidebar #sidebar-inner .sidebar-extra .sidebar-extra-content{width: 198px; border-left:solid 1px #eeeeee;border-right:solid 1px #eeeeee;background:#f0f5f8;}
 #welcome #welcome-inner #sidebar #sidebar-inner .sidebar-extra .sidebar-extra-content-inner{padding: 15px 19px; width: 160px;}
-#welcome #welcome-inner #sidebar #sidebar-inner .sidebar-extra .sidebar-extra-bottom{overflow:hidden;width: 200px;height: 5px;background:url('[:theme]/images/sidebar_extra_bg.png') bottom left no-repeat;}
+#welcome #welcome-inner #sidebar #sidebar-inner .sidebar-extra .sidebar-extra-bottom{overflow:hidden;width: 200px;height: 5px;background:url('[:theme]/images/sidebar_extra_bottom_bg.png') top left no-repeat;}
 /*20 px spacing between side and wide bar*/
 #welcome #welcome-inner #widebar{float: right; overflow: hidden; width: 700px;}
