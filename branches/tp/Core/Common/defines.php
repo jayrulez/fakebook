@@ -24,7 +24,7 @@ if (!defined('CORE_PATH')) exit();
 //   系统信息
 if(version_compare(PHP_VERSION,'6.0.0','<') ) {
     @set_magic_quotes_runtime (0);
-    define('MAGIC_QUOTES_GPC',get_magic_quotes_gpc()?True:False);
+    define('MAGIC_QUOTES_GPC',get_magic_quotes_gpc()?true:false);
 }
 define('MEMORY_LIMIT_ON',function_exists('memory_get_usage')?true:false);
 // 记录内存初始使用
@@ -37,15 +37,18 @@ define('IS_WIN',strstr(PHP_OS, 'WIN') ? 1 : 0 );
 define('IS_LINUX',strstr(PHP_OS, 'Linux') ? 1 : 0 );
 define('IS_FREEBSD',strstr(PHP_OS, 'FreeBSD') ? 1 : 0 );
 
+if(!defined('APP_NAME')) define('APP_NAME', md5(CORE_PATH));		 
+if(!defined('APP_PATH')) define('APP_PATH', dirname(CORE_PATH).DS.APP_NAME);
+
 if(!IS_CLI) {
     // 当前文件名
     if(!defined('_PHP_FILE_')) {
         if(IS_CGI) {
             //CGI/FASTCGI模式下
             $_temp  = explode('.php',$_SERVER["PHP_SELF"]);
-            define('_PHP_FILE_',  rtrim(str_replace($_SERVER["HTTP_HOST"],'',$_temp[0].'.php'),DS));
+            define('_PHP_FILE_',  rtrim(str_replace($_SERVER["HTTP_HOST"],'',$_temp[0].'.php'),'/'));
         }else {
-            define('_PHP_FILE_',    rtrim($_SERVER["SCRIPT_NAME"],DS));
+            define('_PHP_FILE_',    rtrim($_SERVER["SCRIPT_NAME"],'/'));
         }
     }
     if(!defined('WEB_URL')) {
@@ -55,7 +58,7 @@ if(!IS_CLI) {
         }else {
             $_root = dirname(_PHP_FILE_);
         }
-        define('WEB_URL',   (($_root==DS || $_root=='\\')?'':$_root));
+        define('WEB_URL',   (($_root=='/' || $_root=='\\')?'':$_root));
     }
 
     //支持的URL模式
@@ -87,8 +90,8 @@ define('TMPL_PATH',APP_PATH.DS.THEMES_DIR.DS);
 define('PLUGIN_PATH', APP_PATH.DS.PLUGIN_DIR.DS);
 define('COMMON_PATH',   APP_PATH.DS.COMMON_DIR.DS); 
 define('LIB_PATH',         APP_PATH.DS.LIB_DIR.DS);
-define('CONTROLLER_PATH',  APP_PATH.DS.CONTROLLER_DIR.DS);
-define('MODEL_PATH',  APP_PATH.DS.MODEL_DIR.DS);
+define('CONTROLLER_PATH',  LIB_PATH.CONTROLLER_DIR.DS);
+define('MODEL_PATH',  LIB_PATH.MODEL_DIR.DS);
 define('CONFIG_PATH',  APP_PATH.DS.CONFIG_DIR.DS);
 define('LANG_PATH',     APP_PATH.DS.LANG_DIR.DS);
 

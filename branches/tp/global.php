@@ -1,37 +1,19 @@
 <?php
-// +----------------------------------------------------------------------
-// | ThinkPHP
-// +----------------------------------------------------------------------
-// | Copyright (c) 2008 http://thinkphp.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
-// +----------------------------------------------------------------------
-// | Author: liu21st <liu21st@gmail.com>
-// +----------------------------------------------------------------------
-// $Id$
 
-/**
- +------------------------------------------------------------------------------
- * ThinkPHP公共文件
- +------------------------------------------------------------------------------
- */
-if(version_compare(PHP_VERSION,'5.0.0','<') ) {
-    die('ThinkPHP 1.* require PHP > 5.0 !');
+if(!defined('IN_APP'))
+{
+	exit();
 }
-//记录开始运行时间
+
+define('INC_PATH',CORE_PATH.DS.'Inc'.DS);
+define('API_PATH',CORE_PATH.DS.'Api'.DS);
+
 $GLOBALS['_beginTime'] = microtime(TRUE);
 
-    // 加载系统定义文件
-    require CORE_PATH."/Common/defines.php";
-    // 系统函数库
-    require CORE_PATH."/Common/functions.php";
-    // 加载编译需要的函数文件
-    require CORE_PATH."/Common/runtime.php";
-    // 第一次运行检查项目目录结构 如果不存在则自动创建
-	
-    if(version_compare(PHP_VERSION,'5.2.0','<') ) {
-        $content .=  $fun(CORE_PATH.'/Common/compat.php');
-    }
+require_once(INC_PATH.'define.php');
+require_once(INC_PATH.'common.php');
+require_once(INC_PATH.'compat.php');
+require_once(INC_PATH.'runtime.php');
 
 if(is_file(RUNTIME_PATH.'~runtime.php') && filemtime(RUNTIME_PATH.'~runtime.php')>filemtime(ROOT_PATH.DS.'global.php')) {
     // 加载框架核心缓存文件
