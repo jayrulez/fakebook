@@ -2,7 +2,7 @@
 
 return array
 (
-	'pagetitle'		=>	'Sign In',
+	'pagetitle'		=>	'登录',
 );
 
 ?>

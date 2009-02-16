@@ -2,7 +2,7 @@
 
 return array
 (
-	'pagetitle'		=>	'Ê×Ò³',
+	'pagetitle'		=>	'é¦–é¡µ',
 );
 
 ?>
