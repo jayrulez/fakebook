@@ -27,12 +27,14 @@ import('lib.db.db');
 import('lib.template.template');
 
 import('fakebook.user');
+import('fakebook.profile');
 
 start_app();
 
-$tpl   = new template();
-$db    = new db();
-$user  = new user();
+$tpl     = new template();
+$db      = new db();
+$user    = new user();
+$profile = new profile();
 
 if(!C('SITE_OPEN'))
 {

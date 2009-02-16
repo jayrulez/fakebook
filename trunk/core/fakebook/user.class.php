@@ -6,11 +6,14 @@ class user
 	
 	public $db = null;
 	
+	public $profile = null;
+	
 	public $user_table;
 
 	public function __construct()
 	{
-		$this->db = $GLOBALS['db'];
+		$this->db         = $GLOBALS['db'];
+		$this->profile    = $GLOBALS['profile'];
 		$this->user_table = C('DB_PREFIX').C('USER_TABLE');
 	}
 
@@ -73,7 +76,7 @@ class user
 	
 	public function set_login($loginId,$loginpwd,$autosignin)
 	{
-		//$userId = $this->getUserId_handle(handle);
+		$userId = $this->getUserId_handle($loginId);
 		if($autosignin)
 		{
 			cookie::set('loginId',C('COOKIE_EXPIRE'));
@@ -88,7 +91,7 @@ class user
 				   SET visits=visits+1
 				   WHERE id='{$userId}'
 		";
-		if(session::set('userInfo',$userInfo)&&session::set('userId'))
+		if(session::set('userInfo',$userInfo)&&session::set('userId',$userId))
 		{
 			return true;
 		}else{
