@@ -13,6 +13,12 @@ return array
 	'link_signout'	=>	'注册',
 	'link_signin'	=>	'登录',
 	'link_signup'	=>	'退出',
+	
+	'field_login_id'	=>	'用户名:',
+	'field_login_pwd'	=>	'密码:',
+	'field_autologin'	=>	'记住密码?',
+	'quicklogin_submit'	=>	'登录',
+	'link_forgot_password'	=>	'忘记密码?',
 );
 
 ?>
