@@ -21,3 +21,6 @@
 .ie6 #mainbody #mainbody-inner #sidebar #sidebar-inner #quicklogin #quicklogin-content-inner #quicklogin-form #Qlogin #quicklogin-form-inner .inputpass{width:160px;padding:3px;height:20px;}
 .ie6 #mainbody #mainbody-inner #sidebar #sidebar-inner #quicklogin #quicklogin-content-inner #quicklogin-form #Qlogin #quicklogin-form-inner .autologin .inputcheckbox,
 .ie7 #mainbody #mainbody-inner #sidebar #sidebar-inner #quicklogin #quicklogin-content-inner #quicklogin-form #Qlogin #quicklogin-form-inner .autologin .inputcheckbox{margin-left:-4px;}
+
+.ie6 #globalheader #globalheader-content #logobar #logobar-inner .home{background:transparent;width:130px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[:theme]/images/logo.png', sizingMethod="crop");}
+.ie6 #globalheader #globalheader-content #logobar #logobar-inner .home:hover{background:transparent;width:130px;height: 20px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[:theme]/images/logo.png', sizingMethod="crop");background-position: bottom left;}

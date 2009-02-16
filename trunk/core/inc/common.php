@@ -232,7 +232,7 @@ function checkLanguage()
 
 		define('LANG_SET',$langSet);
 
-		if(C('LANG_CACHE_ON') && is_file(CACHE_PATH.PAGE_NAME.'_'.strtolower(LANG_SET).'_lang.php') && filemtime(CACHE_PATH.PAGE_NAME.'_'.strtolower(LANG_SET).'_lang.php')>filemtime(LANG_PATH.LANG_SET.DS.strtolower(PAGE_NAME)))
+		if(C('LANG_CACHE_ON') && is_file(CACHE_PATH.PAGE_NAME.'_'.strtolower(LANG_SET).'_lang.php'))
 		{
 			L(include(CACHE_PATH.PAGE_NAME.'_'.LANG_SET.'_lang.php'));
 		}else{
