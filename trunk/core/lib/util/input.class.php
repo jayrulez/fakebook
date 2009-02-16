@@ -11,6 +11,17 @@ class input
 	{
 	
 	}
+	
+	public function sanitize_login_data($data)
+	{
+		//sanitize data before return
+		return $data;
+	}
+	
+	public function isEmail($string)
+	{
+		return false;
+	}
 }
 
 ?>

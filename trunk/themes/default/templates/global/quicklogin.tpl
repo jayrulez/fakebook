@@ -3,8 +3,9 @@
 										<div id="quicklogin-content">
 											<div id="quicklogin-content-inner">
 												<div id="quicklogin-form">
-													<form id="Qlogin" method="post" action="login.php">
+													<form id="Qlogin" method="post" action="signin.php">
 														<div id="quicklogin-form-inner" class="clearfix">
+															<input type="hidden" name="submit" value="1"/>
 															<label for="loginId">{$lang.field_login_id}</label>
 															<input name="loginId" id="loginId" class="inputtext" type="text"/>
 															<label for="loginPwd">{$lang.field_login_pwd}</label>

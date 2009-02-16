@@ -13,6 +13,7 @@ return array
 	'DBUSER'	=>	'root',
 	'DBPASS'	=>	'',
 	'DB_PREFIX'	=>	'fb_',
+	'USER_TABLE'	=>	'users',
 
 	'CHECK_FILE_CASE'  	=>  	false,
 

@@ -53,12 +53,17 @@ class db
 	
 	public function fetch_array($query)
 	{
-		return mysql_fetch_array($query,$this->link);
+		return mysql_fetch_array($query);
 	}
 	
 	public function fetch_assoc($query)
 	{
-		return mysql_fetch_assoc($query,$this->link);
+		return mysql_fetch_assoc($query);
+	}
+	
+	public function num_rows($query)
+	{
+		return mysql_num_rows($query);
 	}
 }
 
