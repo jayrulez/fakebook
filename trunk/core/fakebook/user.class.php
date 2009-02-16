@@ -10,10 +10,17 @@ class user
 	
 	public $user_table;
 
+    static function getInstance()
+    {
+        return get_instance_of(__CLASS__);
+    }
+	
 	public function __construct()
 	{
-		$this->db         = $GLOBALS['db'];
-		$this->profile    = $GLOBALS['profile'];
+		$this->db      = $GLOBALS['db'];
+		//$this->profile = $GLOBALS['profile'];
+		//$this->db         = db::getInstance();
+		//$this->profile    = profile::getInstance();
 		$this->user_table = C('DB_PREFIX').C('USER_TABLE');
 	}
 

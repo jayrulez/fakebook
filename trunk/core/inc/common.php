@@ -1,5 +1,44 @@
 <?php
 
+/*function to_guid_string($mix)
+{
+    if(is_object($mix) && function_exists('spl_object_hash')) {
+        return spl_object_hash($mix);
+    }elseif(is_resource($mix)){
+        $mix = get_resource_type($mix).strval($mix);
+    }else{
+        $mix = serialize($mix);
+    }
+    return md5($mix);
+}
+
+function get_instance_of($className,$method='',$args=array())
+{
+    static $_instance = array();
+    if(empty($args)) {
+        $identify   =   $className.$method;
+    }else{
+        $identify   =   $className.$method.to_guid_string($args);
+    }
+    if (!isset($_instance[$identify])) {
+        if(class_exists($className)){
+            $o = new $className();
+            if(method_exists($o,$method)){
+                if(!empty($args)) {
+                    $_instance[$identify] = call_user_func_array(array(&$o, $method), $args);
+                }else {
+                    $_instance[$identify] = $o->$method();
+                }
+            }
+            else
+                $_instance[$identify] = $o;
+        }
+        else
+            halt(L('_CLASS_NOT_EXIST_').':'.$className);
+    }
+    return $_instance[$identify];
+}*/
+
 function require_login($flag=true)
 {
 	if($flag == true)

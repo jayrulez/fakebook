@@ -5,7 +5,7 @@ class db
 	public $link = false;
 	
 	public $db   = null;
-
+	
 	public function __construct()
 	{
 		$dbhost = C('DBHOST');
@@ -18,6 +18,11 @@ class db
 			throw_exception(L('_DB_CONNECTION_ERROR_'));
 		}
 	}
+
+    static function getInstance()
+    {
+        return get_instance_of(__CLASS__);
+    }
 	
 	public function connect($dbhost,$dbname,$dbuser,$dbpass)
 	{

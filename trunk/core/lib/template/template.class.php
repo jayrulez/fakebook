@@ -4,6 +4,11 @@ import('vendor.smarty.Smarty');
 
 class template extends Smarty
 {
+    static function getInstance()
+    {
+        return get_instance_of(__CLASS__);
+    }
+	
 	public function __construct()
 	{
 		parent::__construct();
