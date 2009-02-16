@@ -7,9 +7,9 @@
 														<div id="quicklogin-form-inner" class="clearfix">
 															<input type="hidden" name="submit" value="1"/>
 															<label for="loginId">{$lang.field_login_id}</label>
-															<input name="loginId" id="loginId" class="inputtext" type="text"/>
+															<input name="loginId" id="loginId" class="inputtext" type="text" value={$loginId_val}/>
 															<label for="loginPwd">{$lang.field_login_pwd}</label>
-															<input name="loginPwd" id="loginPwd" class="inputpass" type="password"/>
+															<input name="loginPwd" id="loginPwd" class="inputpass" type="password" value={$loginPwd_val}/>
 															<label for="autologin" class="autologin">
 																<input name="autologin" id="autologin" class="inputcheckbox" type="checkbox"/>
 																<span class="autologin-text">{$lang.field_autologin}</span>

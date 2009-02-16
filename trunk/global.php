@@ -40,8 +40,13 @@ if(!C('SITE_OPEN'))
 	$tpl->display('common.tpl');
 	exit();
 }
-$islogged = $user->islogged();
 
+if(cookie::is_set('loginId'))
+	$tpl->assign('loginId_val',cookie::get('loginId'));
+if(cookie::is_set('loginPwd'))
+	$tpl->assign('loginPwd_val',cookie::get('loginPwd'));
+
+$islogged = $user->islogged();
 $tpl->assign('islogged',$islogged);
 
 ?>

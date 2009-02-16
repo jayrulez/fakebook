@@ -16,12 +16,12 @@ class user
 
 	public function getUserId_handle($handle)
 	{
-		$sql = "SELECT * FROM {$this->user_table} 
-				WHERE email={$handle} 
-				OR account={$handle}
+		$sql = "SELECT id FROM {$this->user_table} 
+				WHERE email='{$handle}' 
+				OR account='{$handle}'
 		";
-		$userInfo = $this->db->fetch_assoc($this->db->query($sql));
-		return $userInfo['id'];
+		$userId = $this->db->fetch_array($this->db->query($sql));
+		return $userId[0];
 	}
 	
 	public function islogged()
@@ -34,7 +34,7 @@ class user
 		}
 	}
 	
-	public function login($loginId,$loginpwd)
+	public function login($loginId,$loginpwd,$autosignin)
 	{
 		if(input::isEmail($loginId))
 		{
@@ -57,8 +57,7 @@ class user
 			$countAccount = $this->db->fetch_array($this->db->query($chkAccount));
 			if($countAccount[0]>0)
 			{
-				$userId = $this->getUserId_handle(handle);
-				if($this->set_login($userId))
+				if($this->set_login($loginId,$loginpwd,$autosignin))
 				{
 					return 0;
 				}else{
@@ -72,8 +71,14 @@ class user
 		}
 	}
 	
-	public function set_login($userId)
+	public function set_login($loginId,$loginpwd,$autosignin)
 	{
+		//$userId = $this->getUserId_handle(handle);
+		if($autosignin)
+		{
+			cookie::set('loginId',C('COOKIE_EXPIRE'));
+			cookie::set('loginPwd',C('COOKIE_EXPIRE'));
+		}
 		/*$sql = "SELECT *
 				FROM {$this->user_table}
 				WHERE id='{$userId}'
