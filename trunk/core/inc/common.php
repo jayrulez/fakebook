@@ -18,7 +18,7 @@ function require_login($flag=true)
 
 function redirect($location)
 {
-
+	exit();
 }
 
 function cssBrowserId()
@@ -136,6 +136,9 @@ function start_app()
 	C(include(INC_PATH.'system.php'));
 	C(include(INC_PATH.'config.php'));
 	import('lib.util.cookie');
+	import('lib.util.session');
+	import('lib.util.input');
+	session::start();
 	checkLanguage();
 	checkTemplate();
 }

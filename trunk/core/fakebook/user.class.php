@@ -13,7 +13,7 @@ class user
 
 	public function islogged()
 	{
-		if(cookie::is_set(C('USER_AUTH_KEY')))
+		if(session::get(C('USER_AUTH_KEY')))
 		{
 			return true;
 		}else{

@@ -4,6 +4,8 @@ error_reporting(E_ALL);
 
 define('IN_APP', true);
 
+define('APP_NAME','fakebook');
+
 define('DS', DIRECTORY_SEPARATOR);
 
 define('ROOT_PATH', dirname(__FILE__).DS);
@@ -21,7 +23,6 @@ $GLOBALS['import_file'] = array();
 
 import('lib.exception.myException');
 import('lib.util.log');
-import('lib.util.input');
 import('lib.db.db');
 import('lib.template.template');
 

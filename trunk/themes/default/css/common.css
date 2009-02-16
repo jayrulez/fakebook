@@ -51,7 +51,7 @@ html[xmlns] .clearfix{display: block;}
 #mainbody #mainbody-inner{padding: 0px 15px;}
 #mainbody #mainbody-inner #sidebar{float: left; overflow: hidden; width: 200px;}
 #mainbody #mainbody-inner #sidebar #sidebar-inner{}
-#mainbody #mainbody-inner #sidebar #sidebar-inner #quicklogin{width: 200px;}
+#mainbody #mainbody-inner #sidebar #sidebar-inner #quicklogin{width: 200px;margin-bottom: 10px;}
 #mainbody #mainbody-inner #sidebar #sidebar-inner #quicklogin #quicklogin-top{overflow:hidden;width: 200px;height: 5px;background:url('[:theme]/images/quicklogin_top_bg.png') top left no-repeat;}
 #mainbody #mainbody-inner #sidebar #sidebar-inner #quicklogin #quicklogin-content{width: 198px; border-left:solid 1px #b8d4e8;border-right:solid 1px #b8d4e8;background:#f0f5f8;overflow: hidden;}
 #mainbody #mainbody-inner #sidebar #sidebar-inner #quicklogin #quicklogin-content-inner{padding: 15px 19px; width: 160px;}
@@ -66,7 +66,7 @@ html[xmlns] .clearfix{display: block;}
 #mainbody #mainbody-inner #sidebar #sidebar-inner #quicklogin #quicklogin-content-inner #quicklogin-form #Qlogin #quicklogin-form-inner .autologin .autologin-text{font-weight: normal;}
 #mainbody #mainbody-inner #sidebar #sidebar-inner #quicklogin #quicklogin-content-inner #quicklogin-form #Qlogin #quicklogin-form-inner .submitbutton{}
 #mainbody #mainbody-inner #sidebar #sidebar-inner #quicklogin #quicklogin-bottom{overflow:hidden;width: 200px;height: 5px;background:url('[:theme]/images/quicklogin_bottom_bg.png') top left no-repeat;}
-#mainbody #mainbody-inner #sidebar #sidebar-inner .sidebar-extra{width: 200px;margin-top: 10px;}
+#mainbody #mainbody-inner #sidebar #sidebar-inner .sidebar-extra{width: 200px;margin-bottom: 10px;}
 #mainbody #mainbody-inner #sidebar #sidebar-inner .sidebar-extra .sidebar-extra-top{overflow:hidden;width: 200px;height: 5px;background:url('[:theme]/images/sidebar_extra_top_bg.png') top left no-repeat;}
 #mainbody #mainbody-inner #sidebar #sidebar-inner .sidebar-extra .sidebar-extra-content{width: 198px; border-left:solid 1px #eeeeee;border-right:solid 1px #eeeeee;background:#f0f5f8;}
 #mainbody #mainbody-inner #sidebar #sidebar-inner .sidebar-extra .sidebar-extra-content-inner{padding: 15px 19px; width: 160px;}

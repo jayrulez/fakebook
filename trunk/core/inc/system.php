@@ -12,6 +12,7 @@ return array
 	'DBNAME'	=>	'fakebook',
 	'DBUSER'	=>	'root',
 	'DBPASS'	=>	'',
+	'DB_PREFIX'	=>	'fb_',
 
 	'CHECK_FILE_CASE'  	=>  	false,
 
@@ -38,6 +39,13 @@ return array
         'COOKIE_PATH'		=>      COOKIE_PATH,                  
         'COOKIE_PREFIX'		=>      'fakebook_',
 	'COOKIE_SECRET_KEY'     =>   	'',
+
+	'SESSION_NAME'				=>	'sid',	
+	'SESSION_PATH'				=>	SESSION_PATH,		
+	'SESSION_TYPE'				=>	'File',	
+	'SESSION_EXPIRE'			=>	'300000',	
+	'SESSION_TABLE'				=>	C('DB_PREFIX').'session',
+	'SESSION_CALLBACK'		=>	'',
 	
 	'USER_AUTH_KEY'		=>	'userId',
 );
