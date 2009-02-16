@@ -39,25 +39,8 @@ if(!C('SITE_OPEN'))
 	$tpl->display('common.tpl');
 	exit();
 }
-
-/*pages that both members and guests can view*/
-$global_pages = array(); 
-
 $islogged = $user->islogged();
 
 $tpl->assign('islogged',$islogged);
-
-if(REQUIRE_USER == true)
-{
-	if(!$islogged)
-	{
-		redirect('signin.php');
-	}
-}else{
-	if($islogged && !in_array($global_pages,PAGE_NAME))
-	{
-		redirect('home.php');
-	}
-}
 
 ?>

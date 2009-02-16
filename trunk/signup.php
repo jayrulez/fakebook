@@ -1,9 +1,10 @@
 <?php
 
 define('PAGE_NAME', 'signup');
-define('REQUIRE_USER', false);
 
 require_once(dirname(__FILE__).DIRECTORY_SEPARATOR.'global.php');
+
+require_login(false);
 
 if(!C('SIGNUP_OPEN'))
 {

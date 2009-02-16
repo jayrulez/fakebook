@@ -1,5 +1,26 @@
 <?php
 
+function require_login($flag=true)
+{
+	if($flag == true)
+	{
+		if(!$GLOBALS['islogged'])
+		{
+			redirect('signin.php');
+		}
+	}else{
+		if($GLOBALS['islogged'])
+		{
+			redirect('home.php');
+		}
+	}
+}
+
+function redirect($location)
+{
+
+}
+
 function cssBrowserId()
 {
 	$_browser      = get_client_browser();

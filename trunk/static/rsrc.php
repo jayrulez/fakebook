@@ -1,8 +1,6 @@
 <?php
 
 define('PAGE_NAME', 'rsrc');
-define('REQUIRE_USER', false);
-
 require_once(dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR.'global.php');
 
 $resource = $_REQUEST['get'];
@@ -36,8 +34,7 @@ if(is_file($cache)&&filemtime($cache)>filemtime($file))
 	if(is_file($file))
 	{
 		$content = file_get_contents($file);
-		$content = str_replace(array('[:theme]'),array('http://'.URL.'/themes/'.TMPL_NAME),$content);
-		//$content = nl2br($content);
+		$content = str_replace(array('[:theme]'),array(NON_SECURE_PROTOCOL.URL.'/themes/'.TMPL_NAME),$content);
 		$subdir_array = array('static');
 		for($i=0;$i<count($subdir_array);$i++)
 		{
@@ -51,7 +48,6 @@ if(is_file($cache)&&filemtime($cache)>filemtime($file))
 	}else{
 		echo $file;
 	}
-
 }
 
 ?>
