@@ -212,16 +212,16 @@ function checkLanguage()
 			if(isset($_GET[C('VAR_LANG')]))
 			{
 				$langSet = $_GET[C('VAR_LANG')];
-				Cookie::set('_language',$langSet,time()+3600);
-			}elseif(Cookie::is_set('_language'))
+				cookie::set('language',$langSet,C('COOKIE_EXPIRE'));
+			}else if(cookie::is_set('language'))
 			{
-				$langSet = Cookie::get('_language');
+				$langSet = cookie::get('language');
 			}else{
 				if(isset($_SERVER['HTTP_ACCEPT_LANGUAGE']))
 				{
 					preg_match('/^([a-z\-]+)/i', $_SERVER['HTTP_ACCEPT_LANGUAGE'], $matches);
-					$langSet = $matches[1];
-					Cookie::set('_language',$langSet,time()+3600);
+					$langSet = strtolower($matches[1]);
+					cookie::set('language',$langSet,C('COOKIE_EXPIRE'));
 				}else{
 					$langSet = $defaultLang;
 				}
@@ -232,7 +232,7 @@ function checkLanguage()
 
 		define('LANG_SET',$langSet);
 
-		if(C('LANG_CACHE_ON') && is_file(CACHE_PATH.PAGE_NAME.'_'.LANG_SET.'_lang.php'))
+		if(C('LANG_CACHE_ON') && is_file(CACHE_PATH.PAGE_NAME.'_'.strtolower(LANG_SET).'_lang.php') && filemtime(CACHE_PATH.PAGE_NAME.'_'.strtolower(LANG_SET).'_lang.php')>filemtime(LANG_PATH.LANG_SET.DS.strtolower(PAGE_NAME)))
 		{
 			L(include(CACHE_PATH.PAGE_NAME.'_'.LANG_SET.'_lang.php'));
 		}else{
@@ -256,7 +256,7 @@ function checkLanguage()
 			if(C('LANG_CACHE_ON'))
 			{
 				$content  = "<?php\r\nreturn ".var_export(L(),true).";\r\n?>";
-				file_put_contents(CACHE_PATH.PAGE_NAME.'_'.LANG_SET.'_lang.php',$content);
+				file_put_contents(CACHE_PATH.PAGE_NAME.'_'.strtolower(LANG_SET).'_lang.php',$content);
 			}
 		}
 		C('LANG_ID',substr(LANG_SET,0,2));

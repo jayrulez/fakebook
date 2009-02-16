@@ -22,7 +22,7 @@ return array
 	'DEFAULT_TMPL'		=>	'default',
 	'VAR_TMPL'		=>	't',
 
-	'LANG_CACHE_ON'		=> 	false,
+	'LANG_CACHE_ON'		=> 	true,
 	'LANG_SWITCH_ON'	=>	true,
 	'AUTO_DETECT_LANG'	=>	true,
 	'DEFAULT_LANG'		=>	'en-us',
@@ -37,7 +37,7 @@ return array
         'COOKIE_EXPIRE'		=>      3600,      
         'COOKIE_DOMAIN'		=>      get_cookie_domain(),   
         'COOKIE_PATH'		=>      COOKIE_PATH,                  
-        'COOKIE_PREFIX'		=>      'fakebook_',
+        'COOKIE_PREFIX'		=>      'fb_',
 	'COOKIE_SECRET_KEY'     =>   	'',
 
 	'SESSION_NAME'				=>	'sid',	

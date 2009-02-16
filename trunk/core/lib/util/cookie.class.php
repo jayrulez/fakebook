@@ -32,11 +32,13 @@ class cookie
 		{
 			$domain =   C('COOKIE_DOMAIN');
 		}
+
 		$expire =   !empty($expire)?    time()+$expire   :  0;
 		if(C('COOKIE_SECRET_KEY'))
 		{
 			$value   =  self::_encrypt($value,C('COOKIE_SECRET_KEY'));
 		}
+		
 		setcookie(C('COOKIE_PREFIX').$name, $value,$expire,$path,$domain);
 		$_COOKIE[C('COOKIE_PREFIX').$name]  =   $value;
 	}
