@@ -43,15 +43,6 @@ if(!C('SITE_OPEN'))
 	exit();
 }
 
-if(cookie::is_set('loginId')&&cookie::is_set('loginPwd'))
-{
-	$tpl->assign('loginId_val',cookie::get('loginId'));
-	$tpl->assign('loginPwd_val',cookie::get('loginPwd'));
-}else{
-	$tpl->assign('loginId_val','');
-	$tpl->assign('loginPwd_val','');
-}
-
 $islogged = $user->islogged();
 $tpl->assign('islogged',$islogged);
 

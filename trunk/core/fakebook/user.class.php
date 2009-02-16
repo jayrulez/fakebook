@@ -9,11 +9,6 @@ class user
 	public $profile = null;
 	
 	public $user_table;
-
-    static function getInstance()
-    {
-        return get_instance_of(__CLASS__);
-    }
 	
 	public function __construct()
 	{
@@ -24,6 +19,11 @@ class user
 		$this->user_table = C('DB_PREFIX').C('USER_TABLE');
 	}
 
+    static function getInstance()
+    {
+        return get_instance_of(__CLASS__);
+    }
+	
 	public function getUserId_handle($handle)
 	{
 		$sql = "SELECT id FROM {$this->user_table} 
@@ -60,9 +60,9 @@ class user
 		if($countHandle[0]>0)
 		{
 			$chkAccount = "SELECT COUNT(*) 
-						   FROM {$this->user_table} 
-						   WHERE {$handle}='{$loginId}' 
-						   AND password='{$loginPwd}'
+                           FROM {$this->user_table} 
+                           WHERE {$handle}='{$loginId}' 
+                           AND password='{$loginPwd}'
 			";
 			$countAccount = $this->db->fetch_array($this->db->query($chkAccount));
 			if($countAccount[0]>0)
@@ -98,7 +98,7 @@ class user
 				   SET visits=visits+1
 				   WHERE id='{$userId}'
 		";
-		if(session::set('userInfo',$userInfo)&&session::set('userId',$userId))
+		if(session::set('userInfo',$userInfo)&&session::set(C('USER_AUTH_KEY'),$userId))
 		{
 			return true;
 		}else{

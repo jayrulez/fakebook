@@ -1,6 +1,6 @@
 <?php
 
-/*function to_guid_string($mix)
+function to_guid_string($mix)
 {
     if(is_object($mix) && function_exists('spl_object_hash')) {
         return spl_object_hash($mix);
@@ -37,7 +37,7 @@ function get_instance_of($className,$method='',$args=array())
             halt(L('_CLASS_NOT_EXIST_').':'.$className);
     }
     return $_instance[$identify];
-}*/
+}
 
 function require_login($flag=true)
 {

@@ -6,11 +6,6 @@ class profile
 	
 	public $db = null;
 	public $user = null;
-
-    static function getInstance()
-    {
-        return get_instance_of(__CLASS__);
-    }
 	
 	public function __construct()
 	{
@@ -21,6 +16,11 @@ class profile
 		//$this->user = user::getInstance();
 		//$this->userId = $this->user->getId();
 	}
+	
+    static function getInstance()
+    {
+        return get_instance_of(__CLASS__);
+    }
 }
 
 ?>
