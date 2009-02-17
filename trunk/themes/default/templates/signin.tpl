@@ -32,9 +32,15 @@
 											<div id="signin-form-top"></div>
 											<div id="signin-form-content">
 												<form id="Sform" method="post" action="signin.php">
-													{if $error}
-														<!--show error here-->
+													{if isset($error) }
+													<!--
+													<div id="error-message">
+														<span class="error">{$error}</span>
+													</div>
+													-->
 													{/if}
+													
+													<!--put form content here-->
 												</div>
 											</div>
 											<div id="signin-form-bottom"></div>
