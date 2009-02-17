@@ -18,6 +18,7 @@ define('API_PATH', CORE_PATH.'api'.DS);
 
 require_once(INC_PATH.'define.php');
 require_once(INC_PATH.'common.php');
+require_once(CORE_PATH.'fakebook'.DS.'inc'.DS.'common.php');
 
 $GLOBALS['import_file'] = array();
 
@@ -26,8 +27,8 @@ import('lib.util.log');
 import('lib.db.db');
 import('lib.template.template');
 
-import('fakebook.user');
-import('fakebook.profile');
+import('fakebook.lib.user');
+import('fakebook.lib.profile');
 
 start_app();
 
