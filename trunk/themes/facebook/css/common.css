@@ -11,26 +11,16 @@ a:hover{text-decoration: underline;}
 input, select{font-size: 11px;color: #444444;}
 select{font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-size:11px;border: solid 1px #d8dfea;padding:2px;}
 label{cursor: pointer;}
-.clearfix{display: inline-block;}
-html[xmlns] .clearfix{display: block;}
-*html .clearfix{height: 1%;}
-.clearfix:after{content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
-.submitbutton{position:relative;float:left;z-index:1;padding:0px;height:22px;}
-.submitbutton .submitbutton-a, .submitbutton .submitbutton-b{margin:0px;padding:3px 10px 3px 12px;border:0px;height:22px;color:white;font-size:11px;font-weight:bold;position:relative;cursor:pointer;float:left;}
-.submitbutton .submitbutton-a{background:transparent url('[:theme]/images/submitbutton_a.png') top left no-repeat;}
-.submitbutton .submitbutton-b{background:transparent url('[:theme]/images/submitbutton_b.png') top left no-repeat;}
-.submitbutton .submitbutton-a-end,.submitbutton .submitbutton-b-end{right:0px;top:0px;width:2px;height:27px;position:absolute;}
-.submitbutton .submitbutton-a-end{background:transparent url('[:theme]/images/submitbutton_a.png') -248px 0px no-repeat;}
-.submitbutton .submitbutton-b-end{background:transparent url('[:theme]/images/submitbutton_b.png') -248px 0px no-repeat;}
-.submitbutton .submitbutton-end{width:2px;height:22px;overflow:hidden;position:relative;float:left;}
+.clearfix{display: inline-block;} html[xmlns] .clearfix{display: block;} *html .clearfix{height: 1%;} .clearfix:after{content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
+
 #UIPage{margin: 0px auto;width: 950px;position: relative;text-align: left;}
 #globalheader{width: 950px;overflow:hidden;background: #3b5998;/*border-left:solid 1px #;border-right:solid 1px #;*/}
 #globalheader-bottom{background: url('[:theme]/images/globalheader_bottom_bg.png') top left no-repeat;height: 5px; width: 950px;overflow:hidden;}
 #globalheader #globalheader-content{}
-#globalheader #globalheader-content #logobar{float: left; width: 150px; overflow: hidden;}
+#globalheader #globalheader-content #logobar{float: left;}
 #globalheader #globalheader-content #logobar #logobar-inner{padding: 10px 9px 5px 9px;vertical-align: middle;}
-#globalheader #globalheader-content #logobar #logobar-inner .home{display: block; width: 130px; height: 17px;background:url('[:theme]/images/menubar_logo.png') 0 0 no-repeat;}
-#globalheader #globalheader-content #logobar #logobar-inner .home:hover{background:url('[:theme]/images/menubar_logo.png') 0 -17px no-repeat;}
+#globalheader #globalheader-content #logobar #logobar-inner .home{display: block; width: 90px; height: 17px;background:url('[:theme]/images/menubar_logo.png') 0 0 no-repeat;}
+#globalheader #globalheader-content #logobar #logobar-inner .home:hover{background-position:0 -17px;}
 #globalheader #globalheader-content #menubar{float: right; width: 800px;}
 #globalheader #globalheader-content #menubar a{font-weight: bold; color: #ffffff;display: inline-block;padding: 5px;}
 #globalheader #globalheader-content #menubar a:hover{text-decoration: none;}
