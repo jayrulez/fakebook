@@ -27,8 +27,7 @@ class user
 	public function getUserId_handle($handle)
 	{
 		$sql = "SELECT id FROM {$this->user_table} 
-				WHERE email='{$handle}' 
-				OR account='{$handle}'
+				WHERE email='{$handle}'
 		";
 		$userId = $this->db->fetch_array($this->db->query($sql));
 		return $userId[0];
@@ -48,14 +47,14 @@ class user
 	{
 		$chkHandle = "SELECT COUNT(*) 
 					  FROM {$this->user_table} 
-					  WHERE email='{loginId}' OR account='{$loginId}'
+					  WHERE email='{loginId}'
 		";
 		$countHandle = $this->db->fetch_array($this->db->query($chkHandle));
 		if($countHandle[0]>0)
 		{
 			$chkAccount = "SELECT COUNT(*) 
                            FROM {$this->user_table} 
-                           WHERE {$handle}='{$loginId}' 
+                           WHERE email='{$loginId}' 
                            AND password='{$loginPwd}'
 			";
 			$countAccount = $this->db->fetch_array($this->db->query($chkAccount));
