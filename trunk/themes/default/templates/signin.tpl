@@ -26,6 +26,21 @@
 								</div>
 							</div>
 							<div id="widebar" class="clearfix">
+								<div id="signin-page">
+									<div id="signin-page-inner">
+										<div id="signin-form">
+											<div id="signin-form-top"></div>
+											<div id="signin-form-content">
+												<form id="Sform" method="post" action="signin.php">
+													{if $error}
+														<!--show error here-->
+													{/if}
+												</div>
+											</div>
+											<div id="signin-form-bottom"></div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
