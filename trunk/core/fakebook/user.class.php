@@ -46,15 +46,9 @@ class user
 	
 	public function login($loginId,$loginpwd,$autosignin)
 	{
-		if(input::isEmail($loginId))
-		{
-			$handle = 'email';
-		}else{
-			$handle = 'account';
-		}
 		$chkHandle = "SELECT COUNT(*) 
 					  FROM {$this->user_table} 
-					  WHERE {$handle}='{loginId}'
+					  WHERE email='{loginId}' OR account='{$loginId}'
 		";
 		$countHandle = $this->db->fetch_array($this->db->query($chkHandle));
 		if($countHandle[0]>0)
