@@ -25,3 +25,4 @@
 .WelcomePage_MainSellRight .WelcomePage_SimpleReg table {padding:0 0 7px;}
 .WelcomePage_MainSellRight .WelcomePage_SimpleReg .label {color:#1D2A5B;padding-right:3px;text-align:right;width:90px;}
 .WelcomePage_MainSellRight .WelcomePage_SimpleReg .inputtext,.WelcomePage_SimpleReg .inputpassword {border-color:#96A6C5;margin-top:2px;width:206px;}
+.WelcomePage_MainSellRight .WelcomePage_SimpleReg select {border-color:#96A6C5;;margin:2px 0 0;}
