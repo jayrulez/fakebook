@@ -4,8 +4,8 @@
 <title>{$conf.sitename} | {$lang.pagetitle}</title>
 {include file='global/header.tpl'}
 </head>
-<body class="{$cbid} {$conf.lang_id}">
-  <div id="non-footer" >
+<body class="WelcomePage {$cbid} {$conf.lang_id}">
+  <div id="non_footer" >
     <div id="page_height">
       <div id="menubar_container">
 {include file='global/menubar.tpl'}
@@ -15,7 +15,7 @@
           <div class="WelcomePage_MainSell">
             <div class="WelcomePage_MainSellCenter clearfix">
               <div class="WelcomePage_MainSellLeft">
-                <div class="WelcomePage_MainMessage">Facebook helps you connect and share with the people in your life.</div>
+                <div class="WelcomePage_MainMessage">Fakebook helps you connect and share with the people in your life.</div>
                 <div class="WelcomePage_MainMap"> </div>
               </div>
               <div class="WelcomePage_MainSellRight">
@@ -152,6 +152,13 @@
                       </tr>
                     </tbody>
                   </table>
+                  <div class="reg_btn clearfix">
+                    <div class="UILinkButton UILinkButton_SU">
+                      <input class="UILinkButton_A" type="submit" value="Sign Up" tabindex="1" />
+                      <div class="UILinkButton_RW">
+                        <div class="UILinkButton_R"/> </div>
+                      </div>
+                    </div>
                 </div>
               </div>
             </div>
