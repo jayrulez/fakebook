@@ -4,7 +4,7 @@
 <title>{$conf.sitename} | {$lang.pagetitle}</title>
 {include file='global/header.tpl'}
 </head>
-<body class="{$cbid} {$langset}">
+<body class="{$cbid} {$conf.lang_id}">
   <div id="non-footer" >
     <div id="page_height">
       <div id="menubar_container">

@@ -30,7 +30,6 @@ class template extends Smarty
 		parent::assign('pagename',PAGE_NAME);
 		parent::assign('conf',$_conf);
 		parent::assign('lang',$_lang);
-		parent::assign('langset',LANG_SET);//for body class
 		parent::assign('theme_path',NON_SECURE_PROTOCOL.URL.'/themes/'.TMPL_NAME);//for favicon path
 		parent::display($tpl);
 	}
