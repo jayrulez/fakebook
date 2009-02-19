@@ -1,8 +1,17 @@
-#signin-page{}
+#signin-page{width: 700px;}
 #signin-page #signin-page-inner{}
-#signin-page #signin-page-inner #signin-form{}
-#signin-page #signin-page-inner #signin-form #signin-form-top{}
-#signin-page #signin-page-inner #signin-form #signin-form-bottom{}
-#signin-page #signin-page-inner #signin-form #signin-form-content{}
-#signin-page #signin-page-inner #signin-form #signin-form-content #error-message{}
-#signin-page #signin-page-inner #signin-form #signin-form-content #error-message .error{}
+
+#signin-page-inner #intro-top{width: 700px; height: 10px;overflow: hidden; background:url('[:theme]/images/public_intro_bg.png') top left;}
+#signin-page-inner #intro-bottom{width: 700px;overflow: hidden;height: 30px;overflow: hidden; background:url('[:theme]/images/public_intro_bg.png') bottom left;}
+#signin-page-inner #intro{width: 698px; border-left: solid 1px #6D84B4;border-right: solid 1px #6D84B4; background: #BDC7D8;overflow: hidden;}
+#signin-page-inner #intro #intro-inner{padding: 10px 19px;}
+#signin-page-inner #intro #intro-inner #intro-title{font-weight: bold;font-size: 12px;margin-bottom: 10px;}
+#signin-page-inner #intro #intro-inner #intro-body{line-height: 15px;}
+
+#signin-page #signin-page-inner #signin-form{margin: 20px 0px 0px 0px;}
+#signin-page #signin-page-inner #signin-form #signin-form-content .item{padding-bottom: 10px;}
+#signin-page #signin-page-inner #signin-form #signin-form-content .item .label{float: left; text-align: right; width: 146px; padding-right: 8px;}
+#signin-page #signin-page-inner #signin-form #signin-form-content .item .field{float: left; text-align: left; width: 255px; padding-right: 4px;}
+#signin-page #signin-page-inner #signin-form #signin-form-content .item select {padding: 1px;border: solid 1px #d8dfea;}
+#signin-page #signin-page-inner #signin-form #signin-form-content .item .field .inputtext,#signin-page-inner #signin-form .item .field .inputpass{padding: 2px; width: 236px; height: 16px;border: solid 1px #d8dfea;}
+#signin-page #signin-page-inner #signin-form #signin-form-content .item .error{float: left; text-align: left; width: 275px;}

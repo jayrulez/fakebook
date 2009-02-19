@@ -15,15 +15,17 @@ if(isset($_POST['submit']))
 	$loginId    = input::sanitize_login_data($_POST['loginId']);
 	$loginPwd   = input::sanitize_login_data($_POST['loginPwd']);
 	$autosignin = isset($_POST['autosignin']) ? true : false;
-	$loginPwd = md5($loginPwd);
+	$loginPwd   = md5($loginPwd);
 	
-	if($user->login($loginId,$loginPwd,$autosignin)==1)
+	$loginRes = $user->login($loginId,$loginPwd,$autosignin);
+	
+	if($loginRes==1)
 	{
 		$error = L('incorrect_login_id');
-	}else if($user->login($loginId,$loginPwd,$autosignin)==2)
+	}else if($loginRes==2)
 	{
 		$error = L('incorrect_login_pwd');
-	}else if($user->login($loginId,$loginPwd,$autosignin)==3)
+	}else if($loginRes==3)
 	{
 		$error = L('unknown_login_error');
 	}else{

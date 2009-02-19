@@ -24,3 +24,5 @@
 
 .ie6 #globalheader #globalheader-content #logobar #logobar-inner .home{background:transparent;width:130px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[:theme]/images/logo.png', sizingMethod="crop");}
 .ie6 #globalheader #globalheader-content #logobar #logobar-inner .home:hover{background:transparent;width:130px;height: 20px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[:theme]/images/logo.png', sizingMethod="crop");background-position: bottom left;}
+
+.ie6 #signin-page #signin-page-inner #intro{width: 700px;}

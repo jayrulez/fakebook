@@ -170,17 +170,18 @@ function checkTemplate()
 			if ( isset($_GET[$t]) )
 			{
 				$templateSet = $_GET[$t];
-				Cookie::set('_template',$templateSet,time()+3600);
+				Cookie::set('template',$templateSet,time()+3600);
 			} else {
-				if(Cookie::is_set('_template'))
+				if(Cookie::is_set('template'))
 				{
-					$templateSet = Cookie::get('_template');
+					$templateSet = Cookie::get('template');
 				}else {
 					$templateSet = $defaultTmpl;
-					Cookie::set('_template',$templateSet,time()+3600);
+					Cookie::set('template',$templateSet,time()+3600);
 				}
 			}
-			if(!is_dir(THEME_PATH.$templateSet))
+			
+			if(!is_dir(THEME_PATH.$templateSet.DS))
 			{
 				$templateSet = $defaultTmpl;
 			}
