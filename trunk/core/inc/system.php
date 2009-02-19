@@ -18,8 +18,8 @@ return array
 	'CHECK_FILE_CASE'  	=>  	false,
 
 	'TMPL_CACHE_ON'		=>	true,
-	'TMPL_SWITCH_ON'	=>	false,
-	'AUTO_DETECT_TMPL'	=>	false,
+	'TMPL_SWITCH_ON'	=>	true,
+	'AUTO_DETECT_TMPL'	=>	true,
 	'DEFAULT_TMPL'		=>	'default',
 	'VAR_TMPL'		=>	't',
 
