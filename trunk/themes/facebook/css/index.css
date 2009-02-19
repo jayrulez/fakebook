@@ -1,14 +1,15 @@
 .WelcomePage {background:transparent url('[:theme]/images/linear_shim.png') repeat-x 0 0;}
 
-#menubar_container .menubar_logged_out {height:83px;background:transparent url('[:theme]/images/menubar_background.png') 0 -17px no-repeat;}
-#menubar_container .menubar_logged_out #logobar {width:170px;float:left;margin:31px 0 0 18px;}
-#menubar_container .menubar_logged_out #logobar .home {width:170px;height:36px;display:block;background:transparent url('[:theme]/images/menubar_logo_big.png') 0 0 no-repeat;}
+.WelcomePage #menubar_container .menubar_logged_out {height:83px;background:transparent url('[:theme]/images/menubar_background.png') 0 -17px no-repeat;}
+.WelcomePage #menubar_container .menubar_logged_out #logobar {width:170px;float:left;margin:31px 0 0 18px;}
+.WelcomePage #menubar_container .menubar_logged_out #logobar .home {width:170px;height:36px;display:block;background:transparent url('[:theme]/images/menubar_logo_big.gif') 0 0 no-repeat;}
 
 #menu_login_container {width:500px;float:right;margin:28px 18px 0 0;}
 #menu_login_container table {float:right;}
+#menu_login_container table tr {height:23px;}
 #menu_login_container table tr td {padding:0 0 0 16px;text-align:right;}
 #menu_login_container .login_form_label_field {padding-bottom:3px;}
-#menu_login_container .login_form_label_field label,a {color:#98A9CA;}
+#menu_login_container .login_form_label_field label,#menu_login_container a {color:#98A9CA;}
 #menu_login_container .login_form_label_field label input {margin-right:5px;}
 #menu_login_container .inputtext,.inputpassword {width:140px;padding:3px;border-color:#1D2A5B;}
 
@@ -22,7 +23,10 @@
 .WelcomePage_MainSellRight .WelcomePage_SignUpHeadline {color:#203360;font-size:20px !important;line-height:29px;word-spacing:-1px;font-weight:bold !important;}
 .WelcomePage_MainSellRight .WelcomePage_SignUpSubheadline {color:#203360;font-size:20px !important;line-height:29px;padding-top:1px;word-spacing:-1px;}
 .WelcomePage_MainSellRight .WelcomePage_SimpleReg {padding:10px 0 20px;}
-.WelcomePage_MainSellRight .WelcomePage_SimpleReg table {padding:0 0 7px;}
-.WelcomePage_MainSellRight .WelcomePage_SimpleReg .label {color:#1D2A5B;padding-right:3px;text-align:right;width:90px;}
+.WelcomePage_MainSellRight .WelcomePage_SimpleReg .label {color:#1D2A5B;padding-right:4px;text-align:right;width:90px;}
 .WelcomePage_MainSellRight .WelcomePage_SimpleReg .inputtext,.WelcomePage_SimpleReg .inputpassword {border-color:#96A6C5;margin-top:2px;width:206px;}
 .WelcomePage_MainSellRight .WelcomePage_SimpleReg select {border-color:#96A6C5;;margin:2px 0 0;}
+.WelcomePage_MainSellRight .WelcomePage_SimpleReg .reg_btn {margin-left:95px;}
+.WelcomePage_MainSellRight .WelcomePage_SimpleReg .UILinkButton_SU .UILinkButton_A,.UILinkButton_SU .UILinkButton_R {background-image:url([:theme]/images/UILinkButton_Green.png);}
+
+#page_footer {background-color:#FFF;border-color:#FFF;}
