@@ -26,7 +26,6 @@
 			
 {include file='global/globalfooter.tpl'}
 
-
 		</div>
 	</body>
 {include file='global/pgfoot.tpl'}

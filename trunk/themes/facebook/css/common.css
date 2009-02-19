@@ -17,8 +17,8 @@ table tr {height:25px}
 
 .inputtext,.inputpassword {width:140px;padding:3px;border: solid 1px #1D2A5B;padding:3px;}
 .UILinkButton,.UILinkButton_RW {float:left;height:22px;padding:0;position:relative;z-index:1;}
-.UILinkButton_A {background:transparent url([:theme]/images/UILinkButton_Blue.png) no-repeat scroll left top;border:0 none;color:white;cursor:pointer;float:left;font-size:11px;font-weight:bold;height:22px;margin:0;padding:3px 10px 3px 12px;position:relative;}
-.UILinkButton_R {background:transparent url([:theme]/images/UILinkButton_Blue.png) no-repeat scroll -248px 0;height:27px;position:absolute;right:0;top:0;width:2px;}
+.UILinkButton_A {background:transparent url([:theme]/images/UILinkButton_Blue.gif) no-repeat scroll left top;border:0 none;color:white;cursor:pointer;float:left;font-size:11px;font-weight:bold;height:22px;margin:0;padding:3px 10px 3px 12px;position:relative;}
+.UILinkButton_R {background:transparent url([:theme]/images/UILinkButton_Blue.gif) no-repeat scroll -248px 0;height:27px;position:absolute;right:0;top:0;width:2px;}
 
 #non_footer {min-height:100%;position:relative;height:auto !important;height:100%;}
 #page_height {padding-bottom:100px;}
