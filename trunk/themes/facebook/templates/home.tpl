@@ -10,8 +10,9 @@
       <div id="menubar_container">
 {include file='global/menubar.tpl'}
       </div>
-      <div id="content">
-
+      <div id="content" class="clearfix">
+        <div class="widecolumn"> </div>
+        <div class="narrowcolumn"> </div>
       </div>
     </div>
   </div>
