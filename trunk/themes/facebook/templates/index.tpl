@@ -170,4 +170,4 @@
   </div>
 {include file='global/footer.tpl'}
 </body>
-</html>
+{include file='global/pgfoot.tpl'}
