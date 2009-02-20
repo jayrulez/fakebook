@@ -1,8 +1,5 @@
 .WelcomePage {background:transparent url('[:theme]/images/linear_shim.png') repeat-x 0 0;}
 
-.WelcomePage #menubar_container .menubar_logged_out {height:83px;background:transparent url('[:theme]/images/menubar_background.gif') 0 -17px no-repeat;}
-.WelcomePage #menubar_container .menubar_logged_out #logobar {width:170px;float:left;margin:31px 0 0 18px;}
-.WelcomePage #menubar_container .menubar_logged_out #logobar .home {width:170px;height:36px;display:block;background:transparent url('[:theme]/images/menubar_logo_big.gif') 0 0 no-repeat;}
 
 #menu_login_container {width:500px;float:right;margin:28px 18px 0 0;}
 #menu_login_container table {float:right;}
@@ -27,6 +24,5 @@
 .WelcomePage_MainSellRight .WelcomePage_SimpleReg .inputtext,.WelcomePage_SimpleReg .inputpassword {border-color:#96A6C5;margin-top:2px;width:206px;}
 .WelcomePage_MainSellRight .WelcomePage_SimpleReg select {border-color:#96A6C5;;margin:2px 0 0;}
 .WelcomePage_MainSellRight .WelcomePage_SimpleReg .reg_btn {margin-left:95px;}
-.WelcomePage_MainSellRight .WelcomePage_SimpleReg .UILinkButton_SU .UILinkButton_A,.UILinkButton_SU .UILinkButton_R {background-image:url([:theme]/images/UILinkButton_Green.gif);}
 
 #page_footer {background-color:#FFF;border-color:#FFF;}

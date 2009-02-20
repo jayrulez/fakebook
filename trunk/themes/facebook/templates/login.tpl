@@ -1,61 +1,32 @@
 {include file='global/pghead.tpl'}
-
-	<head>
-		<title>{$conf.sitename} | {$lang.pagetitle}</title>
+<head>
+<title>{$conf.sitename} | {$lang.pagetitle}</title>
 {include file='global/header.tpl'}
-	</head>
-	<body>
-		<div id="UIPage" class="{$cbid}">
-{include file='global/globalheader.tpl'}
-
-			<div id="globalbody">
-				<div id="globalbody-inner" class="clearfix">
-					<div id="mainbody">
-						<div id="mainbody-inner" class="clearfix">
-							<div id="sidebar" class="clearfix">
-								<div id="sidebar-inner">
-									<div class="sidebar-extra">
-										<div class="sidebar-extra-top"></div>
-										<div class="sidebar-extra-content">
-											<div class="sidebar-extra-content-inner">
-
-											</div>
-										</div>
-										<div class="sidebar-extra-bottom"></div>
-									</div>
-								</div>
-							</div>
-							<div id="widebar" class="clearfix">
-								<div id="signin-page">
-									<div id="signin-page-inner">
-										<div id="signin-form">
-											<div id="signin-form-top"></div>
-											<div id="signin-form-content">
-												<form id="Sform" method="post" action="signin.php">
-													{if isset($error) }
-													<!--
-													<div id="error-message">
-														<span class="error">{$error}</span>
-													</div>
-													-->
-													{/if}
-													
-													<!--put form content here-->
-												</div>
-											</div>
-											<div id="signin-form-bottom"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-{include file='global/globalfooter.tpl'}
-
-
-		</div>
-	</body>
+</head>
+<body class="WelcomePage {$cbid} {$conf.lang_id}">
+  <div id="non_footer" >
+    <div id="page_height">
+      <div id="menubar_container">
+        <div id="menubar" class="menubar_logged_out clearfix">
+          <div id="logobar">
+            <a class="home" title="Go to Fakebook Home" href="{$home}"></a>
+          </div>
+        </div>
+        <div class="signup_box clearfix">
+          <div class="UILinkButton UILinkButton_SU">
+            <input class="UILinkButton_A" type="submit" value="Sign Up" />
+            <div class="UILinkButton_RW">
+              <div class="UILinkButton_R"> </div>
+            </div>
+           <span class="signup_box_message">Fakebook helps you connect and share with the people in your life.</span>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="error">{$error}</div>
+      </div>
+    </div>
+  </div>
+{include file='global/footer.tpl'}
+</body>
 {include file='global/pgfoot.tpl'}

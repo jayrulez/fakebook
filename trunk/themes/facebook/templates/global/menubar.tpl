@@ -22,10 +22,10 @@
 {else}
       <div id="menubar" class="menubar_logged_out clearfix">
         <div id="logobar">
-          <a class="home" href="home.php"></a>
+          <a class="home" title="Go to Fakebook Home" href="{$home}"></a>
         </div>
         <div id="menu_login_container" class="clearfix">
-          <form id="menubar_login" name="menubar_login" action="#" method="post">
+          <form id="menubar_login" name="menubar_login" action="login.php" method="post">
             <table cellspacing="0" cellpadding="0">
               <tbody>
                 <tr>

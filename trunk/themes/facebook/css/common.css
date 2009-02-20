@@ -19,12 +19,14 @@ table tr {height:25px}
 .UILinkButton,.UILinkButton_RW {float:left;height:22px;padding:0;position:relative;z-index:1;}
 .UILinkButton_A {background:transparent url([:theme]/images/UILinkButton_Blue.gif) no-repeat scroll left top;border:0 none;color:white;cursor:pointer;float:left;font-size:11px;font-weight:bold;height:22px;margin:0;padding:3px 10px 3px 12px;position:relative;}
 .UILinkButton_R {background:transparent url([:theme]/images/UILinkButton_Blue.gif) no-repeat scroll -248px 0;height:27px;position:absolute;right:0;top:0;width:2px;}
+.UILinkButton_SU .UILinkButton_A,.UILinkButton_SU .UILinkButton_R {background-image:url([:theme]/images/UILinkButton_Green.gif);}
 
 #non_footer {min-height:100%;position:relative;height:auto !important;height:100%;}
 #page_height {padding-bottom:100px;}
 #page_height #menubar_container {width:964px;margin:0 auto;}
 #page_height #content {width:auto;}
 
+#menubar_container {background:transparent url([:theme]/images/signup_callout.png) no-repeat scroll left bottom;display:block;line-height:0;margin:0 auto;padding:0;position:relative;width:964px;z-index:1;}
 #menubar_container .menubar_logged_in {height:29px;background:transparent url('[:theme]/images/menubar_background.gif') 0 -71px no-repeat;}
 #menubar_container .menubar_logged_in #logobar {width:90px;float:left;margin:5px 10px;}
 #menubar_container .menubar_logged_in #logobar .home {width:90px;height:17px;display:block;background:transparent url('[:theme]/images/menubar_logo.gif') 0 0 no-repeat;}
@@ -35,8 +37,13 @@ table tr {height:25px}
 #main_menu .main_menu {float:left;}
 #account_menu .account_menu {float:right;}
 
+#menubar_container .menubar_logged_out {height:83px;background:transparent url('[:theme]/images/menubar_background.gif') 0 -17px no-repeat;}
+#menubar_container .menubar_logged_out #logobar {width:170px;float:left;margin:31px 0 0 18px;}
+#menubar_container .menubar_logged_out #logobar .home {width:170px;height:36px;display:block;background:transparent url('[:theme]/images/menubar_logo_big.gif') 0 0 no-repeat;}
+#menubar_container .signup_box {clear:left;color:#203360;display:block;font-size:13px;font-weight:bold;line-height:normal;padding:14px 22px;}
+#menubar_container .signup_box_message {display:block;float:left;padding:3px 14px;}
 
-#page_footer {width:964px;margin: -60px auto 0;position:relative;background-color:#F7F7F7;border:1px solid #999;padding:4px 10px;}
+#page_footer {width:964px;margin: -60px auto 0;position:relative;background-color:#F7F7F7;border:1px solid #999;padding:6px 10px;font-size:11px;color:#777;}
 #page_footer .copyright_and_location {float:left;padding:0 5px;}
 #page_footer .page_footer_links,.page_footer_links li {float:right;}
 #page_footer .page_footer_links li {padding:0 5px;}
