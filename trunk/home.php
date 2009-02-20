@@ -4,7 +4,7 @@ define('PAGE_NAME', 'home');
 
 require_once(dirname(__FILE__).DIRECTORY_SEPARATOR.'global.php');
 
-require_login(false);
+require_login(true);
 
 $tpl->display('home.tpl');
 

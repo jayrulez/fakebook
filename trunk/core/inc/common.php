@@ -41,6 +41,7 @@ function get_instance_of($className,$method='',$args=array())
 
 function redirect($location)
 {
+	header('Location: '.$location);
 	exit();
 }
 

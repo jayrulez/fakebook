@@ -22,7 +22,7 @@
 								<ul id="account-menu-list">
 									<li class="account-menu" id="user"><a href="profile.php">my name</a></li>
 									<li class="account-menu" id="account"><a href="account.php">{$lang.link_settings}</a></li>
-									<li class="account-menu" id="signout"><a href="signout.php">{$lang.link_signout}</a></li>
+									<li class="account-menu" id="logout"><a href="logout.php">{$lang.link_logout}</a></li>
 								</ul>
 							</div>
 							
@@ -33,7 +33,7 @@
 							</div>
 							<div id="account-menu" class="clearfix">
 								<ul id="account-menu-list">
-									<li class="account-menu" id="signin"><a href="signin.php">{$lang.link_signin}</a></li>
+									<li class="account-menu" id="login"><a href="login.php">{$lang.link_login}</a></li>
 									<li class="account-menu" id="signup"><a href="signup.php">{$lang.link_signup}</a></li>
 								</ul>
 							</div>

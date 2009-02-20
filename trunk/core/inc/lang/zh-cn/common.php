@@ -10,9 +10,9 @@ return array
 	'link_friends'	=>	'朋友',
 	'link_inbox'	=>	'收件箱',
 	'link_settings'	=>	'设置',
-	'link_signout'	=>	'注册',
-	'link_signin'	=>	'登录',
-	'link_signup'	=>	'退出',
+	'link_logout'	=>	'退出',
+	'link_login'	=>	'登录',
+	'link_signup'	=>	'注册',
 	
 	'field_login_id'	=>	'用户名:',
 	'field_login_pwd'	=>	'密码:',

@@ -20,7 +20,7 @@ return array
 	'TMPL_CACHE_ON'		=>	true,
 	'TMPL_SWITCH_ON'	=>	true,
 	'AUTO_DETECT_TMPL'	=>	true,
-	'DEFAULT_TMPL'		=>	'default',
+	'DEFAULT_TMPL'		=>	'facebook',
 	'VAR_TMPL'		=>	't',
 
 	'LANG_CACHE_ON'		=> 	true,

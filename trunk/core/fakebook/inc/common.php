@@ -6,7 +6,7 @@ function require_login($flag=true)
 	{
 		if(!$GLOBALS['islogged'])
 		{
-			redirect('signin.php');
+			redirect('login.php');
 		}
 	}else{
 		if($GLOBALS['islogged'])

@@ -1,6 +1,6 @@
 <?php
 
-define('PAGE_NAME', 'signin');
+define('PAGE_NAME', 'login');
 
 require_once(dirname(__FILE__).DIRECTORY_SEPARATOR.'global.php');
 

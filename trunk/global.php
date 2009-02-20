@@ -46,5 +46,4 @@ if(!C('SITE_OPEN'))
 
 $islogged = $user->islogged();
 $tpl->assign('islogged',$islogged);
-
 ?>

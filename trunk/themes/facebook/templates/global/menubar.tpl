@@ -13,7 +13,7 @@
         </div>
         <div id="account_menu">
           <ul id="account_menu_list">
-            <li class="account_menu" id="signout"><a href="signout.php">{$lang.link_signout}</a></li>
+            <li class="account_menu" id="logout"><a href="logout.php">{$lang.link_logout}</a></li>
             <li class="account_menu" id="account"><a href="account.php">{$lang.link_settings}</a></li>
             <li class="account_menu" id="user"><a href="profile.php">my name</a></li>
           </ul>
