@@ -3,7 +3,7 @@ fieldset{border: 0px; background: none;}
 legend{display: none;}
 html, body {height: 100%;}
 body{font-family:"lucida grande", tahoma, verdana, arial, sans-serif; font-size: 12px;}
-h1, h2, h3, h4, h5, h6{font-size: 13px;}
+h1, h2, h3, h4, h5, h6{color:#333;font-size: 13px;}
 img{border: 0px;}
 a{cursor:pointer;-moz-outline-style:none;text-decoration:none;color:#3b5998;}
 a:hover{text-decoration: underline;}
@@ -15,10 +15,11 @@ ul,li {list-style:none;}
 table {padding:0 0 7px;}
 table tr {height:25px}
 
-.inputtext,.inputpassword {width:140px;padding:3px;border: solid 1px #1D2A5B;padding:3px;}
+.inputtext,.inputpassword {width:140px;padding:3px;border: solid 1px #BDC7D8;padding:3px;}
+.inputbutton, .inputsubmit {background-color:#3B5998;border-color:#D9DFEA #0E1F5B #0E1F5B #D9DFEA;border-style:solid;border-width:1px;color:#FFFFFF;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-size:11px;padding:2px 15px 3px;text-align:center;}
 .UILinkButton,.UILinkButton_RW {float:left;height:22px;padding:0;position:relative;z-index:1;}
-.UILinkButton_A {background:transparent url([:theme]/images/UILinkButton_Blue.gif) no-repeat scroll left top;border:0 none;color:white;cursor:pointer;float:left;font-size:11px;font-weight:bold;height:22px;margin:0;padding:3px 10px 3px 12px;position:relative;}
-.UILinkButton_R {background:transparent url([:theme]/images/UILinkButton_Blue.gif) no-repeat scroll -248px 0;height:27px;position:absolute;right:0;top:0;width:2px;}
+.UILinkButton_A {background:transparent url([:theme]/images/UILinkButton_Blue.gif) no-repeat scroll left top;border:0 none;color:white;cursor:pointer;float:left;font-size:11px;font-weight:bold;height:22px;margin:0;padding:3px 9px 3px 12px;position:relative;}
+.UILinkButton_R {background:transparent url([:theme]/images/UILinkButton_Blue.gif) no-repeat scroll -248px 0;height:27px;position:absolute;right:0;top:0;width:2px;left:0;}
 .UILinkButton_SU .UILinkButton_A,.UILinkButton_SU .UILinkButton_R {background-image:url([:theme]/images/UILinkButton_Green.gif);}
 
 #non_footer {min-height:100%;position:relative;height:auto !important;height:100%;}
