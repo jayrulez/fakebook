@@ -11,7 +11,7 @@ return array
 	'DBHOST'	=>	'localhost',
 	'DBNAME'	=>	'fakebook',
 	'DBUSER'	=>	'root',
-	'DBPASS'	=>	'',
+	'DBPASS'	=>	'liberal',
 	'DB_PREFIX'	=>	'fb_',
 	'USER_TABLE'	=>	'users',
 

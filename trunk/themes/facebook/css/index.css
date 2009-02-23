@@ -1,9 +1,9 @@
+body {font-size:11px;}
 .WelcomePage {background:transparent url('[:theme]/images/linear_shim.png') repeat-x 0 0;}
-
 
 #menu_login_container {width:500px;float:right;margin:28px 18px 0 0;}
 #menu_login_container table {float:right;}
-#menu_login_container table tr {height:23px;}
+#menu_login_container table tr {height:18px;}
 #menu_login_container table tr td {padding:0 0 0 16px;text-align:right;}
 #menu_login_container .login_form_label_field {padding-bottom:3px;}
 #menu_login_container .login_form_label_field label,#menu_login_container a {color:#98A9CA;}
