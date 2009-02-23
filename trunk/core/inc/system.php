@@ -18,9 +18,9 @@ return array
 	'CHECK_FILE_CASE'  	=>  	false,
 
 	'TMPL_CACHE_ON'		=>	true,
-	'TMPL_SWITCH_ON'	=>	true,
-	'AUTO_DETECT_TMPL'	=>	true,
-	'DEFAULT_TMPL'		=>	'facebook',
+	'TMPL_SWITCH_ON'	=>	false,
+	'AUTO_DETECT_TMPL'	=>	false,
+	'DEFAULT_TMPL'		=>	'default',
 	'VAR_TMPL'		=>	't',
 
 	'LANG_CACHE_ON'		=> 	true,
@@ -33,6 +33,8 @@ return array
 	'XML_ENCODING'		=>	'utf-8',
 	'OUTPUT_CONTENT_TYPE'	=>	'text/html',
 	'OUTPUT_CHARSET'	=>	'utf-8',
+	
+	'VAR_AJAX_SUBMIT'	=>	'ajax',
 
 	'GLOBAL_COOKIE_ON'	=>	true,
         'COOKIE_EXPIRE'		=>      3600,      

@@ -13,9 +13,10 @@ class user
 	public function __construct()
 	{
 		$this->db      = $GLOBALS['db'];
+		import('fakebook.lib.profile');
 		//$this->profile = $GLOBALS['profile'];
 		//$this->db         = db::getInstance();
-		//$this->profile    = profile::getInstance();
+		$this->profile    = profile::getInstance();
 		$this->user_table = C('DB_PREFIX').C('USER_TABLE');
 	}
 
@@ -87,12 +88,7 @@ class user
 				WHERE id='{$userId}'
 		";
 		$userInfo = $this->db->fetch_assoc($this->db->query($sql));
-		/*
-		$upUser = "UPDATE {$this->user_table}
-				   SET visits=visits+1
-				   WHERE id='{$userId}'
-		";
-		*/
+		
 		if(session::set('userInfo',$userInfo)&&session::set(C('USER_AUTH_KEY'),$userId))
 		{
 			return true;

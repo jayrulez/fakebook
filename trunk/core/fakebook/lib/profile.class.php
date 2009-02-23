@@ -10,7 +10,8 @@ class profile
 	public function __construct()
 	{
 		$this->db   = $GLOBALS['db'];
-		$this->user = $GLOBALS['user'];
+		//import('fakebook.lib.user');
+		//$this->user = $GLOBALS['user'];
 
 		//$this->db   = db::getInstance();
 		//$this->user = user::getInstance();
