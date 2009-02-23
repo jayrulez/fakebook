@@ -43,7 +43,7 @@
 										<div id="signin-form">
 											<div id="signin-form-top"></div>
 											<div id="signin-form-content">
-												<form id="Sform" method="post" action="signin.php">
+												<form id="Sform" method="post" action="login.php">
 													{if isset($error) }
 													<!--
 													<div id="error-message">

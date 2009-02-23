@@ -189,10 +189,11 @@ class session
     {
         if (null === $value) {
             unset($_SESSION[$name]);
+            return false;
         } else {
             $_SESSION[$name] = $value;
+            return true;
         }
-        return ;
     }
 
     static function is_setLocal($name)

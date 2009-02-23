@@ -26,6 +26,7 @@
         </div>
         <div id="menu_login_container" class="clearfix">
           <form id="menubar_login" name="menubar_login" action="login.php" method="post">
+            <input type="hidden" name="login" value="1"/>
             <table cellspacing="0" cellpadding="0">
               <tbody>
                 <tr>
@@ -42,7 +43,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <input id="email" class="inputtext" type="text" value="abc@123.com" name="email"/>
+                    <input id="email" class="inputtext" type="text" value="" name="email"/>
                   </td>
                   <td>
                     <input id="pass" class="inputpassword" type="password" value="" name="pass"/>

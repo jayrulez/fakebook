@@ -7,14 +7,13 @@ require_once(dirname(__FILE__).DIRECTORY_SEPARATOR.'global.php');
 require_login(false);
 $error = null;
 
-
-if(isset($_POST['submit']))
+if(isset($_POST['login']))
 {
-	unset($_POST['submit']);
+	unset($_POST['login']);
 	
-	$loginId    = input::sanitize_login_data($_POST['loginId']);
-	$loginPwd   = input::sanitize_login_data($_POST['loginPwd']);
-	$autosignin = isset($_POST['autosignin']) ? true : false;
+	$loginId    = input::sanitize_login_data($_POST['email']);
+	$loginPwd   = input::sanitize_login_data($_POST['pass']);
+	$autosignin = isset($_POST['persistent']) ? true : false;
 	$loginPwd   = md5($loginPwd);
 	
 	$loginRes = $user->login($loginId,$loginPwd,$autosignin);

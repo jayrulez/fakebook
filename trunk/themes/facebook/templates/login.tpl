@@ -38,16 +38,17 @@
                         <h2 class="no_icon">Fakebook Login</h2>
                       </div>
                       <form action="login.php" method="post">
+                        <input type="hidden" name="login" value="1"/>
+                      {if isset($error) }
                         <div id="error">
                           <h2 id="standard_error" name="standard_error">Incorrect Email/Password Combination</h2>
-                          <p id="standard_explanation" name="standard_explanation">
-                            Fakebook passwords are case sensitive. Please check your CAPS lock key. You may also try clearing your browser's cache and cookies.
-                          </p>
+                          <p id="standard_explanation" name="standard_explanation">{$error}</p>
                         </div>
+                      {/if}
                         <div id="loginform" style="">
                           <div class="form_row clearfix">
                             <label id="label_email" for="email">Email:</label>
-                            <input id="email" class="inputtext" type="text" value="email" name="email"/>
+                            <input id="email" class="inputtext" type="text" value="" name="email"/>
                           </div>
                           <div class="form_row clearfix">
                             <label id="label_pass" for="pass">Password:</label>
@@ -65,7 +66,7 @@
                           </div>
                           <p class="reset_password form_row">
                             <label></label>
-                            <a href="http://www.facebook.com/reset.php?locale=en_US">Forgot your password?</a>
+                            <a href="reset.php">Forgot your password?</a>
                           </p>
                         </div>
                       </form>
