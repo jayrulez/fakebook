@@ -219,12 +219,12 @@ class session
     static function _init()
     {
         ini_set('session.auto_start', 0);
+        Session::name(C('SESSION_NAME'));
         if (is_null(Session::detectID())) {
             Session::id(uniqid(dechex(mt_rand())));
         }
         Session::setCookieDomain(C('COOKIE_DOMAIN'));
         Session::localName(APP_NAME);
-        Session::name(C('SESSION_NAME'));
         Session::path(C('SESSION_PATH'));
         Session::setCallback(C('SESSION_CALLBACK'));
     }
