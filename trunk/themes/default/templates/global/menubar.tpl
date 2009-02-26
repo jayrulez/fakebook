@@ -13,9 +13,22 @@
         </div>
         <div id="account_menu">
           <ul id="account_menu_list">
+            <li class="account_menu" id="search">
+              <div id="universal_search" class="clearfix">
+                <form id="universal_search_form" name="universal_search_form" action="#search.php" method="get">
+                  <div id="universal_search_input">
+                    <input id="q" class="inputtext DOMControl_placeholder" type="text" size="25" maxlength="100" title="Search" value="" tabindex="1" name="q"/>
+                  </div>
+                  <div id="universal_search_submit">
+                    <a class="qsearch_button" title="Search Fakebook">
+                      <span class="search_mag_glass"> </span>
+                    </a>
+                  </div>
+                </form>
+              </div>
+            </li>
             <li class="account_menu" id="logout"><a href="logout.php">{$lang.link_logout}</a></li>
             <li class="account_menu" id="account"><a href="account.php">{$lang.link_settings}</a></li>
-            <li class="account_menu" id="user"><a href="profile.php">my name</a></li>
           </ul>
         </div>
       </div>
