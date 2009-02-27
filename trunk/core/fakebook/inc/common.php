@@ -8,11 +8,13 @@ function require_login($flag=true)
 		{
 			redirect('login.php');
 		}
+	/*
 	}else{
 		if($GLOBALS['islogged'])
 		{
 			redirect('home.php');
 		}
+	*/
 	}
 }
 

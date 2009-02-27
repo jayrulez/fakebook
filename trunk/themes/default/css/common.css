@@ -26,12 +26,23 @@ table tr {height:25px}
 #page_height {padding-bottom:100px;}
 #page_height #menubar_container {width:964px;margin:0 auto;}
 #page_height #content {width:auto;}
+#page_height #content .UIFullPage_Container {width:940px;margin:0 auto;padding:20px 12px 0;}
 
 #menubar_container {background:transparent url([:theme]/images/signup_callout.png) no-repeat scroll left bottom;display:block;line-height:normal;margin:0 auto;padding:0;position:relative;width:964px;z-index:1;}
 #menubar_container .menubar_logged_in {height:29px;background:transparent url('[:theme]/images/menubar_background.gif') 0 -71px no-repeat;}
 #menubar_container .menubar_logged_in #logobar {width:90px;float:left;margin:5px 10px;}
 #menubar_container .menubar_logged_in #logobar .home {width:90px;height:17px;display:block;background:transparent url('[:theme]/images/menubar_logo.gif') 0 0 no-repeat;}
 #menubar_container .menubar_logged_in #logobar .home:hover {background-position:0 -17px;}
+
+#menu_login_container {width:500px;float:right;margin:28px 18px 0 0;font-size:11px;}
+#menu_login_container table {float:right;}
+#menu_login_container table tr {height:18px;}
+#menu_login_container table tr td {padding:0 0 0 16px;text-align:right;}
+#menu_login_container .login_form_label_field {padding-bottom:3px;}
+#menu_login_container .login_form_label_field label,#menu_login_container a {color:#98A9CA;}
+#menu_login_container .login_form_label_field label input {margin-right:5px;}
+#menu_login_container .inputtext,.inputpassword {width:140px;padding:3px;border-color:#1D2A5B;}
+
 #main_menu a {display:block;color:#fff;padding:7px 10px;text-decoration:none;font-weight:bold;margin-right:4px;line-height:normal;}
 #account_menu a {display:block;color:#fff;padding:7px 10px;text-decoration:none;margin-right:4px;line-height:normal;}
 #main_menu a:hover,#account_menu a:hover {background-color:#5C75AA;}

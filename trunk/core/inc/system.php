@@ -43,7 +43,7 @@ return array
         'COOKIE_PREFIX'		=>      'fb_',
 	'COOKIE_SECRET_KEY'     =>   	'',
 
-	'SESSION_NAME'				=>	'sid',	
+	'SESSION_NAME'				=>	'SID',	
 	'SESSION_PATH'				=>	SESSION_PATH,		
 	'SESSION_TYPE'				=>	'File',	
 	'SESSION_EXPIRE'			=>	'300000',	

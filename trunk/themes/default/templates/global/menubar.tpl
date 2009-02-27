@@ -1,4 +1,4 @@
-{if $islogged}
+{if $islogged and $pagename <> 'index'}
       <div id="menubar" class="menubar_logged_in clearfix">
         <div id="logobar">
           <a class="home" href="home.php"></a>

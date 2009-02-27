@@ -1,15 +1,6 @@
 body {font-size:11px;}
 .WelcomePage {background:transparent url('[:theme]/images/linear_shim.png') repeat-x 0 0;}
 
-#menu_login_container {width:500px;float:right;margin:28px 18px 0 0;}
-#menu_login_container table {float:right;}
-#menu_login_container table tr {height:18px;}
-#menu_login_container table tr td {padding:0 0 0 16px;text-align:right;}
-#menu_login_container .login_form_label_field {padding-bottom:3px;}
-#menu_login_container .login_form_label_field label,#menu_login_container a {color:#98A9CA;}
-#menu_login_container .login_form_label_field label input {margin-right:5px;}
-#menu_login_container .inputtext,.inputpassword {width:140px;padding:3px;border-color:#1D2A5B;}
-
 .WelcomePage_Container {padding-top:36px;background:transparent url('[:theme]/images/radial_behind_content.jpg') repeat-x center bottom scroll;}
 .WelcomePage_Container .WelcomePage_MainSell {width:964px;margin:0 auto;}
 .WelcomePage_Container .WelcomePage_MainSell .WelcomePage_MainSellCenter {padding:0 12px;width:}
