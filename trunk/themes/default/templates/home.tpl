@@ -12,11 +12,24 @@
       <div id="content" class="clearfix">
       <div class="UIFullPage_Container">
         <div class="widecolumn">
-          <div class="picture clearfix"><a href="profile.php"><img src="{$theme_path}/images/silhouette_s.jpg" alt="" /></a></div>
+          <div id="home_status_editor" class="home_status_editor clearfix">
+            <a class="home_status_editor_photo" href="profile.php"><img src="{$theme_path}/images/silhouette_s.jpg" alt="" /></a>
+            <div class="home_status_editor_content">
+              <div class="status_composer">
+                <div class="status_composer_inner">
+                  <div class="show_placeholder status_field status_placeholder">
+                    <div class="input_wrapper">
+                      <input id="status_placeholder_input_home" class="inputtext" type="text" value="What are you doing right now?" name="" title="What are you doing right now?"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="new_user_todo_holder clearfix">
             <div class="new_user_todo_icon">
               <a href="findfriends.php">
-                <img alt="" src="images/search_profile.gif"/>
+                <img alt="" src="{$theme_path}/images/icons/search_profile.gif"/>
               </a>
             </div>
             <div class="new_user_todo">
@@ -26,6 +39,21 @@
                 </a>
               </h3>
               You can search by name or look for classmates or coworkers.
+            </div>
+          </div>
+          <div class="new_user_todo_holder clearfix">
+            <div class="new_user_todo_icon">
+              <a href="profile.php">
+                <img alt="" src="{$theme_path}/images/icons/edit_profile.gif"/>
+              </a>
+            </div>
+            <div class="new_user_todo">
+              <h3>
+                <a href="profile.php">
+                  View and edit your profile <img class="spritemap_icons sx_see_more" src="{$theme_path}/images/spacer.gif"/>
+                </a>
+              </h3>
+              Fill in details and upload a profile picture to help your friends recognize you.
             </div>
           </div>
           <div class="tab"> </div>
