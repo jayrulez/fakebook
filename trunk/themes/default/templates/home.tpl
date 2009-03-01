@@ -57,27 +57,97 @@
             </div>
           </div>
           <div class="tab"> </div>
-          <div class="feed clearfix">
-            <div class="feed_icon">
-              <img class="spritemap_icons sx_comment" src="{$theme_path}/images/spacer.gif"/>
-            </div>
-            <div class="feed_story">
-              <div class="story_header">
-                <a href="profile.php?id=1">User1</a> commented on <a href="profile.php?id=2">User2</a>'s photo.
-                <span class="story_time">February 2</span>
+          <div id="feeds">
+            <!-- feed comment -->
+            <div class="feed clearfix">
+              <div class="feed_icon">
+                <img class="spritemap_icons sx_comment" src="{$theme_path}/images/spacer.gif"/>
               </div>
-              <div class="story_body">
-                <div class="photo_border">
-                  <a href="photo.php?id=46"><img alt="" src="album/49911/p49911_123192915.thumbnail.jpg"/></a>
+              <div class="feed_story">
+                <div class="story_header">
+                  <a href="profile.php?id=1">User1</a> commented on <a href="profile.php?id=2">User2</a>'s photo.
+                  <span class="story_time">February 2</span>
                 </div>
-                <div class="story_quote">
-                  <span class="em">Comments...</span>
+                <div class="story_body">
+                  <div class="photo_border">
+                    <a href="photo.php?id=46"><img alt="" src="{$theme_path}/images/group_m.jpg"/></a>
+                  </div>
+                  <div class="story_quote">
+                    <span class="em">Comments...</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- feed wall -->
+            <div class="feed clearfix">
+              <div class="feed_icon">
+                <img class="spritemap_icons sx_wall" src="{$theme_path}/images/spacer.gif"/>
+              </div>
+              <div class="feed_story">
+                <div class="story_header">
+                  <a href="group.php?id=1">User2</a> wrote on <a href="group.php?id=2">User2</a>'s wall.
+                  <span class="story_time">2 minutes ago</span>
+                </div>
+              </div>
+            </div>
+            <!-- feed friends -->
+            <div class="feed clearfix">
+              <div class="feed_icon">
+                <img class="spritemap_icons sx_friend" src="{$theme_path}/images/spacer.gif"/>
+              </div>
+              <div class="feed_story">
+                <div class="story_header">
+                  <a href="profile.php?id=1">User1</a> and <a href="profile.php?id=2">User2</a> are now friends.
+                  <span class="story_time">February 2</span>
+                </div>
+              </div>
+            </div>
+            <!-- feed group -->
+            <div class="feed clearfix">
+              <div class="feed_icon">
+                <img class="spritemap_icons sx_group" src="{$theme_path}/images/spacer.gif"/>
+              </div>
+              <div class="feed_story">
+                <div class="story_header">
+                  <a href="profile.php?id=1">User1</a> joined the group <a href="group.php?id=2">Group1</a>.
+                  <span class="story_time">February 2</span>
+                </div>
+              </div>
+            </div>
+            <!-- feed photo -->
+            <div class="feed clearfix">
+              <div class="feed_icon">
+                <img class="spritemap_icons sx_photo" src="{$theme_path}/images/spacer.gif"/>
+              </div>
+              <div class="feed_story">
+                <div class="story_header">
+                  <a href="profile.php?id=1">User1</a> added a new photo.
+                  <span class="story_time">February 21</span>
+                </div>
+                <div class="story_body">
+                  <div class="photo_border">
+                    <a href="photo.php?id=46"><img alt="" src="{$theme_path}/images/group_m.jpg"/></a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="narrowcolumn">
+          <div class="UIRoundedBox">
+            <div class="T"> </div>
+            <div class="C">
+              <div class="sidebar_item first clearfix">
+                <div class="sidebar_item_header">Requests</div>
+                <div class="sidebar_item_body">
+                  <a class="socialmap" href="reqs.php">
+                    <strong>1</strong> friend request
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="B"> </div>
+          </div>
           <div class="UIRoundedBox">
             <div class="T"> </div>
             <div class="C">
