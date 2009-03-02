@@ -22,6 +22,7 @@ CREATE TABLE `fb_apps` (
   `url` varchar(100) NOT NULL,
   `icon` varchar(100) NOT NULL,
   `developer` varchar(100) NOT NULL,
+  `description` blob NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`,`url`,`icon`)
 ) ENGINE=MyISAM;
