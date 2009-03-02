@@ -1,20 +1,11 @@
-CREATE TABLE IF NOT EXISTS `fb_users` (
-  `id` int(100) NOT NULL AUTO_INCREMENT,
-  `truename` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `password` varchar(32) NOT NULL,
-  `register_time` int(100) NOT NULL,
-  `update_time` int(100) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `email` (`email`)
-) ENGINE=MyISAM;
+-- Database: `fakebook`
+--
 
-CREATE TABLE `fb_profile` (
-  `id` int(100) NOT NULL AUTO_INCREMENT,
-  `user_id` int(100) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `user_id` (`user_id`)
-) ENGINE=MyISAM;
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fb_apps`
+--
 
 CREATE TABLE `fb_apps` (
   `id` int(100) NOT NULL AUTO_INCREMENT,
@@ -25,7 +16,58 @@ CREATE TABLE `fb_apps` (
   `description` blob NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`,`url`,`icon`)
-) ENGINE=MyISAM;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fb_networks`
+--
+
+CREATE TABLE `fb_networks` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `description` varchar(164) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fb_profile`
+--
+
+CREATE TABLE `fb_profile` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `user_id` int(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `user_id` (`user_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fb_users`
+--
+
+CREATE TABLE `fb_users` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `truename` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(32) NOT NULL,
+  `network_id` int(100) NOT NULL,
+  `register_time` int(100) NOT NULL,
+  `update_time` int(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fb_user_apps`
+--
 
 CREATE TABLE `fb_user_apps` (
   `id` int(100) NOT NULL AUTO_INCREMENT,
@@ -33,4 +75,4 @@ CREATE TABLE `fb_user_apps` (
   `user_id` int(100) NOT NULL,
   `position` int(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
