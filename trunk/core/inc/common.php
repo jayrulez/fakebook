@@ -211,7 +211,7 @@ function checkLanguage()
 			}else if(cookie::is_set('language'))
 			{
 				$langSet = cookie::get('language');
-			}if(isset($_SERVER['HTTP_ACCEPT_LANGUAGE']))
+			}else if(isset($_SERVER['HTTP_ACCEPT_LANGUAGE']))
 			{
 				preg_match('/^([a-z\-]+)/i', $_SERVER['HTTP_ACCEPT_LANGUAGE'], $matches);
 				$langSet = strtolower($matches[1]);

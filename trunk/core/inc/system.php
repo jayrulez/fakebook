@@ -1,56 +1,74 @@
 <?php
 
-return array
-(
-        'WEB_LOG_RECORD'                        =>      false,
-    	'LOG_RECORD_LEVEL'       =>   array('EMERG','ALERT','CRIT','ERR'),
-        'LOG_FILE_SIZE'                         =>      2097152, 
+class cookie
+{
+	static function is_set($name)
+	{
+		return isset($_COOKIE[C('COOKIE_PREFIX').$name]);
+	}
 
-	'SITE_OPEN'	=>	true,
-	'SIGNUP_OPEN'	=>	true,
-	'DBHOST'	=>	'localhost',
-	'DBNAME'	=>	'fakebook',
-	'DBUSER'	=>	'root',
-	'DBPASS'	=>	'liberal',
-	'DB_PREFIX'	=>	'fb_',
-	'USER_TABLE'	=>	'users',
+	static function get($name)
+	{
+		$value   = $_COOKIE[C('COOKIE_PREFIX').$name];
+		if(C('COOKIE_SECRET_KEY'))
+		{
+			$value   =  self::_decrypt($value,C('COOKIE_SECRET_KEY'));
+		}
+		return $value;
+	}
 
-	'CHECK_FILE_CASE'  	=>  	false,
+	static function set($name,$value,$expire='',$path='',$domain='')
+	{
+		if($expire=='')
+		{
+			$expire =   C('COOKIE_EXPIRE');
+		}
 
-	'TMPL_CACHE_ON'		=>	true,
-	'TMPL_SWITCH_ON'	=>	false,
-	'AUTO_DETECT_TMPL'	=>	false,
-	'DEFAULT_TMPL'		=>	'default',
-	'VAR_TMPL'		=>	't',
+		if(empty($path))
+		{
+			$path = C('COOKIE_PATH');
+		}
+		if(empty($domain))
+		{
+			$domain =   C('COOKIE_DOMAIN');
+		}
 
-	'LANG_CACHE_ON'		=> 	true,
-	'LANG_SWITCH_ON'	=>	true,
-	'AUTO_DETECT_LANG'	=>	true,
-	'DEFAULT_LANG'		=>	'en-us',
-	'VAR_LANG'		=>	'l',
-	'DEFAULT_LANG_ID'	=>	'en',
+		$expire =   !empty($expire)?    time()+$expire   :  0;
+		if(C('COOKIE_SECRET_KEY'))
+		{
+			$value   =  self::_encrypt($value,C('COOKIE_SECRET_KEY'));
+		}
+		
+		setcookie(C('COOKIE_PREFIX').$name, $value,$expire,$path,$domain);
+		//$_COOKIE[C('COOKIE_PREFIX').$name]  =   $value;
+	}
 
-	'XML_ENCODING'		=>	'utf-8',
-	'OUTPUT_CONTENT_TYPE'	=>	'text/html',
-	'OUTPUT_CHARSET'	=>	'utf-8',
-	
-	'VAR_AJAX_SUBMIT'	=>	'ajax',
+	static function delete($name)
+	{
+		Cookie::set($name,'',time()-3600);
+		unset($_COOKIE[C('COOKIE_PREFIX').$name]);
+	}
 
-	'GLOBAL_COOKIE_ON'	=>	true,
-        'COOKIE_EXPIRE'		=>      3600,      
-        'COOKIE_DOMAIN'		=>      get_cookie_domain(),   
-        'COOKIE_PATH'		=>      COOKIE_PATH,                  
-        'COOKIE_PREFIX'		=>      'fb_',
-	'COOKIE_SECRET_KEY'     =>   	'',
+	static function clear()
+	{
+		unset($_COOKIE);
+	}
 
-	'SESSION_NAME'				=>	'SID',	
-	'SESSION_PATH'				=>	SESSION_PATH,		
-	'SESSION_TYPE'				=>	'File',	
-	'SESSION_EXPIRE'			=>	'300000',	
-	'SESSION_TABLE'				=>	C('DB_PREFIX').'session',
-	'SESSION_CALLBACK'		=>	'',
-	
-	'USER_AUTH_KEY'		=>	'userId',
-);
+	static private function _encrypt($value,$key)
+	{
+		$iv_size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_ECB);
+		$iv = mcrypt_create_iv($iv_size, MCRYPT_RAND);
+		$crypttext = mcrypt_encrypt(MCRYPT_RIJNDAEL_256, $key, $value, MCRYPT_MODE_ECB, $iv);
+		return trim(base64_encode($crypttext));
+	}
+
+	static private function _decrypt($value,$key)
+	{
+		$iv_size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_ECB);
+		$iv = mcrypt_create_iv($iv_size, MCRYPT_RAND);
+		$decrypttext = mcrypt_decrypt(MCRYPT_RIJNDAEL_256, $key, base64_decode($value), MCRYPT_MODE_ECB, $iv);
+		return trim($decrypttext);
+	}
+}
 
 ?>
