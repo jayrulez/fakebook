@@ -6,7 +6,7 @@
          <div id="main_menu">
           <ul id="main_menu_list">
             <li class="main_menu" id="home"><a href="home.php">{$lang.link_home}</a></li>
-            <li class="main_menu" id="profile"><a href="profile.php">{$lang.link_profile}</a></li>
+            <li class="main_menu" id="profile"><a href="profile.php?id={$userInfo.id}">{$lang.link_profile}</a></li>
             <li class="main_menu" id="friends"><a href="friends.php">{$lang.link_friends}</a></li>
             <li class="main_menu" id="inbox"><a href="inbox.php">{$lang.link_inbox}</a></li>
           </ul>
