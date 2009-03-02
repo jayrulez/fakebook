@@ -1,7 +1,7 @@
 {if $islogged and $pagename <> 'index'}
       <div id="menubar" class="menubar_logged_in clearfix">
         <div id="logobar">
-          <a class="home" href="home.php"></a>
+          <a class="home" href="home.php" title="Go to Fakebook Home"></a>
         </div>
          <div id="main_menu">
           <ul id="main_menu_list">
