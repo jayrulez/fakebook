@@ -1,34 +1,20 @@
 {include file='global/pghead.tpl'}
-
-	<head>
-		<title>{$conf.sitename} | {$lang.pagetitle}</title>
+<head>
+<title>{$conf.sitename} | {$lang.pagetitle}</title>
 {include file='global/header.tpl'}
-	</head>
-	<body>
-		<div id="UIPage" class="{$cbid}">
-{include file='global/globalheader.tpl'}
-
-			<div id="globalbody">
-				<div id="globalbody-inner" class="clearfix">
-					<div id="mainbody">
-						<div id="mainbody-inner" class="clearfix">
-							<div id="sidebar" class="clearfix">
-								<div id="sidebar-inner">
-								
-{include file='global/quicklogin.tpl'}
-
-								</div>
-							</div>
-							<div id="widebar" class="clearfix">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-{include file='global/globalfooter.tpl'}
-
-
-		</div>
-	</body>
+</head>
+<body class="WelcomePage {$cbid} {$conf.lang_id}">
+  <div id="non_footer" >
+    <div id="page_height">
+      <div id="menubar_container">
+        <div id="menubar" class="menubar_logged_out clearfix">
+          <div id="logobar">
+            <a class="home" title="Go to Fakebook Home" href="{$home}"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{include file='global/footer.tpl'}
+</body>
 {include file='global/pgfoot.tpl'}

@@ -47,4 +47,8 @@ if(!C('SITE_OPEN'))
 $islogged = $user->islogged();
 $tpl->assign('islogged',$islogged);
 $tpl->assign('pagename',PAGE_NAME);
+if($islogged)
+{
+	$tpl->assign('userInfo',session::get('userInfo'));
+}
 ?>

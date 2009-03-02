@@ -29,6 +29,7 @@
             </li>
             <li class="account_menu" id="logout"><a href="logout.php">{$lang.link_logout}</a></li>
             <li class="account_menu" id="account"><a href="account.php">{$lang.link_settings}</a></li>
+			<li class="account_menu" id="user"><a href="profile.php?id={$userInfo.id}">{$userInfo.truename}</a></li>
           </ul>
         </div>
       </div>

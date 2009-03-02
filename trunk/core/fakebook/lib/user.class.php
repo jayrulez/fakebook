@@ -34,6 +34,15 @@ class user
 		return $userId[0];
 	}
 	
+	public function getUserInfo_userId($userId)
+	{
+		$sql = "SELECT * FROM {$this->user_table} 
+				WHERE id='{$userId}'
+		";
+		$userInfo = $this->db->fetch_assoc($this->db->query($sql));
+		return $userInfo;
+	}
+	
 	public function islogged()
 	{
 		if(session::get(C('USER_AUTH_KEY')))
@@ -83,11 +92,8 @@ class user
 			cookie::set('loginId',C('COOKIE_EXPIRE'));
 			cookie::set('loginPwd',C('COOKIE_EXPIRE'));
 		}
-		$sql = "SELECT *
-				FROM {$this->user_table}
-				WHERE id='{$userId}'
-		";
-		$userInfo = $this->db->fetch_assoc($this->db->query($sql));
+
+		$userInfo = $this->getUserInfo_userId($userId);
 		
 		if(session::set('userInfo',$userInfo)&&session::set(C('USER_AUTH_KEY'),$userId))
 		{
