@@ -40,7 +40,7 @@ class cookie
 		}
 		
 		setcookie(C('COOKIE_PREFIX').$name, $value,$expire,$path,$domain);
-		$_COOKIE[C('COOKIE_PREFIX').$name]  =   $value;
+		//$_COOKIE[C('COOKIE_PREFIX').$name]  =   $value;
 	}
 
 	static function delete($name)
