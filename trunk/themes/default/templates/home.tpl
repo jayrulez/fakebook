@@ -58,6 +58,8 @@
           </div>
           <div class="tab"> </div>
           <div id="feeds">
+          
+          
             <!-- feed comment -->
             <div class="feed clearfix">
               <div class="feed_icon">
@@ -78,6 +80,8 @@
                 </div>
               </div>
             </div>
+            
+            
             <!-- feed wall -->
             <div class="feed clearfix">
               <div class="feed_icon">
@@ -102,6 +106,8 @@
                 </div>
               </div>
             </div>
+            
+            
             <!-- feed group -->
             <div class="feed clearfix">
               <div class="feed_icon">
@@ -114,6 +120,8 @@
                 </div>
               </div>
             </div>
+            
+            
             <!-- feed photo -->
             <div class="feed clearfix">
               <div class="feed_icon">
@@ -128,6 +136,20 @@
                   <div class="photo_border">
                     <a href="photo.php?id=46"><img alt="" src="{$theme_path}/images/group_m.jpg"/></a>
                   </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            <!-- feed translations -->
+            <div class="feed clearfix">
+              <div class="feed_icon">
+                <img class="spritemap_icons sx_translations" src="{$theme_path}/images/spacer.gif"/>
+              </div>
+              <div class="feed_story">
+                <div class="story_header">
+                  <a href="profile.php?id=1">User1</a> is now using Fakebook in <a href="editprofile.php">English (US)</a>.
+                  <span class="story_time">February 2</span>
                 </div>
               </div>
             </div>
