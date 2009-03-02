@@ -171,15 +171,11 @@ function checkTemplate()
 			if ( isset($_GET[$t]) )
 			{
 				$templateSet = $_GET[$t];
-				Cookie::set('template',$templateSet,time()+3600);
-			} else {
-				if(Cookie::is_set('template'))
-				{
-					$templateSet = Cookie::get('template');
-				}else {
-					$templateSet = $defaultTmpl;
-					Cookie::set('template',$templateSet,time()+3600);
-				}
+			}else if(cookie::is_set('template'))
+			{
+				$templateSet = cookie::get('template');
+			}else{
+				$templateSet = $defaultTmpl;
 			}
 			
 			if(!is_dir(THEME_PATH.$templateSet.DS))
@@ -189,6 +185,7 @@ function checkTemplate()
 		}else{
 			$templateSet = $defaultTmpl;
 		}
+		cookie::set('template',$templateSet,C('COOKIE_EXPIRE'));
 
 		define('TMPL_NAME',$templateSet);
 		define('TMPL_PATH',THEME_PATH.TMPL_NAME.DS.'templates');
@@ -201,8 +198,8 @@ function checkTemplate()
 
 function checkLanguage()
 {
-	$defaultLang = C('DEFAULT_LANG');
-	$defaultLangId = C('DEFAULT_LANG_ID');
+	$defaultLang = strtolower(C('DEFAULT_LANG'));
+	$defaultLangId = strtolower(C('DEFAULT_LANG_ID'));
 
 	if(C('LANG_SWITCH_ON'))
 	{
@@ -211,24 +208,25 @@ function checkLanguage()
 			if(isset($_GET[C('VAR_LANG')]))
 			{
 				$langSet = $_GET[C('VAR_LANG')];
-				cookie::set('language',$langSet,C('COOKIE_EXPIRE'));
 			}else if(cookie::is_set('language'))
 			{
 				$langSet = cookie::get('language');
+			}if(isset($_SERVER['HTTP_ACCEPT_LANGUAGE']))
+			{
+				preg_match('/^([a-z\-]+)/i', $_SERVER['HTTP_ACCEPT_LANGUAGE'], $matches);
+				$langSet = strtolower($matches[1]);
 			}else{
-				if(isset($_SERVER['HTTP_ACCEPT_LANGUAGE']))
-				{
-					preg_match('/^([a-z\-]+)/i', $_SERVER['HTTP_ACCEPT_LANGUAGE'], $matches);
-					$langSet = strtolower($matches[1]);
-					cookie::set('language',$langSet,C('COOKIE_EXPIRE'));
-				}else{
-					$langSet = $defaultLang;
-				}
+				$langSet = $defaultLang;
+			}
+			if(!is_dir(LANG_PATH.$langSet))
+			{
+				$langSet = $defaultLang;
 			}
 		}else{
 			$langSet = $defaultLang;
 		}
-
+		$langSet = strtolower($langSet);
+		cookie::set('language',$langSet,C('COOKIE_EXPIRE'));
 		define('LANG_SET',$langSet);
 
 		if(C('LANG_CACHE_ON') && is_file(CACHE_PATH.PAGE_NAME.'_'.strtolower(LANG_SET).'_lang.php'))
