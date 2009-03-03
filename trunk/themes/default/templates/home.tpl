@@ -134,7 +134,7 @@
                 </div>
                 <div class="story_body">
                   <div class="photo_border">
-                    <a href="photo.php?id=46"><img alt="" src="{$theme_path}/images/group_m.jpg"/></a>
+                    <a href="photo.php?id=46"><img alt="" src="{$theme_path}/images/group_l.jpg"/></a>
                   </div>
                 </div>
               </div>

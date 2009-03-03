@@ -56,7 +56,79 @@
           </div>
         </div>
         <div class="widecolumn">
-          //wide
+          <div class="profile_name_and_status">
+            <h2 id="profile_name">Yang Guang</h2>
+            <div class="mobile_status">
+              <span id="profile_status">
+                <span id="status_text"> is nothing</span>
+                <small>
+                  <span id="status_time">
+                    <span id="status_time_inner">a moment ago</span>
+                    <a class="status_edit">clear</a>
+                  </span>
+                </small>
+              </span>
+            </div>
+          </div>
+          <div class="tab_menu">
+            <ul>
+              <li>Info</li>
+            </ul>
+          </div>
+          <div class="basic_info clearfix">
+            <span class="info_header">Basic</span>
+            <dt>Nickname</dt>
+            <dd>dingo </dd>
+            <dt>Sex</dt>
+            <dd>Male </dd>
+            <dt>Birthday</dt>
+            <dd>1980-07-31 </dd>
+          </div>
+          <div id="mini_feed">
+            <div class="box_header">Mini-feed</div>
+            <div class="box_subheader">Displaying User1's latest news</div>
+            <div class="box_content">
+              <div class="feed clearfix">111</div>
+            </div>
+          </div>
+          <div id="wall">
+            <div class="box_header">Wall</div>
+            <div class="box_subheader clearfix">
+              <span class="subtitle">Displaying all 1 wall posts</span>
+              <span class="actionlink">
+                <a href="wall.php?id=10">View All</a>
+              </span>
+            </div>
+            <div id="inputarea">
+              <form action="wallpost.php" method="post" name="form">
+                <textarea name="content"></textarea>
+                <br/>
+                <input type="submit" value="Post"/>
+                <input type="hidden" value="profile.php?id=" name="url"/>
+                <input type="hidden" value="10" name="wid"/>
+              </form>
+            </div>
+            <div id="posts">
+              <div class="post_item clearfix">
+                <div class="picture">
+                  <a href="profile.php?id=41">
+                    <img alt="" src="{$theme_path}/images/silhouette_s.jpg"/>
+                  </a>
+                </div>
+                <div class="item">
+                  <div class="user">
+                    <a href="profile.php?id=41">Robert Campbell</a> worte
+                    <br/>
+                    <span class="DateAndTime">at February 2</span>
+                  </div>
+                  <div class="content">testing</div>
+                  <div class="wallactions">
+                    <a onclick="" href="#">Delete</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="adcolumn">
           //ad

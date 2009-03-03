@@ -2,7 +2,7 @@ a, body, br, div, fieldset, form, h1, h2, h3, h4, h5, h6, html, hr, img, input, 
 fieldset{border: 0px; background: none;}
 legend{display: none;}
 html, body {height: 100%;}
-body{font-family:"lucida grande", tahoma, verdana, arial, sans-serif;}
+body{font-family:"lucida grande", tahoma, verdana, arial, sans-serif;text-align:center;}
 h1, h2, h3, h4, h5, h6{color:#333;font-size: 13px;}
 img{border: 0px;}
 a{cursor:pointer;-moz-outline-style:none;text-decoration:none;color:#3b5998;}
@@ -29,7 +29,7 @@ table tr {height:25px}
 #page_height {padding-bottom:100px;}
 #page_height #menubar_container {width:964px;margin:0 auto;}
 #page_height #content {width:auto;}
-#page_height #content .UIFullPage_Container {width:940px;margin:0 auto;padding:20px 12px 0;}
+#page_height #content .UIFullPage_Container {width:940px;margin:0 auto;padding:20px 12px 0;text-align:left;}
 
 #menubar_container {background:transparent url([:theme]/images/signup_callout.png) no-repeat scroll left bottom;display:block;line-height:normal;margin:0 auto;padding:0;position:relative;width:964px;z-index:1;}
 #menubar_container .menubar_logged_in {height:29px;background:transparent url('[:theme]/images/menubar_background.gif') 0 -71px no-repeat;}
@@ -44,7 +44,7 @@ table tr {height:25px}
 #menu_login_container .login_form_label_field {padding-bottom:3px;}
 #menu_login_container .login_form_label_field label,#menu_login_container a {color:#98A9CA;}
 #menu_login_container .login_form_label_field label input {margin-right:5px;}
-#menu_login_container .inputtext,.inputpassword {width:140px;padding:3px;border-color:#1D2A5B;}
+#menu_login_container .inputtext,#menu_login_container .inputpassword {width:140px;padding:3px;border-color:#1D2A5B;}
 
 #main_menu a {display:block;color:#fff;padding:7px 10px;text-decoration:none;font-weight:bold;margin-right:4px;line-height:normal;}
 #account_menu a {display:block;color:#fff;padding:7px 10px;text-decoration:none;margin-right:4px;line-height:normal;}

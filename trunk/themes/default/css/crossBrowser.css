@@ -1,6 +1,5 @@
 .ff3 .UILinkButton .UILinkButton_A {padding:2px 5px 4px 8px;}
-/*
-.ie6 #menubar_container .menubar_logged_out {_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[:theme]/images/menubar_background.png', sizingMethod='scale');}
-*/
+.ie6 .WelcomePage_MainSellLeft .WelcomePage_MainMap {_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[:theme]/images/welcome_page_map.png', sizingMethod='crop');}
+
 .zh *{font-size:12px;}
 .zh h1, h2, h3, h4, h5, h6{font-size: 13px;}
