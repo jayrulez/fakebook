@@ -12,8 +12,7 @@
 .home_status_editor .status_composer .input_wrapper {margin:1px 0;overflow:hidden;padding:0 6px 0 0;}
 .home_status_editor .status_composer .status_field input {border:medium none;margin:0 2px 0 0;width:100%;}
 .home_status_editor .status_composer_inner {background:transparent url([:theme]/images/textarea_nub_ltr.gif) no-repeat scroll left -11px;padding-left:5px;}
-/* temp */
-.home_status_editor .status_composer .status_field input {font-size:15px;padding:0;color:#777;padding-left:4px;}
+/* temp */.home_status_editor .status_composer .status_field input {font-size:15px;padding:0;color:#777;padding-left:4px;}
 
 .new_user_todo_holder {height:46px;border:1px solid #D8DFEA;margin:8px 0;padding:15px 24px 5px;background-color:#F8F9FB;}
 .new_user_todo_icon {float:left;padding-right:10px;}
@@ -23,7 +22,7 @@
 
 .tab {height:8px;border-bottom:1px solid #D3DAE8;margin-bottom:10px;}
 
-.feed {padding:5px 0;font-size:12px;}
+.feed {padding:5px 0;}
 .feed_icon {display:block;float:left;width:16px;height:18px;}
 .spritemap_icons {background-image:url([:theme]/images/icons/icons.png);background-repeat:no-repeat;width:16px;height:16px;}
 .sx_friend {background-position:0 -753px;}

@@ -94,6 +94,8 @@
                 </div>
               </div>
             </div>
+            
+            
             <!-- feed friends -->
             <div class="feed clearfix">
               <div class="feed_icon">
@@ -153,6 +155,8 @@
                 </div>
               </div>
             </div>
+            
+            
           </div>
         </div>
         <div class="narrowcolumn">

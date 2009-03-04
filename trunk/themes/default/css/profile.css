@@ -22,6 +22,25 @@
 .narrowcolumn #user_friends .box_content li .user_picture {width:50px;height:50px;padding-bottom:3px;display:block;}
 .narrowcolumn #user_friends .box_content li .user_name {width:50px;display:block;overflow:hidden;line-height:20px;text-align:center;}
 
+.feed {padding:5px 0;}
+.feed_icon {display:block;float:left;width:16px;height:18px;}
+.spritemap_icons {background-image:url([:theme]/images/icons/icons.png);background-repeat:no-repeat;width:16px;height:16px;}
+.sx_friend {background-position:0 -753px;}
+.sx_group {background-position:0 -882px;height:14px !important}
+.sx_photo {background-position:0 -1272px;}
+.sx_comment {background-position:0 -1868px;}
+.sx_wall {background-position:0 -1868px;}
+.sx_translations {background-position:0 -1803px;}
+.feed_story {width:465px;padding-left:5px;float:left;}
+.stroy_header {height:18px;padding-bottom:7px;}
+.story_time {margin-left:5px;color:gray;font-size:11px;}
+.story_body {padding:10px 0;}
+.photo_border {float:left;width:108px;margin:0 0 5px;margin-right:10px;}
+.story_body a img {border:1px solid #CCC;padding:3px;}
+.story_body a:hover img {border-color:#3B5998;}
+.story_quote {float:left;width:310px;background:transparent url([:theme]/images/start_quote.gif) no-repeat scroll left top;margin:3px 5px 8px 0;padding-left:23px;}
+.story_quote .em {background:transparent url([:theme]/images/end_quote.gif) no-repeat scroll right bottom;color:#666;padding:2px 23px 2px 0;text-align:left;}
+
 /* temp */
 .widecolumn h2 {display:inline;font-size:16px;font-weight:bold;padding:0;}
 .widecolumn .tab_menu {font-size:12px;font-weight:bold;width:50px;text-align:center;padding:3px;;margin-top:10px;display:block;border:1px solid #D8DFEA;border-bottom:1px solid #fff;background-color:#FFF;}
@@ -37,24 +56,6 @@
 .widecolumn .box_subheader {border-bottom:1px solid #ECEFF5;padding:5px 8px;}
 .widecolumn .box_content {padding:10px 5px;}
 .find_friend {background:transparent url(../../images/magnifying_glass.gif) no-repeat scroll left 3px;padding:4px 4px 4px 23px;}
-
-#mini_feed .feed {padding:5px 0;font-size:12px;}
-#mini_feed .feed_icon {display:block;float:left;width:16px;height:18px;}
-#mini_feed .spritemap_icons {background-image:url(../../images/icons.png);background-repeat:no-repeat;width:16px;height:16px;}
-#mini_feed .sx_friend {background-position:0 -753px;}
-#mini_feed .sx_group {background-position:0 -882px;height:14px !important}
-#mini_feed .sx_photo {background-position:0 -1272px;}
-#mini_feed .sx_comment {background-position:0 -1868px;}
-#mini_feed .sx_wall {background-position:0 -1868px;}
-#mini_feed .feed_story {width:465px;padding-left:5px;float:left;}
-#mini_feed .stroy_header {height:18px;padding-bottom:7px;}
-#mini_feed .story_time {margin-left:5px;color:gray;font-size:11px;}
-#mini_feed .story_body {padding:10px 0;}
-#mini_feed .photo_border {float:left;width:108px;margin:0 0 5px;margin-right:10px;}
-#mini_feed .story_body a img {border:1px solid #CCC;padding:3px;}
-#mini_feed .story_body a:hover img {border-color:#3B5998;}
-#mini_feed .story_quote {float:left;width:310px;background:transparent url(../../images/start_quote.gif) no-repeat scroll left top;margin:3px 5px 8px 0;padding-left:23px;}
-#mini_feed .story_quote .em {background:transparent url(../../images/end_quote.gif) no-repeat scroll right bottom;color:#666;padding:2px 23px 2px 0;text-align:left;}
 
 #wall {width:540px;}
 #wall #inputarea {width:540px;text-align:right;border-bottom:1px solid #CCC;background-color:#F7F7F7;}

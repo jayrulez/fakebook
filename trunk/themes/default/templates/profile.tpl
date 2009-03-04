@@ -88,7 +88,105 @@
             <div class="box_header">Mini-feed</div>
             <div class="box_subheader">Displaying User1's latest news</div>
             <div class="box_content">
-              <div class="feed clearfix">111</div>
+            
+            
+              <!-- feed comment -->
+              <div class="feed clearfix">
+                <div class="feed_icon">
+                  <img class="spritemap_icons sx_comment" src="{$theme_path}/images/spacer.gif"/>
+                </div>
+                <div class="feed_story">
+                  <div class="story_header">
+                    <a href="profile.php?id=1">User1</a> commented on <a href="profile.php?id=2">User2</a>'s photo.
+                    <span class="story_time">February 2</span>
+                  </div>
+                  <div class="story_body">
+                    <div class="photo_border">
+                      <a href="photo.php?id=46"><img alt="" src="{$theme_path}/images/group_m.jpg"/></a>
+                    </div>
+                    <div class="story_quote">
+                      <span class="em">Comments...</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+          
+              <!-- feed wall -->
+              <div class="feed clearfix">
+                <div class="feed_icon">
+                  <img class="spritemap_icons sx_wall" src="{$theme_path}/images/spacer.gif"/>
+                </div>
+                <div class="feed_story">
+                  <div class="story_header">
+                    <a href="group.php?id=1">User2</a> wrote on <a href="group.php?id=2">User2</a>'s wall.
+                    <span class="story_time">2 minutes ago</span>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <!-- feed friends -->
+              <div class="feed clearfix">
+                <div class="feed_icon">
+                  <img class="spritemap_icons sx_friend" src="{$theme_path}/images/spacer.gif"/>
+                </div>
+                <div class="feed_story">
+                  <div class="story_header">
+                    <a href="profile.php?id=1">User1</a> and <a href="profile.php?id=2">User2</a> are now friends.
+                    <span class="story_time">February 2</span>
+                  </div>
+                </div>
+              </div>
+          
+          
+              <!-- feed group -->
+              <div class="feed clearfix">
+                <div class="feed_icon">
+                  <img class="spritemap_icons sx_group" src="{$theme_path}/images/spacer.gif"/>
+                </div>
+                <div class="feed_story">
+                  <div class="story_header">
+                    <a href="profile.php?id=1">User1</a> joined the group <a href="group.php?id=2">Group1</a>.
+                    <span class="story_time">February 2</span>
+                  </div>
+                </div>
+              </div>
+          
+          
+              <!-- feed photo -->
+              <div class="feed clearfix">
+                <div class="feed_icon">
+                  <img class="spritemap_icons sx_photo" src="{$theme_path}/images/spacer.gif"/>
+                </div>
+                <div class="feed_story">
+                  <div class="story_header">
+                    <a href="profile.php?id=1">User1</a> added a new photo.
+                    <span class="story_time">February 21</span>
+                  </div>
+                  <div class="story_body">
+                    <div class="photo_border">
+                      <a href="photo.php?id=46"><img alt="" src="{$theme_path}/images/group_l.jpg"/></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+          
+              <!-- feed translations -->
+              <div class="feed clearfix">
+                <div class="feed_icon">
+                  <img class="spritemap_icons sx_translations" src="{$theme_path}/images/spacer.gif"/>
+                </div>
+                <div class="feed_story">
+                  <div class="story_header">
+                    <a href="profile.php?id=1">User1</a> is now using Fakebook in <a href="editprofile.php">English (US)</a>.
+                    <span class="story_time">February 2</span>
+                  </div>
+                </div>
+              </div>
+              
+              
             </div>
           </div>
           <div id="wall">
