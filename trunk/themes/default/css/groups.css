@@ -1,0 +1,11 @@
+.maincolumn .leftcolumn {width:375px;float:left;}
+.maincolumn .rightcolumn {width:375px;float:left;margin-left:10px;}
+.adcolumn {width:160px;float:left;padding:10px 0 0 20px;}
+
+.maincolumn .groups_header {padding:10px;}
+.maincolumn .groups_subheader {background:#6D84B4 none repeat scroll 0 0;padding:5px 10px;border:1px solid #DDD;}
+.maincolumn .groups_subheader h3 {color:#FFF;}
+.maincolumn .groups_item {border:1px solid #DDD;border-top:none;background-color:#FFF;padding:6px 10px;}
+.maincolumn .image {margin-right:10px;float:left;}
+.maincolumn .text {float:left;}
+.maincolumn .friend_item_full {border:1px solid #DDD;border-top:none;display:none;background-color:#FBFDFF;}
