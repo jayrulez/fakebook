@@ -1,6 +1,9 @@
-.friends_header {width:740px;padding:10px;}
-.friends_subheader {width:720px;padding:30px 10px 4px;border:1px solid #DDD;}
-.friend_item {width:720px;border:1px solid #DDD;border-top:none;background-color:#FFF;padding:6px 10px;}
-.image {margin-right:10px;float:left;}
-.text {float:left;}
-.friend_item_full {width:740px;border:1px solid #DDD;border-top:none;display:none;background-color:#FBFDFF;}
+.maincolumn {width:760px;float:left;}
+.adcolumn {width:160px;float:left;padding:10px 0 0 20px;}
+
+.maincolumn .friends_header {padding:10px;}
+.maincolumn .friends_subheader {padding:30px 10px 4px;border:1px solid #DDD;}
+.maincolumn .friend_item {border:1px solid #DDD;border-top:none;background-color:#FFF;padding:6px 10px;}
+.maincolumn .image {margin-right:10px;float:left;}
+.maincolumn .text {float:left;}
+.maincolumn .friend_item_full {border:1px solid #DDD;border-top:none;display:none;background-color:#FBFDFF;}
