@@ -13,17 +13,31 @@
         <div class="UIFullPage_Container">
         <div class="widecolumn">
           <div class="group_title">
-            <img alt="" src="images/group.jpg"/>
             <h2>Jilin University</h2>
+            Global
           </div>
-          <div class="basic_info clearfix">
-            <span class="info_header">Basic</span>
-            <dt>Nickname</dt>
-            <dd>dingo </dd>
-            <dt>Sex</dt>
-            <dd>Male </dd>
-            <dt>Birthday</dt>
-            <dd>1980-07-31 </dd>
+          <div class="group_info_section">
+            <h4>Basic Info</h4>
+            <dl class="clearfix">
+              <dt>Type:</dt>
+              <dd>
+                <a href="#">Internet & Technology</a> - <a href="#">Websites</a>
+              </dd>
+              <dt>Description:</dt>
+              <dd>
+                fake the facebook...<br />
+                <br />
+                The Project:<br />
+                <a href="http://code.google.com/p/fakebook/">http://code.google.com/p/fakebook/</a>
+              </dd>
+            </dl>
+            <h4>Contact Info</h4>
+            <dl class="clearfix">
+              <dt>Email:</dt>
+              <dd>name@domain.com</dd>
+              <dt>Website:</dt>
+              <dd>http://www.domain.com </dd>
+            </dl>
           </div>
           <div id="group_members" class="group_members">
             <div class="box_header">Members</div>
@@ -68,7 +82,7 @@
                 </div>
                 <div class="item">
                   <div class="user">
-                    <a href="profile.php?id=41">User1</a> worte
+                    <a href="profile.php?id=41">User1</a> wrote
                     <br/>
                     <span class="DateAndTime">at February 2</span>
                   </div>
@@ -101,37 +115,35 @@
           </div>
           <div id="profile_actions">
             <ul>
-              <li><a href="#">View Photos of Tom (2)</a></li>
-              <li><a href="#">Suggest Friends for Tom</a></li>
-              <li><a href="#">Send Tom a Message</a></li>
-              <li><a href="#">Poke Tom</a></li>
+              <li><a href="#">Message All Members</a></li>
+              <li><a href="#">Edit Group</a></li>
+              <li><a href="#">Edit Members</a></li>
+              <li><a href="#">Edit Group Officers</a></li>
+              <li><a href="#">Invite People to Join</a></li>
+              <li><a href="#">Create Related Event</a></li>
+              <li><a href="#">Leave Group</a></li>
             <ul/>
           </div>
           <div class="roundbox">
-            <div id="user_friends" class="user_friends">
-              <div class="box_header">Friends</div>
-              <div class="box_subheader">
-                <a href="friends.php?id=10">1 friends</a>
-              </div>
+            <div class="UIProfileBox_Container">
+              <div class="box_header">Group Type</div>
               <div class="box_content clearfix">
-                <ul>
-                  <li>
-                    <a href="profile.php?id=40">
-                      <span class="user_picture"><img alt="" src="{$theme_path}/images/silhouette_s.jpg"/></span>
-                    </a>
-                    <a href="profile.php?id=40">
-                      <span class="user_name">test</span>
-                    </a>
-                  </li>
-                </ul>
+                This is an open group. Anyone can join and invite others to join.
               </div>
             </div>
-            <div id="user_groups" class="user_groups">
-              <div class="box_header">Groups</div>
+            <div class="UIProfileBox_Container">
+              <div class="box_header">Admins</div>
               <div class="box_content">
                 <ul>
                   <li>
-                    <a class="group_name" href="group.php?id=49911">Jilin University</a>
+                    <span>
+                      <a class="group_name" href="group.php?id=49911">User1</a> (creator)
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a class="group_name" href="group.php?id=49911">User2</a>
+                    </span>
                   </li>
                 </ul>
               </div>

@@ -5,9 +5,7 @@ html, body {height: 100%;}
 body{font-family:"lucida grande", tahoma, verdana, arial, sans-serif;text-align:center;}
 .en {font-size: 11px;}
 .zh {font-size: 12px;}
-h3, h4, h5, h6 {font-size:11px;}
-h1, h2 {font-size:13px;}
-.zh h1,.zh h2 {font-size:13px;}
+h1, h2, h3, h4, h5, h6 {font-size:11px;color:#333;}
 img{border: 0px;}
 a{cursor:pointer;-moz-outline-style:none;text-decoration:none;color:#3b5998;}
 a:hover{text-decoration: underline;}

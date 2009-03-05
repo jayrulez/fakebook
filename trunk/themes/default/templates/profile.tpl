@@ -215,7 +215,7 @@
                 </div>
                 <div class="item">
                   <div class="user">
-                    <a href="profile.php?id=41">Robert Campbell</a> worte
+                    <a href="profile.php?id=41">Robert Campbell</a> wrote
                     <br/>
                     <span class="DateAndTime">at February 2</span>
                   </div>
