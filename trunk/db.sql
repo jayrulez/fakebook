@@ -76,3 +76,18 @@ CREATE TABLE `fb_user_apps` (
   `position` int(100) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fb_wall`
+--
+
+CREATE TABLE IF NOT EXISTS `fb_wall` (
+  `id` int(11) NOT NULL auto_increment,
+  `wall_id` int(100) NOT NULL,
+  `post_author` int(100) NOT NULL,
+  `post_content` longtext,
+  `post_time` int(100) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
