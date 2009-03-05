@@ -22,6 +22,8 @@ require_once(CORE_PATH.'fakebook'.DS.'inc'.DS.'common.php');
 
 $GLOBALS['import_file'] = array();
 
+start_app();
+
 import('lib.exception.myException');
 import('lib.util.log');
 import('lib.db.db');
@@ -29,8 +31,6 @@ import('lib.template.template');
 
 import('fakebook.lib.user');
 import('fakebook.lib.profile');
-
-start_app();
 
 $tpl     = new template();
 $db      = new db();
