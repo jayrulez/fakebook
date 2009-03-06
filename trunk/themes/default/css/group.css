@@ -9,7 +9,7 @@
 .widecolumn .group_info_section dl {padding:0;margin:0;}
 .widecolumn .group_info_section dt {float:left;padding:1px 0;width:120px;color:gray;}
 .widecolumn .group_info_section dd {float:left;padding:1px 0;margin-left:20px;width:340px;}
-.widecolumn .box_header {border-top:1px solid #94A3C4;background-color:#ECEFF5;color:#333;padding:5px 8px;text-align:left;}
+.widecolumn .box_header {border-top:1px solid #94A3C4;background-color:#ECEFF5;color:#333;padding:5px 8px;text-align:left;font-weight:bold;}
 .widecolumn .box_subheader {border-bottom:1px solid #ECEFF5;padding:5px 8px;}
 .widecolumn .subtitle {dispaly:block;float:left;}
 .widecolumn .actionlink {dispaly:block;float:right;}
