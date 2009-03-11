@@ -1,9 +1,0 @@
-.maincolumn {width:760px;float:left;}
-.adcolumn {width:160px;float:left;padding:10px 0 0 20px;}
-
-.maincolumn .friends_header {padding:10px;}
-.maincolumn .friends_subheader {padding:30px 10px 4px;border:1px solid #DDD;}
-.maincolumn .friend_item {border:1px solid #DDD;border-top:none;background-color:#FFF;padding:6px 10px;}
-.maincolumn .image {margin-right:10px;float:left;}
-.maincolumn .text {float:left;}
-.maincolumn .friend_item_full {border:1px solid #DDD;border-top:none;display:none;background-color:#FBFDFF;}
