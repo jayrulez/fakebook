@@ -131,7 +131,6 @@ class PublicAction extends Action
 		$file  = ROOT_PATH.WEB_PUBLIC_URL.'/';
 		$file .= $resource;
 		$cache = CACHE_PATH.md5($file).'.'.$split[$parts-1];
-		echo $file;
 
 		if(is_file($cache)&&filemtime($cache)>filemtime($file))
 		{
