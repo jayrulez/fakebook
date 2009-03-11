@@ -1,11 +1,17 @@
-<?php 
+<?php
 
-define('THINK_PATH', './ThinkPHP');
+define('IN_APP',true);
 
-define('APP_NAME', 'Fakebook');
-define('APP_PATH', '.');
+define('DS',DIRECTORY_SEPARATOR);
 
-require(THINK_PATH."/ThinkPHP.php");
+define('ROOT_PATH',dirname(__FILE__).DS);
+define('CORE_PATH',dirname(__FILE__).DS.'Core'.DS);
+define('DATA_PATH',dirname(__FILE__).DS.'Data'.DS);
+
+define('APP_NAME','fakebook');
+define('APP_PATH',ROOT_PATH.DS);
+
+require(ROOT_PATH.'global.php');
 
 $App = new App();
 
