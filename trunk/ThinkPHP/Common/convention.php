@@ -122,21 +122,8 @@ return  array(
 	'TIME_ZONE'					=>	'PRC',		 // 默认时区
 
 	/* 用户认证设置 */
-	'USER_AUTH_ON'				=>	false,		// 默认不启用用户认证
-	'USER_AUTH_TYPE'			=>	1,		// 默认认证类型 1 登录认证 2 实时认证
 	'USER_AUTH_KEY'			=>	'authId',	// 用户认证SESSION标记
 	'ADMIN_AUTH_KEY'			=>	'administrator',
-	'USER_AUTH_MODEL'		=>   'User',	// 默认验证数据表模型
-	'AUTH_PWD_ENCODER'		=>	'md5',	// 用户认证密码加密方式
-	'USER_AUTH_PROVIDER'	=>	'DaoAuthentictionProvider',	 // 默认认证委托器
-	'USER_AUTH_GATEWAY'	=>	'/Public/login',	// 默认认证网关
-	'NOT_AUTH_MODULE'		=>	'Public',		// 默认无需认证模块
-	'REQUIRE_AUTH_MODULE'=>	'',		// 默认需要认证模块
-	'NOT_AUTH_ACTION'		=>'',		// 默认无需认证操作
-	'REQUIRE_AUTH_ACTION'=>'',		// 默认需要认证操作
-    'GUEST_AUTH_ON'          => false,    // 是否开启游客授权访问
-    'GUEST_AUTH_ID'           =>    0,     // 游客的用户ID
-	'RBAC_ERROR_PAGE'	        =>	'',		// RBAC认证没有权限的错误页面
 
 	/* SESSION设置 */
 	'SESSION_NAME'				=>	'ThinkID',		// 默认Session_name 如果需要不同项目共享SESSION 可以设置相同
