@@ -62,7 +62,7 @@ return  array(
 
 	/* 错误设置 */
 	'DEBUG_MODE'				=>	false,	 // 调试模式默认关闭
-	'ERROR_MESSAGE'			=>	'您浏览的页面暂时发生了错误！请稍后再试～',	// 错误显示信息 非调试模式有效
+	'ERROR_MESSAGE'			=>	'Page Error, please try again later...',	// 错误显示信息 非调试模式有效
 	'ERROR_PAGE'					=>	'',	// 错误定向页面
     'SHOW_ERROR_MSG'        =>   true,
 
@@ -118,7 +118,7 @@ return  array(
 	'LANG_SWITCH_ON'			=>	false,	 // 默认关闭多语言包功能
     'AUTO_DETECT_LANG'      =>   false,     // 自动侦测语言
     'LANG_CACHE_ON'           =>    false, // 默认关闭语言包的缓存 大型应用可以开启 按照模块的语言包来缓存
-	'DEFAULT_LANGUAGE'		=>	'zh-cn',	 // 默认语言
+	'DEFAULT_LANGUAGE'		=>	'en-us',	 // 默认语言
 	'TIME_ZONE'					=>	'PRC',		 // 默认时区
 
 	/* 用户认证设置 */
