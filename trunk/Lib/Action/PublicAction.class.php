@@ -107,6 +107,46 @@ class PublicAction extends Action
 		import('ORG.Util.Image');
 		Image::buildImageVerify();
 	}
+	public function _static()
+	{
+		$resource = $_REQUEST['item'];
+		$resource = str_replace('-','/',$resource);
+		$split    = explode('.',$resource);
+		$parts    = count($split);
+		$valid    = array('js','css');
+
+		if(!in_array($split[$parts-1],$valid))
+		{
+			echo 'Invalid Resource';
+		}
+
+		if($split[$parts-1]=='js')
+		{
+			header('Content-Type: text/javascript');
+		}else{
+			header('Content-Type: text/css');
+		}
+		
+		$file  = ROOT_PATH.WEB_PUBLIC_URL.'/';
+		$file .= $resource;
+		$cache = CACHE_PATH.md5($file).'.'.$split[$parts-1];
+		echo $file;
+
+		if(is_file($cache)&&filemtime($cache)>filemtime($file))
+		{
+			$content = file_get_contents($cache);
+			echo $content;
+		}else{
+			if(is_file($file))
+			{
+				$content = file_get_contents($file);
+				file_put_contents($cache,$content);
+				echo $content;
+			}else{
+				echo LParse(L('_RESOURCE_NOT_EXIST_'),$file);
+			}
+		}
+	}
 }
 
 ?>
