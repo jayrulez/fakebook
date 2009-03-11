@@ -107,6 +107,7 @@ class PublicAction extends Action
 		import('ORG.Util.Image');
 		Image::buildImageVerify();
 	}
+
 	public function _static()
 	{
 		$resource = $_REQUEST['item'];
@@ -117,7 +118,7 @@ class PublicAction extends Action
 
 		if(!in_array($split[$parts-1],$valid))
 		{
-			echo 'Invalid Resource';
+			echo LParse(L('_RESOURCE_NOT_VALID_'),$resource);
 		}
 
 		if($split[$parts-1]=='js')
