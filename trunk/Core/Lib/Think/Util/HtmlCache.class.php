@@ -1,0 +1,90 @@
+<?php
+
+class HtmlCache extends Base
+{
+    static private $cacheFile = null;
+    static private $cacheTime = null;
+    static private $requireCache = false;
+
+    static function readHTMLCache()
+    {
+         if(is_file(CONFIG_PATH.'htmls.php')) {
+            $htmls = include CONFIG_PATH.'htmls.php';
+            if(!is_array($htmls)) {
+				return ;
+            }
+			
+            if(isset($htmls[MODULE_NAME.':'.ACTION_NAME])) {
+                $html   =   $htmls[MODULE_NAME.':'.ACTION_NAME];
+            }elseif(isset($htmls[ACTION_NAME])){
+                $html   =   $htmls[ACTION_NAME];
+            }elseif(isset($htmls['*'])){
+                $html   =   $htmls['*'];
+            }
+            if(!empty($html)) {
+                self::$requireCache = true;
+                $rule    = $html[0];
+                $rule  = preg_replace('/{\$(_\w+)\.(\w+)\|(\w+)}/e',"\\3(\$\\1['\\2'])",$rule);
+                $rule  = preg_replace('/{\$(_\w+)\.(\w+)}/e',"\$\\1['\\2']",$rule);
+                $rule  = preg_replace('/{(\w+)\|(\w+)}/e',"\\2(\$_GET['\\1'])",$rule);
+                $rule  = preg_replace('/{(\w+)}/e',"\$_GET['\\1']",$rule);
+                $rule  = str_ireplace(
+                    array('{:app}','{:module}','{:action}'),
+                    array(APP_NAME,MODULE_NAME,ACTION_NAME),
+                    $rule);
+                $rule  = preg_replace('/{|(\w+)}/e',"\\1()",$rule);
+                if(!empty($html[2])) {
+                    $rule    =   $html[2]($rule);
+                }
+                $time = isset($html[1])?$html[1]:C('HTML_CACHE_TIME') 
+                self::$cacheTime = $time;
+                $cacheName  =   $rule.C('HTML_FILE_SUFFIX');
+                self::$cacheFile = $cacheName;
+                define('HTML_FILE_NAME',HTML_PATH . $cacheName);
+                if (self::checkHTMLCache(HTML_FILE_NAME,$time)) {
+                    if(C('HTML_READ_TYPE')==1) {
+                        redirect(str_replace(array(realpath($_SERVER["DOCUMENT_ROOT"]),"\\"),array('',"/"),realpath(HTML_FILE_NAME)));
+                    }else {
+                        readfile(HTML_FILE_NAME);
+                        exit();
+                    }
+                }
+            }
+        }
+        return ;
+    }
+
+    static function writeHTMLCache(&$content)
+    {
+        if(self::$requireCache) {
+            if(MODULE_NAME != 'Public' && !self::checkHTMLCache(self::$cacheFile,self::$cacheTime)) {
+                if(!is_dir(dirname(HTML_FILE_NAME))) {
+                    mk_dir(dirname(HTML_FILE_NAME));
+                }
+                if( false === file_put_contents( HTML_FILE_NAME , $content )) {
+                    throw_exception(L('_CACHE_WRITE_ERROR_'));
+                }
+            }
+        }
+        return $content;
+    }
+
+    static function checkHTMLCache($cacheFile='',$cacheTime='')
+    {
+        if(!is_file($cacheFile)){
+            return false;
+        }
+        elseif (filemtime(C('TMPL_FILE_NAME')) > filemtime($cacheFile)) {
+            return false;
+        }
+        elseif(!is_numeric($cacheTime) && function_exists($cacheTime)){
+            return $cacheTime($cacheFile);
+        }
+        elseif ($cacheTime != -1 && time() > filemtime($cacheFile)+$cacheTime) {
+            return false;
+        }
+        return true;
+    }
+}
+
+?>
