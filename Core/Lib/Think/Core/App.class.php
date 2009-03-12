@@ -249,6 +249,7 @@ class App extends Base
             }
         }else{
 			$langSet = $defaultLang;
+			define('LANG_SET',$langSet);
             L(include CORE_PATH.'Lang'.DS.$langSet.'.php');
         }
 		$langId = substr($langSet, 0,2);
