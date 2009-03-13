@@ -1,4 +1,4 @@
-{if $islogged and $pagename <> 'index'}
+<!--<session name='authId'>-->
       <div id="menubar" class="menubar_logged_in clearfix">
         <div id="logobar">
           <a class="home" href="home.php" title="Go to Fakebook Home"></a>
@@ -33,7 +33,8 @@
           </ul>
         </div>
       </div>
-{else}
+<!--</session>-->
+<!--<nosession>-->
       <div id="menubar" class="menubar_logged_out clearfix">
         <div id="logobar">
           <a class="home" title="Go to Fakebook Home" href="{$home}"></a>
@@ -78,4 +79,4 @@
           </form>
         </div>
       </div>
-{/if}
+</nosession>
