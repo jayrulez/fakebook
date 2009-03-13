@@ -82,6 +82,6 @@ define('VENDOR_PATH',CORE_PATH.DS.VENDOR_DIR.DS);
 
 set_include_path(get_include_path() . PATH_SEPARATOR . VENDOR_PATH);
 
-define('THINK_VERSION', '1.5.1beta r1169');
+define('THINK_VERSION', '1.5.1beta r1173');
 
 ?>

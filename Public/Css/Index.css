@@ -1,12 +1,12 @@
 body {font-size:11px;}
-.WelcomePage {background:transparent url('[:theme]/images/linear_shim.png') repeat-x 0 0;}
+.WelcomePage {background:transparent url('[theme_url]/Images/linear_shim.png') repeat-x 0 0;}
 
-.WelcomePage_Container {background:transparent url('[:theme]/images/linear_tile.jpg') repeat-x scroll center bottom;}
-.WelcomePage_Container .WelcomePage_MainSell {width:964px;margin:0 auto;padding-top:36px;text-align:left;background:transparent url('[:theme]/images/radial_behind_content.jpg') no-repeat center bottom scroll;}
+.WelcomePage_Container {background:transparent url('[theme_url]/Images/linear_tile.jpg') repeat-x scroll center bottom;}
+.WelcomePage_Container .WelcomePage_MainSell {width:964px;margin:0 auto;padding-top:36px;text-align:left;background:transparent url('[theme_url]/Images/radial_behind_content.jpg') no-repeat center bottom scroll;}
 .WelcomePage_Container .WelcomePage_MainSell .WelcomePage_MainSellCenter {padding:0 12px;}
 .WelcomePage_MainSellLeft {float:left;padding-bottom:20px;width:536px;}
 .WelcomePage_MainSellLeft .WelcomePage_MainMessage {color:#203360;font-size:20px !important;font-weight:bold !important;line-height:29px;margin:1px 0 0 6px;padding-right:60px;word-spacing:-1px;}
-.WelcomePage_MainSellLeft .WelcomePage_MainMap {background:transparent url([:theme]/images/welcome_page_map.png) no-repeat scroll left top !important;height:195px;margin-left:-11px;margin-top:20px;width:537px;}
+.WelcomePage_MainSellLeft .WelcomePage_MainMap {background:transparent url([theme_url]/Images/welcome_page_map.png) no-repeat scroll left top !important;height:195px;margin-left:-11px;margin-top:20px;width:537px;}
 .WelcomePage_MainSellRight {float:left;padding:0;width:396px;}
 .WelcomePage_MainSellRight .WelcomePage_SignUpHeadline {color:#203360;font-size:20px !important;line-height:29px;word-spacing:-1px;font-weight:bold !important;}
 .WelcomePage_MainSellRight .WelcomePage_SignUpSubheadline {color:#203360;font-size:20px !important;line-height:29px;padding-top:1px;word-spacing:-1px;}
