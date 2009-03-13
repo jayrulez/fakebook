@@ -34,6 +34,7 @@ function _static()
 		if(is_file($file))
 		{
 			$content = file_get_contents($file);
+			$content = str_replace('{theme_url}',C('SITE_URL').'/Public',$content);
 			file_put_contents($cache,$content);
 			echo $content;
 		}else{
