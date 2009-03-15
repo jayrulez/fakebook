@@ -35,7 +35,7 @@ class PublicAction extends Action
 		{
 			$this->redirect('index','home');
 		}else{
-			if(isset($_POST['signin']))
+			if(isset($_POST['login']))
 			{
 				if(C('TOKEN_ON') && isset($_POST[C('TOKEN_NAME')]))
 				{
@@ -44,9 +44,9 @@ class PublicAction extends Action
 					$secure_code = '';
 				}
 				
-				$signinId   = isset($_POST['signinId'])   ? $_POST['signinId'] : '';
-				$password   = isset($_POST['password'])   ? $secure_code.$_POST['password'] : '';
-				$autosignin = isset($_POST['autosignin']) ? true               : false;
+				$signinId   = isset($_POST['email'])   ? $_POST['email'] : '';
+				$password   = isset($_POST['pass'])   ? $secure_code.$_POST['pass'] : '';
+				$autosignin = isset($_POST['persistent']) ? true               : false;
 						
 				import('ORG.Text.Validation');
 						
