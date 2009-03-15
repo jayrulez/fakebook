@@ -29,7 +29,7 @@ class PublicAction extends Action
 		}
 	}
 
-	public function signin()
+	public function login()
 	{
 		if(Session::get(C('USER_AUTH_KEY')))
 		{
@@ -87,7 +87,7 @@ class PublicAction extends Action
 		}
 	}
 
-	public function signout()
+	public function logout()
 	{
 		if(Session::get(C('USER_AUTH_KEY')))
 		{
