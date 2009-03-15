@@ -1,0 +1,16 @@
+.maincolumn {width:760px;float:left;}
+.maincolumn .leftcolumn {width:375px;float:left;}
+.maincolumn .rightcolumn {width:375px;float:left;margin-left:10px;}
+.adcolumn {width:160px;float:left;padding:10px 0 0 20px;}
+
+.maincolumn .groups_header {padding:10px 10px 12px;}
+.maincolumn .groups_header h1 {background:url([theme_url]/images/icons/group.gif) left 8px no-repeat;font-size:14px;padding:7px 0 7px 24px;}
+.maincolumn .groups_subheader {background:#6D84B4 none repeat scroll 0 0;padding:5px 10px;border:1px solid #6D84B4;}
+.maincolumn .groups_subheader h3 {color:#FFF;}
+.maincolumn .group {border:1px solid #DDD;border-top:none;background-color:#FFF;padding:6px 10px;}
+.maincolumn .group .image {margin-right:10px;float:left;}
+.maincolumn .group .info {float:left;width:240px;}
+.maincolumn .group small {color:#777;}
+.maincolumn .group dl {margin:0;padding:5px 0 0;}
+.maincolumn .group dt {color:gray;float:left;min-width:75px;padding:2px 0 0;}
+.maincolumn .group dd {float:left;margin:0;padding:2px 0 0;width:165px;}

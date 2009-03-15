@@ -1,0 +1,59 @@
+#content .widecolumn {width:600px;float:left;}
+#content .narrowcolumn {width:240px;float:left;margin-left:20px;}
+
+.home_status_editor {margin:1px 0 12px 7px;overflow:hidden;}
+.home_status_editor .home_status_editor_photo {float:left;margin-right:6px;}
+.home_status_editor .home_status_editor_content {float:left;width:500px;}
+.home_status_editor .status_composer {padding-left:0;}
+.home_status_editor .status_composer {overflow:hidden;padding:6px 8px 5px 7px;}
+.home_status_editor .status_composer .status_field {background:white none repeat scroll 0 0;border:1px solid #BDC7D8;height:19px;padding:0;position:relative;}
+.home_status_editor .status_composer .status_field {border-left:medium none;}
+.home_status_editor .status_composer .status_placeholder {margin-right:6px;padding:2px 0;}
+.home_status_editor .status_composer .input_wrapper {margin:1px 0;overflow:hidden;padding:0 6px 0 0;}
+.home_status_editor .status_composer .status_field input {border:medium none;margin:0 2px 0 0;width:100%;}
+.home_status_editor .status_composer_inner {background:transparent url([theme_url]/images/textarea_nub_ltr.gif) no-repeat scroll left -11px;padding-left:5px;}
+/* temp */.home_status_editor .status_composer .status_field input {font-size:15px;padding:0;color:#777;padding-left:4px;}
+
+.new_user_todo_holder {height:46px;border:1px solid #D8DFEA;margin:8px 0;padding:15px 24px 5px;background-color:#F8F9FB;}
+.new_user_todo_icon {float:left;padding-right:10px;}
+.new_user_todo {float:left;line-height:16px;padding:0 0 10px;}
+.new_user_todo h3 {font-size:13px;padding:0 0 4px;font-weight:bold;}
+.new_user_todo .sx_see_more {padding-left:5px;width:0;height:9px;background-position:0 -1569px;}
+
+.tab {height:8px;border-bottom:1px solid #D3DAE8;margin-bottom:10px;}
+
+.feed {padding:5px 0;}
+.feed_icon {display:block;float:left;width:16px;height:18px;}
+.spritemap_icons {background-image:url([theme_url]/images/icons/icons.png);background-repeat:no-repeat;width:16px;height:16px;}
+.sx_friend {background-position:0 -753px;}
+.sx_group {background-position:0 -882px;height:14px !important}
+.sx_photo {background-position:0 -1272px;}
+.sx_comment {background-position:0 -1868px;}
+.sx_wall {background-position:0 -1868px;}
+.sx_translations {background-position:0 -1803px;}
+.feed_story {width:465px;padding-left:5px;float:left;}
+.stroy_header {height:18px;padding-bottom:7px;}
+.story_time {margin-left:5px;color:gray;font-size:11px;}
+.story_body {padding:10px 0;}
+.photo_border {float:left;width:108px;margin:0 0 5px;margin-right:10px;}
+.story_body a img {border:1px solid #CCC;padding:3px;}
+.story_body a:hover img {border-color:#3B5998;}
+.story_quote {float:left;width:310px;background:transparent url([theme_url]/images/start_quote.gif) no-repeat scroll left top;margin:3px 5px 8px 0;padding-left:23px;}
+.story_quote .em {background:transparent url([theme_url]/images/end_quote.gif) no-repeat scroll right bottom;color:#666;padding:2px 23px 2px 0;text-align:left;}
+
+.UIRoundedBox {width:320px;margin-bottom:10px;}
+.UIRoundedBox .T,.B {width:320px;height:5px;background-image:url([theme_url]/images/UIRoundedBox_corner.gif);background-repeat:no-repeat;}
+.UIRoundedBox .C {border-left:1px solid #ccc;border-right:1px solid #ccc;background-color:#f7f7f7;}
+.UIRoundedBox .T {background-position:0 0;}
+.UIRoundedBox .B {background-position:0 -11px;}
+.sidebar_item {border-bottom:1px solid #E9E9E9;padding:5px 0;}
+.sidebar_item_header {padding:6px 9px;font-weight:bold;}
+.sidebar_item_body {padding:0 9px 5px;line-height:18px;}
+.sidebar_item_body ul,li {list-style:none;}
+.sidebar_item_body li {width:105px;float:left;margin:4px 0;}
+.socialmap {background:transparent url([theme_url]/images/icons/friend.gif) no-repeat scroll left 3px;padding:4px 4px 4px 23px;}
+.app_group {background:transparent url([theme_url]/images/icons/group.gif) no-repeat scroll left 3px;padding:4px 4px 4px 23px;}
+.app_photo {background:transparent url([theme_url]/images/icons/photo.gif) no-repeat scroll left 3px;padding:4px 4px 4px 23px;}
+.app_gift {background:transparent url([theme_url]/images/icons/gift.gif) no-repeat scroll left 3px;padding:4px 4px 4px 23px;}
+.friend_finder {background:transparent url([theme_url]/images/icons/friend_finder.gif) no-repeat scroll left 3px;padding:4px 4px 4px 23px;}
+.first {border-bottom:1px solid #f7f7f7;}
