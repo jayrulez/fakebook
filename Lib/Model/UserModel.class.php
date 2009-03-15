@@ -3,7 +3,7 @@
 class UserModel extends Model
 {
 
-	protected $_validate = array
+/*	protected $_validate = array
 	(
 		array('account','require',L('account_required'),1),
 		array('email','email',L('email_required'),2),
@@ -13,6 +13,7 @@ class UserModel extends Model
 		array('email','',L('email_exists'),0,'unique','add'),
 		array('verify','checkVerify',L('verify_invalid'),0,'callback'),
 	);
+*/
 
 	protected $_auto     = array
 	(
