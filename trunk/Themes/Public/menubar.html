@@ -1,14 +1,14 @@
-<!--<session name='authId'>-->
+<if condition="$islogged" >
       <div id="menubar" class="menubar_logged_in clearfix">
         <div id="logobar">
           <a class="home" href="home.php" title="Go to Fakebook Home"></a>
         </div>
          <div id="main_menu">
           <ul id="main_menu_list">
-            <li class="main_menu" id="home"><a href="home.php">{$lang.link_home}</a></li>
-            <li class="main_menu" id="profile"><a href="profile.php?id={$userInfo.id}">{$lang.link_profile}</a></li>
-            <li class="main_menu" id="friends"><a href="friends.php">{$lang.link_friends}</a></li>
-            <li class="main_menu" id="inbox"><a href="inbox.php">{$lang.link_inbox}</a></li>
+            <li class="main_menu" id="home"><a href="home">{$lang.link_home}</a></li>
+            <li class="main_menu" id="profile"><a href="profile/id/{$userInfo.id}">{$lang.link_profile}</a></li>
+            <li class="main_menu" id="friends"><a href="friends">{$lang.link_friends}</a></li>
+            <li class="main_menu" id="inbox"><a href="inbox">{$lang.link_inbox}</a></li>
           </ul>
         </div>
         <div id="account_menu">
@@ -27,20 +27,19 @@
                 </form>
               </div>
             </li>
-            <li class="account_menu" id="logout"><a href="logout.php">{$lang.link_logout}</a></li>
-            <li class="account_menu" id="account"><a href="account.php">{$lang.link_settings}</a></li>
-			<li class="account_menu" id="user"><a href="profile.php?id={$userInfo.id}">{$userInfo.truename}</a></li>
+            <li class="account_menu" id="logout"><a href="logout">{$lang.link_logout}</a></li>
+            <li class="account_menu" id="account"><a href="account">{$lang.link_settings}</a></li>
+			<li class="account_menu" id="user"><a href="profile/id/{$userInfo.id}">{$userInfo.truename}</a></li>
           </ul>
         </div>
       </div>
-<!--</session>-->
-<!--<nosession>-->
+<else />
       <div id="menubar" class="menubar_logged_out clearfix">
         <div id="logobar">
           <a class="home" title="Go to Fakebook Home" href="{$home}"></a>
         </div>
         <div id="menu_login_container" class="clearfix">
-          <form id="menubar_login" name="menubar_login" action="login.php" method="post">
+          <form id="menubar_login" name="menubar_login" action="login" method="post">
             <input type="hidden" name="login" value="1"/>
             <table cellspacing="0" cellpadding="0">
               <tbody>
@@ -79,4 +78,4 @@
           </form>
         </div>
       </div>
-</nosession>
+</if>

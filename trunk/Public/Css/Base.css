@@ -2,7 +2,7 @@ a, body, br, div, fieldset, form, h1, h2, h3, h4, h5, h6, html, hr, img, input, 
 fieldset{border: 0px; background: none;}
 legend{display: none;}
 html, body {height: 100%;}
-body{font-family:"lucida grande", tahoma, verdana, arial, sans-serif;text-align:center;}
+body{font-family:"lucida grande", tahoma, verdana, arial, sans-serif;text-align:center;font-size: 11px;}
 .en {font-size: 11px;}
 .zh {font-size: 12px;}
 h1, h2, h3, h4, h5, h6 {font-size:11px;color:#333;}
