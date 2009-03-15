@@ -1,5 +1,10 @@
 <?php
 
+function css_browser_id()
+{
+
+}
+
 function _static()
 {
 	$resource = $_REQUEST['item'];

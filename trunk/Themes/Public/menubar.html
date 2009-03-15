@@ -6,7 +6,7 @@
          <div id="main_menu">
           <ul id="main_menu_list">
             <li class="main_menu" id="home"><a href="home">{$lang.link_home}</a></li>
-            <li class="main_menu" id="profile"><a href="{:url('','','profile','',array('id',$userInfo.id))}">{$lang.link_profile}</a></li>
+            <li class="main_menu" id="profile"><a href="{:url('','','profile','',array('id'=>$userInfo.id))}">{$lang.link_profile}</a></li>
             <li class="main_menu" id="friends"><a href="friends">{$lang.link_friends}</a></li>
             <li class="main_menu" id="inbox"><a href="inbox">{$lang.link_inbox}</a></li>
           </ul>
@@ -29,7 +29,7 @@
             </li>
             <li class="account_menu" id="logout"><a href="logout">{$lang.link_logout}</a></li>
             <li class="account_menu" id="account"><a href="account">{$lang.link_settings}</a></li>
-			<li class="account_menu" id="user"><a href="{:url('','','profile','',array('id',$userInfo.id))}">{$userInfo.truename}</a></li>
+			<li class="account_menu" id="user"><a href="{:url('','','profile','',array('id'=>$userInfo.id))}">{$userInfo.truename}</a></li>
           </ul>
         </div>
       </div>
