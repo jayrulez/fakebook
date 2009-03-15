@@ -4,14 +4,14 @@ class PublicAction extends Action
 {
 	public function _empty()
 	{
-		$this->redirect('','Index');
+		$this->redirect('','index');
 	}
 
 	public function signup()
 	{
 		if(Session::get(C('USER_AUTH_KEY')))
 		{
-			$this->redirect('index','Home');
+			$this->redirect('index','home');
 		}else{
 			if(isset($_POST['signup']))
 			{
@@ -33,7 +33,7 @@ class PublicAction extends Action
 	{
 		if(Session::get(C('USER_AUTH_KEY')))
 		{
-			$this->redirect('index','Home');
+			$this->redirect('index','home');
 		}else{
 			if(isset($_POST['signin']))
 			{
@@ -78,7 +78,7 @@ class PublicAction extends Action
 						Cookie::set('password',$password,C('COOKIE_EXPIRE'));
 					}
 
-					$this->redirect('index','Home');
+					$this->redirect('index','home');
 				}else{
 					$this->assign('error',L('signin_incorrect_password'));
 				}

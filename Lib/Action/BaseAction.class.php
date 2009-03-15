@@ -8,7 +8,7 @@ class BaseAction extends Action
 	{		
 		if(!Session::get(C('USER_AUTH_KEY')))
 		{
-			$this->redirect('signin','Public');
+			$this->redirect('','login');
 		}
 		
 		if(empty($this->userId))
