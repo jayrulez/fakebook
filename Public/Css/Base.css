@@ -67,3 +67,11 @@ table tr {height:25px}
 #page_footer .copyright_and_location,#page_footer .language {float:left;padding-right:10px;}
 #page_footer .page_footer_links,.page_footer_links li {float:right;}
 #page_footer .page_footer_links li {padding:0 5px;}
+
+.UIRoundedImage {background-color:#C4CDE0;display:block;overflow:hidden;position:relative;}
+.UIRoundedImage_LARGE {width:50px;height:50px;}
+.UIRoundedImage_SMALL {width:35px;height:35px;}
+.UIRoundedImage_Corners {background:transparent none repeat scroll 0 0;display:block;height:100%;left:0;overflow:hidden;position:absolute;top:0;width:100%;}
+.UIRoundedImage_CornersSprite {background:transparent none repeat scroll 0 0 !important;height:200px !important;width:110px !important;display:block;position:absolute;}
+.UIRoundedImage_LARGE .UIRoundedImage_CornersSprite {left:0;}
+.UIRoundedImage_WHITE .UIRoundedImage_CornersSprite {top:0;}
