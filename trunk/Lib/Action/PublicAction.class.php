@@ -51,14 +51,14 @@ class PublicAction extends Action
 				import('ORG.Text.Validation');
 						
 				$isEmail = I('Validation')->check($signinId,'email');
-						
+
 				if(!$isEmail)
 				{
 					$map['account'] = $signinId;
 				}else{
 					$map['email']   = $signinId;
 				}
-
+				
 				$userDao = D('User');
 				$user    = $userDao->find($map,'*');
 				
