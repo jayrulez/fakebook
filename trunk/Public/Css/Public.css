@@ -1,0 +1,29 @@
+body {font-size:11px;}
+label {color:#666;cursor:pointer;font-weight:bold;vertical-align:middle;}
+
+#content .UIFullPage_Container {margin:0 auto;padding:50px 12px 0;width:940px;}
+#content .UIInterstitialContainer {padding:34px 150px 50px;}
+#content .UIRoundedTransparentBox_Inner {position:relative;}
+#content .UIRoundedTransparentBox_Corner {background:transparent url([theme_url]/images/UIRoundedTransparentBox.gif) no-repeat scroll left top;height:8px;margin:0;overflow:hidden;padding:0;position:absolute;width:8px;}
+#content .UIRoundedTransparentBox_TL {background-position:0 0;left:0;top:0;}
+#content .UIRoundedTransparentBox_TR {background-position:-8px 0;right:0;top:0;}
+#content .UIRoundedTransparentBox_BL {background-position:0 -8px;bottom:0;left:0;}
+#content .UIRoundedTransparentBox_BR {background-position:-8px -8px;bottom:0;right:0;}
+#content .UIRoundedTransparentBox_Border {background:transparent none repeat scroll 0 0;border:1px solid #CFCFCF;margin:0;padding:0;}
+#content .UIInterstitialBox_Container {padding:25px 30px;}
+#content .UIInterstitialBox_Container .title_header {margin:0 0 10px;padding:0 0 10px;}
+#content .UIInterstitialBox_Container .add_border {border-bottom:1px solid #CCCCCC;}
+#loginform {clear:left;margin:auto;padding-top:15px;text-align:left;width:380px;}
+#loginform .form_row {padding:0 0 8px;text-align:left;}
+#loginform .form_row label {display:block;float:left;padding:3px 0;width:100px;}
+#loginform .inputtext,#loginform .inputpassword {width:175px;}
+#loginform .persistent {color:#333;display:block;font-size:11px;font-weight:normal;line-height:16px;padding:3px 0 3px 100px;}
+#loginform #buttons {padding:5px 0 0 100px;text-align:left;}
+#loginform #buttons label {float:none;width:auto;}
+#loginform #buttons input {margin-right:2px;}
+#loginform .reset_password label {float:none;font-weight:normal;width:auto;}
+#loginform .reset_password {padding-left:100px;}
+#loginform p {line-height:16px;margin:10px 0;text-align:left;}
+
+#error {background:#FFEBE8 none repeat scroll 0 0;border:1px solid #DD3C10;margin:0 0 10px;padding:10px;}
+#error p {font-weight:normal;line-height:14px;margin:4px 0 0;}
