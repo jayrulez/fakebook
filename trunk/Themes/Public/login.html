@@ -37,7 +37,7 @@
                       <div class="title_header add_border">
                         <h2 class="no_icon">Fakebook Login</h2>
                       </div>
-                      <form action="/login" method="post">
+                      <form action="{:url('','','login')}" method="post">
                         <input type="hidden" name="login" value="1"/>
                       <if condition="$error" >
                         <div id="error">
