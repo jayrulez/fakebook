@@ -2,7 +2,8 @@
 
 class UserModel extends Model
 {
-
+    protected $tableName = 'users';
+    
 /*	protected $_validate = array
 	(
 		array('account','require',L('account_required'),1),
