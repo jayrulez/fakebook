@@ -4,7 +4,7 @@ return array
 (
 	/* SITE CONFIG */
 	'SITE_NAME'=>'Fakebook',
-	'SITE_URL'=>'http://localhost/fakebook',
+	'SITE_URL'=>'http://fakebookdemo.com',
 	'SITE_ID'=>'fb',
 	
 	/* DATABASE CONFIG */
