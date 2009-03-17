@@ -26,8 +26,8 @@ function _static()
 	{
 		header('Content-Type: text/css');
 	}
-		
-	$file  = ROOT_PATH.WEB_PUBLIC_URL.'/';
+
+	$file  = ROOT_PATH.'Themes/'.WEB_PUBLIC_URL.'/';
 	$file .= $resource;
 	$cache = CACHE_PATH.md5($file).'.'.$ext;
 
@@ -39,10 +39,11 @@ function _static()
 		if(is_file($file))
 		{
 			$content = file_get_contents($file);
-			$content = str_replace('[theme_url]',C('SITE_URL').'/Public',$content);
+			//$content = str_replace('[theme_url]',C('SITE_URL').'/Public',$content);
 			file_put_contents($cache,$content);
 			echo $content;
 		}else{
+			echo (string)$file;
 			echo LParse(L('_RESOURCE_NOT_EXIST_'),$file);
 		}
 	}
