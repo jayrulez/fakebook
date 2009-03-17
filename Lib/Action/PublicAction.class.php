@@ -44,19 +44,19 @@ class PublicAction extends Action
 					$secure_code = '';
 				}
 				
-				$signinId   = isset($_POST['email'])   ? $_POST['email'] : '';
+				$email   = isset($_POST['email'])   ? $_POST['email'] : '';
 				$password   = isset($_POST['pass'])   ? $secure_code.$_POST['pass'] : '';
 				$autosignin = isset($_POST['persistent']) ? true               : false;
 						
 				import('ORG.Text.Validation');
 						
-				$isEmail = I('Validation')->check($signinId,'email');
+				$isEmail = I('Validation')->check($email,'email');
 
 				if(!$isEmail)
 				{
-					$map['account'] = $signinId;
+					$map['account'] = $email;
 				}else{
-					$map['email']   = $signinId;
+					$map['email']   = $email;
 				}
 				
 				$userDao = D('User');
@@ -64,7 +64,7 @@ class PublicAction extends Action
 				
 				if(!$user)
 				{
-					$this->assign('error',L('signin_invalid_signinId'));
+					$this->assign('error',L('login_invalid_Id'));
 				}else if($secure_code.$user['password'] == md5($password))
 				{
 					Session::set(C('USER_AUTH_KEY'),$user['id']);
@@ -74,7 +74,7 @@ class PublicAction extends Action
 
 					if($autosignin)
 					{
-						Cookie::set('signinId',$signinId,C('COOKIE_EXPIRE'));
+						Cookie::set('signinId',$email,C('COOKIE_EXPIRE'));
 						Cookie::set('password',$password,C('COOKIE_EXPIRE'));
 					}
 
