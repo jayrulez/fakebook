@@ -27,7 +27,7 @@ function _static()
 		header('Content-Type: text/css');
 	}
 
-	$file  = ROOT_PATH.'Themes/'.WEB_PUBLIC_URL.'/';
+	$file  = ROOT_PATH.'Themes'.WEB_PUBLIC_URL.'/';
 	$file .= $resource;
 	$cache = CACHE_PATH.md5($file).'.'.$ext;
 
