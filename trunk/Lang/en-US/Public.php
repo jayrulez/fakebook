@@ -5,7 +5,8 @@ return array
 	'signup_pagename'		=>	'Sign Up for #site_name#',
 
 	'login_pagename'		=>	'Login',
-	'login_invalid_Id'	=>		'No account was found with the email address you entered.',
+	'login_invalid_email'	=>		'Please enter your email address.',
+	'login_incorrect_email'	=>		'No account was found with the email address you entered.',
 	'signin_incorrect_password'	=>	'Incorrect Password!',
 	'account_required'	=>	'',
 	'email_required'	=>	'',

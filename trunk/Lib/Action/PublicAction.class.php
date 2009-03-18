@@ -54,33 +54,32 @@ class PublicAction extends Action
 
 				if(!$isEmail)
 				{
-					$map['account'] = $email;
+					$this->assign('error',L('login_invalid_email'));
 				}else{
 					$map['email']   = $email;
-				}
+					$userDao = D('User');
+					$user    = $userDao->find($map,'*');
 				
-				$userDao = D('User');
-				$user    = $userDao->find($map,'*');
-				
-				if(!$user)
-				{
-					$this->assign('error',L('login_invalid_Id'));
-				}else if($secure_code.$user['password'] == md5($password))
-				{
-					Session::set(C('USER_AUTH_KEY'),$user['id']);
-					Session::set('userInfo',$user);
-
-					$userDao->setField('signinTime',time(),'id='.$user['id']);
-
-					if($autosignin)
+					if(!$user)
 					{
-						Cookie::set('signinId',$email,C('COOKIE_EXPIRE'));
-						Cookie::set('password',$password,C('COOKIE_EXPIRE'));
-					}
+						$this->assign('error',L('login_incorrect_email'));
+					}else if($secure_code.$user['password'] == md5($password))
+					{
+						Session::set(C('USER_AUTH_KEY'),$user['id']);
+						Session::set('userInfo',$user);
 
-					$this->redirect('index','home');
-				}else{
-					$this->assign('error',L('signin_incorrect_password'));
+						$userDao->setField('signinTime',time(),'id='.$user['id']);
+
+						if($autosignin)
+						{
+							Cookie::set('signinId',$email,C('COOKIE_EXPIRE'));
+							Cookie::set('password',$password,C('COOKIE_EXPIRE'));
+						}
+
+						$this->redirect('index','home');
+					}else{
+						$this->assign('error',L('signin_incorrect_password'));
+					}
 				}
 			}
 			$this->display();
