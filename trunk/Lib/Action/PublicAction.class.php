@@ -11,7 +11,7 @@ class PublicAction extends Action
 	{
 		if(Session::get(C('USER_AUTH_KEY')))
 		{
-			$this->redirect('index','home');
+			$this->redirect('','home');
 		}else{
 			if(isset($_POST['signup']))
 			{
@@ -33,7 +33,7 @@ class PublicAction extends Action
 	{
 		if(Session::get(C('USER_AUTH_KEY')))
 		{
-			$this->redirect('index','home');
+			$this->redirect('','home');
 		}else{
 			if(isset($_POST['login']))
 			{
@@ -76,7 +76,7 @@ class PublicAction extends Action
 							Cookie::set('password',$password,C('COOKIE_EXPIRE'));
 						}
 
-						$this->redirect('index','home');
+						$this->redirect('','home');
 					}else{
 						$this->assign('error',L('signin_incorrect_password'));
 					}

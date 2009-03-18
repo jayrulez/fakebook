@@ -2,7 +2,7 @@
 .narrowcolumn {width:200px;float:left;margin-left:20px;}
 .adcolumn {width:160px;float:left;padding:56px 0 0 20px;}
 
-.widecolumn .group_title {background:transparent url('../Public/images/icons/group.gif') no-repeat scroll left 1px;border-bottom:1px solid #EEEEEE;color:gray;margin-left:10px;padding-bottom:15px;padding-left:22px;}
+.widecolumn .group_title {background:transparent url('../Themes/Public/images/icons/group.gif') no-repeat scroll left 1px;border-bottom:1px solid #EEEEEE;color:gray;margin-left:10px;padding-bottom:15px;padding-left:22px;}
 .widecolumn .group_title h2 {font-size:14px;padding-bottom:2px;}
 .widecolumn .group_info_section {padding:10px 10px 20px 8px;}
 .widecolumn .group_info_section h4 {color:#444444;margin:1px 0 0;padding:4px 0 2px;}
