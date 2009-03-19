@@ -6,7 +6,7 @@ class IndexAction extends Action
 	{
 		if(Session::get(C('USER_AUTH_KEY')))
 		{
-			$this->redirect('','Home');
+			//$this->redirect('','home');
 		}
 	}
 

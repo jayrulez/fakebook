@@ -1,7 +1,7 @@
-<if condition="Session::get(C('USER_AUTH_KEY'))" >
+<if condition="$userId" >
       <div id="menubar" class="menubar_logged_in clearfix">
         <div id="logobar">
-          <a class="home" href="home" title="Go to Fakebook Home"></a>
+          <a class="home" href="__APP__/home" title="Go to Fakebook Home"></a>
         </div>
          <div id="main_menu">
           <ul id="main_menu_list">

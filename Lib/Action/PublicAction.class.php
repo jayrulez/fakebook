@@ -49,7 +49,7 @@ class PublicAction extends Action
 				$autosignin = isset($_POST['persistent']) ? true               : false;
 						
 				import('ORG.Text.Validation');
-						
+				
 				$isEmail = I('Validation')->check($email,'email');
 
 				if(!$isEmail)
