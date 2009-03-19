@@ -11,9 +11,126 @@
 #widecolumn #home_filter .UIFilterList_FirstItem {border-top:1px solid #DDDDDD;}
 #widecolumn #home_filter .UIFilterList_Selected {background:transparent url(../Themes/Public/images/UIFilterList_Selected_ltr.gif) no-repeat scroll left top;border-top:1px solid white;height:27px;margin-top:-1px;}
 #widecolumn #home_filter .UIFilterList_Item .UIFilterList_ItemLink {border-bottom:1px solid #D6D9DE;color:#333;display:block;height:19px;margin:0;overflow:hidden;padding:6px 7px 0 25px;white-space:nowrap;}
+#widecolumn #home_filter .UIFilterList_Icon {background-position:right top;background-repeat:no-repeat;height:16px;left:5px;position:absolute;top:5px;width:16px;}
+#widecolumn #home_filter .UIFilterList_ItemRight {display:none;}
+#widecolumn #home_filter .UIFilterList_BottomMargin {padding-bottom:20px;}
+
+#widecolumn #home_filter .NewsFeed_Icon {background-image:url(../Themes/Public/images/app_icons/newsfeed.gif);}
+#widecolumn #home_filter .PublicProfiles_Icon {background-image:url(../Themes/Public/images/app_icons/fbpage.gif);}
+#widecolumn #home_filter .Network_Icon {background-image:url(../Themes/Public/images/app_icons/network.gif);}
+#widecolumn #home_filter .Photo_Icon {background-image:url(../Themes/Public/images/app_icons/photo.gif);}
+#widecolumn #home_filter .Video_Icon {background-image:url(../Themes/Public/images/app_icons/video.gif);}
+#widecolumn #home_filter .Post_Icon {background-image:url(../Themes/Public/images/app_icons/post.gif);}
+#widecolumn #home_filter .Note_Icon {background-image:url(../Themes/Public/images/app_icons/note.gif);}
+#widecolumn #home_filter .Event_Icon {background-image:url(../Themes/Public/images/app_icons/event.gif);}
+
 #widecolumn #home_filter .UIFilterList_Selected .UIFilterList_ItemLink {border-bottom:0 none;color:#FFFFFF;padding-bottom:6px;}
 #widecolumn #home_filter .UIFilterList_Selected .UIFilterList_Icon {background-position:left top;}
-#widecolumn #home_filter .UIFilterList_Icon {background-image:url(../Themes/Public/images/app_icons/newsfeed.gif);}
+#widecolumn #home_filter .UIFilterList_Selected .UIFilterList_ItemRight {background:transparent url(../Themes/Public/images/UIFilterList_Selected_ltr.gif) no-repeat scroll left -27px;display:block;height:27px;position:absolute;right:0;top:0;width:9px;}
+
+/*  Temp  */
+#widecolumn #home_stream {float:left;padding-left:14px;width:530px;}
+.UIComposer_Pic {position:absolute;}
+.UIComposer_STATE_PIC_OUTSIDE .UIComposer_UIRoundedBox {padding-left:59px;}
+.UIComposer{margin-bottom:10px;overflow:hidden;}
+.safari2 .UIComposer,
+.safari3 .UIComposer{position:relative;}
+.UIComposer_Upload_Iframe{width:1px;height:1px;position:absolute;left:0;top:-1000px;}
+.UIComposer_Pic{position:absolute;}
+.safari2 .UIComposer_Pic,
+.safari3 .UIComposer_Pic{left:0;}
+.UIComposer_PicRounded{position:absolute;left:0;}
+.UIComposer_Content{overflow:hidden;padding:1px 9px 0 9px;}
+.UIComposer_Prompt{color:#696969;font-size:13px;font-weight:bold;margin-bottom:5px;}
+.UIComposer_Table{width:100%;}
+.UIComposer_TDTextArea{background:white;border:1px solid #bbbbbb;border-top-color:#aeaeae;width:100%;}
+.UIComposer_TextAreaShadow{border-top:1px solid #e8e8e8;padding:2px 3px 3px 3px;}
+.ie6 .UIComposer_TextAreaShadow,
+.ie7 .UIComposer_TextAreaShadow{padding:1px 3px 2px 3px;}
+.UIComposer_TextArea{border:none;font-size:13px;margin:0;vertical-align:bottom;width:100%;height:21px;outline:none;overflow:hidden;padding:0;resize:none;}
+.UIComposer_TDButton{padding-left:8px;vertical-align:top;white-space:nowrap;}
+.UIComposer_ButtonContainer{background:url(../Themes/Public/images/UIComposer_sprites_v3.gif) right -25px no-repeat #5C74A3;padding-right:2px;position:relative;}
+.UIComposer_Button{background:url(../Themes/Public/images/UIComposer_sprites_v3.gif) left -25px no-repeat;border:none;color:white;cursor:pointer;font-size:13px;font-weight:bold;height:29px;line-height:27px;margin:0;padding:0 5px 3px 7px;}
+.safari2 .UIComposer_Button,
+.safari3 .UIComposer_Button{padding:0 6px 0 10px;}
+.ie6 .UIComposer_Button{padding:0 0 0 4px;}
+.ie7 .UIComposer_Button{padding:0 1px 0 3px;}
+
+.UIRoundedBox_Container{margin:0px;padding:0px;}
+.UIRoundedBox_BottomMargin{padding-bottom:10px;}
+.UIRoundedBox_Box{margin:0px;padding:0px;}
+.UIRoundedBox_Container .UIRoundedBox_Side{/* @noflip */background:url(../Themes/Public/images/UIRoundedBox_SideSpriteGray_ltr.gif) top left repeat-y;}
+.UIRoundedBox_WhiteBackground .UIRoundedBox_Side{/* @noflip */background:url(../Themes/Public/images/UIRoundedBox_SideSpriteWhite_ltr.gif) top left repeat-y;}
+.UIRoundedBox_GrayGirlyBlueBackground .UIRoundedBox_Side{/* @noflip */background:url(../Themes/Public/images/UIRoundedBox_SideSpriteGrayGirlyBlue.gif) top left repeat-y;}
+.UIRoundedBox_GirlyBlueBackground .UIRoundedBox_Side{/* @noflip */background:url(../Themes/Public/images/UIRoundedBox_SideSpriteGirlyBlue.gif) top left repeat-y;}
+.UIRoundedBox_GrayBlueTopBackground .UIRoundedBox_Side{/* @noflip */background:url(../Themes/Public/images/UIRoundedBox_SideSpriteGrayBlueTop.gif) top left repeat-y;}
+.UIRoundedBox_GrayDarkTopBackground .UIRoundedBox_Side{/* @noflip */background:url(../Themes/Public/images/UIRoundedBox_SideSpriteGrayDarkTop.gif) top left repeat-y;}
+.UIRoundedBox_GirlyBlueBackgroundNoBorder .UIRoundedBox_Side{/* @noflip */background:url(../Themes/Public/images/UIRoundedBox_SideSpriteGirlyBlueNoBorder.gif) top left repeat-y;}
+.UIRoundedBox_Container .UIRoundedBox_LS{/* @noflip */background-position:left top;}
+.UIRoundedBox_Container .UIRoundedBox_RS{/* @noflip */background-position:right top;padding:0px 1px;}
+.UIRoundedBox_Container .UIRoundedBox_Corner{/* @noflip */background:url(../Themes/Public/images/UIRoundedBox_SpriteGray_ltr.gif) top left no-repeat;}
+.UIRoundedBox_WhiteBackground .UIRoundedBox_Corner{/* @noflip */background:url(../Themes/Public/images/UIRoundedBox_SpriteWhite_ltr.gif) top left repeat-y;}
+.UIRoundedBox_GrayGirlyBlueBackground .UIRoundedBox_Corner{/* @noflip */background:url(../Themes/Public/images/UIRoundedBox_SpriteGrayGirlyBlue.gif) top left repeat-y;}
+.UIRoundedBox_GirlyBlueBackground .UIRoundedBox_Corner{/* @noflip */background:url(../Themes/Public/images/UIRoundedBox_SpriteGirlyBlue.gif) top left repeat-y;}
+.UIRoundedBox_GrayBlueTopBackground .UIRoundedBox_Corner{/* @noflip */background:url(../Themes/Public/images/UIRoundedBox_SpriteGrayBlueTop.gif) top left no-repeat;}
+.UIRoundedBox_GrayDarkTopBackground .UIRoundedBox_Corner{/* @noflip */background:url(../Themes/Public/images/UIRoundedBox_SpriteGrayDarkTop.gif) top left no-repeat;}
+.UIRoundedBox_GirlyBlueBackgroundNoBorder .UIRoundedBox_Corner{/* @noflip */background:url(../Themes/Public/images/UIRoundedBox_SpriteGirlyBlueNoBorder.gif) top left repeat-y;}
+.UIRoundedBox_Container .UIRoundedBox_TL{padding:0;/* @noflip */background-position:left top;}
+.UIRoundedBox_Container .UIRoundedBox_TR{padding:5px 0 0 0;/* @noflip */background-position:right top;}
+.UIRoundedBox_Container .UIRoundedBox_BL{padding:0;/* @noflip */background-position:left bottom;}
+.UIRoundedBox_Container .UIRoundedBox_BR{padding:0 0 5px 0;/* @noflip */background-position:right bottom;}
+.UIRoundedBox_GrayDarkTopBackground .UIRoundedBox_Box .UIRoundedBox_TR,
+.UIRoundedBox_GrayBlueTopBackground .UIRoundedBox_Box .UIRoundedBox_TR{padding:9px 0 0 0;}
+.UIRoundedBox_GrayDarkTopBackground .UIRoundedBox_Box .UIRoundedBox_BR,
+.UIRoundedBox_GrayBlueTopBackground .UIRoundedBox_Box .UIRoundedBox_BR{padding:0 0 9px 0;}
+/*  Temp  */
+
+.UIIntentionalStory_Pic {position:absolute;}
+.UIIntentionalStory_Body {min-height:50px;overflow:hidden;padding:0 0 0 60px;}
+.UIIntentionalStream .UIIntentionalStory_Message {width:435px;}
+.UIIntentionalStory_Message {color:#333;display:inline-block;font-size:13px;font-weight:normal;overflow:hidden;position:relative;}
+.UIIntentionalStory_Names {color:#444;font-weight:bold;}
+.UIIntentionalStory_Message {color:#333;font-size:13px;font-weight:normal;}
+.UIStoryAttachment {margin-top:4px;}
+.UIStoryAttachment_Content {overflow:hidden;padding-right:10px;}
+.UIIntentionalStory .UIStoryAttachment_MediaSingle {padding-right:10px;}
+.UIStoryAttachment_Media {float:left;overflow:hidden;}
+.UIMediaItem img {display:block;vertical-align:middle;}
+.UIStoryAttachment_Copy {color:gray;padding-top:2px;}
+.UIIntentionalStory_AttachmentInfo {padding-top:5px;}
+.UIIntentionalStory_Info {clear:left;margin-top:1px;overflow:hidden;}
+.UIIntentionalStory_Icon, .UIIntentionalStory_Mobile {position:absolute;}
+.UIIntentionalStory_InfoText {min-height:16px;padding:2px 0 0;}
+.UIIntentionalStory_InfoTextIndented {padding-left:22px;}
+.UIIntentionalStory_Time {color:#777777;font-size:11px;}
+span.action_links_bottom {color:#999999;display:inline-block;}
+span.action_links_bottom {color:#999999;}
+.action_link_dash {color:#888888;}
+.like_not_exists .like_component_exists {display:block;}
+.like_not_exists .like_component_exists {display:none;}
+
+.collapsed_comments .comment_box {display:block;}
+.commentable_item .comment_box {background:transparent url(../Themes/Public/images/box_bg.gif) no-repeat scroll left 1px;clear:both;font-size:11px;overflow:hidden;padding:7px 0 0;}
+.commentable_item .comment_box {font-size:11px;}
+.like_box {overflow:hidden;}
+.wallpost {float:left;margin:0 0 15px;padding:0;}
+.commentable_item .view_all_link, .commentable_item .show_all_link, .commentable_item .wallpost {background:#ECEFF5 none repeat scroll 0 0;border-bottom:1px solid #E5EAF1;clear:left;float:none;margin-bottom:2px;overflow:hidden;width:350px;}
+.commentable_item .show_all_link, .commentable_item .wallpost {padding:6px 4px 6px 6px;}
+.commentable_item .wallpost {padding-bottom:0;}
+.commentable_item .like_box .wallpost {padding-bottom:0;}
+.like_box .like_sentence_container {overflow:hidden;padding:0 0 5px;position:relative;}
+.like_sentence {padding-top:1px;}
+.like_box_thumb_icon {display:block;float:left;margin-left:1px;margin-right:4px;width:15px;}
+.like_sentence_exists .like_box_thumb_icon {background:transparent url(../Themes/Public/images/like_on.gif) no-repeat scroll left top;}
+.commentable_item .comment_box .comments_add_box {border:0 none;margin-bottom:0;padding:0;}
+.commentable_item .comment_box .comments_add_box .wallcommentbox {margin-bottom:4px;margin-left:0;position:relative;}
+.commentable_item .comment_box .comments_add_box .comments_add_box_image {float:left;margin-right:7px;}
+textarea {border:1px solid #BDC7D8;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-size:11px;padding:3px;}
+.DOMControl_autogrow {overflow:hidden;}
+.commentable_item .comment_box .comments_add_box textarea {height:29px;margin:0;min-height:29px;overflow:auto;width:298px;}
+.commentable_item .comment_box .comments_add_box .inline_comment_buttons {padding:0 0 7px 42px;}
+.commentable_item .comment_box .comments_add_box .comments_add_box_submit {float:left;width:100px;}
+
 
 
 
@@ -58,7 +175,7 @@
 .story_quote .em {background:transparent url('../Themes/Public/images/end_quote.gif') no-repeat scroll right bottom;color:#666;padding:2px 23px 2px 0;text-align:left;}
 
 .UIRoundedBox {width:320px;margin-bottom:10px;}
-.UIRoundedBox .T,.B {width:320px;height:5px;background-image:url(../Themes/Public/images/UIRoundedBox_corner.gif);background-repeat:no-repeat;}
+.UIRoundedBox .T,.B {width:320px;height:5px;background-image:url(../Themes/Public../Themes/Public/imagesRoundedBox_corner.gif);background-repeat:no-repeat;}
 .UIRoundedBox .C {border-left:1px solid #ccc;border-right:1px solid #ccc;background-color:#f7f7f7;}
 .UIRoundedBox .T {background-position:0 0;}
 .UIRoundedBox .B {background-position:0 -11px;}
