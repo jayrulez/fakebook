@@ -122,7 +122,7 @@ span.action_links_bottom {color:#999999;}
 .commentable_item .like_box .wallpost {padding-bottom:0;}
 .like_box .like_sentence_container {overflow:hidden;padding:0 0 5px;position:relative;}
 .like_sentence {padding-top:1px;}
-.like_box_thumb_icon {display:block;float:left;margin-left:1px;margin-right:4px;width:15px;}
+.like_box_thumb_icon {display:block;float:left;margin-left:1px;margin-right:4px;width:15px;height:13px;}
 .like_sentence_exists .like_box_thumb_icon {background:transparent url(../Themes/Public/images/like_on.gif) no-repeat scroll left top;}
 .commentable_item .comment_box .comments_add_box {border:0 none;margin-bottom:0;padding:0;}
 .commentable_item .comment_box .comments_add_box .wallcommentbox {margin-bottom:4px;margin-left:0;position:relative;}
