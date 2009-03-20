@@ -13,6 +13,7 @@ label {color:#666;cursor:pointer;font-weight:bold;vertical-align:middle;}
 #content .UIInterstitialBox_Container {padding:25px 30px;}
 #content .UIInterstitialBox_Container .title_header {margin:0 0 10px;padding:0 0 10px;}
 #content .UIInterstitialBox_Container .add_border {border-bottom:1px solid #CCCCCC;}
+
 #loginform {clear:left;margin:auto;padding-top:15px;text-align:left;width:380px;}
 #loginform .form_row {padding:0 0 8px;text-align:left;}
 #loginform .form_row label {display:block;float:left;padding:3px 0;width:100px;}
@@ -24,6 +25,15 @@ label {color:#666;cursor:pointer;font-weight:bold;vertical-align:middle;}
 #loginform .reset_password label {float:none;font-weight:normal;width:auto;}
 #loginform .reset_password {padding-left:100px;}
 #loginform p {line-height:16px;margin:10px 0;text-align:left;}
-
 #error {background:#FFEBE8 none repeat scroll 0 0;border:1px solid #DD3C10;margin:0 0 10px;padding:10px;}
 #error p {font-weight:normal;line-height:14px;margin:4px 0 0;}
+
+.UISimpleMessage_Title {border-bottom:1px solid #CCCCCC;margin:0;padding:0 0 10px;}
+.UISimpleMessage_Title h2 {background-image: url(../Themes/Public/images/alert.gif);font-size:14px;margin:0;padding:0;}
+.UISimpleMessage_HasIcon .UISimpleMessage_Title h2 {background-position:left top;background-repeat:no-repeat;padding-left:25px;}
+.UISimpleMessage_HasIcon .UISimpleMessage_Content {padding-left:0;}
+.UISimpleMessage_Content {margin:0;padding:0;}
+.UIOneOff_Container {margin:0;padding:0;}
+.UIOneOff_Container p {margin:10px 0;}
+.UIInterstitialBox_Container ul {list-style-type:square;margin:0 0 0 13px;padding:0;}
+.UIInterstitialBox_Container ul li {color:#3B5998;list-style-type:square;}

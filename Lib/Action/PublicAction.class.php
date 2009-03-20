@@ -2,11 +2,16 @@
 
 class PublicAction extends Action
 {
-	public function _empty()
+	public function error()
 	{
-		$this->redirect('','index');
+		$this->display('error');
 	}
 
+	public function _empty()
+	{
+		$this->redirect('','ERROR');
+	}
+	
 	public function signup()
 	{
 		if(Session::get(C('USER_AUTH_KEY')))

@@ -1,0 +1,53 @@
+<include file="../Public/pghead"/>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+<title>{&SITE_NAME} | {$Think.lang.error_pagename}</title>
+<include file="../Public/header"/>
+</head>
+<body class="{:css_browser_id()} {&LANG_ID}">
+  <div id="non_footer" >
+    <div id="page_height">
+      <div id="menubar_container">
+<include file="../Public/menubar"/>
+      </div>
+      <div id="content">
+        <div class="UIFullPage_Container">
+          <div class="UIInterstitialContainer clearfix">
+            <div class="UIRoundedTransparentBox">
+              <div class="UIRoundedTransparentBox_Inner clearfix">
+                <div class="UIRoundedTransparentBox_Corner UIRoundedTransparentBox_TL"> </div>
+                <div class="UIRoundedTransparentBox_Corner UIRoundedTransparentBox_TR"> </div>
+                <div class="UIRoundedTransparentBox_Corner UIRoundedTransparentBox_BL"> </div>
+                <div class="UIRoundedTransparentBox_Corner UIRoundedTransparentBox_BR"> </div>
+                <div class="UIRoundedTransparentBox_Border clearfix">
+                  <div class="UIInterstitialBox_Container clearfix">
+                    <div class="UISimpleMessage_Container UISimpleMessage_HasIcon">
+                      <div class="UISimpleMessage_Title">
+                        <h2>The page you requested was not found.</h2>
+                      </div>
+                      <div class="UISimpleMessage_Content">
+                        <div class="UIOneOff_Container">
+                          <p>You may have clicked an expired link or mistyped the address. Some web addresses are case sensitive.</p>
+                          <ul>
+                            <li>
+                              <a href="http://www.facebook.com/home.php?">Return home</a>
+                            </li>
+                            <li>
+                              <a onclick="return wait_for_load(this, event, function() { history.back(); });">Go back to the previous page</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<include file="../Public/footer"/>
+</body>
+<include file="../Public/pgfoot"/>

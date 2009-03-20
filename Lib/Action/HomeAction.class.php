@@ -6,6 +6,11 @@ class HomeAction extends BaseAction
 	{
 		$this->display();
 	}
+	
+	public function _empty()
+	{
+		$this->redirect('','ERROR');
+	}
 }
 
 ?>

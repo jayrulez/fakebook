@@ -30,7 +30,7 @@ return array(
 	/* Debug Config */
 	'DEBUG_MODE'				=>	false,	 
 	'ERROR_MESSAGE'			=>	L('_ERROR_MESSAGE_'),	
-	'ERROR_PAGE'					=>	'',	
+	'ERROR_PAGE'					=>	'',
     'SHOW_ERROR_MSG'        =>   true,
 
 	/* Var Config */
