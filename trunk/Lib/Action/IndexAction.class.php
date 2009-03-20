@@ -14,6 +14,11 @@ class IndexAction extends Action
 	{
 		$this->display();
 	}
+
+	public function _empty()
+	{
+		$this->redirect('','ERROR');
+	}
 }
 
 ?>

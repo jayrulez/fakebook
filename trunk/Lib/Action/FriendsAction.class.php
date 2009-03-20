@@ -1,6 +1,6 @@
 <?php
 
-class GroupAction extends BaseAction
+class FriendsAction extends BaseAction
 {
 	public function index()
 	{

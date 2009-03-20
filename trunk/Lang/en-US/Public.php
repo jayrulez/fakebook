@@ -17,6 +17,7 @@ return array
 	'verify_invalid'	=>	'',
 
 	'logout_pagename'		=>	'Logout',
+	'error_pagename'		=>	'Page Not Found',
 );
 
 ?>

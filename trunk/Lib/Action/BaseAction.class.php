@@ -3,7 +3,7 @@
 class BaseAction extends Action
 {
 	public $userId;
-
+	
 	public function _initialize()
 	{
 	    /*
