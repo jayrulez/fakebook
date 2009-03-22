@@ -27,16 +27,16 @@
                 </form>
               </div>
             </li>
-            <li class="account_menu" id="logout"><a href="logout">{$Think.lang.link_logout}</a></li>
-            <li class="account_menu" id="account"><a href="account">{$Think.lang.link_settings}</a></li>
-            <li class="account_menu" id="user"><a href="__APP__/profile">{$userInfo.truename}</a></li>
+            <li class="account_menu" id="logout"><a href="__APP__/logout">{$Think.lang.link_logout}</a></li>
+            <li class="account_menu" id="account"><a href="__APP__/account">{$Think.lang.link_settings}</a></li>
+            <li class="account_menu" id="user"><a href="__APP__/profile">{$userId}</a></li>
           </ul>
         </div>
       </div>
 <else />
       <div id="menubar" class="menubar_logged_out clearfix">
         <div id="logobar">
-          <a class="home" title="Go to Fakebook Home" href="{$home}"></a>
+          <a class="home" title="Go to Fakebook Home" href="__APP__/"></a>
         </div>
         <div id="menu_login_container" class="clearfix">
           <form id="menubar_login" name="menubar_login" action="{:url('','','login')}" method="post">

@@ -1,6 +1,6 @@
 <?php
 
-class PublicAction extends Action
+class PublicAction extends BaseAction
 {
 	public function error()
 	{

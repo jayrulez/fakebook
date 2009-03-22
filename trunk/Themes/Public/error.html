@@ -30,10 +30,10 @@
                           <p>You may have clicked an expired link or mistyped the address. Some web addresses are case sensitive.</p>
                           <ul>
                             <li>
-                              <a href="http://www.facebook.com/home.php?">Return home</a>
+                              <a href="__APP__/home">Return home</a>
                             </li>
                             <li>
-                              <a onclick="return wait_for_load(this, event, function() { history.back(); });">Go back to the previous page</a>
+                              <a onclick="javascript: history.back();">Go back to the previous page</a>
                             </li>
                           </ul>
                         </div>
