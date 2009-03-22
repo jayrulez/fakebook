@@ -36,7 +36,7 @@ function _static()
 	$split    = explode('.',$resource);
 	$parts    = count($split);
 	$valid    = array('js','css');
-	$ext      = $split[$parts-1];   
+	$ext      = $split[$parts-1];
 
 	if(!in_array($ext,$valid))
 	{
@@ -68,7 +68,6 @@ function _static()
 			file_put_contents($cache,$content);
 			echo $content;
 		}else{
-			echo (string)$file;
 			echo LParse(L('_RESOURCE_NOT_EXIST_'),$file);
 		}
 	}
