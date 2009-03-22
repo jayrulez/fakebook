@@ -24,7 +24,7 @@
 
 .feed {padding:5px 0;}
 .feed_icon {display:block;float:left;width:16px;height:18px;}
-.spritemap_icons {background-image:url(../Themes/Public/images/icons/icons.png);background-repeat:no-repeat;width:16px;height:16px;}
+.spritemap_icons {background-image:url([theme_url]/Images/Icons/Icons.png);background-repeat:no-repeat;width:16px;height:16px;}
 .sx_friend {background-position:0 -753px;}
 .sx_group {background-position:0 -882px;height:14px !important}
 .sx_photo {background-position:0 -1272px;}
@@ -38,8 +38,8 @@
 .photo_border {float:left;width:108px;margin:0 0 5px;margin-right:10px;}
 .story_body a img {border:1px solid #CCC;padding:3px;}
 .story_body a:hover img {border-color:#3B5998;}
-.story_quote {float:left;width:310px;background:transparent url(../Themes/Public/images/start_quote.gif) no-repeat scroll left top;margin:3px 5px 8px 0;padding-left:23px;}
-.story_quote .em {background:transparent url(../Themes/Public/images/end_quote.gif) no-repeat scroll right bottom;color:#666;padding:2px 23px 2px 0;text-align:left;}
+.story_quote {float:left;width:310px;background:transparent url([theme_url]/Images/start_quote.gif) no-repeat scroll left top;margin:3px 5px 8px 0;padding-left:23px;}
+.story_quote .em {background:transparent url([theme_url]/Images/end_quote.gif) no-repeat scroll right bottom;color:#666;padding:2px 23px 2px 0;text-align:left;}
 
 /* temp */
 .widecolumn h2 {display:inline;font-size:16px;font-weight:bold;padding:0;}
@@ -55,7 +55,7 @@
 .widecolumn .box_header {border-top:1px solid #94A3C4;background-color:#ECEFF5;color:#333;padding:5px 8px;font-weight:bold;}
 .widecolumn .box_subheader {border-bottom:1px solid #ECEFF5;padding:5px 8px;}
 .widecolumn .box_content {padding:10px 5px;}
-.find_friend {background:transparent url(../../images/magnifying_glass.gif) no-repeat scroll left 3px;padding:4px 4px 4px 23px;}
+.find_friend {background:transparent url(../../Images/magnifying_glass.gif) no-repeat scroll left 3px;padding:4px 4px 4px 23px;}
 
 #wall {width:540px;}
 #wall #inputarea {width:540px;text-align:right;border-bottom:1px solid #CCC;background-color:#F7F7F7;}
