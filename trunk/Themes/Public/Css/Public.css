@@ -4,7 +4,7 @@ label {color:#666;cursor:pointer;font-weight:bold;vertical-align:middle;}
 #content .UIFullPage_Container {margin:0 auto;padding:50px 12px 0;width:940px;}
 #content .UIInterstitialContainer {padding:34px 150px 50px;}
 #content .UIRoundedTransparentBox_Inner {position:relative;}
-#content .UIRoundedTransparentBox_Corner {background:transparent url('../Themes/Public/Images/UIRoundedTransparentBox.gif') no-repeat scroll left top;height:8px;margin:0;overflow:hidden;padding:0;position:absolute;width:8px;}
+#content .UIRoundedTransparentBox_Corner {background:transparent url('[theme_url]/Images/UIRoundedTransparentBox.gif') no-repeat scroll left top;height:8px;margin:0;overflow:hidden;padding:0;position:absolute;width:8px;}
 #content .UIRoundedTransparentBox_TL {background-position:0 0;left:0;top:0;}
 #content .UIRoundedTransparentBox_TR {background-position:-8px 0;right:0;top:0;}
 #content .UIRoundedTransparentBox_BL {background-position:0 -8px;bottom:0;left:0;}
@@ -29,7 +29,7 @@ label {color:#666;cursor:pointer;font-weight:bold;vertical-align:middle;}
 #error p {font-weight:normal;line-height:14px;margin:4px 0 0;}
 
 .UISimpleMessage_Title {border-bottom:1px solid #CCCCCC;margin:0;padding:0 0 10px;}
-.UISimpleMessage_Title h2 {background-image: url(../Themes/Public/images/alert.gif);font-size:14px;margin:0;padding:0;}
+.UISimpleMessage_Title h2 {background-image: url([theme_url]/Images/alert.gif);font-size:14px;margin:0;padding:0;}
 .UISimpleMessage_HasIcon .UISimpleMessage_Title h2 {background-position:left top;background-repeat:no-repeat;padding-left:25px;}
 .UISimpleMessage_HasIcon .UISimpleMessage_Content {padding-left:0;}
 .UISimpleMessage_Content {margin:0;padding:0;}

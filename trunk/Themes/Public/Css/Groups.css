@@ -4,7 +4,7 @@
 .adcolumn {width:160px;float:left;padding:10px 0 0 20px;}
 
 .maincolumn .groups_header {padding:10px 10px 12px;}
-.maincolumn .groups_header h1 {background:url('../Themes/Public/images/icons/group.gif') left 8px no-repeat;font-size:14px;padding:7px 0 7px 24px;}
+.maincolumn .groups_header h1 {background:url('[theme_url]/Images/Icons/group.gif') left 8px no-repeat;font-size:14px;padding:7px 0 7px 24px;}
 .maincolumn .groups_subheader {background:#6D84B4 none repeat scroll 0 0;padding:5px 10px;border:1px solid #6D84B4;}
 .maincolumn .groups_subheader h3 {color:#FFF;}
 .maincolumn .group {border:1px solid #DDD;border-top:none;background-color:#FFF;padding:6px 10px;}

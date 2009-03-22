@@ -303,7 +303,7 @@ class App extends Base
         if(C('APP_DOMAIN_DEPLOY')) {
             $appRoot   =  '/';
         }else{
-            $appRoot   =  WEB_URL.'/'.APP_NAME.'/';
+            $appRoot   =  WEB_URL.'/';
         }
 
         if(defined('C_MODULE_NAME')) {
@@ -314,14 +314,14 @@ class App extends Base
             C('TMPL_FILE_NAME',LIB_PATH.COMPONENT_NAME.'/'.THEMES_DIR.'/'.TEMPLATE_NAME.'/'.MODULE_NAME.'/'.ACTION_NAME.C('TEMPLATE_SUFFIX'));
 
             define('APP_TMPL_URL', $appRoot.LIB_DIR.'/'.COMPONENT_NAME.'/'.THEMES_DIR.'/'.TEMPLATE_NAME.'/');
-            define('__CURRENT__', WEB_URL.'/'.APP_NAME.'/'.LIB_DIR.'/'.$tmplDir.str_replace(C('COMPONENT_DEPR'),'/',C_MODULE_NAME));
+            define('__CURRENT__', WEB_URL.'/'.LIB_DIR.'/'.$tmplDir.str_replace(C('COMPONENT_DEPR'),'/',C_MODULE_NAME));
         }else{
 
             define('__URL__',PHP_FILE.'/'.$module);
 
             define('__ACTION__',__URL__.C('PATH_DEPR').$action);
             C('TMPL_FILE_NAME',TEMPLATE_PATH.'/'.MODULE_NAME.'/'.ACTION_NAME.C('TEMPLATE_SUFFIX'));
-            define('__CURRENT__', WEB_URL.'/'.APP_NAME.'/'.$tmplDir.MODULE_NAME);
+            define('__CURRENT__', WEB_URL.'/'.$tmplDir.MODULE_NAME);
 
             define('APP_TMPL_URL', $appRoot.$tmplDir);
         }

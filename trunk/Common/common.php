@@ -51,8 +51,9 @@ function _static()
 		header('Content-Type: text/css');
 	}
 
-	$file  = ROOT_PATH.'Themes'.WEB_PUBLIC_URL.'/';
+	$file  = ROOT_PATH.THEMES_DIR.'/Public/';
 	$file .= $resource;
+
 	$cache = CACHE_PATH.md5($file).'.'.$ext;
 
 	if(is_file($cache)&&filemtime($cache)>filemtime($file))
@@ -63,7 +64,7 @@ function _static()
 		if(is_file($file))
 		{
 			$content = file_get_contents($file);
-			//$content = str_replace('[theme_url]',C('SITE_URL').'/Public',$content);
+			$content = str_replace('[theme_url]',C('SITE_URL').APP_PUBLIC_URL,$content);
 			file_put_contents($cache,$content);
 			echo $content;
 		}else{
@@ -84,7 +85,7 @@ function _jsLang()
 		$split    = explode('.',$resource);
 		$parts    = count($split);
 		$ext      = $split[$parts-1];
-		$cache = CACHE_PATH.md5($lang).'_'.MODULE_NAME.'.'.$ext;
+		$cache    = CACHE_PATH.md5($lang).'_'.MODULE_NAME.'.'.$ext;
 
 		if(is_file($cache))
 		{
