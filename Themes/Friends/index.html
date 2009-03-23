@@ -4,7 +4,7 @@
 <title>{&SITE_NAME} | {$Think.lang.index_pagename}</title>
 <include file="../Public/header"/>
 </head>
-<body class="{$cbid} {$conf.lang_id}">
+<body class="{:css_browser_id()} {&LANG_ID}">
   <div id="non_footer" >
     <div id="page_height">
       <div id="menubar_container">
@@ -14,17 +14,17 @@
         <div class="UIFullPage_Container">
           <div class="maincolumn">
             <div class="friends_header">
-              <h2>Showing <a href="__APP__/profile/13">User1</a>'s friends.</h2>
+              <h2>Showing <a href="{:url('','profile')}">User1</a>'s friends.</h2>
             </div>
             <div class="friends_subheader">
-              <a href="__APP__/profile/14">User1</a> has 2 friends.
+              <a href="{:url('','profile')}">User1</a> has 2 friends.
             </div>
             <div class="friend_item clearfix">
               <div class="image">
-                <a href="__APP__/profile/14"><img alt="" src="../Public/images/silhouette_s.jpg"/></a>
+                <a href="{:url('','profile')}"><img alt="" src="../Public/images/silhouette_s.jpg"/></a>
               </div>
               <div class="text">
-                <a href="__APP__/profile/14">Friend1</a>
+                <a href="{:url('','profile')}">Friend1</a>
               </div>
             </div>
           </div>
