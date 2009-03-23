@@ -10,7 +10,7 @@
       <div id="menubar_container">
         <div id="menubar" class="menubar_logged_out clearfix">
           <div id="logobar">
-            <a class="home" title="Go to Fakebook Home" href="{:url('','index')}"></a>
+            <a class="home" title="Go to Fakebook Home" href="{:url('','','index')}"></a>
           </div>
         </div>
         <div class="signup_box clearfix">
@@ -38,7 +38,7 @@
                       <div class="title_header add_border">
                         <h2 class="no_icon">Fakebook Login</h2>
                       </div>
-                      <form action="{:url('','login')}" method="post">
+                      <form action="{:url('','','login')}" method="post">
                         <input type="hidden" name="login" value="1"/>
                       <if condition="$error" >
                         <div id="error">
