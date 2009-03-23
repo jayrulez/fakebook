@@ -2,7 +2,6 @@
 
 class UserModel extends Model
 {
-    protected $tableName = 'users';
     
 /*	protected $_validate = array
 	(
