@@ -10,7 +10,9 @@
       <div id="menubar_container">
 <include file="../Public/menubar"/>
       </div>
+<if condition="$userId">
       <div class="top_wash"> </div>
+</if>
       <div id="content" class="clearfix">
       <div class="UIFullPage_Container">
         <div class="wall_header clearfix">
@@ -20,13 +22,14 @@
               <img src="../Public/images/UIRoundedImage.png" alt="" class="UIRoundedImage_CornersSprite" />
             </span>
           </span>
-          <div class="walltitle">xxx 's Wall</div>
+          <div class="walltitle">xxx's Wall</div>
           <div class="walllink">
             <a href="group.php?id=49911">Back to xxx</a>
           </div>
         </div>
         <div class="widecolumn">
           <div id="wall">
+<if condition="$userId">
             <div id="inputarea">
               <form action="wallpost.php" method="post" name="form">
                 <textarea name="content"></textarea>
@@ -36,6 +39,7 @@
                 <input type="hidden" value="10" name="wid"/>
               </form>
             </div>
+</if>
             <div id="posts">
               <div class="post_item clearfix">
                 <div class="picture">
@@ -54,7 +58,53 @@
                     <br/>
                     <span class="DateAndTime">at February 2</span>
                   </div>
-                  <div class="content">testing</div>
+                  <div class="content">testing {$id} {$page}</div>
+                  <div class="wallactions">
+                    <a onclick="" href="#">Delete</a>
+                  </div>
+                </div>
+              </div>
+              <div class="post_item clearfix">
+                <div class="picture">
+                  <a href="profile.php?id=41">
+                    <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
+                      <img alt="" src="../Public/images/silhouette_s.jpg"/>
+                      <span class="UIRoundedImage_Corners">
+                        <img src="../Public/images/UIRoundedImage.png" alt="" class="UIRoundedImage_CornersSprite" />
+                      </span>
+                    </span>
+                  </a>
+                </div>
+                <div class="item">
+                  <div class="user">
+                    <a href="profile.php?id=41">Robert Campbell</a> wrote
+                    <br/>
+                    <span class="DateAndTime">at February 2</span>
+                  </div>
+                  <div class="content">testing {$id} {$page}</div>
+                  <div class="wallactions">
+                    <a onclick="" href="#">Delete</a>
+                  </div>
+                </div>
+              </div>
+              <div class="post_item clearfix">
+                <div class="picture">
+                  <a href="profile.php?id=41">
+                    <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
+                      <img alt="" src="../Public/images/silhouette_s.jpg"/>
+                      <span class="UIRoundedImage_Corners">
+                        <img src="../Public/images/UIRoundedImage.png" alt="" class="UIRoundedImage_CornersSprite" />
+                      </span>
+                    </span>
+                  </a>
+                </div>
+                <div class="item">
+                  <div class="user">
+                    <a href="profile.php?id=41">Robert Campbell</a> wrote
+                    <br/>
+                    <span class="DateAndTime">at February 2</span>
+                  </div>
+                  <div class="content">testing {$id} {$page}</div>
                   <div class="wallactions">
                     <a onclick="" href="#">Delete</a>
                   </div>

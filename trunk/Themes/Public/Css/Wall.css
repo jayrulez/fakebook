@@ -1,5 +1,5 @@
-.top_wash {width:100%;height:115px;position:absolute;background-color:#EDEFF4;border-bottom:1px solid #D8DFEA;margin-top:-70px;z-index:-1;}
-ie6 .top_wash,ie7 .top_wash {*height:146px;*left:0;*top:0;}
+.top_wash {width:100%;height:135px;position:absolute;background-color:#EDEFF4;border-bottom:1px solid #D8DFEA;margin-top:-90px;z-index:-1;}
+ie6 .top_wash,ie7 .top_wash {*height:166px;*left:0;*top:0;}
 
 .widecolumn {width:760px;float:left;}
 .adcolumn {width:160px;float:left;padding:56px 0 0 20px;}
