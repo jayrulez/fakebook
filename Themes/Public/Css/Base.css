@@ -1,4 +1,4 @@
-a, body, br, div, fieldset, form, h1, h2, h3, h4, h5, h6, html, hr, img, input, label, legend, li, p, ul, table, tr, th, td, p, span{margin: 0px;	padding: 0px;}
+a, body, br, div, fieldset, form, h1, h2, h3, h4, h5, h6, html, hr, img, input, label, legend, li, p, ul, table, tr, th, td, p, span{margin: 0px;padding: 0px;}
 fieldset{border: 0px; background: none;}
 legend{display: none;}
 html, body {height: 100%;}
@@ -11,8 +11,9 @@ a{cursor:pointer;-moz-outline-style:none;text-decoration:none;color:#3b5998;}
 a:hover{text-decoration: underline;}
 input,select{font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-size:11px;vartical-align:center;}
 select{padding:2px;border: solid 1px #1D2A5B;padding:3px;}
-label{cursor: pointer;}
+label{color:#666;cursor:pointer;font-weight:bold;vertical-align:middle;}
 .clearfix{display: inline-block;} html[xmlns] .clearfix{display: block;} *html .clearfix{height: 1%;} .clearfix:after{content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
+.ie6 .clearfix {display:inline-block;}
 ul,li {list-style:none;}
 table {padding:0 0 7px;}
 table tr {height:25px}
@@ -21,6 +22,7 @@ table tr {height:25px}
 .inputbutton, .inputsubmit {background-color:#3B5998;border-color:#D9DFEA #0E1F5B #0E1F5B #D9DFEA;border-style:solid;border-width:1px;color:#FFFFFF;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-size:11px;padding:2px 15px 3px;text-align:center;}
 .UILinkButton,.UILinkButton_RW {float:left;height:22px;padding:0;position:relative;z-index:1;}
 .UILinkButton_A {background:transparent url([theme_url]/Images/UILinkButton_Blue.gif) no-repeat scroll left top;border:0 none;color:white;cursor:pointer;float:left;font-size:11px;font-weight:bold;height:22px;margin:0;padding:3px 9px 3px 12px;position:relative;}
+.ff3 .UILinkButton .UILinkButton_A {padding:2px 5px 6px 8px;}
 .UILinkButton_R {background:transparent url([theme_url]/Images/UILinkButton_Blue.gif) no-repeat scroll -248px 0;height:27px;position:absolute;right:0;top:0;width:2px;left:0;}
 .UILinkButton_SU .UILinkButton_A,.UILinkButton_SU .UILinkButton_R {background-image:url([theme_url]/Images/UILinkButton_Green.gif);}
 

@@ -97,12 +97,12 @@ class PublicAction extends BaseAction
 		{
 			if(Session::destroy())
 			{
-				$this->display();
+				$this->redirect('','login');
 			}else{
 
 			}	
 		}else{
-
+			$this->redirect('','login');
 		}
 	}
 
