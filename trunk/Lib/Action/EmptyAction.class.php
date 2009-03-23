@@ -1,6 +1,7 @@
 <?php
 
-Class EmptyAction extends BaseAction{
+class EmptyAction extends BaseAction
+{
 	
 	public function index()
 	{

@@ -23,18 +23,18 @@
               <li><a href="#">Suggest Friends for Tom</a></li>
               <li><a href="#">Send Tom a Message</a></li>
               <li><a href="#">Poke Tom</a></li>
-            <ul/>
+            </ul>
           </div>
           <div class="roundbox">
             <div id="user_friends" class="user_friends">
               <div class="box_header">Friends</div>
               <div class="box_subheader">
-                <a href="friends.php?id=10">1 friends</a>
+                <a href="{:url('','friends')}">1 friends</a>
               </div>
               <div class="box_content clearfix">
                 <ul>
                   <li>
-                    <a href="profile.php?id=40">
+                    <a href="{:url('','profile')}">
                       <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
                         <img alt="" src="../Public/images/silhouette_s.jpg"/>
                         <span class="UIRoundedImage_Corners">
@@ -42,7 +42,7 @@
                         </span>
                       </span>
                     </a>
-                    <a href="profile.php?id=40">
+                    <a href="{:url('','profile')}">
                       <span class="user_name">test</span>
                     </a>
                   </li>
@@ -54,7 +54,7 @@
               <div class="box_content">
                 <ul>
                   <li>
-                    <a class="group_name" href="group.php?id=49911">Jilin University</a>
+                    <a class="group_name" href="{:url('','group')}">Jilin University</a>
                   </li>
                 </ul>
               </div>
@@ -83,12 +83,14 @@
           </div>
           <div class="basic_info clearfix">
             <span class="info_header">Basic</span>
-            <dt>Nickname</dt>
-            <dd>dingo </dd>
-            <dt>Sex</dt>
-            <dd>Male </dd>
-            <dt>Birthday</dt>
-            <dd>1980-07-31 </dd>
+            <dl>
+              <dt>Nickname</dt>
+              <dd>dingo </dd>
+              <dt>Sex</dt>
+              <dd>Male </dd>
+              <dt>Birthday</dt>
+              <dd>1980-07-31 </dd>
+            </dl>
           </div>
           <div id="mini_feed">
             <div class="box_header">Mini-feed</div>
@@ -200,7 +202,7 @@
             <div class="box_subheader clearfix">
               <span class="subtitle">Displaying all 1 wall posts</span>
               <span class="actionlink">
-                <a href="wall.php?id=10">View All</a>
+                <a href="{:url('','wall')}">View All</a>
               </span>
             </div>
             <div id="inputarea">
