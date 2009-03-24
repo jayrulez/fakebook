@@ -6,7 +6,7 @@ return array
 	'jsLang'	=>	array('Public','_jsLang','item'),
 
 	'profile'	=>	array('Profile','index','id'),
-	'wall'		=>	array('wall','index','id,page'),
+	'wall'		=>	array('wall','index','wid,page'),
 
 	'login'		=>	array('Public','login'),
 	'logout'	=>	array('Public','logout'),

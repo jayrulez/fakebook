@@ -7,7 +7,7 @@
 --
 
 CREATE TABLE `fb_user` (
-  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `id` int(100) NOT NULL auto_increment,
   `email` varchar(100) NOT NULL,
   `password` varchar(32) NOT NULL,
   `register_time` int(100) NOT NULL,

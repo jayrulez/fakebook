@@ -18,7 +18,7 @@ class Page extends Base
 
     protected $rollPage   ;
 
-    protected $config   =   array('header'=>'条记录','prev'=>L('_PREVIOUS_'),'next'=>L('_NEXT_'),'first'=>L('_FIRST_'),'last'=>L('_LAST_'));
+    protected $config   =   array('header'=>' posts','prev'=>L('_PREVIOUS_'),'next'=>L('_NEXT_'),'first'=>L('_FIRST_'),'last'=>L('_LAST_'));
 
     public function __construct($totalRows,$listRows='',$parameter='')
     {
@@ -89,14 +89,14 @@ class Page extends Base
             $theFirst = "";
             $prePage = "";
         }else{
-            $prePage = "[<a href='".$preUrl."' >上".$this->rollPage."页</a>]";
+            $prePage = "[<a href='".$preUrl."' >Prev ".$this->rollPage." page</a>]";
             $theFirst = "[<a href='".$theFirstUrl."' >".$this->config['first']."</a>]";
         }
         if($nowCoolPage == $this->coolPages){
             $nextPage = "";
             $theEnd="";
         }else{
-            $nextPage = "[<a href='".$nextUrl."' >下".$this->rollPage."页</a>]";
+            $nextPage = "[<a href='".$nextUrl."' >Next ".$this->rollPage." page</a>]";
             $theEnd = "[<a href='".$theEndUrl."' >".$this->config['last']."</a>]";
         }
         $linkPage = "";
@@ -117,7 +117,7 @@ class Page extends Base
                 }
             }
         }
-        $pageStr = '共'.$this->totalRows.' '.$this->config['header'].'/'.$this->totalPages.'页 '.$upPage.' '.$downPage.' '.$theFirst.' '.$prePage.' '.$linkPage.' '.$nextPage.' '.$theEnd;
+        $pageStr = 'Total '.$this->totalRows.' '.$this->config['header'].'/'.$this->totalPages.' pages '.$upPage.' '.$downPage.' '.$theFirst.' '.$prePage.' '.$linkPage.' '.$nextPage.' '.$theEnd;
         if($isArray) {
             $pageArray['totalRows'] =   $this->totalRows;
             $pageArray['upPage']    =   $url.'&'.C('VAR_PAGE')."=$upRow";
