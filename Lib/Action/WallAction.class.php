@@ -15,6 +15,7 @@ class WallAction extends BaseAction
 	{
 		$this->redirect('','ERROR');
 	}
+
 }
 
 ?>

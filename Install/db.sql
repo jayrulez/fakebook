@@ -31,10 +31,112 @@ CREATE TABLE `fb_user` (
 --
 
 CREATE TABLE IF NOT EXISTS `fb_wall` (
+  `id` int(100) NOT NULL auto_increment,
+  `wid` int(100) NOT NULL,
+  `fromid` int(100) NOT NULL,
+  `text` longtext,
+  `time` int(100) NOT NULL,
+  `username` varchar(100) NULL
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fb_comment`
+--
+
+CREATE TABLE IF NOT EXISTS `fb_comment` (
   `id` int(11) NOT NULL auto_increment,
-  `wall_id` int(100) NOT NULL,
-  `post_author` int(100) NOT NULL,
-  `post_content` longtext,
-  `post_time` int(100) NOT NULL,
+  `xid` int(100) NOT NULL,
+  `fromid` int(100) NOT NULL,
+  `text` longtext,
+  `time` int(100) NOT NULL,
+  `username` varchar(100) NULL
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fb_group`
+--
+
+CREATE TABLE IF NOT EXISTS `fb_group` (
+  `id` int(11) NOT NULL auto_increment,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fb_group_member`
+--
+
+CREATE TABLE IF NOT EXISTS `fb_group_member` (
+  `id` int(11) NOT NULL auto_increment,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fb_friend`
+--
+
+CREATE TABLE IF NOT EXISTS `fb_friend` (
+  `id` int(11) NOT NULL auto_increment,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fb_friend_request`
+--
+
+CREATE TABLE IF NOT EXISTS `fb_friend_request` (
+  `id` int(11) NOT NULL auto_increment,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fb_album`
+--
+
+CREATE TABLE IF NOT EXISTS `fb_album` (
+  `id` int(11) NOT NULL auto_increment,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fb_photo`
+--
+
+CREATE TABLE IF NOT EXISTS `fb_photo` (
+  `id` int(11) NOT NULL auto_increment,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fb_photo_tag`
+--
+
+CREATE TABLE IF NOT EXISTS `fb_photo_tag` (
+  `id` int(11) NOT NULL auto_increment,
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
