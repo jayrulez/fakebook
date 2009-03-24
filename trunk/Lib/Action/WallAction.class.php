@@ -13,15 +13,11 @@ class WallAction extends BaseAction
 		
 		$count	= $dao->count($map);
 		
-		$Wall = $dao->relation(true)
-					->where($map)
+		$Wall = $dao->where($map)
 					->order('time desc')
-					//->field('id,fromid,text,time,username')
+					->field('id,fromid,text,time,username')
 					->limit('0,10')
 					->findAll();
-		
-		$this->assign('Wall',$Wall);
-		
 		
 		$this->assign('list',$Wall);
 		$this->assign('count',$count);

@@ -111,4 +111,34 @@ function _jsLang()
 	}  
 }
 
+/**
+ * format date
+ * 
+ */
+function formatDate($time,$timezone=0){
+  $interval = time() - $time;
+  $time -= $timezone*60*60;
+  if($interval <= 60){
+    return $interval.L('_TIME_MINUTE_AGO_');//'1 minute ago';
+    exit();
+  } else if($interval > 60 && $interval <= 60*60){
+    return (int)($interval / 60).L('_TIME_MINUTES_AGO_');//' minutes ago';
+    exit();
+  } else if($interval > 60*60 && $interval <= 12*60*60){
+    return (int)($interval / (60*60)).L('_TIME_HOURS_AGO_');//' hours ago';
+    exit();
+  } else if($interval > 12*60*60 && $interval <= 24*60*60){
+    return L('_TIME_TODAY_');//'Today';
+    exit();
+  } else if($interval > 24*60*60 && $interval <= 2*24*60*60){
+    return L('_TIME_YESTODAY_');//'Yestoday';
+    exit();
+  } else if($interval > 2*24*60*60 && $interval <= 7*24*60*60){
+    return (int)($interval / (24*60*60)).L('_TIME_DAYS_AGO_');//' days ago';
+    exit();
+  } else {
+    return date(L('_TIME_DATE_SHORT_'),$time);
+    exit();
+  }
+}
 ?>
