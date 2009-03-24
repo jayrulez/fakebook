@@ -141,4 +141,14 @@ function formatDate($time,$timezone=0){
     exit();
   }
 }
+
+/* get user info by id */
+function getUserInfo($uid){
+	$userinfo = D('User')->find($uid);
+	return $userinfo;
+}
+function getUserName($uid){
+	$info = getUserInfo($uid);
+	return $info['truename']';
+}
 ?>
