@@ -21,7 +21,7 @@ function css_browser_id()
 		$CssBrowserId = 'ff3';
 
 	if(stristr($_browser, 'Chrome') !== false)
-		$CssBrowserId = 'gc';
+		$CssBrowserId = 'chrome';
 
 	if($CssBrowserId==null)
 		$CssBrowserId = 'general';
