@@ -41,9 +41,10 @@
             </div>
 </if>
             <div id="posts">
+<iterate name="list" id="post">
               <div class="post_item clearfix">
                 <div class="picture">
-                  <a href="profile.php?id=41">
+                  <a href="{:url('','','profile')}">
                     <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
                       <img alt="" src="../Public/images/silhouette_s.jpg"/>
                       <span class="UIRoundedImage_Corners">
@@ -54,62 +55,17 @@
                 </div>
                 <div class="item">
                   <div class="user">
-                    <a href="profile.php?id=41">Robert Campbell</a> wrote
+                    <a href="profile.php?id=41">{$post.fromid}</a> wrote
                     <br/>
-                    <span class="DateAndTime">at February 2</span>
+                    <span class="DateAndTime">at {$post.time}</span>
                   </div>
-                  <div class="content">testing {$id} {$page}</div>
+                  <div class="content">{$post.text}</div>
                   <div class="wallactions">
                     <a onclick="" href="#">Delete</a>
                   </div>
                 </div>
               </div>
-              <div class="post_item clearfix">
-                <div class="picture">
-                  <a href="profile.php?id=41">
-                    <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
-                      <img alt="" src="../Public/images/silhouette_s.jpg"/>
-                      <span class="UIRoundedImage_Corners">
-                        <img src="../Public/images/UIRoundedImage.png" alt="" class="UIRoundedImage_CornersSprite" />
-                      </span>
-                    </span>
-                  </a>
-                </div>
-                <div class="item">
-                  <div class="user">
-                    <a href="profile.php?id=41">Robert Campbell</a> wrote
-                    <br/>
-                    <span class="DateAndTime">at February 2</span>
-                  </div>
-                  <div class="content">testing {$id} {$page}</div>
-                  <div class="wallactions">
-                    <a onclick="" href="#">Delete</a>
-                  </div>
-                </div>
-              </div>
-              <div class="post_item clearfix">
-                <div class="picture">
-                  <a href="profile.php?id=41">
-                    <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
-                      <img alt="" src="../Public/images/silhouette_s.jpg"/>
-                      <span class="UIRoundedImage_Corners">
-                        <img src="../Public/images/UIRoundedImage.png" alt="" class="UIRoundedImage_CornersSprite" />
-                      </span>
-                    </span>
-                  </a>
-                </div>
-                <div class="item">
-                  <div class="user">
-                    <a href="profile.php?id=41">Robert Campbell</a> wrote
-                    <br/>
-                    <span class="DateAndTime">at February 2</span>
-                  </div>
-                  <div class="content">testing {$id} {$page}</div>
-                  <div class="wallactions">
-                    <a onclick="" href="#">Delete</a>
-                  </div>
-                </div>
-              </div>
+</iterate>
             </div>
           </div>
           <div id="pager">
