@@ -55,9 +55,9 @@
                 </div>
                 <div class="item">
                   <div class="user">
-                    <a href="profile.php?id=41">{:Dump($post)}</a> wrote
+                    <a href="profile.php?id=41">{$post.fromid}</a> wrote
                     <br/>
-                    <span class="DateAndTime">at {$post.time}</span>
+                    <span class="DateAndTime">at {$post.time|formatDate}</span>
                   </div>
                   <div class="content">{$post.text|htmlspecialchars|nl2br}</div>
                   <div class="wallactions">
