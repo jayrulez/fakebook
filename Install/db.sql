@@ -13,7 +13,7 @@ CREATE TABLE `fb_user` (
   `register_time` int(100) NOT NULL,
   `update_time` int(100) NOT NULL,
   `status` enum('Registered','Deactivated','Unverified','Provisional','Denied') NOT NULL,
-  `fist_name` varchar(100) NOT NULL,
+  `first_name` varchar(100) NOT NULL,
   `middle_name` varchar(100) NULL,
   `last_name` varchar(100) NULL,
   `display_name` varchar(100) NOT NULL,
