@@ -22,9 +22,15 @@ ie6 .top_wash,ie7 .top_wash {*height:166px;*left:0;*top:0;}
 #wall #posts .item .wallactions {padding:3px 5px;}
 #wall #posts .item .wallactions a {cursor:pointer;}
 
-#pager {display:block;height:22px;font-size:11px;border-top:1px solid #ccc;padding:1px 5px;clear:both;background:white none repeat scroll 0 0;}
-#pager ul {list-style:none;float:right;padding-top:4px;}
-#pager li {float:left;display:inline;}
-#pager a {color:#3B5998;text-decoration:none;padding:3px 3px 2px;}
-#pager a:hover {color:#FFF;background-color:#3B5998;}
-#pager .current a,.current a:hover {color:#3B5998;background-color:#FFF;border-top:2px solid #3B5998;font-weight:bold;padding-left:2px;padding-right:2px;}
+.footer_bar {border-top:1px solid #CCCCCC;padding:0 20px;background:white none repeat scroll 0 0;clear:both;}
+.footer_bar .pagerpro_container {float:right;margin:0 0;padding:3px 0 4px;width:200px;}
+.footer_bar .pagerpro {float:right;list-style-image:none;list-style-position:outside;list-style-type:none;margin:0;padding:0;}
+.footer_bar .pagerpro li {display:inline;}
+.footer_bar .pagerpro a {padding:3px 3px 2px;text-transform:none;}
+.footer_bar .pagerpro a:hover {background-color:#3B5998;border-bottom:1px solid #3B5998;border-color:#D8DFEA #D8DFEA #3B5998;color:#FFFFFF;text-decoration:none;}
+.footer_bar .pagerpro a {border-top:2px solid white;padding-bottom:0;padding-top:1px;}
+.footer_bar .pagerpro a:hover {border-bottom:2px solid #3B5998;border-top:2px solid #3B5998;}
+.footer_bar .pagerpro .current a {border-bottom:2px solid #3B5998;border-color:#3B5998;color:#3B5998;font-weight:bold;padding-left:2px;padding-right:2px;}
+.footer_bar .pagerpro .current a:hover {background-color:#3B5998;color:#FFFFFF;}
+.footer_bar .pagerpro .current a {border-bottom-color:white;border-top:2px solid #3B5998;}
+.footer_bar .pagerpro .current a:hover {border-bottom:2px solid #3B5998;border-top:2px solid #3B5998;}
