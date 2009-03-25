@@ -149,6 +149,6 @@ function getUserInfo($uid){
 }
 function getUserName($uid){
 	$info = getUserInfo($uid);
-	return $info['truename']';
+	return $info['truename'];
 }
 ?>
