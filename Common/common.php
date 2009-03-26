@@ -3,30 +3,23 @@
 function css_browser_id()
 {
 	$_browser      = get_client_browser();
-	$CssBrowserId = null;
+	$CssBrowserId  = 'general';
 	
-	if(stristr($_browser, 'msie 6') !== false)
-		$CssBrowserId = 'ie6';
+	if(is_file(CONFIG_PATH.'cssBrowsers.php'))
+	{
+		$_agentArray = include(CONFIG_PATH.'cssBrowsers.php'); 
+	}
+	
+	foreach($_agentArray as $agent => $id)
+	{
+		if(stristr($_browser,$agent) !== false)
+		{
+			$cssBrowser = $id;
+			break;
+		}
+	}
 
-	if(stristr($_browser, 'msie 7') !== false)
-		$CssBrowserId = 'ie7';
-
-	if(stristr($_browser, 'opera') !== false)
-		$CssBrowserId = 'opera';
-
-	if(stristr($_browser, 'firefox/2') !== false)
-		$CssBrowserId = 'ff2';
-
-	if(stristr($_browser, 'firefox/3') !== false)
-		$CssBrowserId = 'ff3';
-
-	if(stristr($_browser, 'Chrome') !== false)
-		$CssBrowserId = 'chrome';
-
-	if($CssBrowserId==null)
-		$CssBrowserId = 'general';
-		
-	return $CssBrowserId;
+	return $cssBrowser;
 }
 
 function _static()
