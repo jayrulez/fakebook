@@ -18,8 +18,20 @@ class WallAction extends BaseAction
 					->limit('0,10')
 					->findAll();
 		
+		$walltype = getTypeById($wid);
+		
+		if($walltype == 'user')
+		{	
+			$walltitle = getUserName($wid);	
+		}
+		else if ($walltype == 'group')
+		{
+			$walltitle = getGroupName($wid);
+		}
+
 		$this->assign('wid',$wid);
-		$this->assign('walltitle',getTypeById($wid));
+		$this->assign('walltype',$walltype);
+		$this->assign('walltitle',$walltitle);
 		$this->assign('list',$Wall);
 		$this->assign('count',$count);
 		
