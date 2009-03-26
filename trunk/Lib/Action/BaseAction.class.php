@@ -18,6 +18,7 @@ class BaseAction extends Action
 		}
 		
 		$this->assign('userId',$this->userId);
+		$this->assign('username',getUserName($this->userId));
 	}
 	
 	public function __destruct() {}

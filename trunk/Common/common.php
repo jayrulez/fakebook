@@ -144,11 +144,35 @@ function formatDate($time,$timezone=0){
 
 /* get user info by id */
 function getUserInfo($uid){
-	$userinfo = D('User')->find($uid);
-	return $userinfo;
+	$info = D('User')->find($uid);
+	return $info;
 }
+
 function getUserName($uid){
 	$info = getUserInfo($uid);
 	return $info['display_name'];
+}
+
+/* get user info by id */
+function getGroupInfo($gid){
+	$info = D('Group')->find($gid);
+	return $info;
+}
+
+function getGroupName($gid){
+	$info = getGroupInfo($gid);
+	return $info['name'];
+}
+
+function getTypeById($id){
+	if(getUserInfo($id)){
+		return 'user';
+	}
+	
+	if(getGroupInfo($id)){
+		return 'group';
+	}
+	
+	return false;
 }
 ?>

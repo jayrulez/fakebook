@@ -1,9 +1,17 @@
 <?php
 
-class PublicAction extends BaseAction
+class PublicAction extends Action
 {
 	public function error()
 	{
+		if(empty($this->userId))
+		{
+			$this->userId = Session::get(C('USER_AUTH_KEY'));
+		}
+		
+		$this->assign('userId',$this->userId);
+		$this->assign('username',getUserName($this->userId));
+		
 		$this->display('error');
 	}
 

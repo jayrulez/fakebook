@@ -7,7 +7,7 @@ return array
 
 	'profile'	=>	array('Profile','index','id'),
 	'wall@'		=>	array(
-						array('/^\/(\d+)\/(\d+)/','wall','index','wid,page'),
+						array('/^\/(\d+)/','wall','index','wid,page'),
 					),
 
 	'login'		=>	array('Public','login'),

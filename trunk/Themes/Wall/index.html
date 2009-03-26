@@ -1,7 +1,7 @@
 <include file="../Public/pghead"/>
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
-<title>{&SITE_NAME} | {$Think.lang.index_pagename}</title>
+<title>{&SITE_NAME} | {$Think.lang.index_pagename|sprintf=###,$walltitle}</title>
 <include file="../Public/header"/>
 </head>
 <body class="{:css_browser_id()} {&LANG_ID}">
@@ -22,9 +22,9 @@
               <img src="../Public/images/UIRoundedImage.png" alt="" class="UIRoundedImage_CornersSprite" />
             </span>
           </span>
-          <div class="walltitle">xxx's Wall</div>
+          <div class="walltitle">{$Think.lang.index_pagename|sprintf=###,$walltitle}</div>
           <div class="walllink">
-            <a href="group.php?id=49911">Back to xxx</a>
+            <a href="group.php?id=49911">{$Think.lang.index_walllink|sprintf=###,$walltitle}</a>
           </div>
         </div>
         <div class="widecolumn">
@@ -61,7 +61,7 @@
                   </div>
                   <div class="content">{$post['text']|htmlspecialchars|nl2br}</div>
                   <div class="wallactions">
-                    <a onclick="" href="#">Delete</a>
+                    <a onclick="" href="{:url('','','wall','app',array('action'=>'delete','id'=>$post['id']))}">Delete</a>
                   </div>
                 </div>
               </div>
