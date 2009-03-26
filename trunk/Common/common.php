@@ -168,4 +168,70 @@ function getTypeById($id){
 	
 	return false;
 }
+
+function isWallOwner($id,$userId,$wid=0,$fromid=0)
+{
+	if(!$wid)
+	{
+		if(!$post = D('Wall')->find($id))
+			return false;
+		$wid = $post['wid'];
+		$fromid = $post['fromid'];
+	}
+
+	if($userId == $fromid)
+		return true;
+	
+	if($userId == $wid)
+		return true;
+		
+}
+
+function Pager($count,$page,$listRows,$wid)
+{
+  $totalPages = (int)($count / $listRows) + 1;
+  $page = ($page > $totalPages) ? $totalPages : $page;
+  
+  //show First button
+  if($page > 3 && $totalPages > 5)
+    $output = "<li><a href=\"".url('','','wall','app',array('id'=>$wid,'page'=>1))."\">First</a></li>";
+  //show Prev button
+  if($page > 1 && $totalPages > 1)
+    $output .= "<li><a href=\"".url('','','wall','app',array('id'=>$wid,'page'=>$page-1))."\">Prev</a></li>";
+  //show page-4
+  if($page > 4 && $totalPages > 5 && $totalPages < $page + 2)
+    $output .= "<li><a href=\"".url('','','wall','app',array('id'=>$wid,'page'=>$page-4))."\">".($page - 4)."</a></li>";
+  //show page-3
+  if($page > 3 && $totalPages > 4 && $totalPages < $page + 1)
+    $output .= "<li><a href=\"".url('','','wall','app',array('id'=>$wid,'page'=>$page-3))."\">".($page - 3)."</a></li>";
+  //show page-2
+  if($page > 2 && $totalPages > 5)
+    $output .= "<li><a href=\"".url('','','wall','app',array('id'=>$wid,'page'=>$page-2))."\">".($page - 2)."</a></li>";
+  //show page-1
+  if($page > 1 && $totalPages > 2)
+    $output .= "<li><a href=\"".url('','','wall','app',array('id'=>$wid,'page'=>$page-1))."\">".($page - 1)."</a></li>";
+  //show current page
+  if($totalPages > 1)
+    $output .= "<li class=\"current\"><a href=\"".url('','','wall','app',array('id'=>$wid,'page'=>$page))."\">".$page."</a></li>";
+  //show page+1
+  if($totalPages > $page)
+    $output .= "<li><a href=\"".url('','','wall','app',array('id'=>$wid,'page'=>$page+1))."\">".($page + 1)."</a></li>";
+  //show page+2
+  if($totalPages > $page + 1)
+    $output .= "<li><a href=\"".url('','','wall','app',array('id'=>$wid,'page'=>$page+2))."\">".($page + 2)."</a></li>";
+  //show page+3
+  if($totalPages > $page + 2 && $page < 3)
+    $output .= "<li><a href=\"".url('','','wall','app',array('id'=>$wid,'page'=>$page+3))."\">".($page + 3)."</a></li>";
+  //show page+4
+  if($totalPages > $page + 3 && $page < 2)
+    $output .= "<li><a href=\"".url('','','wall','app',array('id'=>$wid,'page'=>$page+4))."\">".($page + 4)."</a></li>";
+  //show Next button
+  if($totalPages > $page)
+    $output .= "<li><a href=\"".url('','','wall','app',array('id'=>$wid,'page'=>$page+1))."\">Next</a></li>";
+  //show Last button
+  if($totalPages > $page + 2)
+    $output .= "<li><a href=\"".url('','','wall','app',array('id'=>$wid,'page'=>$totalPages))."\">Last</a></li>";
+  
+  return $output;
+}
 ?>
