@@ -7,6 +7,7 @@ return array
 	'msie 7'	=>	'ie7',
 	'firefox/2'	=>	'ff2',
 	'firefox/3'	=>	'ff3',
+	'Chrome'	=>	'chrome',
 );
 
 ?>
