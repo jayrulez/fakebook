@@ -19,6 +19,7 @@ class WallAction extends BaseAction
 					->findAll();
 		
 		$this->assign('wid',$wid);
+		$this->assign('walltitle',getTypeById($wid));
 		$this->assign('list',$Wall);
 		$this->assign('count',$count);
 		
@@ -29,6 +30,11 @@ class WallAction extends BaseAction
 	public function insert()
 	{
 		dump($_POST);
+	}
+	
+	public function delete()
+	{
+		dump($_GET);
 	}
 	
 	public function _empty()

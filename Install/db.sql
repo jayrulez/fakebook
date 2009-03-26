@@ -17,6 +17,7 @@ CREATE TABLE `fb_user` (
   `middle_name` varchar(100) NULL,
   `last_name` varchar(100) NOT NULL,
   `display_name` varchar(100) NOT NULL,
+  `pic` varchar(100) NULL,
   `timezone` int(10) NULL,
   `language` varchar(10) NULL,
   PRIMARY KEY (`id`),
@@ -48,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `fb_wall` (
 --
 
 CREATE TABLE IF NOT EXISTS `fb_comment` (
-  `id` int(11) NOT NULL auto_increment,
+  `id` int(100) NOT NULL auto_increment,
   `xid` int(100) NOT NULL,
   `fromid` int(100) NOT NULL,
   `text` longtext,
@@ -65,7 +66,19 @@ CREATE TABLE IF NOT EXISTS `fb_comment` (
 --
 
 CREATE TABLE IF NOT EXISTS `fb_group` (
-  `id` int(11) NOT NULL auto_increment,
+  `id` int(100) NOT NULL auto_increment,
+  `name` varchar(100) NOT NULL,
+  `pic` varchar(100) NULL,
+  `description` text NULL,
+  `group_type` varchar(100) NULL,
+  `group_subtype` varchar(100) NULL,
+  `recent_news` text NULL,
+  `creator` int(100) NOT NULL,
+  `update_time` int(100) NULL,
+  `office` varchar(100) NULL,
+  `website` varchar(100) NULL,
+  `venue` text NULL,
+  `privacy` enum('OPEN','CLOSED','SECRET') NOT NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
 
