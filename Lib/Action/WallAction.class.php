@@ -27,6 +27,9 @@ class WallAction extends BaseAction
 		else if ($walltype == 'group')
 		{
 			$walltitle = getGroupName($wid);
+		} else
+		{
+			redirect(url('','','home'));
 		}
 
 		$this->assign('wid',$wid);
