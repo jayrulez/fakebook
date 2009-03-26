@@ -7,7 +7,6 @@ class WallAction extends BaseAction
 		$wid = $_GET['wid'];
 		$page = $_GET['page'];
 		$dao = D('Wall');
-		
 		$map['wid'] = $wid;
 		$listRows  =  10;
 		
@@ -19,11 +18,17 @@ class WallAction extends BaseAction
 					->limit('0,10')
 					->findAll();
 		
+		$this->assign('wid',$wid);
 		$this->assign('list',$Wall);
 		$this->assign('count',$count);
 		
 		$this->display();
 		
+	}
+	
+	public function insert()
+	{
+		dump($_POST);
 	}
 	
 	public function _empty()
