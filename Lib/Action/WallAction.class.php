@@ -41,12 +41,22 @@ class WallAction extends BaseAction
 	
 	public function insert()
 	{
-		dump($_POST);
+		$dao = D("Wall");
+		$dao->time = time();
+		$dao->text = $_POST['content'];
+		$dao->wid = $_POST['wid'];
+		$dao->fromid = $this->userId;
+		$dao->add();
+
+		redirect($_SERVER["HTTP_REFERER"]);
 	}
 	
 	public function delete()
 	{
-		dump($_GET);
+		$dao = D("Wall");
+		$dao->deleteById($_GET['delete']);
+
+		redirect($_SERVER["HTTP_REFERER"]);
 	}
 	
 	public function _empty()

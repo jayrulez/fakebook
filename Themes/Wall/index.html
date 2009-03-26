@@ -37,8 +37,7 @@
                 <textarea name="content"></textarea>
                 <br/>
                 <input type="submit" value="Post"/>
-                <input type="hidden" value="{:url('','','wall','app',array('wid'=>$wid))}" name="url"/>
-                <input type="hidden" value="10" name="wid"/>
+                <input type="hidden" value="{$wid}" name="wid"/>
               </form>
             </div>
             </if>
