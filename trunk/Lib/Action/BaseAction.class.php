@@ -6,7 +6,7 @@ class BaseAction extends Action
 	
 	public function _initialize()
 	{
-		parent::_initialized();
+		parent::_initialize();
 
 		$this->userId   = Session::get(C('USER_AUTH_KEY'));
 		$this->userInfo = Session::get('userInfo');
