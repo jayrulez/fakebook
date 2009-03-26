@@ -31,11 +31,11 @@
           <div id="wall">
             <if condition="$userId">
             <div id="inputarea">
-              <form action="wallpost.php" method="post" name="form">
+              <form action="{:url('insert','wall')}" method="post" name="form">
                 <textarea name="content"></textarea>
                 <br/>
                 <input type="submit" value="Post"/>
-                <input type="hidden" value="profile.php?id=" name="url"/>
+                <input type="hidden" value="{:url('','','wall','app',array('wid'=>$wid))}" name="url"/>
                 <input type="hidden" value="10" name="wid"/>
               </form>
             </div>
@@ -44,7 +44,7 @@
               <iterate name="list" id="post">
               <div class="post_item clearfix">
                 <div class="picture">
-                  <a href="{:url('','','profile')}">
+                  <a href="{:url('','','profile','app',array('id'=>$post['fromid']))}">
                     <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
                       <img alt="" src="../Public/images/silhouette_s.jpg"/>
                       <span class="UIRoundedImage_Corners">
@@ -55,11 +55,11 @@
                 </div>
                 <div class="item">
                   <div class="user">
-                    <a href="profile.php?id=41">{$post.fromid|getUserName}</a> wrote
+                    <a href="{:url('','','profile','app',array('id'=>$post['fromid']))}">{$post['fromid']|getUserName}</a> wrote
                     <br/>
-                    <span class="DateAndTime">at {$post.time|formatDate}</span>
+                    <span class="DateAndTime">at {$post['time']|formatDate}</span>
                   </div>
-                  <div class="content">{$post.text|htmlspecialchars|nl2br}</div>
+                  <div class="content">{$post['text']|htmlspecialchars|nl2br}</div>
                   <div class="wallactions">
                     <a onclick="" href="#">Delete</a>
                   </div>
