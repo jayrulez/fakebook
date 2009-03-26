@@ -14,12 +14,12 @@ function css_browser_id()
 	{
 		if(stristr($_browser,$agent) !== false)
 		{
-			$cssBrowser = $id;
+			$cssBrowserId = $id;
 			break;
 		}
 	}
 
-	return $cssBrowser;
+	return $cssBrowserId;
 }
 
 function _static()
