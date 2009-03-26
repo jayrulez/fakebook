@@ -16,12 +16,18 @@
       <div id="content" class="clearfix">
       <div class="UIFullPage_Container">
         <div class="wall_header clearfix">
-          <span class="UIRoundedImage  UIRoundedImage_MEDIA UIRoundedImage_LARGE">
-            <img alt="" src="../Public/images/silhouette_s.jpg"/>
-            <span class="UIRoundedImage_Corners">
-              <img src="../Public/images/UIRoundedImage.png" alt="" class="UIRoundedImage_CornersSprite" />
+          <a href="{:url('','','profile','app',array('id'=>$wid))}">
+            <span class="UIRoundedImage  UIRoundedImage_MEDIA UIRoundedImage_LARGE">
+              <if condition="$walltype eq user">
+              <img alt="" src="../Public/images/silhouette_s.jpg"/>
+              <else />
+              <img alt="" src="../Public/images/group_s.jpg"/>
+              </if>
+              <span class="UIRoundedImage_Corners">
+                <img src="../Public/images/UIRoundedImage.png" alt="" class="UIRoundedImage_CornersSprite" />
+              </span>
             </span>
-          </span>
+          </a>
           <div class="walltitle">{$Think.lang.index_pagename|sprintf=###,$walltitle}</div>
           <if condition="$walltype eq group">
           <div class="walllink">
@@ -62,37 +68,24 @@
                   </div>
                   <div class="content">{$post['text']|htmlspecialchars|nl2br}</div>
                   <div class="wallactions">
-                    <a onclick="" href="{:url('','','wall','app',array('action'=>'delete','id'=>$post['id']))}">Delete</a>
+                    <if condition="isWallOwner($post['id'],$userId,$post['wid'],$post['fromid'])">
+                      <a onclick="" href="{:url('','','wall','app',array('action'=>'delete','id'=>$post['id']))}">Delete</a>
+                    </if>
                   </div>
                 </div>
               </div>
               </iterate>
             </div>
           </div>
+          <if condition="$count gt $listRows">
           <div class="footer_bar clearfix">
             <div class="pagerpro_container">
               <ul class="pagerpro">
-                <li class="current">
-                  <a href="#page=3">1</a>
-                </li>
-                <li>
-                  <a href="#page=3">2</a>
-                </li>
-                <li>
-                  <a href="#page=3">3</a>
-                </li>
-                <li>
-                  <a href="#page=3">4</a>
-                </li>
-                <li>
-                  <a href="#page=3">5</a>
-                </li>
-                <li>
-                  <a href="#page=3">Next</a>
-                </li>
+                {:Pager($count,$page,$listRows,$wid)}
               </ul>
             </div>
           </div>
+          </if>
         </div>
         <div class="adcolumn">
           //ad

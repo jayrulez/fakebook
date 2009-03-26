@@ -4,18 +4,24 @@ class WallAction extends BaseAction
 {
 	public function index()
 	{
-		$wid = $_GET['wid'];
-		$page = $_GET['page'];
+		$wid = (int)$_GET['wid'];
+		$page = (int)$_GET['page'];
 		$dao = D('Wall');
 		$map['wid'] = $wid;
 		$listRows  =  10;
 		
 		$count	= $dao->count($map);
 		
+		if($page < 1)
+			$page = 1;
+		
+		if($page > $count)
+			$page = $count;
+		
 		$Wall = $dao->where($map)
 					->order('time desc')
 					->field('id,fromid,text,time,username')
-					->limit('0,10')
+					->limit((($page - 1) * $listRows).',10')
 					->findAll();
 		
 		$walltype = getTypeById($wid);
@@ -36,7 +42,9 @@ class WallAction extends BaseAction
 		$this->assign('walltype',$walltype);
 		$this->assign('walltitle',$walltitle);
 		$this->assign('list',$Wall);
+		$this->assign('listRows',$listRows);
 		$this->assign('count',$count);
+		$this->assign('page',$page);
 		
 		$this->display();
 		
@@ -56,9 +64,14 @@ class WallAction extends BaseAction
 	
 	public function delete()
 	{
-		$dao = D("Wall");
-		$dao->deleteById($_GET['delete']);
-
+		$id = (int)$_GET['delete'];
+		
+		if(isWallOwner($id,$this->userId))
+		{
+			$dao = D("Wall");
+			$dao->deleteById($_GET['delete']);
+		}
+		
 		redirect($_SERVER["HTTP_REFERER"]);
 	}
 	
