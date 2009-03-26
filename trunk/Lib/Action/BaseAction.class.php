@@ -6,18 +6,17 @@ class BaseAction extends Action
 	
 	public function _initialize()
 	{
-	    /*
-		if(!Session::get(C('USER_AUTH_KEY')))
+		$this->userId   = Session::get(C('USER_AUTH_KEY'));
+		$this->userInfo = Session::get('userInfo');
+		/*
+		if(empty($this->userId)||empty($this->userInfo))
 		{
-			$this->redirect('','login');
+			$this->redirect('','','login');
 		}
 		*/
-		if(empty($this->userId))
-		{
-			$this->userId = Session::get(C('USER_AUTH_KEY'));
-		}
 		
 		$this->assign('userId',$this->userId);
+		$this->assign('userInfo',$this->userInfo);
 		$this->assign('username',getUserName($this->userId));
 	}
 	
