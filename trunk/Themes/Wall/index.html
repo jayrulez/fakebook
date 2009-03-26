@@ -23,9 +23,11 @@
             </span>
           </span>
           <div class="walltitle">{$Think.lang.index_pagename|sprintf=###,$walltitle}</div>
+          <if condition="$walltype eq group">
           <div class="walllink">
-            <a href="group.php?id=49911">{$Think.lang.index_walllink|sprintf=###,$walltitle}</a>
+            <a href="{:url('','','group','app',array('id'=>$wid))}">{$Think.lang.index_walllink|sprintf=###,$walltitle}</a>
           </div>
+          </if>
         </div>
         <div class="widecolumn">
           <div id="wall">
