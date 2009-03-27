@@ -1,7 +1,7 @@
 <include file="../Public/pghead"/>
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
-<title>{&SITE_NAME} | {$Think.lang.index_pagename|sprintf=###,$walltitle}</title>
+<title>{&SITE_NAME} | {$Think.lang.index_pagename|sprintf=###,$title}</title>
 <include file="../Public/header"/>
 </head>
 <body class="{:css_browser_id()} {&LANG_ID}">
@@ -16,9 +16,13 @@
       <div id="content" class="clearfix">
       <div class="UIFullPage_Container">
         <div class="wall_header clearfix">
-          <a href="{:url('','','profile','app',array('id'=>$wid))}">
+          <if condition="$type eq u">
+            <a href="{:url('','','profile','app',array('id'=>$wid))}">
+          <else />
+            <a href="{:url('','','group','app',array('id'=>$wid))}">
+          </if>
             <span class="UIRoundedImage  UIRoundedImage_MEDIA UIRoundedImage_LARGE">
-              <if condition="$walltype eq user">
+              <if condition="$type eq u">
               <img alt="" src="../Public/images/silhouette_s.jpg"/>
               <else />
               <img alt="" src="../Public/images/group_s.jpg"/>
@@ -28,10 +32,10 @@
               </span>
             </span>
           </a>
-          <div class="walltitle">{$Think.lang.index_pagename|sprintf=###,$walltitle}</div>
-          <if condition="$walltype eq group">
+          <div class="walltitle">{$Think.lang.index_pagename|sprintf=###,$title}</div>
+          <if condition="$type eq g">
           <div class="walllink">
-            <a href="{:url('','','group','app',array('id'=>$wid))}">{$Think.lang.index_walllink|sprintf=###,$walltitle}</a>
+            <a href="{:url('','','group','app',array('id'=>$wid))}">{$Think.lang.index_walllink|sprintf=###,$title}</a>
           </div>
           </if>
         </div>
@@ -43,6 +47,7 @@
                 <textarea name="content"></textarea>
                 <br/>
                 <input type="submit" value="Post"/>
+                <input type="hidden" value="{$type}" name="type"/>
                 <input type="hidden" value="{$wid}" name="wid"/>
               </form>
             </div>
@@ -81,7 +86,7 @@
           <div class="footer_bar clearfix">
             <div class="pagerpro_container">
               <ul class="pagerpro">
-                {:Pager($count,$page,$listRows,$wid)}
+                {:Pager($count,$page,$listRows,$wid,$type)}
               </ul>
             </div>
           </div>

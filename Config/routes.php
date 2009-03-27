@@ -8,8 +8,8 @@ return array
 	'profile'	=>	array('Profile','index','id'),
 	'group'		=>	array('Group','index','id'),
 	'wall@'		=>	array(
-						array('/^\/(\d+)\/(\d+)/','wall','index','wid,page'),
-						array('/^\/(\d+)/','wall','index','wid'),
+						array('/^\/(g|u)\/(\d+)\/(\d+)/','wall','index','type,wid,page'),
+						array('/^\/(g|u)\/(\d+)/','wall','index','type,wid'),
 					),
 
 	'login'		=>	array('Public','login'),

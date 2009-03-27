@@ -32,13 +32,16 @@ CREATE TABLE `fb_user` (
 --
 
 CREATE TABLE IF NOT EXISTS `fb_wall` (
-  `id` int(100) NOT NULL auto_increment,
-  `wid` int(100) NOT NULL,
-  `fromid` int(100) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `type` enum('u','g') NOT NULL DEFAULT 'g',
+  `wid` int(100) DEFAULT NULL,
+  `fromid` int(100) DEFAULT NULL,
   `text` longtext,
-  `time` int(100) NOT NULL,
-  `username` varchar(100) NULL
-  PRIMARY KEY  (`id`)
+  `time` int(100) DEFAULT NULL,
+  `username` varchar(100) DEFAULT NULL,
+  `del` tinyint(1) NOT NULL DEFAULT '0',
+  `delby` int(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
 
 

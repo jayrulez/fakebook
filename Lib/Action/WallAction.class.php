@@ -6,8 +6,27 @@ class WallAction extends BaseAction
 	{
 		$wid = (int)$_GET['wid'];
 		$page = (int)$_GET['page'];
+		
+		$type = $_GET['type'];
+		
+		if($type == 'u' && getUserName($wid))
+		{	
+			$title = getUserName($wid);
+			$map['type'] = 'u';
+		}
+		else if ($type == 'g' && getGroupName($wid))
+		{
+			$title = getGroupName($wid);
+			$map['type'] = 'g';
+		}
+		else
+		{
+			redirect(url('','','home'));
+		}
+		
 		$dao = D('Wall');
 		$map['wid'] = $wid;
+		$map['del'] = 0;
 		$listRows  =  10;
 		
 		$count	= $dao->count($map);
@@ -23,24 +42,10 @@ class WallAction extends BaseAction
 					->field('id,fromid,text,time,username')
 					->limit((($page - 1) * $listRows).',10')
 					->findAll();
-		
-		$walltype = getTypeById($wid);
-		
-		if($walltype == 'user')
-		{	
-			$walltitle = getUserName($wid);	
-		}
-		else if ($walltype == 'group')
-		{
-			$walltitle = getGroupName($wid);
-		} else
-		{
-			redirect(url('','','home'));
-		}
 
 		$this->assign('wid',$wid);
-		$this->assign('walltype',$walltype);
-		$this->assign('walltitle',$walltitle);
+		$this->assign('type',$type);
+		$this->assign('title',$title);
 		$this->assign('list',$Wall);
 		$this->assign('listRows',$listRows);
 		$this->assign('count',$count);
@@ -53,10 +58,11 @@ class WallAction extends BaseAction
 	public function insert()
 	{
 		$dao = D("Wall");
-		$dao->time = time();
+		$dao->type = $_POST['type'];
 		$dao->text = $_POST['content'];
 		$dao->wid = $_POST['wid'];
 		$dao->fromid = $this->userId;
+		$dao->time = time();
 		$dao->add();
 
 		redirect($_SERVER["HTTP_REFERER"]);
@@ -68,8 +74,14 @@ class WallAction extends BaseAction
 		
 		if(isWallOwner($id,$this->userId))
 		{
+			/*
 			$dao = D("Wall");
 			$dao->deleteById($_GET['delete']);
+			*/
+			$dao = D('Wall');
+			$dao->find($id);
+			$dao->del = '1';
+			$dao->save();
 		}
 		
 		redirect($_SERVER["HTTP_REFERER"]);
