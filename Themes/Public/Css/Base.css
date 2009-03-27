@@ -47,13 +47,13 @@ table tr {height:25px}
 #menu_login_container .login_form_label_field label input {margin-right:5px;}
 #menu_login_container .inputtext,#menu_login_container .inputpassword {width:140px;padding:3px;border-color:#1D2A5B;}
 
-#main_menu a {display:block;color:#fff;padding:7px 10px;text-decoration:none;font-weight:bold;margin-right:4px;line-height:normal;}
-#account_menu a {display:block;color:#fff;padding:7px 10px;text-decoration:none;margin-right:4px;line-height:normal;}
+#main_menu a {display:block;color:#fff;padding:7px 7px 7px 8px;text-decoration:none;font-weight:bold;margin-right:4px;line-height:normal;}
+#account_menu a {display:block;color:#fff;padding:7px 5px;text-decoration:none;margin-right:5px;line-height:normal;}
 #main_menu a:hover,#account_menu a:hover {background-color:#5C75AA;}
 #universal_search {padding:3px 11px 3px 4px;width:172px;}
 #universal_search #universal_search_input {float:left;width:151px;}
 #universal_search #universal_search_input #q {background:white url([theme_url]/Images/fb_menubar_search_shadow.gif) no-repeat scroll left top;border:1px solid #315091;border-right:0;border-width:1px 0 1px 1px;float:left;margin:0;padding:3px 4px;width:143px;}
-#universal_search #universal_search_submit {float:left;width:21px;height:21px;}
+#universal_search #universal_search_submit {float:left;width:21px;}
 #universal_search #universal_search_submit a {background:#6D84B4 url([theme_url]/Images/search_input_gloss.gif) repeat-x scroll center top;border:1px solid #315091;display:block;font-size:11px;margin:0;padding:0;text-decoration:none;width:19px;height:19px;}
 #universal_search #universal_search_submit a span {background:transparent url([theme_url]/Images/search_glass.gif) no-repeat scroll 0 70%;display:block;margin:0;padding:3px 0;height:13px;}
 #main_menu .main_menu {float:left;}

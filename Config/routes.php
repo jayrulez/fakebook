@@ -7,6 +7,7 @@ return array
 
 	'profile'	=>	array('Profile','index','id'),
 	'group'		=>	array('Group','index','id'),
+
 	'wall@'		=>	array(
 						array('/^\/(g|u)\/(\d+)\/(\d+)/','wall','index','type,wid,page'),
 						array('/^\/(g|u)\/(\d+)/','wall','index','type,wid'),
