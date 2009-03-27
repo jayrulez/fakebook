@@ -78,7 +78,7 @@ class WallAction extends BaseAction
 	{
 		$id = (int)$_GET['delete'];
 		
-		if(isWallOwner($id))
+		if($this->isOwner($id))
 		{
 			/*
 			$dao = D("Wall");
@@ -93,7 +93,7 @@ class WallAction extends BaseAction
 		redirect($_SERVER["HTTP_REFERER"]);
 	}
 	
-	private function isOwner($id,$wid=0,$fromid=0)
+	public function isOwner($id,$wid=0,$fromid=0)
 	{
 		if(!$wid)
 		{
@@ -108,6 +108,10 @@ class WallAction extends BaseAction
 	
 		if($this->userId == $wid)
 			return true;
+		
+		/* group wall */
+
+		return false;
 	}
 	
 	public function _empty()
