@@ -157,24 +157,6 @@ function getGroupName($gid){
 	return $info['name'];
 }
 
-function isWallOwner($id,$userId,$wid=0,$fromid=0)
-{
-	if(!$wid)
-	{
-		if(!$post = D('Wall')->find($id))
-			return false;
-		$wid = $post['wid'];
-		$fromid = $post['fromid'];
-	}
-
-	if($userId == $fromid)
-		return true;
-	
-	if($userId == $wid)
-		return true;
-		
-}
-
 function Pager($count,$page,$listRows,$wid,$type)
 {
   $totalPages = (int)($count / $listRows) + 1;

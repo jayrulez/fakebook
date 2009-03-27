@@ -43,6 +43,12 @@ class WallAction extends BaseAction
 					->limit((($page - 1) * $listRows).',10')
 					->findAll();
 
+		foreach($Wall as &$key)
+		{
+			$isOwner = array('isOwner'=>$this->isOwner($key['id'],$wid,$key['fromid']));
+			$key = array_merge($key,$isOwner);
+		}
+
 		$this->assign('wid',$wid);
 		$this->assign('type',$type);
 		$this->assign('title',$title);
@@ -72,7 +78,7 @@ class WallAction extends BaseAction
 	{
 		$id = (int)$_GET['delete'];
 		
-		if(isWallOwner($id,$this->userId))
+		if(isWallOwner($id))
 		{
 			/*
 			$dao = D("Wall");
@@ -85,6 +91,23 @@ class WallAction extends BaseAction
 		}
 		
 		redirect($_SERVER["HTTP_REFERER"]);
+	}
+	
+	private function isOwner($id,$wid=0,$fromid=0)
+	{
+		if(!$wid)
+		{
+			if(!$post = D('Wall')->find($id))
+				return false;
+			$wid = $post['wid'];
+			$fromid = $post['fromid'];
+		}
+
+		if($this->userId == $fromid)
+			return true;
+	
+		if($this->userId == $wid)
+			return true;
 	}
 	
 	public function _empty()
