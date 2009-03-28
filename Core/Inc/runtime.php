@@ -31,6 +31,7 @@ function buildAppDir() {
             MODEL_DATA_PATH,
 			HTML_PATH,
 			UPLOAD_PATH,
+		RESOURCE_DATA_PATH,
 		));
 	
         if(!defined('BUILD_DIR_SECURE')) define('BUILD_DIR_SECURE',false);

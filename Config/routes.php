@@ -2,7 +2,7 @@
 
 return array
 (
-	'static'	=>	array('Public','_static','item'),
+	'static'	=>	array('Public','_static','type,item'),
 	'jsLang'	=>	array('Public','_jsLang','item'),
 
 	'profile'	=>	array('Profile','index','id'),

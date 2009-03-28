@@ -1,9 +1,9 @@
 <meta http-equiv="Content-language" content="{&LANG_ID}"/>
 <html:link type="ICO" href="../Public/Images/Icons/favicon.ico" />
-<html:link type="CSS" href="__APP__/static/Css-Base.css" />
-<html:link type="CSS" href="__APP__/static/Css-CrossBrowser.css" />
-<html:link type="CSS" href="__APP__/static/Css-{*MODULE_NAME}.css" />
-<html:link type="CSS" href="__APP__/jsLang/{*LANG_SET}_{*MODULE_NAME}.js" />
-<html:link type="CSS" href="__APP__/static/Js-Base.js" />
-<html:link type="CSS" href="__APP__/static/Js-jquery_1.3.2.min.js" />
-<html:link type="CSS" href="__APP__/static/Js-{*MODULE_NAME}.js" />
+<html:link type="CSS" href="{:url('','','static','',array('type'=>'css','item'=>'Css-Base'));}" />
+<html:link type="CSS" href="{:url('','','static','',array('type'=>'css','item'=>'Css-'.MODULE_NAME));}" />
+<html:link type="JS" href="{:url('','','static','',array('type'=>'js','item'=>LANG_SET.'_'.MODULE_NAME));}" />
+<html:link type="CSS" href="{:url('','','static','',array('type'=>'css','item'=>'Css-crossBrowser'));}" />
+<html:link type="JS" href="{:url('','','static','',array('type'=>'js','item'=>'Js-jQuery-1.3.2.min'));}" />
+<html:link type="JS" href="{:url('','','static','',array('type'=>'js','item'=>'Js-Base'));}" />
+<html:link type="JS" href="{:url('','','static','',array('type'=>'js','item'=>'Js-'.MODULE_NAME));}" />

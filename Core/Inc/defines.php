@@ -60,6 +60,7 @@ define('COMMON_DIR',     'Common');
 define('UPLOAD_DIR',     'Uploads');
 define('PLUGIN_DIR',     'PlugIns');
 define('MODEL_DATA_DIR',     'Model_Data');
+define('RESOURCE_DATA_DIR',    'Resource');
 define('VENDOR_DIR',     'Vendor');
 
 define('COMMON_PATH',   APP_PATH.COMMON_DIR.DS); 
@@ -75,6 +76,7 @@ define('CACHE_PATH',   APP_DATA_PATH.CACHE_DIR.DS);
 define('RUNTIME_PATH',      APP_DATA_PATH.RUNTIME_DIR.DS); 
 define('UPLOAD_PATH', APP_DATA_PATH.UPLOAD_DIR.DS);
 define('MODEL_DATA_PATH', APP_DATA_PATH.MODEL_DATA_DIR.DS); 
+define('RESOURCE_DATA_PATH',APP_DATA_PATH.RESOURCE_DATA_DIR.DS);
 
 define('DATA_TYPE_OBJ',1);
 define('DATA_TYPE_ARRAY',0);
