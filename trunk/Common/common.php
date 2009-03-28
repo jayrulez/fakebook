@@ -24,46 +24,45 @@ function css_browser_id()
 
 function _static()
 {
-	$resource = $_REQUEST['item'];
-	$resource = str_replace('-','/',$resource);
-	$split    = explode('.',$resource);
-	$parts    = count($split);
-	$valid    = array('js','css');
-	$ext      = $split[$parts-1];
+	$item = $_REQUEST['item'];
+	$type = $_REQUEST['type'];
 
-	if(!in_array($ext,$valid))
+	if($type=='css')
 	{
-		echo LParse(L('_RESOURCE_NOT_VALID_'),$resource);
+		header('Content-type: text/css');
+	}else if($type=='js')
+	{
+		header('Content-type: text/javascript');
 	}
 
-	if($ext=='js')
-	{
-		header('Content-Type: text/javascript');
-	}else if($ext=='css')
-	{
-		header('Content-Type: text/css');
-	}
+	$resource_url = str_replace('-',DS,$item).'.'.$type;
+	$file_path    = TMPL_PATH.'Public'.DS;
+	$file         = $file_path.$resource_url;
+	$cache        = RESOURCE_DATA_PATH.md5($resource_url).'.'.$type;
 
-	$file  = ROOT_PATH.THEMES_DIR.'/Public/';
-	$file .= $resource;
-
-	$cache = CACHE_PATH.md5($file).'.'.$ext;
+echo $file;
+	$content      = '';
 
 	if(is_file($cache)&&filemtime($cache)>filemtime($file))
 	{
-		$content = file_get_contents($cache);
-		echo $content;
+		$content .= file_get_contents($cache);
 	}else{
 		if(is_file($file))
 		{
-			$content = file_get_contents($file);
-			$content = str_replace('[theme_url]',C('SITE_URL').APP_PUBLIC_URL,$content);
-			file_put_contents($cache,$content);
-			echo $content;
+			$content .= file_get_contents($file);
+
+			if(C(RESOURCE_CACHE_ON))
+			{
+				file_put_contents($cache,$content);
+			}
 		}else{
-			echo LParse(L('_RESOURCE_NOT_EXIST_'),$file);
+			$content .= L('_RESOURCE_NOT_EXIST_');
 		}
 	}
+
+	$content = str_replace('[theme_url]',C('THEME_URL'),$content);
+
+	echo $content;
 }
 
 function _jsLang()
