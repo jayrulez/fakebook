@@ -40,7 +40,6 @@ function _static()
 	$file         = $file_path.$resource_url;
 	$cache        = RESOURCE_DATA_PATH.md5($resource_url).'.'.$type;
 
-echo $file;
 	$content      = '';
 
 	if(is_file($cache)&&filemtime($cache)>filemtime($file))
