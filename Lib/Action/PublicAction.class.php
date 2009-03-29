@@ -48,11 +48,11 @@ class PublicAction extends BaseAction
 				}else{
 					$secure_code = '';
 				}
-				
-				$email   = isset($_POST['email'])   ? $_POST['email'] : '';
-				$password   = isset($_POST['pass'])   ? $secure_code.$_POST['pass'] : '';
-				$autosignin = isset($_POST['persistent']) ? true               : false;
-						
+
+				$email   = isset($_POST['email']) ? $_POST['email'] : '';
+				$password   = isset($_POST['pass']) ? $secure_code.$_POST['pass'] : '';
+				$autosignin = isset($_POST['persistent']) ? true : false;
+
 				import('ORG.Text.Validation');
 				
 				$isEmail = I('Validation')->check($email,'email');
