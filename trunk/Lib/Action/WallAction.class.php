@@ -10,7 +10,7 @@ class WallAction extends BaseAction
 		$type = $_GET['type'];
 		
 		if($type == 'u' && getUserName($wid))
-		{	
+		{
 			$title = getUserName($wid);
 			$map['type'] = 'u';
 		}
@@ -58,7 +58,6 @@ class WallAction extends BaseAction
 		$this->assign('page',$page);
 		
 		$this->display();
-		
 	}
 	
 	public function insert()
@@ -80,10 +79,6 @@ class WallAction extends BaseAction
 		
 		if($this->isOwner($id))
 		{
-			/*
-			$dao = D("Wall");
-			$dao->deleteById($_GET['delete']);
-			*/
 			$dao = D('Wall');
 			$dao->find($id);
 			$dao->del = '1';
@@ -118,7 +113,6 @@ class WallAction extends BaseAction
 	{
 		$this->redirect('','ERROR');
 	}
-
 }
 
 ?>
