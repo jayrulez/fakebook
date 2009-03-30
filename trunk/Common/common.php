@@ -134,6 +134,17 @@ function formatDate($time,$timezone=0){
 }
 
 /* get user info by id */
+function getUserInfo($uid){
+	$info = D('User')->find($uid);
+	return $info;
+}
+
+function getUserName($uid){
+	$info = getUserInfo($uid);
+	return $info['display_name'];
+}
+
+/* get group info by id */
 function getGroupInfo($gid){
 	$info = D('Group')->find($gid);
 	return $info;
