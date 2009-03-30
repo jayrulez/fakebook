@@ -70,7 +70,7 @@ class App extends Base
                     header('Last-Modified:'.(date('D,d M Y H:i:s',$_SERVER['REQUEST_TIME']-C('LIMIT_REFLESH_TIMES'))).' GMT');
                 }
             }
-
+			
             $this->checkLanguage();    
             $this->checkTemplate();   
 
@@ -204,10 +204,13 @@ class App extends Base
 		$defaultLang = C('DEFAULT_LANGUAGE');
         if(C('LANG_SWITCH_ON')) {
             if(C('AUTO_DETECT_LANG')) {
-                if(isset($_GET[C('VAR_LANGUAGE')])) {
+                /*if(isset($_GET[C('VAR_LANGUAGE')])) {
                     $langSet = $_GET[C('VAR_LANGUAGE')];
                 }elseif ( Cookie::is_set('language') ) {
-                    $langSet = Cookie::get('language');
+                    $langSet = Cookie::get('language');*/
+            	if(Session::get('userInfo') != NULL){
+            		$userInfo = Session::get('userInfo');
+            		$langSet = $userInfo['language'];
                 }else if(isset($_SERVER['HTTP_ACCEPT_LANGUAGE']))
 				{
                     preg_match('/^([a-z\-]+)/i', $_SERVER['HTTP_ACCEPT_LANGUAGE'], $matches);
@@ -222,7 +225,7 @@ class App extends Base
             }else{
                 $langSet = $defaultLang;
             }
-			Cookie::set('language',$langSet,C('COOKIE_EXPIRE'));
+			//Cookie::set('language',$langSet,C('COOKIE_EXPIRE'));
 			
             define('LANG_SET',$langSet);
             if(C('LANG_CACHE_ON') && is_file(RUNTIME_PATH.MODULE_NAME.'_'.LANG_SET.'_lang.php')) {
