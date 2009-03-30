@@ -1,7 +1,7 @@
 <include file="../Public/pghead"/>
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
-<title>{&SITE_NAME} | {$Think.lang.index_pagename}</title>
+<title>{&SITE_NAME} | {$groupInfo['name']}</title>
 <include file="../Public/header"/>
 </head>
 <body class="{:css_browser_id()} {&LANG_ID}">
@@ -14,7 +14,7 @@
         <div class="UIFullPage_Container">
         <div class="widecolumn">
           <div class="group_title">
-            <h2>Jilin University</h2>
+            <h2>{$groupInfo['name']}</h2>
             Global
           </div>
           <div class="group_info_section">

@@ -2,7 +2,7 @@
 
 return array
 (
-	'index_pagename'	=>	'朋友',
+	'index_pagename'	=>	'所有朋友',
 );
 
 ?>
