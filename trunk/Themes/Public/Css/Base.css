@@ -48,6 +48,7 @@ table tr {height:25px}
 #menu_login_container .inputtext,#menu_login_container .inputpassword {width:140px;padding:3px;border-color:#1D2A5B;}
 
 #main_menu a {display:block;color:#fff;padding:7px 7px 7px 8px;text-decoration:none;font-weight:bold;margin-right:4px;line-height:normal;}
+.zh #main_menu a {font-weight:normal;}
 #account_menu a {display:block;color:#fff;padding:7px 5px;text-decoration:none;margin-right:5px;line-height:normal;}
 #main_menu a:hover,#account_menu a:hover {background-color:#5C75AA;}
 #universal_search {padding:3px 11px 3px 4px;width:172px;}
