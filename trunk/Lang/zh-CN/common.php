@@ -4,6 +4,7 @@ return array
 (
 	'_RESOURCE_NOT_EXIST_'	=>	'资源不存在: \0',
 	'_RESOURCE_NOT_VALID_'	=>	'资源不可用: \0',
+	'_LANGUAGE_'	=>	'中文(简体)',
 	
 	/* main menu */
 	'link_home'	=>	'首页',
