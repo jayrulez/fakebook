@@ -93,8 +93,13 @@ CREATE TABLE IF NOT EXISTS `fb_group` (
 --
 
 CREATE TABLE IF NOT EXISTS `fb_group_member` (
-  `id` int(11) NOT NULL auto_increment,
-  PRIMARY KEY  (`id`)
+  `uid` int(100) NOT NULL,
+  `gid` int(100) NOT NULL,
+  `status` tinyint(1) default '0',
+  `time` int(100) NULL,
+  `title` enum('member','admin','creator') NOT NULL default 'member',
+  `positions` varchar(100) NULL,
+  PRIMARY KEY  (`uid`,`gid`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
 
 

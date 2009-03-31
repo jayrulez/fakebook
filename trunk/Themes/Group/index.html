@@ -112,7 +112,7 @@
             </div>
             <div class="moreaction">
               <if condition="$wall['count'] gt $wall['listRows']">
-                <a href="{:url('','','wall','app',array('type'=>'g','id'=>$groupInfo['id']))}">See all {$wall.count} wall posts</a>
+                <a href="{:url('','','wall','app',array('type'=>'g','id'=>$groupInfo['id']))}">{$Think.lang.index_wall_action|sprintf=###,number_format($wall['count'])}</a>
               </if>
             </div>
           </div>

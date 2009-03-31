@@ -24,6 +24,12 @@ return array
 	'_TIME_YESTODAY_'	=>	'昨天',
 	'_TIME_DAYS_AGO_'	=>	'天前',
 	'_TIME_DATE_SHORT_'	=>	'n月j日',
+
+	'index_wall_header'	=>	'留言板',
+	'index_wall_subheader1'	=>	'显示全部%s条留言',
+	'index_wall_subheader2'	=>	'显示 %s%s条留言%s 中的%s条',
+	'index_wall_subheader3'	=>	'没有留言',
+	'index_wall_action'	=>	'浏览全部%s条留言',
 );
 
 ?>
