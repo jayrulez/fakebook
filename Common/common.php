@@ -155,8 +155,13 @@ function getGroupName($gid){
 	return $info['name'];
 }
 
-function Pager($count,$page,$listRows,$wid,$type)
+function Pager($wall,$type)
 {
+  $count = $wall['count'];
+  $page = $wall['page'];
+  $listRows = $wall['listRows'];
+  $wid = $wall['wid'];
+  
   $totalPages = (int)($count / $listRows) + 1;
   $page = ($page > $totalPages) ? $totalPages : $page;
   
