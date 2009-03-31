@@ -246,7 +246,7 @@
               </iterate>
             </div>
             <div class="moreaction">
-              <if condition="$wall.count gt $wall.listRows">
+              <if condition="$wall['count'] gt $wall['listRows']">
                 <a href="{:url('','','wall','app',array('type'=>'u','id'=>$profile['id']))}">See all {$wall.count} wall posts</a>
               </if>
             </div>
