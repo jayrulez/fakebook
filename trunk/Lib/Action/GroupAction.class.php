@@ -11,6 +11,10 @@ class GroupAction extends BaseAction
 			
 		$groupInfo = getGroupInfo($gid);
 		
+		$WallCls = new WallAction;
+		$Wall = $WallCls->getWall($gid,5,1);
+		
+		$this->assign('wall',$Wall);
 		$this->assign('groupInfo',$groupInfo);
 		
 		$this->display();

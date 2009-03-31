@@ -83,11 +83,11 @@
               </iterate>
             </div>
           </div>
-          <if condition="$count gt $listRows">
+          <if condition="$wall.count gt $wall.listRows">
           <div class="footer_bar clearfix">
             <div class="pagerpro_container">
               <ul class="pagerpro">
-                {:Pager($count,$page,$listRows,$wid,$type)}
+                {:Pager($wall,$type)}
               </ul>
             </div>
           </div>

@@ -67,24 +67,25 @@
           <div id="wall">
             <div class="box_header">Wall</div>
             <div class="box_subheader clearfix">
-              <span class="subtitle">Displaying all 1 wall posts</span>
+              <span class="subtitle">Displaying 5 of {$wall.count}</span>
               <span class="actionlink">
-                <a href="wall.php?id=10">View All</a>
+                <a href="{:url('','','wall','app',array('type'=>'g','id'=>$groupInfo['id']))}">View All</a>
               </span>
             </div>
             <div id="inputarea">
-              <form action="wallpost.php" method="post" name="form">
+              <form action="{:url('insert','wall')}" method="post" name="form">
                 <textarea name="content"></textarea>
                 <br/>
                 <input type="submit" value="Post"/>
-                <input type="hidden" value="profile.php?id=" name="url"/>
-                <input type="hidden" value="10" name="wid"/>
+                <input type="hidden" value="{:url('','','group','app',array('id'=>$groupInfo['id']))}" name="url"/>
+                <input type="hidden" value="{$groupInfo['id']}" name="wid"/>
               </form>
             </div>
             <div id="posts">
+              <iterate name="wall.list" id="post">
               <div class="post_item clearfix">
                 <div class="picture">
-                  <a href="profile.php?id=41">
+                  <a href="{:url('','','profile','app',array('id'=>$post['fromid']))}">
                     <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
                       <img alt="" src="../Public/images/silhouette_s.jpg"/>
                       <span class="UIRoundedImage_Corners">
@@ -95,16 +96,24 @@
                 </div>
                 <div class="item">
                   <div class="user">
-                    <a href="profile.php?id=41">User1</a> wrote
+                    <a href="{:url('','','profile','app',array('id'=>$post['fromid']))}">{$post['fromid']|getUserName}</a> wrote
                     <br/>
-                    <span class="DateAndTime">at February 2</span>
+                    <span class="DateAndTime">at {$post['time']|formatDate}</span>
                   </div>
-                  <div class="content">testing</div>
+                  <div class="content">{$post['text']|htmlspecialchars|nl2br}</div>
                   <div class="wallactions">
-                    <a onclick="" href="#">Delete</a>
+                    <if condition="$post['isOwner']">
+                      <a onclick="" href="{:url('','','wall','app',array('action'=>'delete','id'=>$post['id']))}">Delete</a>
+                    </if>
                   </div>
                 </div>
               </div>
+              </iterate>
+            </div>
+            <div class="moreaction">
+              <if condition="$wall.count gt 5">
+                <a href="{:url('','','wall','app',array('type'=>'g','id'=>$groupInfo['id']))}">See all {$wall.count} wall posts</a>
+              </if>
             </div>
           </div>
           <div id="photos">
