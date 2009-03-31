@@ -56,7 +56,7 @@
               <div class="box_content">
                 <ul>
                   <li>
-                    <a class="group_name" href="{:url('','','group')}">Jilin University</a>
+                    <a class="group_name" href="{:url('','','group','app',array('id'=>49911))}">Jilin University</a>
                   </li>
                 </ul>
               </div>
@@ -247,7 +247,7 @@
             </div>
             <div class="moreaction">
               <if condition="$wall['count'] gt $wall['listRows']">
-                <a href="{:url('','','wall','app',array('type'=>'u','id'=>$profile['id']))}">See all {$wall.count} wall posts</a>
+                <a href="{:url('','','wall','app',array('type'=>'u','id'=>$profile['id']))}">{$Think.lang.index_wall_action|sprintf=###,number_format($wall['count'])}</a>
               </if>
             </div>
           </div>
