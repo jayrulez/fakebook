@@ -17,10 +17,13 @@ class ProfileAction extends BaseAction
 			$Profile = $dao->find($uid);
 		}
 		
+		$listRows = 5;
 		$WallCls = new WallAction;
-		$Wall = $WallCls->getWall($uid,5,1);
+		$Wall = $WallCls->getWall($uid,$listRows,1);
+		$wallSubheader = $WallCls->getWallHeader($Wall['count'],$listRows,$uid,'u');
 		
 		$this->assign('wall',$Wall);
+		$this->assign('wallSubheader',$wallSubheader);
 		$this->assign('profile',$Profile);
 		
 		$this->display();

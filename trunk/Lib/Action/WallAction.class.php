@@ -121,6 +121,22 @@ class WallAction extends BaseAction
 		return $array;
 	}
 	
+	public function getWallHeader($count,$listRows,$wid,$type)
+	{
+		if($count > $listRows){
+			return sprintf(L('index_wall_subheader2'),
+							"<a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid))."\">",
+							number_format($count),
+							"</a>",
+							$listRows);
+		} else if($count > 0){
+			return sprintf(L('index_wall_subheader1'),$count);
+		} else {
+			return sprintf(L('index_wall_subheader3'));
+		}
+		
+	}
+	
 	public function _empty()
 	{
 		$this->redirect('','ERROR');
