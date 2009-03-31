@@ -24,6 +24,11 @@ return array
 	'_TIME_YESTODAY_'	=>	'Yestoday',
 	'_TIME_DAYS_AGO_'	=>	' days ago',
 	'_TIME_DATE_SHORT_'	=>	'F n',
+
+	'index_wall_header'	=>	'Wall',
+	'index_wall_subheader1'	=>	'Displaying all %s wall posts',
+	'index_wall_subheader2'	=>	'Displaying %4$s of %1$s%2$s wall posts%3$s',
+	'index_wall_subheader3'	=>	'No wall posts',
 );
 
 ?>

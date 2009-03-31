@@ -200,9 +200,9 @@
             </div>
           </div>
           <div id="wall">
-            <div class="box_header">Wall</div>
+            <div class="box_header">{$Think.lang.index_wall_header}</div>
             <div class="box_subheader clearfix">
-              <span class="subtitle">Displaying 5 of {$wall.count}</span>
+              <span class="subtitle">{$wallSubheader}</span>
               <span class="actionlink">
                 <a href="{:url('','','wall','app',array('type'=>'u','id'=>$profile['id']))}">View All</a>
               </span>
@@ -246,7 +246,7 @@
               </iterate>
             </div>
             <div class="moreaction">
-              <if condition="$wall.count gt 5">
+              <if condition="$wall.count gt $wall.listRows">
                 <a href="{:url('','','wall','app',array('type'=>'u','id'=>$profile['id']))}">See all {$wall.count} wall posts</a>
               </if>
             </div>
