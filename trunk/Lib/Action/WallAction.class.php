@@ -24,38 +24,13 @@ class WallAction extends BaseAction
 			redirect(url('','','home'));
 		}
 		
-		$dao = D('Wall');
-		$map['wid'] = $wid;
-		$map['del'] = 0;
 		$listRows  =  10;
-		
-		$count	= $dao->count($map);
-		
-		if($page < 1)
-			$page = 1;
-		
-		if($page > $count)
-			$page = $count;
-		
-		$Wall = $dao->where($map)
-					->order('time desc')
-					->field('id,fromid,text,time,username')
-					->limit((($page - 1) * $listRows).',10')
-					->findAll();
 
-		foreach($Wall as &$key)
-		{
-			$isOwner = array('isOwner'=>$this->isOwner($key['id'],$wid,$key['fromid']));
-			$key = array_merge($key,$isOwner);
-		}
+		$Wall = $this->getWall($wid,$listRows,$page);
 
-		$this->assign('wid',$wid);
+		$this->assign('wall',$Wall);
 		$this->assign('type',$type);
 		$this->assign('title',$title);
-		$this->assign('list',$Wall);
-		$this->assign('listRows',$listRows);
-		$this->assign('count',$count);
-		$this->assign('page',$page);
 		
 		$this->display();
 	}
@@ -70,7 +45,7 @@ class WallAction extends BaseAction
 		$dao->time = time();
 		$dao->add();
 
-		redirect($_SERVER["HTTP_REFERER"]);
+		redirect($_POST["url"]);
 	}
 	
 	public function delete()
@@ -107,6 +82,43 @@ class WallAction extends BaseAction
 		/* group wall */
 
 		return false;
+	}
+	
+	public function getWall($wid,$listRows=10,$page=1)
+	{
+		$dao = D('Wall');
+		$map['wid'] = $wid;
+		$map['del'] = 0;
+		
+		$count	= $dao->count($map);
+		
+		if($page < 1)
+			$page = 1;
+		
+		if($page > $count)
+			$page = $count;
+		
+		$Wall = $dao->where($map)
+					->order('time desc')
+					->field('id,fromid,text,time,username')
+					->limit((($page - 1) * $listRows).','.$listRows)
+					->findAll();
+
+		foreach($Wall as &$key)
+		{
+			$isOwner = array('isOwner'=>$this->isOwner($key['id'],$wid,$key['fromid']));
+			$key = array_merge($key,$isOwner);
+		}
+
+		$array = array();
+		
+		$array['wid'] = $wid;
+		$array['list'] = $Wall;
+		$array['listRows'] = $listRows;
+		$array['count'] = $count;
+		$array['page'] = $page;
+		
+		return $array;
 	}
 	
 	public function _empty()

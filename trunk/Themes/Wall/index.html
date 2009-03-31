@@ -48,12 +48,13 @@
                 <br/>
                 <input type="submit" value="Post"/>
                 <input type="hidden" value="{$type}" name="type"/>
+                <input type="hidden" value="{:url('','','profile','app',array('id'=>$profile['id']))}" name="url"/>
                 <input type="hidden" value="{$wid}" name="wid"/>
               </form>
             </div>
             </if>
             <div id="posts">
-              <iterate name="list" id="post">
+              <iterate name="wall.list" id="post">
               <div class="post_item clearfix">
                 <div class="picture">
                   <a href="{:url('','','profile','app',array('id'=>$post['fromid']))}">
