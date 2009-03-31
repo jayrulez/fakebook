@@ -17,7 +17,11 @@ class ProfileAction extends BaseAction
 			$Profile = $dao->find($uid);
 		}
 		
-		$this->assign('Profile',$Profile);
+		$WallCls = new WallAction;
+		$Wall = $WallCls->getWall($uid,5,1);
+		
+		$this->assign('wall',$Wall);
+		$this->assign('profile',$Profile);
 		
 		$this->display();
 	}
