@@ -25,12 +25,22 @@ return array
 	'_TIME_DAYS_AGO_'	=>	' days ago',
 	'_TIME_DATE_SHORT_'	=>	'F n',
 
-	'index_wall_header'	=>	'Wall',
-	'index_wall_subheader1'	=>	'Displaying all %s wall posts',
-	'index_wall_subheader2'	=>	'Displaying %4$s of %1$s%2$s wall posts%3$s',
-	'index_wall_subheader3'	=>	'No wall posts',
-	'index_wall_moreaction'	=>	'See all %s wall posts',
-	'index_wall_action_delete'	=>	'Delete',
+
+	'wall_header'		=>	'The Wall',
+	'wall_subheader1'	=>	'Displaying all %s wall posts',
+	'wall_subheader2'	=>	'Displaying %4$s of %1$s%2$s wall posts%3$s',
+	'wall_subheader3'	=>	'No wall posts',
+	'wall_moreaction'	=>	'See all %s wall posts',
+	'wall_wrote'		=>	'wrote',
+	'wall_at'			=>	'at',
+
+	'_ACTION_DELETE_'	=>	'Delete',
+	'_ACTION_VIEWALL_'	=>	'View All',
+	'_ACTION_POST_'		=>	'Post',
+	'_PAGE_FIRST_'		=>	'First',
+	'_PAGE_LAST_'		=>	'Last',
+	'_PAGE_PREV_'		=>	'Prev',
+	'_PAGE_NEXT_'		=>	'Next',
 );
 
 ?>

@@ -25,12 +25,21 @@ return array
 	'_TIME_DAYS_AGO_'	=>	'天前',
 	'_TIME_DATE_SHORT_'	=>	'n月j日',
 
-	'index_wall_header'	=>	'留言板',
-	'index_wall_subheader1'	=>	'显示全部%s条留言',
-	'index_wall_subheader2'	=>	'显示 %s%s条留言%s 中的%s条',
-	'index_wall_subheader3'	=>	'没有留言',
-	'index_wall_moreaction'	=>	'浏览全部%s条留言',
-	'index_wall_action_delete'	=>	'删除',
+	'wall_header'		=>	'留言板',
+	'wall_subheader1'	=>	'显示全部%s条留言',
+	'wall_subheader2'	=>	'显示 %s%s条留言%s 中的%s条',
+	'wall_subheader3'	=>	'没有留言',
+	'wall_moreaction'	=>	'浏览全部%s条留言',
+	'wall_wrote'		=>	'写道',
+	'wall_at'			=>	'于',
+
+	'_ACTION_DELETE_'	=>	'删除',
+	'_ACTION_VIEWALL_'	=>	'查看全部',
+	'_ACTION_POST_'		=>	'发布',
+	'_PAGE_FIRST_'		=>	'第一页',
+	'_PAGE_LAST_'		=>	'最后一页',
+	'_PAGE_PREV_'		=>	'上一页',
+	'_PAGE_NEXT_'		=>	'下一页',
 );
 
 ?>

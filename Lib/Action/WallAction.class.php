@@ -37,15 +37,27 @@ class WallAction extends BaseAction
 	
 	public function insert()
 	{
-		$dao = D("Wall");
-		$dao->type = $_POST['type'];
-		$dao->text = $_POST['content'];
-		$dao->wid = $_POST['wid'];
-		$dao->fromid = $this->userId;
-		$dao->time = time();
-		$dao->add();
+		$post = $_POST;
+		if(empty($post))
+		{
+			$this->redirect('','','home');
+		}
+		else if(empty($post['content']))
+		{
+			redirect($_POST["url"]);
+		}
+		else
+		{
+			$dao = D("Wall");
+			$dao->type = $_POST['type'];
+			$dao->text = $_POST['content'];
+			$dao->wid = $_POST['wid'];
+			$dao->fromid = $this->userId;
+			$dao->time = time();
+			$dao->add();
 
-		redirect($_POST["url"]);
+			redirect($_POST["url"]);
+		}
 	}
 	
 	public function delete()
@@ -124,15 +136,15 @@ class WallAction extends BaseAction
 	public function getWallHeader($count,$listRows,$wid,$type)
 	{
 		if($count > $listRows){
-			return sprintf(L('index_wall_subheader2'),
+			return sprintf(L('wall_subheader2'),
 							"<a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid))."\">",
 							number_format($count),
 							"</a>",
 							$listRows);
 		} else if($count > 0){
-			return sprintf(L('index_wall_subheader1'),$count);
+			return sprintf(L('wall_subheader1'),$count);
 		} else {
-			return sprintf(L('index_wall_subheader3'));
+			return sprintf(L('wall_subheader3'));
 		}
 		
 	}
