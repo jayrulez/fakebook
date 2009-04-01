@@ -65,18 +65,18 @@
             </div>
           </div>
           <div id="wall">
-            <div class="box_header">{$Think.lang.index_wall_header}</div>
+            <div class="box_header">{$Think.lang.wall_header}</div>
             <div class="box_subheader clearfix">
               <span class="subtitle">{$wallSubheader}</span>
               <span class="actionlink">
-                <a href="{:url('','','wall','app',array('type'=>'g','id'=>$groupInfo['id']))}">View All</a>
+                <a href="{:url('','','wall','app',array('type'=>'g','id'=>$groupInfo['id']))}">{$Think.lang._ACTION_VIEWALL_}</a>
               </span>
             </div>
             <div id="inputarea">
               <form action="{:url('insert','Wall')}" method="post" name="form">
                 <textarea name="content"></textarea>
                 <br/>
-                <input type="submit" value="Post"/>
+                <input type="submit" value="{$Think.lang._ACTION_POST_}"/>
                 <input type="hidden" value="{:url('','','group','app',array('id'=>$groupInfo['id']))}" name="url"/>
                 <input type="hidden" value="{$groupInfo['id']}" name="wid"/>
               </form>
@@ -96,14 +96,14 @@
                 </div>
                 <div class="item">
                   <div class="user">
-                    <a href="{:url('','','profile','app',array('id'=>$post['fromid']))}">{$post['fromid']|getUserName}</a> wrote
+                    <a href="{:url('','','profile','app',array('id'=>$post['fromid']))}">{$post['fromid']|getUserName}</a> {$Think.lang.wall_wrote}
                     <br/>
-                    <span class="DateAndTime">at {$post['time']|formatDate}</span>
+                    <span class="DateAndTime">{$Think.lang.wall_at} {$post['time']|formatDate}</span>
                   </div>
                   <div class="content">{$post['text']|htmlspecialchars|nl2br}</div>
                   <div class="wallactions">
                     <if condition="$post['isOwner']">
-                      <a onclick="" href="{:url('','','Wall','',array('action'=>'delete','id'=>$post['id']))}">{$Think.lang.index_wall_action_delete}</a>
+                      <a onclick="" href="{:url('','','Wall','',array('action'=>'delete','id'=>$post['id']))}">{$Think.lang._ACTION_DELETE_}</a>
                     </if>
                   </div>
                 </div>
@@ -112,7 +112,7 @@
             </div>
             <div class="moreaction">
               <if condition="$wall['count'] gt $wall['listRows']">
-                <a href="{:url('','','wall','app',array('type'=>'g','id'=>$groupInfo['id']))}">{$Think.lang.index_wall_moreaction|sprintf=###,number_format($wall['count'])}</a>
+                <a href="{:url('','','wall','app',array('type'=>'g','id'=>$groupInfo['id']))}">{$Think.lang.wall_moreaction|sprintf=###,number_format($wall['count'])}</a>
               </if>
             </div>
           </div>

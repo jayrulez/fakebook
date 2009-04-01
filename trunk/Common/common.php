@@ -167,10 +167,10 @@ function Pager($wall,$type)
   
   //show First button
   if($page > 3 && $totalPages > 5)
-    $output = "<li><a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid,'page'=>1))."\">First</a></li>";
+    $output = "<li><a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid,'page'=>1))."\">".L('_PAGE_FIRST_')."</a></li>";
   //show Prev button
   if($page > 1 && $totalPages > 1)
-    $output .= "<li><a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid,'page'=>$page-1))."\">Prev</a></li>";
+    $output .= "<li><a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid,'page'=>$page-1))."\">".L('_PAGE_PREV_')."</a></li>";
   //show page-4
   if($page > 4 && $totalPages > 5 && $totalPages < $page + 2)
     $output .= "<li><a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid,'page'=>$page-4))."\">".($page - 4)."</a></li>";
@@ -200,10 +200,10 @@ function Pager($wall,$type)
     $output .= "<li><a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid,'page'=>$page+4))."\">".($page + 4)."</a></li>";
   //show Next button
   if($totalPages > $page)
-    $output .= "<li><a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid,'page'=>$page+1))."\">Next</a></li>";
+    $output .= "<li><a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid,'page'=>$page+1))."\">".L('_PAGE_NEXT_')."</a></li>";
   //show Last button
   if($totalPages > $page + 2)
-    $output .= "<li><a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid,'page'=>$totalPages))."\">Last</a></li>";
+    $output .= "<li><a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid,'page'=>$totalPages))."\">".L('_PAGE_LAST_')."</a></li>";
   
   return $output;
 }

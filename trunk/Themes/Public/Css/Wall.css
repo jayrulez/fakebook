@@ -23,7 +23,7 @@ ie6 .top_wash,ie7 .top_wash {*height:166px;*left:0;*top:0;}
 #wall #posts .item .wallactions a {cursor:pointer;}
 
 .footer_bar {border-top:1px solid #CCCCCC;padding:0 20px;background:white none repeat scroll 0 0;clear:both;}
-.footer_bar .pagerpro_container {float:right;margin:0 0;padding:3px 0 4px;width:200px;}
+.footer_bar .pagerpro_container {float:right;margin:0 0;padding:3px 0 4px;}
 .footer_bar .pagerpro {float:right;list-style-image:none;list-style-position:outside;list-style-type:none;margin:0;padding:0;}
 .footer_bar .pagerpro li {display:inline;}
 .footer_bar .pagerpro a {padding:3px 3px 2px;text-transform:none;}
