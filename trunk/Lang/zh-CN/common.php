@@ -29,7 +29,8 @@ return array
 	'index_wall_subheader1'	=>	'显示全部%s条留言',
 	'index_wall_subheader2'	=>	'显示 %s%s条留言%s 中的%s条',
 	'index_wall_subheader3'	=>	'没有留言',
-	'index_wall_action'	=>	'浏览全部%s条留言',
+	'index_wall_moreaction'	=>	'浏览全部%s条留言',
+	'index_wall_action_delete'	=>	'删除',
 );
 
 ?>

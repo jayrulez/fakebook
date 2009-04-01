@@ -53,9 +53,9 @@
                 <li>
                   <a onclick="" href="#">
                     <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
-                      <img alt="" src="../Public/images/silhouette_s.jpg"/>
+                      <img alt="" src="../Public/Images/silhouette_s.jpg"/>
                       <span class="UIRoundedImage_Corners">
-                        <img src="../Public/images/UIRoundedImage.png" alt="" class="UIRoundedImage_CornersSprite" />
+                        <img src="../Public/Images/UIRoundedImage.png" alt="" class="UIRoundedImage_CornersSprite" />
                       </span>
                     </span>
                   </a>
@@ -87,9 +87,9 @@
                 <div class="picture">
                   <a href="{:url('','','profile','app',array('id'=>$post['fromid']))}">
                     <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
-                      <img alt="" src="../Public/images/silhouette_s.jpg"/>
+                      <img alt="" src="../Public/Images/silhouette_s.jpg"/>
                       <span class="UIRoundedImage_Corners">
-                        <img src="../Public/images/UIRoundedImage.png" alt="" class="UIRoundedImage_CornersSprite" />
+                        <img src="../Public/Images/UIRoundedImage.png" alt="" class="UIRoundedImage_CornersSprite" />
                       </span>
                     </span>
                   </a>
@@ -103,7 +103,7 @@
                   <div class="content">{$post['text']|htmlspecialchars|nl2br}</div>
                   <div class="wallactions">
                     <if condition="$post['isOwner']">
-                      <a onclick="" href="{:url('','','wall','app',array('action'=>'delete','id'=>$post['id']))}">Delete</a>
+                      <a onclick="" href="{:url('','','wall','app',array('action'=>'delete','id'=>$post['id']))}">{$Think.lang.index_wall_action_delete}</a>
                     </if>
                   </div>
                 </div>
@@ -112,7 +112,7 @@
             </div>
             <div class="moreaction">
               <if condition="$wall['count'] gt $wall['listRows']">
-                <a href="{:url('','','wall','app',array('type'=>'g','id'=>$groupInfo['id']))}">{$Think.lang.index_wall_action|sprintf=###,number_format($wall['count'])}</a>
+                <a href="{:url('','','wall','app',array('type'=>'g','id'=>$groupInfo['id']))}">{$Think.lang.index_wall_moreaction|sprintf=###,number_format($wall['count'])}</a>
               </if>
             </div>
           </div>
@@ -126,14 +126,14 @@
             </div>
             <div id="photos">
               <div class="item">
-                <a href="photo.php?id=45"><img alt="" src="../Public/images/group_s.jpg"/></a>
+                <a href="photo.php?id=45"><img alt="" src="../Public/Images/group_s.jpg"/></a>
               </div>
             </div>
           </div>
         </div>
         <div class="narrowcolumn">
           <div class="picture">
-            <img alt="" src="../Public/images/group_l.jpg"/>
+            <img alt="" src="../Public/Images/group_l.jpg"/>
           </div>
           <div id="profile_actions">
             <ul>

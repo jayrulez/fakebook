@@ -15,7 +15,7 @@
       <div class="UIFullPage_Container">
         <div class="narrowcolumn">
           <div class="picture">
-            <img alt="" src="../Public/images/silhouette_l.jpg"/>
+            <img alt="" src="../Public/Images/silhouette_l.jpg"/>
           </div>
           <div id="profile_actions">
             <ul>
@@ -36,9 +36,9 @@
                   <li>
                     <a href="{:url('','','profile')}">
                       <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
-                        <img alt="" src="../Public/images/silhouette_s.jpg"/>
+                        <img alt="" src="../Public/Images/silhouette_s.jpg"/>
                         <span class="UIRoundedImage_Corners">
-                          <img src="../Public/images/UIRoundedImage.png" alt="" class="UIRoundedImage_CornersSprite" />
+                          <img src="../Public/Images/UIRoundedImage.png" alt="" class="UIRoundedImage_CornersSprite" />
                         </span>
                       </span>
                     </a>
@@ -101,7 +101,7 @@
               <!-- feed comment -->
               <div class="feed clearfix">
                 <div class="feed_icon">
-                  <img class="spritemap_icons sx_comment" src="../Public/images/spacer.gif"/>
+                  <img class="spritemap_icons sx_comment" src="../Public/Images/spacer.gif"/>
                 </div>
                 <div class="feed_story">
                   <div class="story_header">
@@ -110,7 +110,7 @@
                   </div>
                   <div class="story_body">
                     <div class="photo_border">
-                      <a href="photo.php?id=46"><img alt="" src="../Public/images/group_m.jpg"/></a>
+                      <a href="photo.php?id=46"><img alt="" src="../Public/Images/group_m.jpg"/></a>
                     </div>
                     <div class="story_quote">
                       <span class="em">Comments...</span>
@@ -123,7 +123,7 @@
               <!-- feed wall -->
               <div class="feed clearfix">
                 <div class="feed_icon">
-                  <img class="spritemap_icons sx_wall" src="../Public/images/spacer.gif"/>
+                  <img class="spritemap_icons sx_wall" src="../Public/Images/spacer.gif"/>
                 </div>
                 <div class="feed_story">
                   <div class="story_header">
@@ -137,7 +137,7 @@
               <!-- feed friends -->
               <div class="feed clearfix">
                 <div class="feed_icon">
-                  <img class="spritemap_icons sx_friend" src="../Public/images/spacer.gif"/>
+                  <img class="spritemap_icons sx_friend" src="../Public/Images/spacer.gif"/>
                 </div>
                 <div class="feed_story">
                   <div class="story_header">
@@ -151,7 +151,7 @@
               <!-- feed group -->
               <div class="feed clearfix">
                 <div class="feed_icon">
-                  <img class="spritemap_icons sx_group" src="../Public/images/spacer.gif"/>
+                  <img class="spritemap_icons sx_group" src="../Public/Images/spacer.gif"/>
                 </div>
                 <div class="feed_story">
                   <div class="story_header">
@@ -165,7 +165,7 @@
               <!-- feed photo -->
               <div class="feed clearfix">
                 <div class="feed_icon">
-                  <img class="spritemap_icons sx_photo" src="../Public/images/spacer.gif"/>
+                  <img class="spritemap_icons sx_photo" src="../Public/Images/spacer.gif"/>
                 </div>
                 <div class="feed_story">
                   <div class="story_header">
@@ -174,7 +174,7 @@
                   </div>
                   <div class="story_body">
                     <div class="photo_border">
-                      <a href="photo.php?id=46"><img alt="" src="../Public/images/group_l.jpg"/></a>
+                      <a href="photo.php?id=46"><img alt="" src="../Public/Images/group_l.jpg"/></a>
                     </div>
                   </div>
                 </div>
@@ -184,7 +184,7 @@
               <!-- feed translations -->
               <div class="feed clearfix">
                 <div class="feed_icon">
-                  <img class="spritemap_icons sx_translations" src="../Public/images/spacer.gif"/>
+                  <img class="spritemap_icons sx_translations" src="../Public/Images/spacer.gif"/>
                 </div>
                 <div class="feed_story">
                   <div class="story_header">
@@ -220,9 +220,9 @@
                 <div class="picture">
                   <a href="{:url('','','profile','app',array('id'=>$post['fromid']))}">
                     <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
-                      <img alt="" src="../Public/images/silhouette_s.jpg"/>
+                      <img alt="" src="../Public/Images/silhouette_s.jpg"/>
                       <span class="UIRoundedImage_Corners">
-                        <img src="../Public/images/UIRoundedImage.png" alt="" class="UIRoundedImage_CornersSprite" />
+                        <img src="../Public/Images/UIRoundedImage.png" alt="" class="UIRoundedImage_CornersSprite" />
                       </span>
                     </span>
                   </a>
@@ -236,7 +236,7 @@
                   <div class="content">{$post['text']|htmlspecialchars|nl2br}</div>
                   <div class="wallactions">
                     <if condition="$post['isOwner']">
-                      <a onclick="" href="{:url('','','wall','app',array('action'=>'delete','id'=>$post['id']))}">Delete</a>
+                      <a onclick="" href="{:url('','','wall','app',array('action'=>'delete','id'=>$post['id']))}">{$Think.lang.index_wall_action_delete}</a>
                     </if>
                   </div>
                 </div>
@@ -245,7 +245,7 @@
             </div>
             <div class="moreaction">
               <if condition="$wall['count'] gt $wall['listRows']">
-                <a href="{:url('','','wall','app',array('type'=>'u','id'=>$profile['id']))}">{$Think.lang.index_wall_action|sprintf=###,number_format($wall['count'])}</a>
+                <a href="{:url('','','wall','app',array('type'=>'u','id'=>$profile['id']))}">{$Think.lang.index_wall_moreaction|sprintf=###,number_format($wall['count'])}</a>
               </if>
             </div>
           </div>
