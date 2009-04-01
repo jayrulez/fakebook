@@ -34,6 +34,7 @@ return array
 	'wall_at'			=>	'于',
 
 	'_ACTION_DELETE_'	=>	'删除',
+	'_ACTION_REPORT_'	=>	'举报',
 	'_ACTION_VIEWALL_'	=>	'查看全部',
 	'_ACTION_POST_'		=>	'发布',
 	'_PAGE_FIRST_'		=>	'第一页',
