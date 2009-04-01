@@ -48,8 +48,8 @@
                 <br/>
                 <input type="submit" value="Post"/>
                 <input type="hidden" value="{$type}" name="type"/>
-                <input type="hidden" value="{:url('','','Wall','',array('type'=>$type,'id'=>$wall['wid']))}" name="url"/>
-                <input type="hidden" value="{$wid}" name="wid"/>
+                <input type="hidden" value="{:url('','','wall','',array('type'=>$type,'id'=>$wall['wid']))}" name="url"/>
+                <input type="hidden" value="{$wall['wid']}" name="wid"/>
               </form>
             </div>
             </if>

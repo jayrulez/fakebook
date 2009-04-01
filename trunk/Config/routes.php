@@ -5,6 +5,7 @@ return array
 	'static'	=>	array('Public','_static','type,item'),
 	'jsLang'	=>	array('Public','_jsLang','item'),
 
+	'index'		=>	array('Index','index'),
 	'home'		=>	array('Home','index'),
 	'profile'	=>	array('Profile','index','id'),
 	'people'	=>	array('Profile','people','username,id'),
