@@ -29,7 +29,8 @@ return array
 	'index_wall_subheader1'	=>	'Displaying all %s wall posts',
 	'index_wall_subheader2'	=>	'Displaying %4$s of %1$s%2$s wall posts%3$s',
 	'index_wall_subheader3'	=>	'No wall posts',
-	'index_wall_action'	=>	'See all %s wall posts',
+	'index_wall_moreaction'	=>	'See all %s wall posts',
+	'index_wall_action_delete'	=>	'Delete',
 );
 
 ?>
