@@ -14,8 +14,8 @@ return array
 	'friends'	=>	array('Friends','index','id'),
 
 	'wall@'		=>	array(
-						array('/^\/(g|u)\/(\d+)\/(\d+)/','wall','index','type,wid,page'),
-						array('/^\/(g|u)\/(\d+)/','wall','index','type,wid'),
+						array('/^\/(g|u)\/(\d+)\/(\d+)/','Wall','index','type,wid,page'),
+						array('/^\/(g|u)\/(\d+)/','Wall','index','type,wid'),
 					),
 
 	'login'		=>	array('Public','login'),

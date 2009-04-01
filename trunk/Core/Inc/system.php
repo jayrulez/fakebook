@@ -5,7 +5,7 @@ return array(
 	/* Dispatch Config */
 	'DISPATCH_ON'				=>	true,
 	'DISPATCH_NAME'			=>	'Think',
-	'URL_MODEL'					=>	2,
+	'URL_MODEL'					=>	1,
 	'PATH_MODEL'					=>	2,
 	'PATH_DEPR'					=>	'/',	
 	'ROUTER_ON'					=>	true,

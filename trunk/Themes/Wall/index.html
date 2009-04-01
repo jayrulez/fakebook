@@ -43,7 +43,7 @@
           <div id="wall">
             <if condition="$userId">
             <div id="inputarea">
-              <form action="{:url('insert','wall')}" method="post" name="form">
+              <form action="{:url('insert','Wall')}" method="post" name="form">
                 <textarea name="content"></textarea>
                 <br/>
                 <input type="submit" value="Post"/>
@@ -75,7 +75,7 @@
                   <div class="content">{$post['text']|htmlspecialchars|nl2br}</div>
                   <div class="wallactions">
                     <if condition="$post['isOwner']">
-                      <a onclick="" href="{:url('','','wall','app',array('action'=>'delete','id'=>$post['id']))}">Delete</a>
+                      <a onclick="" href="{:url('','','Wall','',array('action'=>'delete','id'=>$post['id']))}">{$Think.lang.index_wall_action_delete}</a>
                     </if>
                   </div>
                 </div>
