@@ -8,7 +8,7 @@ class ProfileAction extends BaseAction
 		
 		if(empty($uid))
 		{
-			if(empty($this->userId)||empty($this->userInfo))
+			if(empty($this->userId))
 			{
 				$this->redirect('','','index');
 			}
@@ -32,7 +32,7 @@ class ProfileAction extends BaseAction
 				if(empty($Profile))
 					$this->redirect('','','home');
 
-				if(empty($this->userId)||empty($this->userInfo))
+				if(empty($this->userId))
 					$this->redirect('','','people','',array('username'=>str_replace(' ','-',$Profile['display_name']),'id'=>$uid));
 
 			}
@@ -60,7 +60,7 @@ class ProfileAction extends BaseAction
 		}
 		else
 		{
-			if(empty($this->userId)||empty($this->userInfo))
+			if(empty($this->userId))
 			{
 				$dao = D('User');
 				$Profile = $dao->find($uid);
