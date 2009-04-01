@@ -35,6 +35,7 @@ return array
 	'wall_at'			=>	'at',
 
 	'_ACTION_DELETE_'	=>	'Delete',
+	'_ACTION_REPORT_'	=>	'Report',
 	'_ACTION_VIEWALL_'	=>	'View All',
 	'_ACTION_POST_'		=>	'Post',
 	'_PAGE_FIRST_'		=>	'First',
