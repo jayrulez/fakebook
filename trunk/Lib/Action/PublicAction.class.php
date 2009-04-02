@@ -140,6 +140,25 @@ class PublicAction extends BaseAction
 		
 		redirect($_SERVER["HTTP_REFERER"]);
 	}
+	
+	public function locale()
+	{
+		$id = $_GET['id'];
+		
+		if($id == 'en' || $id == 'zh')
+		{
+			$lang = ($id == 'en') ? 'en-US' : 'zh-CN';
+			$dao = D('User');
+			$dao->language = $lang;
+			$dao->save();
+			
+			$user = $this->userInfo;
+			$user['language'] = $lang;
+			Session::set('userInfo',$user);
+		}
+		
+		redirect($_SERVER["HTTP_REFERER"]);
+	}
 }
 
 ?>
