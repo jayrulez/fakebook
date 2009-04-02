@@ -117,6 +117,11 @@ function getGroupName($gid){
 	return $info['name'];
 }
 
+/*
+ *   show page controller 
+ *   (need redesign)
+ *
+ */
 function Pager($wall,$type)
 {
   $count = $wall['count'];

@@ -119,8 +119,21 @@ class WallAction extends BaseAction
 
 		foreach($Wall as &$key)
 		{
-			$isOwner = array('isOwner'=>$this->isOwner($key['id'],$wid,$key['fromid']));
-			$key = array_merge($key,$isOwner);
+			$action = array();
+
+			if($this->userId != $key['fromid'])
+			{
+				$report = array('report'=>'<a onclick="" href="'.url('','','report','',array('type'=>'wall','id'=>$key['id'])).'">'.L('_ACTION_REPORT_').'</a>');
+				$action = array_merge($action,$report);
+			}
+				
+			if($this->isOwner($key['id'],$wid,$key['fromid']))
+			{
+				$delete = array('delete'=>'<a onclick="" href="'.url('','','Wall','',array('action'=>'delete','id'=>$key['id'])).'">'.L('_ACTION_DELETE_').'</a>');
+				$action = array_merge($action,$delete);
+			}
+			
+			$key = array_merge($key,array('action'=>$action));
 		}
 
 		$array = array();
