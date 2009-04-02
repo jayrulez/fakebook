@@ -40,7 +40,7 @@ class ProfileAction extends BaseAction
 		
 		$listRows = 5;
 		$WallCls = new WallAction;
-		$Wall = $WallCls->getWall($uid,$listRows,1);
+		$Wall = $WallCls->getWall($uid,'u',$listRows,1);
 		$wallSubheader = $WallCls->getWallHeader($Wall['count'],$listRows,$uid,'u');
 		
 		$this->assign('wall',$Wall);

@@ -3,7 +3,7 @@
 return array
 (
 	'static'	=>	array('Public','_static','type,item'),
-	'jsLang'	=>	array('Public','_jsLang','item'),
+
 	'report'	=>	array('Public','report','type,id'),
 	'login'		=>	array('Public','login'),
 	'logout'	=>	array('Public','logout'),
