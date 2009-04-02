@@ -5,6 +5,7 @@ return array
 	'static'	=>	array('Public','_static','type,item'),
 
 	'report'	=>	array('Public','report','type,id'),
+	'locale'	=>	array('Public','locale','id'),
 	'login'		=>	array('Public','login'),
 	'logout'	=>	array('Public','logout'),
 	'ERROR'		=>	array('Public','error'),

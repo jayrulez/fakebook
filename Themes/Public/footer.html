@@ -3,7 +3,11 @@
       Fakebook &copy; 2009
     </div>
     <div class="language">
-      <a href="#">{$Think.lang._LANGUAGE_}</a>
+    <if condition="$userInfo['language'] eq 'zh-CN'">
+      <a href="{:url('','','locale','',array('id'=>'en'))}">{$Think.lang._EN_}</a> | {$Think.lang._ZH_}
+    <else />
+      {$Think.lang._EN_} | <a href="{:url('','','locale','',array('id'=>'zh'))}">{$Think.lang._ZH_}</a>
+    </if>
     </div>
     <div class="page_footer_links">
       <ul>

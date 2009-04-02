@@ -4,7 +4,8 @@ return array
 (
 	'_RESOURCE_NOT_EXIST_'	=>	'Resource does not exist: \0',
 	'_RESOURCE_NOT_VALID_'	=>	'Resource not valid: \0',
-	'_LANGUAGE_'	=>	'English (US)',
+	'_EN_'	=>	'English (US)',
+	'_ZH_'	=>	'中文(简体)',
 	
 	/* main menu */
 	'link_home'	=>	'Home',
@@ -36,7 +37,7 @@ return array
 
 	'_ACTION_DELETE_'	=>	'Delete',
 	'_ACTION_REPORT_'	=>	'Report',
-	'_ACTION_VIEWALL_'	=>	'View All',
+	'_ACTION_VIEWALL_'	=>	'See All',
 	'_ACTION_POST_'		=>	'Post',
 	'_PAGE_FIRST_'		=>	'First',
 	'_PAGE_LAST_'		=>	'Last',
