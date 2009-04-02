@@ -30,7 +30,8 @@
 #wall #posts .item .DateAndTime {font-size:11px;color:#aaa;font-weight:normal;padding:3px;}
 #wall #posts .item .content {padding:5px;width:450px;overflow:hidden;}
 #wall #posts .item .wallactions {padding:3px 5px;}
-#wall #posts .item .wallactions a {cursor:pointer;}
+#wall #posts .item .wallactions a {cursor:pointer;font-size:10px;}
+.zh #wall #posts .item .wallactions a {font-size:12px;}
 #wall .moreaction {width:540px;text-align:right;margin-bottom:15px;}
 
 #photos {width:540px;height:120px;padding:10px 0;text-align:center;margin:0 auto;}

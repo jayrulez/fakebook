@@ -26,7 +26,7 @@ class WallAction extends BaseAction
 		
 		$listRows  =  10;
 
-		$Wall = $this->getWall($wid,$listRows,$page);
+		$Wall = $this->getWall($wid,$type,$listRows,$page);
 
 		$this->assign('wall',$Wall);
 		$this->assign('type',$type);
@@ -96,11 +96,12 @@ class WallAction extends BaseAction
 		return false;
 	}
 	
-	public function getWall($wid,$listRows=10,$page=1)
+	public function getWall($wid,$type,$listRows=10,$page=1)
 	{
 		$dao = D('Wall');
 		$map['wid'] = $wid;
 		$map['del'] = 0;
+		$map['type'] = $type;
 		
 		$count	= $dao->count($map);
 		
@@ -125,6 +126,7 @@ class WallAction extends BaseAction
 		$array = array();
 		
 		$array['wid'] = $wid;
+		$array['type'] = $type;
 		$array['list'] = $Wall;
 		$array['listRows'] = $listRows;
 		$array['count'] = $count;
@@ -148,7 +150,7 @@ class WallAction extends BaseAction
 		}
 		
 	}
-	
+
 	public function _empty()
 	{
 		$this->redirect('','ERROR');

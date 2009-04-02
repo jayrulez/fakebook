@@ -48,7 +48,7 @@
                 <br/>
                 <input type="submit" value="{$Think.lang._ACTION_POST_}"/>
                 <input type="hidden" value="{$type}" name="type"/>
-                <input type="hidden" value="{:url('','','wall','',array('type'=>$type,'id'=>$wall['wid']))}" name="url"/>
+                <input type="hidden" value="__SELF__" name="url"/>
                 <input type="hidden" value="{$wall['wid']}" name="wid"/>
               </form>
             </div>

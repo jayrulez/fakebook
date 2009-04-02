@@ -197,61 +197,7 @@
               
             </div>
           </div>
-          <div id="wall">
-            <div class="box_header">{$Think.lang.wall_header}</div>
-            <div class="box_subheader clearfix">
-              <span class="subtitle">{$wallSubheader}</span>
-              <span class="actionlink">
-                <a href="{:url('','','wall','app',array('type'=>'u','id'=>$profile['id']))}">{$Think.lang._ACTION_VIEWALL_}</a>
-              </span>
-            </div>
-            <div id="inputarea">
-              <form action="{:url('insert','Wall')}" method="post" name="form">
-                <textarea name="content"></textarea>
-                <br/>
-                <input type="submit" value="{$Think.lang._ACTION_POST_}"/>
-                <input type="hidden" value="{:url('','','profile','app',array('id'=>$profile['id']))}" name="url"/>
-                <input type="hidden" value="{$profile['id']}" name="wid"/>
-              </form>
-            </div>
-            <div id="posts">
-              <iterate name="wall.list" id="post">
-              <div class="post_item clearfix">
-                <div class="picture">
-                  <a href="{:url('','','profile','app',array('id'=>$post['fromid']))}">
-                    <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
-                      <img alt="" src="../Public/Images/silhouette_s.jpg"/>
-                      <span class="UIRoundedImage_Corners">
-                        <img src="../Public/Images/UIRoundedImage.png" alt="" class="UIRoundedImage_CornersSprite" />
-                      </span>
-                    </span>
-                  </a>
-                </div>
-                <div class="item">
-                  <div class="user">
-                    <a href="{:url('','','profile','app',array('id'=>$post['fromid']))}">{$post['fromid']|getUserName}</a> {$Think.lang.wall_wrote}
-                    <br/>
-                    <span class="DateAndTime">{$Think.lang.wall_at} {$post['time']|formatDate}</span>
-                  </div>
-                  <div class="content">{$post['text']|htmlspecialchars|nl2br}</div>
-                  <div class="wallactions">
-                    <if condition="$post['fromid'] neq $userId">
-                      <a onclick="" href="{:url('','','report','',array('type'=>'wall','id'=>$post['id']))}">{$Think.lang._ACTION_REPORT_}</a>
-                    </if>
-                    <if condition="$post['isOwner']">
-                      <a onclick="" href="{:url('','','Wall','',array('action'=>'delete','id'=>$post['id']))}">{$Think.lang._ACTION_DELETE_}</a>
-                    </if>
-                  </div>
-                </div>
-              </div>
-              </iterate>
-            </div>
-            <div class="moreaction">
-              <if condition="$wall['count'] gt $wall['listRows']">
-                <a href="{:url('','','wall','app',array('type'=>'u','id'=>$profile['id']))}">{$Think.lang.wall_moreaction|sprintf=###,number_format($wall['count'])}</a>
-              </if>
-            </div>
-          </div>
+          <include file="Wall:mini" />
         </div>
         <div class="adcolumn">
           //ad

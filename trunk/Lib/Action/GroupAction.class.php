@@ -13,7 +13,7 @@ class GroupAction extends BaseAction
 		
 		$listRows = 5;
 		$WallCls = new WallAction;
-		$Wall = $WallCls->getWall($gid,$listRows,1);
+		$Wall = $WallCls->getWall($gid,'g',$listRows,1);
 		$wallSubheader = $WallCls->getWallHeader($Wall['count'],$listRows,$gid,'g');
 		
 		$this->assign('wall',$Wall);

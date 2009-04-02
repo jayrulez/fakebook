@@ -64,44 +64,6 @@ function _static()
 	echo $content;
 }
 
-function _jsLang()
-{
-	header('Content-Type: text/javascript');
-	$resource = $_REQUEST['item'];
-	$lang     = explode('_',$resource);
-	$lang     = $lang[0];
-	if(LANG_SET==$lang)
-	{
-		$split    = explode('.',$resource);
-		$parts    = count($split);
-		$ext      = $split[$parts-1];
-		$cache    = CACHE_PATH.md5($lang).'_'.MODULE_NAME.'.'.$ext;
-
-		if(is_file($cache))
-		{
-			$content = file_get_contents($cache);
-			echo $content;
-		}else{
-			if(is_file(RUNTIME_PATH.MODULE_NAME.'_'.$lang.'_lang.php'))
-			{
-				$content = 'var _string_table = {';
-				$items = include(RUNTIME_PATH.MODULE_NAME.'_'.$lang.'_lang.php');
-			
-				foreach($items as $var => $val)
-				{
-					$content .= '"'.$var.'":"'.$val.'",';
-				}
-				$content .= '};';
-			
-				file_put_contents($cache,$content);
-				echo $content;
-			}
-		}
-	}else{
-		//lang file not exist
-	}  
-}
-
 /**
  * format date
  * 
