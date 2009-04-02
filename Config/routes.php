@@ -4,6 +4,10 @@ return array
 (
 	'static'	=>	array('Public','_static','type,item'),
 	'jsLang'	=>	array('Public','_jsLang','item'),
+	'report'	=>	array('Public','report','type,id'),
+	'login'		=>	array('Public','login'),
+	'logout'	=>	array('Public','logout'),
+	'ERROR'		=>	array('Public','error'),
 
 	'index'		=>	array('Index','index'),
 	'home'		=>	array('Home','index'),
@@ -18,10 +22,6 @@ return array
 						array('/^\/(g|u)\/(\d+)\/(\d+)/','Wall','index','type,wid,page'),
 						array('/^\/(g|u)\/(\d+)/','Wall','index','type,wid'),
 					),
-
-	'login'		=>	array('Public','login'),
-	'logout'	=>	array('Public','logout'),
-	'ERROR'		=>	array('Public','error'),
 )
 
 ?>

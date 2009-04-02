@@ -121,6 +121,25 @@ class PublicAction extends BaseAction
 	{
 		_jsLang();
 	}
+	
+	public function report()
+	{
+		$type = $_GET['type'];
+		$id = $_GET['id'];
+		
+		if(!empty($type) || !empty($id))
+		{
+			$dao = D('Report');
+			$dao->type = $type;
+			$dao->xid = $id;
+			$dao->uid = $this->userId;
+			$dao->status = 1;
+			$dao->time = time();
+			dump($dao->add());
+		}
+		
+		redirect($_SERVER["HTTP_REFERER"]);
+	}
 }
 
 ?>
