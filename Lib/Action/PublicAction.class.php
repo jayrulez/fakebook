@@ -135,7 +135,7 @@ class PublicAction extends BaseAction
 			$dao->uid = $this->userId;
 			$dao->status = 1;
 			$dao->time = time();
-			dump($dao->add());
+			$dao->add();
 		}
 		
 		redirect($_SERVER["HTTP_REFERER"]);
