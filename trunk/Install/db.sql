@@ -161,3 +161,21 @@ CREATE TABLE IF NOT EXISTS `fb_photo_tag` (
   `id` int(11) NOT NULL auto_increment,
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fb_report`
+--
+
+CREATE TABLE IF NOT EXISTS `fb_report` (
+  `id` int(100) NOT NULL auto_increment,
+  `type` varchar(20) NOT NULL,
+  `xid` int(100) NOT NULL,
+  `uid` int(100) NOT NULL,
+  `status` tinyint(1) default '0',
+  `time` int(100) NULL,
+
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
