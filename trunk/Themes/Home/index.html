@@ -12,21 +12,6 @@
       </div>
       <div id="content" class="clearfix">
       <div class="UIFullPage_Container">
-        <div class="home_welcome clearfix">
-          <h1>Welcome, user1.</h1>
-          <span id="welcome_requests">
-            You have
-            <span>
-              <img class="spritemap_icons sx_friend" src="../Public/Images/spacer.gif?8:11"/>
-              <a class="request_link" href="/reqs.php#friend">
-                <span id="friend_add_sidebar_text">
-                  <strong>1</strong> friend request
-                </span>
-              </a>
-            </span>
-            .
-          </span>
-        </div>
         <div id="home_left_column">
           <div id="home_filter">
             <div class="UIFilterList UIFilterList_BottomMargin">
@@ -261,6 +246,34 @@
           </div>
         </div>
         <div id="home_sidebar">
+          <div class="UIOneOff_Container">
+            <div class="UIHomeBox">
+              <div class="UIHomeBox_Top">
+                <div class="UIHomeBox_TitleBar">
+                  <span class="UIHomeBox_Title">Requests</span>
+                </div>
+                <div class="UIHomeBox_More">
+                  <small><a class="UIHomeBox_MoreLink" href="/reqs.php">See All</a></small>
+                </div>
+              </div>
+              <div class="UIHomeBox_Content">
+                <div class="UIRequestsBox_Short UIRequestsBox UIRequestsBox_Short">
+                  <span class="UIRequestsBox_Request UIRequestsBox_RequestFirst UIRequestsBox_RequestOdd">
+                    <img class="spritemap_icons sx_friend" src="../Public/Images/spacer.gif?8:11"/>
+                    <a class="request_link" href="/reqs.php#friend">
+                      <span id="friend_add_sidebar_text"><strong>1</strong> friend request</span>
+                    </a>
+                  </span>
+                  <span class="UIRequestsBox_Request UIRequestsBox_RequestSecond">
+                    <img class="spritemap_icons sx_group" src="../Public/Images/spacer.gif?8:11"/>
+                    <a class="request_link" href="/reqs.php#group">
+                      <span id="group_invite_sidebar_text"><strong>1</strong> group invitation</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="UIHomeBox">
             <div class="UIHomeBox_Top">
               <div class="UIHomeBox_TitleBar">
@@ -356,6 +369,33 @@
                 </div>
                 
                 
+              </div>
+            </div>
+          </div>
+          <div class="UIConnectWithFriends UIHomeBox">
+            <div class="UIHomeBox_Top">
+              <div class="UIHomeBox_TitleBar">
+                <span class="UIHomeBox_Title">Connect With Friends</span>
+              </div>
+            </div>
+            <div class="UIHomeBox_Content">
+              <div class="UIUpcoming_Item UIUpcoming_FirstItem">
+                <div class="UIUpcoming_Icon">
+                  <a href="/invite.php?ref=sb">
+                    <img class="spritemap_icons sx_invite" src="../Public/Images/spacer.gif?8:11"/>
+                  </a>
+                </div>
+                <div class="UIUpcoming_Info">
+                  <a href="/invite.php?ref=sb">Invite friends to join Facebook.</a>
+                </div>
+              </div>
+              <div class="UIUpcoming_Item">
+                <div class="UIUpcoming_Icon">
+                  <img class="spritemap_icons sx_friend_finder" src="../Public/Images/spacer.gif?8:11"/>
+                </div>
+                <div class="UIUpcoming_Info">
+                  To find people you know who are already using Facebook, check out the <a href="#findfriends">Friend Finder</a> .
+                </div>
               </div>
             </div>
           </div>

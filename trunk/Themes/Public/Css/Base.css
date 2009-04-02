@@ -68,7 +68,7 @@ table tr {height:25px}
 #menubar_container .signup_box {clear:left;color:#203360;display:block;font-size:13px;font-weight:bold;line-height:normal;padding:14px 22px;}
 #menubar_container .signup_box_message {display:block;float:left;padding:3px 14px;}
 
-#page_footer {width:964px;margin: -80px auto 0;position:relative;border-top:1px solid #DDD;padding:6px 0;font-size:11px;color:#777;}
+#page_footer {width:964px;margin: -60px auto 0;position:relative;border-top:1px solid #DDD;padding:6px 0;font-size:11px;color:#777;}
 #page_footer .copyright_and_location,#page_footer .language {float:left;padding-right:10px;}
 #page_footer .page_footer_links,.page_footer_links li {float:right;}
 #page_footer .page_footer_links li {padding:0 5px;}
