@@ -235,7 +235,9 @@
                   </div>
                   <div class="content">{$post['text']|htmlspecialchars|nl2br}</div>
                   <div class="wallactions">
-                    <a onclick="" href="{:url('','','report','',array('type'=>'wall','id'=>$post['id']))}">{$Think.lang._ACTION_REPORT_}</a>
+                    <if condition="$post['fromid'] neq $userId">
+                      <a onclick="" href="{:url('','','report','',array('type'=>'wall','id'=>$post['id']))}">{$Think.lang._ACTION_REPORT_}</a>
+                    </if>
                     <if condition="$post['isOwner']">
                       <a onclick="" href="{:url('','','Wall','',array('action'=>'delete','id'=>$post['id']))}">{$Think.lang._ACTION_DELETE_}</a>
                     </if>
