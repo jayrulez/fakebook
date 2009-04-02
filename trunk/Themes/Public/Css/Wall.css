@@ -11,7 +11,8 @@ ie6 .top_wash,ie7 .top_wash {*height:166px;*left:0;*top:0;}
 #wall {width:540px;padding-top:15px;}
 #wall #inputarea {width:540px;text-align:right;}
 #wall #inputarea textarea {width:532px;height:50px;margin:8px 0;padding:3px;border:1px solid #BDC7D8;overflow:auto;font-size:11px;}
-#wall #inputarea input {margin-bottom:18px;background-color:#3B5998;border-color:#D9DFEA #0E1F5B #0E1F5B #D9DFEA;border-style:solid;border-width:1px;color:#FFFFFF;padding:2px 15px 3px 15px;text-align:center;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-size:11px;}
+#wall #inputarea input {margin-bottom:18px;background-color:#3B5998;border-color:#D9DFEA #0E1F5B #0E1F5B #D9DFEA;border-style:solid;border-width:1px;color:#FFFFFF;padding:2px 15px 3px 15px;text-align:center;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-size:10px;}
+.zh #wall #inputarea input {font-size:12px;}
 #wall #posts .post_item {margin-bottom:15px;}
 #wall #posts .picture {float:left;width:50px;margin:0 0 15px;}
 #wall #posts .item {float:left;width:480px;margin-left:10px;border-top:1px solid #3B5998;border-bottom:1px solid #D8DFEA;}
