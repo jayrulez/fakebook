@@ -127,7 +127,7 @@ class PublicAction extends BaseAction
 		$type = $_GET['type'];
 		$id = $_GET['id'];
 		
-		if(!empty($type) || !empty($id))
+		if(!empty($type) && !empty($id))
 		{
 			$dao = D('Report');
 			$dao->type = $type;
