@@ -145,7 +145,7 @@ function Pager($wall,$type)
   if($page > 2 && $totalPages > 5)
     $output .= "<li><a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid,'page'=>$page-2))."\">".($page - 2)."</a></li>";
   //show page-1
-  if($page > 1 && $totalPages > 2)
+  if($page > 1 && $totalPages > 1)
     $output .= "<li><a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid,'page'=>$page-1))."\">".($page - 1)."</a></li>";
   //show current page
   if($totalPages > 1)
