@@ -121,7 +121,7 @@ class WallAction extends BaseAction
 		{
 			$action = array();
 
-			if($this->userId != $key['fromid'])
+			if($this->userId && $this->userId != $key['fromid'])
 			{
 				$report = array('report'=>'<a onclick="" href="'.url('','','report','',array('type'=>'wall','id'=>$key['id'])).'">'.L('_ACTION_REPORT_').'</a>');
 				$action += $report;
