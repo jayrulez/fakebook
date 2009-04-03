@@ -136,7 +136,7 @@ return array(
 	'SHOW_DB_TIMES'			=>	false,
 	'SHOW_CACHE_TIMES'		=>	false,
 	'SHOW_USE_MEM'			=>	false,
-	'SHOW_PAGE_TRACE'		=>	true,
+	'SHOW_PAGE_TRACE'		=>	false,
 
 	/* Template engine config */
 	'TMPL_ENGINE_TYPE'		=>	'Think',		
