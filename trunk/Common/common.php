@@ -125,49 +125,51 @@ function Pager($wall,$type)
   $page = $wall['page'];
   $listRows = $wall['listRows'];
   $wid = $wall['wid'];
+  $url = url('','','wall','',array('type'=>$type,'id'=>$wid));
   
-  $totalPages = (int)($count / $listRows) + 1;
+  $totalPages = ($count%$listRows)>0?((int)($count/$listRows)+1):($count/$listRows);
+
   $page = ($page > $totalPages) ? $totalPages : $page;
   
   //show First button
   if($page > 3 && $totalPages > 5)
-    $output = "<li><a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid,'page'=>1))."\">".L('_PAGE_FIRST_')."</a></li>";
+    $output = "<li><a href=\"".$url."\">".L('_PAGE_FIRST_')."</a></li>";
   //show Prev button
   if($page > 1 && $totalPages > 1)
-    $output .= "<li><a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid,'page'=>$page-1))."\">".L('_PAGE_PREV_')."</a></li>";
+    $output .= "<li><a href=\"".$url."/".($page-1)."\">".L('_PAGE_PREV_')."</a></li>";
   //show page-4
-  if($page > 4 && $totalPages > 5 && $totalPages < $page + 2)
-    $output .= "<li><a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid,'page'=>$page-4))."\">".($page - 4)."</a></li>";
+  if($page > 4 && $totalPages > 4 && $totalPages < $page + 3)
+    $output .= "<li><a href=\"".$url."/".($page-4)."\">".($page - 4)."</a></li>";
   //show page-3
-  if($page > 3 && $totalPages > 4 && $totalPages < $page + 1)
-    $output .= "<li><a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid,'page'=>$page-3))."\">".($page - 3)."</a></li>";
+  if($page > 3 && $totalPages > 3 && $totalPages < $page + 2)
+    $output .= "<li><a href=\"".$url."/".($page-3)."\">".($page - 3)."</a></li>";
   //show page-2
-  if($page > 2 && $totalPages > 5)
-    $output .= "<li><a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid,'page'=>$page-2))."\">".($page - 2)."</a></li>";
+  if($page > 2 && $totalPages > 2)
+    $output .= "<li><a href=\"".$url."/".($page-2)."\">".($page - 2)."</a></li>";
   //show page-1
   if($page > 1 && $totalPages > 1)
-    $output .= "<li><a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid,'page'=>$page-1))."\">".($page - 1)."</a></li>";
+    $output .= "<li><a href=\"".$url."/".($page-1)."\">".($page - 1)."</a></li>";
   //show current page
   if($totalPages > 1)
-    $output .= "<li class=\"current\"><a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid,'page'=>$page))."\">".$page."</a></li>";
+    $output .= "<li class=\"current\"><a href=\"".$url."/".($page)."\">".$page."</a></li>";
   //show page+1
   if($totalPages > $page)
-    $output .= "<li><a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid,'page'=>$page+1))."\">".($page + 1)."</a></li>";
+    $output .= "<li><a href=\"".$url."/".($page+1)."\">".($page + 1)."</a></li>";
   //show page+2
   if($totalPages > $page + 1)
-    $output .= "<li><a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid,'page'=>$page+2))."\">".($page + 2)."</a></li>";
+    $output .= "<li><a href=\"".$url."/".($page+2)."\">".($page + 2)."</a></li>";
   //show page+3
   if($totalPages > $page + 2 && $page < 3)
-    $output .= "<li><a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid,'page'=>$page+3))."\">".($page + 3)."</a></li>";
+    $output .= "<li><a href=\"".$url."/".($page+3)."\">".($page + 3)."</a></li>";
   //show page+4
   if($totalPages > $page + 3 && $page < 2)
-    $output .= "<li><a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid,'page'=>$page+4))."\">".($page + 4)."</a></li>";
+    $output .= "<li><a href=\"".$url."/".($page+4)."\">".($page + 4)."</a></li>";
   //show Next button
   if($totalPages > $page)
-    $output .= "<li><a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid,'page'=>$page+1))."\">".L('_PAGE_NEXT_')."</a></li>";
+    $output .= "<li><a href=\"".$url."/".($page+1)."\">".L('_PAGE_NEXT_')."</a></li>";
   //show Last button
-  if($totalPages > $page + 2)
-    $output .= "<li><a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid,'page'=>$totalPages))."\">".L('_PAGE_LAST_')."</a></li>";
+  if($totalPages > $page + 2 && $totalPages > 5)
+    $output .= "<li><a href=\"".$url."/".($totalPages)."\">".L('_PAGE_LAST_')."</a></li>";
   
   return $output;
 }
