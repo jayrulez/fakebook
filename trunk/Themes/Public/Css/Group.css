@@ -26,9 +26,10 @@
 #wall #posts .post_item {margin-bottom:15px;}
 #wall #posts .picture {float:left;width:50px;margin:0 0 15px;}
 #wall #posts .item {float:left;width:460px;margin-left:10px;border-top:1px solid #3B5998;border-bottom:1px solid #D8DFEA;}
-#wall #posts .item .user {padding:3px;border-bottom:1px solid #D8DFEA;background-color:#F7F7F7;}
+#wall #posts .item .user {padding:3px 5px;border-bottom:1px solid #D8DFEA;background-color:#F7F7F7;}
 #wall #posts .item .user a {font-weight:bold;}
-#wall #posts .item .DateAndTime {font-size:11px;color:#aaa;font-weight:normal;padding:3px;}
+#wall #posts .item .DateAndTime {font-size:10px;color:#aaa;font-weight:normal;padding:3px 0;}
+.zh #wall #posts .item .DateAndTime {font-size:11px;}
 #wall #posts .item .content {padding:5px;width:450px;overflow:hidden;}
 #wall #posts .item .wallactions {padding:3px 5px;}
 #wall #posts .item .wallactions a {cursor:pointer;font-size:10px;}

@@ -81,16 +81,13 @@ function formatDate($time,$timezone=0){
     return (int)($interval / (60*60)).L('_TIME_HOURS_AGO_');//' hours ago';
     exit();
   } else if($interval > 12*60*60 && $interval <= 24*60*60){
-    return L('_TIME_TODAY_');//'Today';
+    return date(L('_TIME_TODAY_'),$time);//'Today';
     exit();
   } else if($interval > 24*60*60 && $interval <= 2*24*60*60){
-    return L('_TIME_YESTODAY_');//'Yestoday';
-    exit();
-  } else if($interval > 2*24*60*60 && $interval <= 7*24*60*60){
-    return (int)($interval / (24*60*60)).L('_TIME_DAYS_AGO_');//' days ago';
+    return date(L('_TIME_YESTODAY_'),$time);//'Yestoday';
     exit();
   } else {
-    return date(L('_TIME_DATE_SHORT_'),$time);
+    return date(L('_TIME_FORMAT_'),$time);
     exit();
   }
 }

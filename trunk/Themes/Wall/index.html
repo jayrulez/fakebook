@@ -70,7 +70,7 @@
                   <div class="user">
                     <a href="{:url('','','profile','app',array('id'=>$post['fromid']))}">{$post['fromid']|getUserName}</a> {$Think.lang.wall_wrote}
                     <br/>
-                    <span class="DateAndTime">{$Think.lang.wall_at} {$post['time']|formatDate}</span>
+                    <span class="DateAndTime">{$post['time']|formatDate=###,$userInfo['timezone']}</span>
                   </div>
                   <div class="content">{$post['text']|htmlspecialchars|nl2br}</div>
                   <div class="wallactions">

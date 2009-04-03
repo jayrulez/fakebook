@@ -21,10 +21,10 @@ return array
 	'_TIME_MINUTE_AGO_'	=>	' seconds ago',
 	'_TIME_MINUTES_AGO_'	=>	' minutes ago',
 	'_TIME_HOURS_AGO_'	=>	' hours ago',
-	'_TIME_TODAY_'	=>	'Today',
-	'_TIME_YESTODAY_'	=>	'Yestoday',
-	'_TIME_DAYS_AGO_'	=>	' days ago',
-	'_TIME_DATE_SHORT_'	=>	'F n',
+	'_TIME_TODAY_'	=>	'\a\t g:ia \T\o\d\a\y',
+	'_TIME_YESTODAY_'	=>	'\a\t g:ia \Y\e\s\t\o\d\a\y',
+	//'_TIME_DAYS_AGO_'	=>	' days ago',
+	'_TIME_FORMAT_'	=>	'\a\t g:ia \o\n F nS, Y',
 
 
 	'wall_header'		=>	'The Wall',
@@ -33,7 +33,6 @@ return array
 	'wall_subheader3'	=>	'No wall posts',
 	'wall_moreaction'	=>	'See all %s wall posts',
 	'wall_wrote'		=>	'wrote',
-	'wall_at'			=>	'at',
 
 	'_ACTION_DELETE_'	=>	'Delete',
 	'_ACTION_REPORT_'	=>	'Report',
