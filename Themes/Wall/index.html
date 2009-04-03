@@ -35,7 +35,7 @@
           <div class="walltitle">{$Think.lang.index_pagename|sprintf=###,$title}</div>
           <if condition="$type eq g">
           <div class="walllink">
-            <a href="{:url('','','group','app',array('id'=>$wid))}">{$Think.lang.index_walllink|sprintf=###,$title}</a>
+            <a href="{:url('','','group','app',array('id'=>$wall['wid']))}">{$Think.lang.index_walllink|sprintf=###,$title}</a>
           </div>
           </if>
         </div>
@@ -48,7 +48,7 @@
                 <br/>
                 <input type="submit" value="{$Think.lang._ACTION_POST_}"/>
                 <input type="hidden" value="{$type}" name="type"/>
-                <input type="hidden" value="__SELF__" name="url"/>
+                <input type="hidden" value="{:url('','','wall','',array('type'=>$type,'id'=>$wall['wid']))}" name="url"/>
                 <input type="hidden" value="{$wall['wid']}" name="wid"/>
               </form>
             </div>
