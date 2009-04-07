@@ -18,6 +18,7 @@ return array
 	'groups'	=>	array('Groups','index'),
 	'inbox'		=>	array('Inbox','index'),
 	'friends'	=>	array('Friends','index','id'),
+	'inbox'		=>	array('Inbox','index'),
 
 	'wall@'		=>	array(
 						array('/^\/(g|u)\/(\d+)\/(\d+)/','Wall','index','type,wid,page'),
