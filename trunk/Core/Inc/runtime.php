@@ -22,7 +22,7 @@ function buildAppDir() {
             COMMON_PATH,
             LANG_PATH,
             TMPL_PATH,
-            TMPL_PATH.'default/',
+            //TMPL_PATH.'default/',
 			DATA_PATH,
 			APP_DATA_PATH,
             CACHE_PATH,

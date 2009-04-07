@@ -6,6 +6,7 @@ body{font-family:"lucida grande", tahoma, verdana, arial, sans-serif;text-align:
 .en {font-size:11px;}
 .zh {font-size:12px;}
 h1, h2, h3, h4, h5, h6 {font-size:11px;color:#333;}
+.zh h1,.zh h2,.zh h3,.zh h4,.zh h5,.zh h6 {font-size:12px;}
 img{border: 0px;}
 a{cursor:pointer;-moz-outline-style:none;text-decoration:none;color:#3b5998;}
 a:hover{text-decoration: underline;}
