@@ -35,7 +35,7 @@ table tr {height:25px}
 
 #menubar_container {background:transparent url([theme_url]/Images/signup_callout.png) no-repeat scroll left bottom;display:block;line-height:normal;margin:0 auto;padding:0;position:relative;width:964px;z-index:1;}
 #menubar_container .menubar_logged_in {height:29px;background:transparent url('[theme_url]/Images/menubar_background.gif') 0 -71px no-repeat;}
-#menubar_container .menubar_logged_in #logobar {width:90px;float:left;margin:5px 10px;}
+#menubar_container .menubar_logged_in #logobar {width:90px;float:left;padding:5px 0 5px 10px;}
 #menubar_container .menubar_logged_in #logobar .home {width:90px;height:17px;display:block;background:transparent url('[theme_url]/Images/menubar_logo.gif') 0 0 no-repeat;}
 #menubar_container .menubar_logged_in #logobar .home:hover {background-position:0 -17px;}
 
