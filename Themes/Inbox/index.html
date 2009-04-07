@@ -1,7 +1,7 @@
 <include file="../Public/pghead"/>
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
-<title>{&SITE_NAME} | {$profile['display_name']}</title>
+<title>{&SITE_NAME} | {$Think.lang.index_pagename}</title>
 <include file="../Public/header"/>
 </head>
 <body class="{:css_browser_id()} {&LANG_ID}">
@@ -11,17 +11,17 @@
         <include file="../Public/menubar"/>
       </div>
       <div id="content" class="clearfix">
-      <div class="UIFullPage_Container">
-        <div class="narrowcolumn">
-          //narrow column
+        <div class="UIFullPage_Container">
+          <div class="narrowcolumn">
+            //narrow column
+          </div>
+          <div class="widecolumn">
+            //wide column
+          </div>
+          <div class="adcolumn">
+            //ad
+          </div>
         </div>
-        <div class="widecolumn">
-          //wide column
-        </div>
-        <div class="adcolumn">
-          //ad
-        </div>
-      </div>
       </div>
     </div>
   </div>
