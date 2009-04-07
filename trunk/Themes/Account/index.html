@@ -1,10 +1,30 @@
 <include file="../Public/pghead"/>
-	<head>
-	<meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
-		<title>{&SITE_NAME} | {$Think.lang.index_pagename}</title>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+<title>{&SITE_NAME} | {$Think.lang.index_pagename}</title>
 <include file="../Public/header"/>
-	</head>
-	<body>
-
-	</body>
+</head>
+<body class="{:css_browser_id()} {&LANG_ID}">
+  <div id="non_footer" >
+    <div id="page_height">
+      <div id="menubar_container">
+        <include file="../Public/menubar"/>
+      </div>
+      <div id="content" class="clearfix">
+        <div class="UIFullPage_Container">
+          <div class="narrowcolumn">
+            //narrow column
+          </div>
+          <div class="widecolumn">
+            //wide column
+          </div>
+          <div class="adcolumn">
+            //ad
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<include file="../Public/footer"/>
+</body>
 <include file="../Public/pgfoot"/>
