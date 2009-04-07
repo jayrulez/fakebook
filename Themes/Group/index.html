@@ -15,37 +15,40 @@
         <div class="widecolumn">
           <div class="group_title">
             <h2>{$groupInfo['name']}</h2>
-            Global
+            {/* Global */}
           </div>
           <div class="group_info_section">
-            <h4>Basic Info</h4>
+            <h4>{$Think.lang._bi_header}</h4>
             <dl class="clearfix">
-              <dt>Type:</dt>
+              <dt>{$Think.lang._bi_type}</dt>
               <dd>
-                <a href="#">Internet & Technology</a> - <a href="#">Websites</a>
+                <a href="#">{$Think.lang._bi_type_student}</a> - <a href="#">{$Think.lang._bi_subtype_alumni}</a>
               </dd>
-              <dt>Description:</dt>
+              <if condition="$groupInfo['description']">
+              <dt>{$Think.lang._bi_description}</dt>
               <dd>
-                fake the facebook...<br />
-                <br />
-                The Project:<br />
-                <a href="http://code.google.com/p/fakebook/">http://code.google.com/p/fakebook/</a>
+                {$groupInfo['description']|htmlspecialchars|nl2br}
               </dd>
+              </if>
             </dl>
+            {/*
             <h4>Contact Info</h4>
             <dl class="clearfix">
               <dt>Email:</dt>
               <dd>name@domain.com</dd>
               <dt>Website:</dt>
-              <dd>http://www.domain.com </dd>
+              <dd>http://www.domain.com</dd>
+              <dt>Location:</dt>
+              <dd>Jilin Changchun</dd>
             </dl>
+            */}
           </div>
           <div id="group_members" class="group_members">
-            <div class="box_header">Members</div>
+            <div class="box_header">{$Think.lang._gm_header}</div>
             <div class="box_subheader clearfix">
-              <span class="subtitle">Displaying 1 of <a href="#members.php?id=49911">40 members</a></span>
+              <span class="subtitle">Displaying 1 of <a href="#members.php?id=49911">40 members</a>{$Think.const.UPLOAD_PATH}</span>
               <span class="actionlink">
-                <a href="#members.php?id=49911">View All</a>
+                <a href="#members.php?id=49911">{$Think.lang._gm_seeall}</a>
               </span>
             </div>
             <div class="box_content clearfix">
@@ -84,6 +87,7 @@
           <div class="picture">
             <img alt="" src="../Public/Images/group_l.jpg"/>
           </div>
+          {/*
           <div id="profile_actions">
             <ul>
               <li><a href="#">Message All Members</a></li>
@@ -95,20 +99,27 @@
               <li><a href="#">Leave Group</a></li>
             <ul/>
           </div>
+          */}
           <div class="roundbox">
             <div class="UIProfileBox_Container">
-              <div class="box_header">Group Type</div>
+              <div class="box_header">{$Think.lang._gt_header}</div>
               <div class="box_content clearfix">
-                This is an open group. Anyone can join and invite others to join.
+                <if condition="$groupInfo['privacy'] eq OPEN">
+                  {$Think.lang._gt_open}
+                <elseif condition="$groupInfo['privacy'] eq CLOSED" />
+                  {$Think.lang._gt_closed}
+                <else />
+                  {$Think.lang._gt_secret}
+                </if>
               </div>
             </div>
             <div class="UIProfileBox_Container">
-              <div class="box_header">Admins</div>
+              <div class="box_header">{$Think.lang._ga_header}</div>
               <div class="box_content">
                 <ul>
                   <li>
                     <span>
-                      <a class="group_name" href="group.php?id=49911">User1</a> (creator)
+                      <a class="group_name" href="group.php?id=49911">User1</a> ({$Think.lang._ga_creator})
                     </span>
                   </li>
                   <li>
