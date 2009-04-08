@@ -6,7 +6,7 @@
 -- Table structure for table `fb_user`
 --
 
-CREATE TABLE `fb_user` (
+CREATE TABLE IF NOT EXISTS `fb_user` (
   `id` int(100) NOT NULL auto_increment,
   `email` varchar(100) NOT NULL,
   `password` varchar(32) NOT NULL,
@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `fb_comment` (
   `fromid` int(100) NOT NULL,
   `text` longtext,
   `time` int(100) NOT NULL,
-  `username` varchar(100) NULL
+  `username` varchar(100) NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
 
