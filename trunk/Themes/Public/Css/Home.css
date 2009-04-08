@@ -213,7 +213,7 @@ div.UIHotStory_Ad {border-top:0 none;margin-top:0;padding-top:0;}
 .story_quote .em {background:transparent url('[theme_url]/Images/end_quote.gif') no-repeat scroll right bottom;color:#666;padding:2px 23px 2px 0;text-align:left;}
 
 .UIRoundedBox {width:320px;margin-bottom:10px;}
-.UIRoundedBox .T,.B {width:320px;height:5px;background-image:url([theme_url][theme_url]/ImagesRoundedBox_corner.gif);background-repeat:no-repeat;}
+.UIRoundedBox .T,.UIRoundedBox .B {width:320px;height:5px;background-image:url([theme_url][theme_url]/ImagesRoundedBox_corner.gif);background-repeat:no-repeat;}
 .UIRoundedBox .C {border-left:1px solid #ccc;border-right:1px solid #ccc;background-color:#f7f7f7;}
 .UIRoundedBox .T {background-position:0 0;}
 .UIRoundedBox .B {background-position:0 -11px;}

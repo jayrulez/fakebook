@@ -32,6 +32,7 @@ table tr {height:25px}
 #page_height #menubar_container {width:964px;margin:0 auto;}
 #page_height #content {width:auto;}
 #page_height #content .UIFullPage_Container {width:940px;margin:0 auto;padding:20px 12px 0;text-align:left;}
+.ie6 #page_height #content .UIFullPage_Container {width:964px;}
 
 #menubar_container {background:transparent url([theme_url]/Images/signup_callout.png) no-repeat scroll left bottom;display:block;line-height:normal;margin:0 auto;padding:0;position:relative;width:964px;z-index:1;}
 #menubar_container .menubar_logged_in {height:29px;background:transparent url('[theme_url]/Images/menubar_background.gif') 0 -71px no-repeat;}
@@ -51,14 +52,19 @@ table tr {height:25px}
 #main_menu a {display:block;color:#fff;padding:7px 7px 7px 8px;text-decoration:none;font-weight:bold;margin-right:4px;line-height:normal;}
 .ff3 #main_menu a {padding:7px 7px 6px 8px;}
 .zh #main_menu a {font-weight:normal;}
+.zh.ie6 #main_menu a {padding:7px 7px 6px 8px;}
 #account_menu a {display:block;color:#fff;padding:7px 5px;text-decoration:none;margin-right:5px;line-height:normal;}
 .ff3 #account_menu a {padding:7px 5px 6px;}
+.zh.ie6 #account_menu a {padding:7px 5px 6px;}
 #main_menu a:hover,#account_menu a:hover {background-color:#5C75AA;}
 #universal_search {padding:3px 11px 3px 4px;width:172px;}
+.ie6 #universal_search {width:187px;}
 #universal_search #universal_search_input {float:left;width:151px;}
 #universal_search #universal_search_input #q {background:white url([theme_url]/Images/fb_menubar_search_shadow.gif) no-repeat scroll left top;border:1px solid #315091;border-right:0;border-width:1px 0 1px 1px;float:left;margin:0;padding:3px 4px;width:143px;}
+.ie6 #universal_search #universal_search_input #q {width:151px;}
 #universal_search #universal_search_submit {float:left;width:21px;}
 #universal_search #universal_search_submit a {background:#6D84B4 url([theme_url]/Images/search_input_gloss.gif) repeat-x scroll center top;border:1px solid #315091;display:block;font-size:11px;margin:0;padding:0;text-decoration:none;width:19px;height:19px;}
+.ie6 #universal_search #universal_search_submit a {width:21px;}
 #universal_search #universal_search_submit a span {background:transparent url([theme_url]/Images/search_glass.gif) no-repeat scroll 0 70%;display:block;margin:0;padding:3px 0;height:13px;}
 #main_menu .main_menu {float:left;}
 #account_menu .account_menu {float:right;}
@@ -80,6 +86,8 @@ table tr {height:25px}
 .UIRoundedImage_SMALL .UIRoundedImage_Image {height:35px;width:35px;}
 .UIRoundedImage_Corners {background:transparent none repeat scroll 0 0;display:block;height:100%;left:0;overflow:hidden;position:absolute;top:0;width:100%;}
 .UIRoundedImage_CornersSprite {background:transparent none repeat scroll 0 0 !important;height:200px !important;width:110px !important;display:block;position:absolute;}
+.UIRoundedImage_CornersSprite img{background:transparent !important;width:110px !important;height:200px !important;}
+.ie6 .UIRoundedImage_CornersSprite{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[theme_url]/Images/UIRoundedImage.png',sizingMethod="scale");}
 .UIRoundedImage_LARGE .UIRoundedImage_CornersSprite {left:0;}
 .UIRoundedImage_WHITE .UIRoundedImage_CornersSprite {top:0;}
 .UIRoundedImage_SMALL .UIRoundedImage_CornersSprite {left:-50px;}
