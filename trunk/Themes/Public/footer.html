@@ -3,7 +3,7 @@
       Fakebook &copy; 2009
     </div>
     <div class="language">
-    <if condition="$userInfo['language'] eq 'zh-CN'">
+    <if condition="$language eq 'zh-CN'">
       <a href="{:url('','','locale','',array('id'=>'en'))}">{$Think.lang._EN_}</a> | {$Think.lang._ZH_}
     <else />
       {$Think.lang._EN_} | <a href="{:url('','','locale','',array('id'=>'zh'))}">{$Think.lang._ZH_}</a>
