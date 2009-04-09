@@ -33,7 +33,7 @@ class ProfileAction extends BaseAction
 					$this->redirect('','','home');
 
 				if(empty($this->userId))
-					$this->redirect('','','people','',array('username'=>str_replace(' ','-',$Profile['display_name']),'id'=>$uid));
+					$this->redirect('','','people','',array('username'=>str_replace(' ','-',$Profile['name']),'id'=>$uid));
 
 			}
 		}

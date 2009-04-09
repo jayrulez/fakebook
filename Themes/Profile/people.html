@@ -1,7 +1,7 @@
 <include file="../Public/pghead"/>
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
-<title>{&SITE_NAME} | {$profile['display_name']}</title>
+<title>{&SITE_NAME} | {$profile['name']}</title>
 <include file="../Public/header"/>
 </head>
 <body class="{:css_browser_id()} {&LANG_ID}">
@@ -19,7 +19,7 @@
         </div>
         <div class="widecolumn">
           <div class="profile_name_and_status">
-            <h2 id="profile_name">{$profile['display_name']}</h2>
+            <h2 id="profile_name">{$profile['name']}</h2>
           </div>
         </div>
         <div class="adcolumn">
