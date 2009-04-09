@@ -93,25 +93,37 @@ function formatDate($time,$timezone=0){
 }
 
 /* get user info by id */
-function getUserInfo($uid){
+function getUserInfo($uid)
+{
 	$info = D('User')->find($uid);
 	return $info;
 }
 
-function getUserName($uid){
+function getUserName($uid)
+{
 	$info = getUserInfo($uid);
 	return $info['display_name'];
 }
 
 /* get group info by id */
-function getGroupInfo($gid){
+function getGroupInfo($gid)
+{
 	$info = D('Group')->find($gid);
 	return $info;
 }
 
-function getGroupName($gid){
+function getGroupName($gid)
+{
 	$info = getGroupInfo($gid);
 	return $info['name'];
+}
+
+function getGroupMember($gid)
+{
+	$map['gid'] = $gid;
+	$map['status'] = 1;
+	$groupMember = D('GroupMember')->findAll($map);
+	return $groupMember;
 }
 
 /*

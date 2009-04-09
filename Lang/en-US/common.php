@@ -6,9 +6,12 @@ return array
 	'_RESOURCE_NOT_VALID_'	=>	'Resource not valid: \0',
 	'_EN_'	=>	'English (US)',
 	'_ZH_'	=>	'中文(简体)',
-	
+
+	/* common */
+	'_ACTION_SEEALL'	=>	'See All',
+
 	/* main menu */
-	'link_home'	=>	'Home',
+	'link_home'		=>	'Home',
 	'link_profile'	=>	'Profile',
 	'link_friends'	=>	'Friends',
 	'link_inbox'	=>	'Inbox',
@@ -18,13 +21,13 @@ return array
 	'link_signup'	=>	'Sign Up',
 
 	/* time & date */
-	'_TIME_MINUTE_AGO_'	=>	' seconds ago',
+	'_TIME_MINUTE_AGO_'		=>	' seconds ago',
 	'_TIME_MINUTES_AGO_'	=>	' minutes ago',
-	'_TIME_HOURS_AGO_'	=>	' hours ago',
-	'_TIME_TODAY_'	=>	'\a\t g:ia \T\o\d\a\y',
-	'_TIME_YESTODAY_'	=>	'\a\t g:ia \Y\e\s\t\o\d\a\y',
-	//'_TIME_DAYS_AGO_'	=>	' days ago',
-	'_TIME_FORMAT_'	=>	'\a\t g:ia \o\n F nS, Y',
+	'_TIME_HOURS_AGO_'		=>	' hours ago',
+	'_TIME_TODAY_'			=>	'\a\t g:ia \T\o\d\a\y',
+	'_TIME_YESTODAY_'		=>	'\a\t g:ia \Y\e\s\t\o\d\a\y',
+	//'_TIME_DAYS_AGO_'		=>	' days ago',
+	'_TIME_FORMAT_'			=>	'\a\t g:ia \o\n F nS, Y',
 
 
 	'wall_header'		=>	'The Wall',
@@ -36,7 +39,6 @@ return array
 
 	'_ACTION_DELETE_'	=>	'Delete',
 	'_ACTION_REPORT_'	=>	'Report',
-	'_ACTION_VIEWALL_'	=>	'See All',
 	'_ACTION_POST_'		=>	'Post',
 	'_PAGE_FIRST_'		=>	'First',
 	'_PAGE_LAST_'		=>	'Last',
