@@ -102,7 +102,13 @@ function getUserInfo($uid)
 function getUserName($uid)
 {
 	$info = getUserInfo($uid);
-	return $info['display_name'];
+	return $info['name'];
+}
+
+function getProfilePicture($uid,$size='L')
+{
+	$info = getUserInfo($uid);
+	return 'Data'.DS.APP_NAME.DS.UPLOAD_DIR.DS.$info['pic'];
 }
 
 /* get group info by id */

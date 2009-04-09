@@ -4,8 +4,9 @@ return array
 (
 	/* SITE CONFIG */
 	'SITE_NAME'=>'Fakebook',
-	'SITE_URL'=>'http://localhost',
+	'SITE_URL'=>'http://192.168.1.7',
 	'SITE_ID'=>'fb',
+	'GA_ID'=>'UA-2449462-14',
 	
 	/* DATABASE CONFIG */
     'DB_TYPE'=>'mysql',
@@ -16,7 +17,7 @@ return array
     'DB_PORT'=>'3306',
     'DB_PREFIX'=>'fb_',
 
-	'THEME_URL'	=>	'http://localhost/Themes/Public',
+	'THEME_URL'	=>	'http://192.168.1.7/Themes/Public',
 	'RESOURCE_CACHE_ON'	=>	true,
 )
 
