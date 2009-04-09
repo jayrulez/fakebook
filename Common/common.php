@@ -121,7 +121,6 @@ function getGroupName($gid)
 function getGroupMember($gid)
 {
 	$map['gid'] = $gid;
-	$map['status'] = 1;
 	$groupMember = D('GroupMember')->findAll($map);
 	return $groupMember;
 }
