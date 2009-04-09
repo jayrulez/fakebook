@@ -53,6 +53,7 @@
             </div>
             <div class="box_content clearfix">
               <ul>
+                <iterate name="groupMember" id="vo" offset="0" length='8'>
                 <li>
                   <a onclick="" href="#">
                     <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
@@ -62,8 +63,9 @@
                       </span>
                     </span>
                   </a>
-                  <a onclick="" href="#"><span class="user_name">Tom</span></a>
+                  <a onclick="" href="#"><span class="user_name">{$vo['uid']|getUserName}</span></a>
                 </li>
+                </iterate>
               </ul>
             </div>
           </div>

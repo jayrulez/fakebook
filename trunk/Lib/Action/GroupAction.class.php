@@ -22,6 +22,7 @@ class GroupAction extends BaseAction
 		
 		//get members
 		$groupMember = getGroupMember($gid);
+		shuffle($groupMember);
 		
 		//get header
 		$count = count($groupMember);
