@@ -12,6 +12,9 @@ class IndexAction extends Action
 
 	public function index()
 	{
+		$language = Cookie::get('language');
+		$this->assign('language',$language);
+		
 		$this->display();
 	}
 
