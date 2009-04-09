@@ -6,7 +6,10 @@ return array
 	'_RESOURCE_NOT_VALID_'	=>	'资源不可用: \0',
 	'_EN_'	=>	'English (US)',
 	'_ZH_'	=>	'中文(简体)',
-	
+
+	/* common */
+	'_ACTION_SEEALL'	=>	'显示全部',
+
 	/* main menu */
 	'link_home'	=>	'首页',
 	'link_profile'	=>	'个人主页',
@@ -35,7 +38,6 @@ return array
 
 	'_ACTION_DELETE_'	=>	'删除',
 	'_ACTION_REPORT_'	=>	'举报',
-	'_ACTION_VIEWALL_'	=>	'显示全部',
 	'_ACTION_POST_'		=>	'发布',
 	'_PAGE_FIRST_'		=>	'第一页',
 	'_PAGE_LAST_'		=>	'最后一页',

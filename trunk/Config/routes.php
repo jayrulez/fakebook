@@ -15,6 +15,7 @@ return array
 	'profile'	=>	array('Profile','index','id'),
 	'people'	=>	array('Profile','people','username,id'),
 	'group'		=>	array('Group','index','id'),
+	'members'	=>	array('Group','members','id'),
 	'groups'	=>	array('Groups','index'),
 	'inbox'		=>	array('Inbox','index'),
 	'friends'	=>	array('Friends','index','id'),

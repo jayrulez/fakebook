@@ -117,16 +117,17 @@ class WallAction extends BaseAction
 					->limit((($page - 1) * $listRows).','.$listRows)
 					->findAll();
 
+		//get wall action
 		foreach($Wall as &$key)
 		{
 			$action = array();
-
+			//wall action: report
 			if($this->userId && $this->userId != $key['fromid'])
 			{
 				$report = array('report'=>'<a onclick="" href="'.url('','','report','',array('type'=>'wall','id'=>$key['id'])).'">'.L('_ACTION_REPORT_').'</a>');
 				$action += $report;
 			}
-				
+			//wall action: delete
 			if($this->isOwner($key['id'],$wid,$key['fromid']))
 			{
 				$delete = array('delete'=>'<a onclick="" href="'.url('','','Wall','',array('action'=>'delete','id'=>$key['id'])).'">'.L('_ACTION_DELETE_').'</a>');
@@ -152,7 +153,7 @@ class WallAction extends BaseAction
 	{
 		if($count > $listRows){
 			return sprintf(L('wall_subheader2'),
-							"<a href=\"".url('','','wall','app',array('type'=>$type,'id'=>$wid))."\">",
+							"<a href=\"".url('','','wall','',array('type'=>$type,'id'=>$wid))."\">",
 							number_format($count),
 							"</a>",
 							$listRows);

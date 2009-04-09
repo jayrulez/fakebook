@@ -46,9 +46,9 @@
           <div id="group_members" class="group_members">
             <div class="box_header">{$Think.lang._gm_header}</div>
             <div class="box_subheader clearfix">
-              <span class="subtitle">Displaying 1 of <a href="#members.php?id=49911">40 members</a></span>
+              <span class="subtitle">{$groupMemberHeader}</span>
               <span class="actionlink">
-                <a href="#members.php?id=49911">{$Think.lang._gm_seeall}</a>
+                <a href="{:url('','','members','',array('id'=>$groupInfo['id']))}">{$Think.lang._ACTION_SEEALL}</a>
               </span>
             </div>
             <div class="box_content clearfix">
