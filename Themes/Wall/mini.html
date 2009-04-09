@@ -31,7 +31,7 @@
                 </div>
                 <div class="item">
                   <div class="user">
-                    <a href="{:url('','','profile','app',array('id'=>$post['fromid']))}">{$post['userInfo']|getUserName}</a> {$Think.lang.wall_wrote}
+                    <a href="{:url('','','profile','app',array('id'=>$post['fromid']))}">{$post['fromid']|getUserName}</a> {$Think.lang.wall_wrote}
                     <br/>
                     <span class="DateAndTime">{$post['time']|formatDate=###,$userInfo['timezone']}</span>
                   </div>
