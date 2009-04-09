@@ -55,7 +55,7 @@
               <ul>
                 <iterate name="groupMember" id="vo" offset="0" length='8'>
                 <li>
-                  <a onclick="" href="#">
+                  <a onclick="" href="{:url('','','profile','',array('id'=>$vo['uid']))}">
                     <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
                       <img alt="" src="../Public/Images/silhouette_s.jpg"/>
                       <span class="UIRoundedImage_Corners">
@@ -63,7 +63,7 @@
                       </span>
                     </span>
                   </a>
-                  <a onclick="" href="#"><span class="user_name">{$vo['uid']|getUserName}</span></a>
+                  <a onclick="" href="{:url('','','profile','',array('id'=>$vo['uid']))}"><span class="user_name">{$vo['uid']|getUserName}</span></a>
                 </li>
                 </iterate>
               </ul>
