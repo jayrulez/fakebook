@@ -148,13 +148,22 @@ class PublicAction extends BaseAction
 		if($id == 'en' || $id == 'zh')
 		{
 			$lang = ($id == 'en') ? 'en-US' : 'zh-CN';
-			$dao = D('User');
-			$dao->language = $lang;
-			$dao->save();
 			
-			$user = $this->userInfo;
-			$user['language'] = $lang;
-			Session::set('userInfo',$user);
+			if(empty($this->userId))
+			{
+				Cookie::set('language',$lang,0);
+			}
+			else
+			{
+				$dao = D('User');
+				$dao->find($this->userId);
+				$dao->language = $lang;
+				$dao->save();
+			
+				$user = $this->userInfo;
+				$user['language'] = $lang;
+				Session::set('userInfo',$user);
+			}
 		}
 		
 		redirect($_SERVER["HTTP_REFERER"]);

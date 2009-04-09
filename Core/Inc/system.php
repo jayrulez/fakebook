@@ -148,11 +148,11 @@ return array(
 	'TAG_NESTED_LEVEL'		=>	3,		
 
 	/* Cookie Config */
-	'COOKIE_EXPIRE'				=>	3600,		
-	'COOKIE_DOMAIN'			=>	'',	
-	'COOKIE_PATH'				=>	'/',	
-	'COOKIE_PREFIX'				=>	'think_', 
-    'COOKIE_SECRET_KEY'     =>   '',  
+	'COOKIE_EXPIRE'				=>	3600,
+	'COOKIE_DOMAIN'			=>	'',
+	'COOKIE_PATH'				=>	'/',
+	'COOKIE_PREFIX'				=>	'fb_',
+    'COOKIE_SECRET_KEY'     =>   '',
 
 	/* Page List Config */
 	'PAGE_NUMBERS'				=>	5,		

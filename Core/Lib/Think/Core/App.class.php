@@ -205,12 +205,12 @@ class App extends Base
         if(C('LANG_SWITCH_ON')) {
             if(C('AUTO_DETECT_LANG')) {
                 /*if(isset($_GET[C('VAR_LANGUAGE')])) {
-                    $langSet = $_GET[C('VAR_LANGUAGE')];
-                }elseif ( Cookie::is_set('language') ) {
-                    $langSet = Cookie::get('language');*/
+                    $langSet = $_GET[C('VAR_LANGUAGE')];*/
             	if(Session::get('userInfo') != NULL){
             		$userInfo = Session::get('userInfo');
             		$langSet = $userInfo['language'];
+                }elseif ( Cookie::is_set('language') ) {
+                    $langSet = Cookie::get('language');
                 }else if(isset($_SERVER['HTTP_ACCEPT_LANGUAGE']))
 				{
                     preg_match('/^([a-z\-]+)/i', $_SERVER['HTTP_ACCEPT_LANGUAGE'], $matches);

@@ -10,15 +10,19 @@ class BaseAction extends Action
 
 		$this->userId   = Session::get(C('USER_AUTH_KEY'));
 		$this->userInfo = Session::get('userInfo');
-		/*
-		if(empty($this->userId)||empty($this->userInfo))
+		
+		if(empty($this->userId))
 		{
-			$this->redirect('','','login');
+			$language = Cookie::get('language');
 		}
-		*/
+		else
+		{
+			$language = $this->userInfo['language'];
+		}
 		
 		$this->assign('userId',$this->userId);
 		$this->assign('userInfo',$this->userInfo);
+		$this->assign('language',$language);
 	}
 	
 	public function __destruct() {}
