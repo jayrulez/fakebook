@@ -114,8 +114,9 @@ CREATE TABLE IF NOT EXISTS `fb_group_member` (
 --
 
 CREATE TABLE IF NOT EXISTS `fb_friend` (
-  `id` int(11) NOT NULL auto_increment,
-  PRIMARY KEY  (`id`)
+  `uid1` int(100) NOT NULL,
+  `uid2` int(100) NOT NULL,
+  PRIMARY KEY  (`uid1`,`uid2`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
 
 
@@ -126,8 +127,9 @@ CREATE TABLE IF NOT EXISTS `fb_friend` (
 --
 
 CREATE TABLE IF NOT EXISTS `fb_friend_request` (
-  `id` int(11) NOT NULL auto_increment,
-  PRIMARY KEY  (`id`)
+  `uid_from` int(100) NOT NULL,
+  `uid_to` int(100) NOT NULL,
+  PRIMARY KEY  (`uid_from`,`uid_to`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
 
 

@@ -51,13 +51,12 @@ table tr td {font-size:11px;}
 #menu_login_container .login_form_label_field label input {margin-right:5px;}
 #menu_login_container .inputtext,#menu_login_container .inputpassword {width:140px;padding:3px;border-color:#1D2A5B;}
 
-#main_menu a {display:block;color:#fff;padding:7px 7px 7px 8px;text-decoration:none;font-weight:bold;margin-right:4px;line-height:normal;}
-.ff3 #main_menu a {padding:7px 7px 6px 8px;}
-.zh #main_menu a {font-weight:normal;}
-.zh.ie6 #main_menu a {padding:7px 7px 6px 8px;}
-#account_menu a {display:block;color:#fff;padding:7px 5px;text-decoration:none;margin-right:5px;line-height:normal;}
-.ff3 #account_menu a {padding:7px 5px 6px;}
-.zh.ie6 #account_menu a {padding:7px 5px 6px;}
+#main_menu a {display:block;color:#fff;padding:7px 7px 8px 8px;text-decoration:none;font-weight:bold;margin-right:4px;line-height:normal;}
+.zh #main_menu a {font-weight:normal;padding:7px 7px 7px 8px;}
+.zh.ie6 #main_menu a,.zh.ff3 #main_menu a {padding:7px 7px 6px 8px;}
+#account_menu a {display:block;color:#fff;padding:7px 5px 8px;text-decoration:none;margin-right:5px;line-height:normal;}
+.zh #account_menu a {padding:7px 5px;}
+.zh.ie6 #account_menu a,.zh.ff3 #account_menu a  {padding:7px 5px 6px;}
 #main_menu a:hover,#account_menu a:hover {background-color:#5C75AA;}
 #universal_search {padding:3px 11px 3px 4px;width:172px;}
 .ie6 #universal_search {width:187px;}

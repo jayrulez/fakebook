@@ -148,7 +148,7 @@ textarea {border:1px solid #BDC7D8;font-family:"lucida grande",tahoma,verdana,ar
 .UIMediaItem img {display:block;vertical-align:middle;}
 .UIHotStory_Small .UIHotStory_Body {float:left;width:166px;}
 .UIHotStory_Icon {float:right;padding-left:6px;}
-.spritemap_icons {background-image:url([theme_url]/Images/Icons/Icons.png);background-repeat:no-repeat;height:16px;width:16px;}
+.spritemap_icons {background-image:url([theme_url]/Images/Icons/icons.png);background-repeat:no-repeat;height:16px;width:16px;}
 .spritemap_icons.sx_group {background-position:0 -882px;height:14px !important;}
 .spritemap_icons.sx_ad {background-position:0 -16px;height:15px !important;}
 .UIHotStory_Title {font-size:11px;font-weight:bold;}
