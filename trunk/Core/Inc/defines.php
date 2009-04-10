@@ -7,7 +7,7 @@ if(!defined('DS'))
 
 if(!defined('APP_NAME')) define('APP_NAME', md5(CORE_PATH));
 if(!defined('APP_PATH')) define('APP_PATH', dirname(CORE_PATH).APP_NAME);
-if(!defined('APP_DATA_PATH')) define('APP_DATA_PATH',DATA_PATH.APP_NAME.DS);
+if(!defined('APP_DATA_PATH')) define('APP_DATA_PATH',DATA_PATH);
 
 if(version_compare(PHP_VERSION,'6.0.0','<') ) {
     @set_magic_quotes_runtime (0);

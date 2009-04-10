@@ -105,10 +105,44 @@ function getUserName($uid)
 	return $info['name'];
 }
 
-function getProfilePicture($uid,$size='L')
+function getProfilePicture($uid,$size='big')
 {
 	$info = getUserInfo($uid);
-	return 'Data'.DS.APP_NAME.DS.UPLOAD_DIR.DS.$info['pic'];
+	
+	switch($size)
+	{
+		case 'big':
+			$pic = $info['pic_big'];
+			break;
+		case 'small':
+			$pic = $info['pic_small'];
+			break;
+		case 'square':
+			$pic = $info['pic_square'];
+			break;
+	}
+	
+	if($pic)
+	{
+		$pic = C('SITE_URL').'/Data/Uploads/'.$pic;
+	}
+	else
+	{
+		switch($size)
+		{
+			case 'big':
+				$pic = '../Public/Images/silhouette_l.jpg';
+				break;
+			case 'small':
+				$pic = '../Public/Images/silhouette_m.jpg';
+				break;
+			case 'square':
+				$pic = '../Public/Images/silhouette_s.jpg';
+				break;
+		}
+	}
+	
+	return $pic;
 }
 
 /* get group info by id */
@@ -122,6 +156,46 @@ function getGroupName($gid)
 {
 	$info = getGroupInfo($gid);
 	return $info['name'];
+}
+
+function getGroupPicture($gid,$size='big')
+{
+	$info = getGroupInfo($gid);
+	
+	switch($size)
+	{
+		case 'big':
+			$pic = $info['pic_big'];
+			break;
+		case 'small':
+			$pic = $info['pic_small'];
+			break;
+		case 'square':
+			$pic = $info['pic_square'];
+			break;
+	}
+	
+	if($pic)
+	{
+		$pic = C('SITE_URL').'/Data/Uploads/'.$pic;
+	}
+	else
+	{
+		switch($size)
+		{
+			case 'big':
+				$pic = '../Public/Images/group_l.jpg';
+				break;
+			case 'small':
+				$pic = '../Public/Images/group_m.jpg';
+				break;
+			case 'square':
+				$pic = '../Public/Images/group_s.jpg';
+				break;
+		}
+	}
+	
+	return $pic;
 }
 
 function getGroupMember($gid)

@@ -4,7 +4,7 @@
 <title>{&SITE_NAME} | {$groupInfo['name']}</title>
 <include file="../Public/header"/>
 </head>
-<body class="{:css_browser_id()} {&LANG_ID}">
+<body class="{$browser_id} {&LANG_ID}">
   <div id="non_footer" >
     <div id="page_height">
       <div id="menubar_container">
@@ -57,9 +57,13 @@
                 <li>
                   <a onclick="" href="{:url('','','profile','',array('id'=>$vo['uid']))}">
                     <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
-                      <img alt="" src="../Public/Images/silhouette_s.jpg"/>
+                      <img alt="" src="{$vo['uid']|getProfilePicture=###,'square'}"/>
                       <span class="UIRoundedImage_Corners">
-                        <img src="../Public/Images/UIRoundedImage.png" alt="" class="UIRoundedImage_CornersSprite" />
+                        <if condition="$browser_id eq ie6">
+                        <div class="transparent_png UIRoundedImage_CornersSprite" style="_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../Public/Images/UIRoundedImage.png',sizingMethod='scale');"> </div>
+                        <else />
+                        <img src="../Public/Images/UIRoundedImage.png" alt="" class="invisible_png" />
+                        </if>
                       </span>
                     </span>
                   </a>
