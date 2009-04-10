@@ -15,7 +15,7 @@
       <div class="UIFullPage_Container">
         <div class="narrowcolumn">
           <div class="picture">
-            <img alt="" src="../Public/Images/silhouette_l.jpg"/>
+            <img alt="" src="{$profile['id']|getProfilePicture=###,'big'}"/>
           </div>
           <div id="profile_actions">
             <ul>
@@ -63,7 +63,8 @@
         </div>
         <div class="widecolumn">
           <div class="profile_name_and_status">
-            <h2 id="profile_name">Yang Guang</h2>
+            <h2 id="profile_name">{$profile['id']|getUserName}</h2>
+{/*
             <div class="mobile_status">
               <span id="profile_status">
                 <span id="status_text"> is nothing</span>
@@ -75,6 +76,7 @@
                 </small>
               </span>
             </div>
+*/}
           </div>
           <div class="tab_menu">
             <ul>
@@ -84,14 +86,17 @@
           <div class="basic_info clearfix">
             <span class="info_header">Basic</span>
             <dl>
-              <dt>Nickname</dt>
-              <dd>dingo </dd>
+              <dt>Fullname</dt>
+              <dd>{$profile['id']|getUserName}</dd>
               <dt>Sex</dt>
-              <dd>Male </dd>
+              <dd>{$profile['sex']}</dd>
+{/*
               <dt>Birthday</dt>
               <dd>1980-07-31 </dd>
+*/}
             </dl>
           </div>
+{/*
           <div id="mini_feed">
             <div class="box_header">Mini-feed</div>
             <div class="box_subheader">Displaying User1's latest news</div>
@@ -197,6 +202,7 @@
               
             </div>
           </div>
+*/}
           <include file="Wall:mini" />
         </div>
         <div class="adcolumn">

@@ -131,9 +131,9 @@ return array(
 	'ACTION_CACHE_ON'		=>	false,
 
 	/* trace config */
-	'SHOW_RUN_TIME'			=>	false,
-	'SHOW_ADV_TIME'			=>	false,			
-	'SHOW_DB_TIMES'			=>	false,
+	'SHOW_RUN_TIME'			=>	true,
+	'SHOW_ADV_TIME'			=>	true,			
+	'SHOW_DB_TIMES'			=>	true,
 	'SHOW_CACHE_TIMES'		=>	false,
 	'SHOW_USE_MEM'			=>	false,
 	'SHOW_PAGE_TRACE'		=>	false,

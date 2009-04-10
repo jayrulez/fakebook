@@ -22,7 +22,6 @@ class GroupAction extends BaseAction
 		
 		//get members
 		$groupMember = getGroupMember($gid);
-		shuffle($groupMember);
 		
 		//get header
 		$count = count($groupMember);
@@ -36,6 +35,8 @@ class GroupAction extends BaseAction
 		
 		//assign
 		$this->assign('groupMember',$groupMember);
+		shuffle($groupMember);
+		$this->assign('groupMemberShuffle',$groupMember);
 		$this->assign('groupMemberHeader',$groupMemberHeader);
 		
 		

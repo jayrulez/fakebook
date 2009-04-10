@@ -31,7 +31,7 @@
               </dd>
               </if>
             </dl>
-            {/*
+{/*
             <h4>Contact Info</h4>
             <dl class="clearfix">
               <dt>Email:</dt>
@@ -41,7 +41,7 @@
               <dt>Location:</dt>
               <dd>Jilin Changchun</dd>
             </dl>
-            */}
+*/}
           </div>
           <div id="group_members" class="group_members">
             <div class="box_header">{$Think.lang._gm_header}</div>
@@ -53,7 +53,7 @@
             </div>
             <div class="box_content clearfix">
               <ul>
-                <iterate name="groupMember" id="vo" offset="0" length='8'>
+                <iterate name="groupMemberShuffle" id="vo" offset="0" length='8'>
                 <li>
                   <a onclick="" href="{:url('','','profile','',array('id'=>$vo['uid']))}">
                     <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
@@ -91,21 +91,21 @@
         </div>
         <div class="narrowcolumn">
           <div class="picture">
-            <img alt="" src="../Public/Images/group_l.jpg"/>
+            <img alt="" src="{$groupInfo['id']|getGroupPicture=###,'big'}"/>
           </div>
-          {/*
           <div id="profile_actions">
             <ul>
+{/*
               <li><a href="#">Message All Members</a></li>
               <li><a href="#">Edit Group</a></li>
               <li><a href="#">Edit Members</a></li>
               <li><a href="#">Edit Group Officers</a></li>
               <li><a href="#">Invite People to Join</a></li>
-              <li><a href="#">Create Related Event</a></li>
+*/}
+              <li><a href="{:url('','','members','',array('id'=>$groupInfo['id']))}">View All Members</a></li>
               <li><a href="#">Leave Group</a></li>
             <ul/>
           </div>
-          */}
           <div class="roundbox">
             <div class="UIProfileBox_Container">
               <div class="box_header">{$Think.lang._gt_header}</div>
@@ -123,16 +123,21 @@
               <div class="box_header">{$Think.lang._ga_header}</div>
               <div class="box_content">
                 <ul>
+                  <iterate name="groupMember" id="vo">
+                    <if condition="$vo['title'] eq creator">
                   <li>
                     <span>
-                      <a class="group_name" href="group.php?id=49911">User1</a> ({$Think.lang._ga_creator})
+                      <a class="group_name" href="{:url('','','profile','',array('id'=>$vo['uid']))}">{$vo['uid']|getUserName}</a> ({$Think.lang._ga_creator})
                     </span>
                   </li>
+                    <elseif condition="$vo['title'] eq admin" />
                   <li>
                     <span>
-                      <a class="group_name" href="group.php?id=49911">User2</a>
+                      <a class="group_name" href="{:url('','','profile','',array('id'=>$vo['uid']))}">{$vo['uid']|getUserName}</a>
                     </span>
                   </li>
+                    </if>
+                  </iterate>
                 </ul>
               </div>
             </div>
