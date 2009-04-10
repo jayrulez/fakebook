@@ -229,7 +229,7 @@ function Pager($wall,$type)
   if($page > 1 && $totalPages > 1)
     $output .= "<li><a href=\"".$url."/".($page-1)."\">".L('_PAGE_PREV_')."</a></li>";
   //show page-4
-  if($page > 4 && $totalPages > 4 && $totalPages < $page + 3)
+  if($page > 4 && $totalPages > 4 && $totalPages < $page + 1)
     $output .= "<li><a href=\"".$url."/".($page-4)."\">".($page - 4)."</a></li>";
   //show page-3
   if($page > 3 && $totalPages > 3 && $totalPages < $page + 2)
