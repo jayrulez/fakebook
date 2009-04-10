@@ -60,6 +60,8 @@
 .zh #wall #posts .item .wallactions a {font-size:12px;}
 #wall .moreaction {width:540px;text-align:right;margin-bottom:15px;}
 
+.find_friend {background:transparent url([theme_url]/Images/Icons/magnifying_glass.gif) no-repeat scroll left 3px;padding:4px 4px 4px 23px;}
+
 /* temp */
 .widecolumn h2 {display:inline;font-size:16px;font-weight:bold;padding:0;}
 .widecolumn .tab_menu {font-size:12px;font-weight:bold;width:50px;text-align:center;padding:3px;;margin-top:10px;display:block;border:1px solid #D8DFEA;border-bottom:1px solid #fff;background-color:#FFF;}
@@ -74,7 +76,6 @@
 .widecolumn .box_header {border-top:1px solid #94A3C4;background-color:#ECEFF5;color:#333;padding:5px 8px;font-weight:bold;}
 .widecolumn .box_subheader {border-bottom:1px solid #ECEFF5;padding:5px 8px;}
 .widecolumn .box_content {padding:10px 5px;}
-.find_friend {background:transparent url(../../Images/magnifying_glass.gif) no-repeat scroll left 3px;padding:4px 4px 4px 23px;}
 
 #content .dialog_summary {font-size:16px;padding:12px 0;margin-bottom:20px;font-weight:bold;}
 #content .dialog_body .image {float:left;margin-right:10px;}

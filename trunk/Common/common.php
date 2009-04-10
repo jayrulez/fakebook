@@ -145,6 +145,15 @@ function getProfilePicture($uid,$size='big')
 	return $pic;
 }
 
+function getFriend($uid)
+{
+	$map['uid1'] = $uid;
+	$map['uid2'] = $uid;
+	$map['_logic'] = 'or';
+	$userFriend = D('Friend')->findAll($map);
+	return $userFriend;
+}
+
 /* get group info by id */
 function getGroupInfo($gid)
 {
