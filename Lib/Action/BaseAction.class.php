@@ -23,6 +23,7 @@ class BaseAction extends Action
 		$this->assign('userId',$this->userId);
 		$this->assign('userInfo',$this->userInfo);
 		$this->assign('language',$language);
+		$this->assign('browser_id',css_browser_id());
 	}
 	
 	public function __destruct() {}

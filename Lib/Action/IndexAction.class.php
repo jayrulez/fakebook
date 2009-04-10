@@ -15,6 +15,8 @@ class IndexAction extends Action
 		$language = Cookie::get('language');
 		$this->assign('language',$language);
 		
+		$this->assign('browser_id',css_browser_id());
+		
 		$this->display();
 	}
 

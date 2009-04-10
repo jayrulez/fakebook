@@ -18,8 +18,10 @@ label{color:#666;cursor:pointer;font-weight:bold;vertical-align:middle;}
 ul,li {list-style:none;}
 table {padding:0 0 7px;}
 table tr {height:25px}
+table tr td {font-size:11px;}
 
 .inputtext,.inputpassword {width:140px;padding:3px;border: solid 1px #BDC7D8;padding:3px;}
+.ie6 .inputtext,.ie6 .inputpassword {height:21px;}
 .inputbutton, .inputsubmit {background-color:#3B5998;border-color:#D9DFEA #0E1F5B #0E1F5B #D9DFEA;border-style:solid;border-width:1px;color:#FFFFFF;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-size:11px;padding:2px 15px 3px;text-align:center;}
 .UILinkButton,.UILinkButton_RW {float:left;height:22px;padding:0;position:relative;z-index:1;}
 .UILinkButton_A {background:transparent url([theme_url]/Images/UILinkButton_Blue.gif) no-repeat scroll left top;border:0 none;color:white;cursor:pointer;float:left;font-size:11px;font-weight:bold;height:22px;margin:0;padding:3px 9px 3px 12px;position:relative;}
@@ -80,16 +82,25 @@ table tr {height:25px}
 #page_footer .page_footer_links,.page_footer_links li {float:right;}
 #page_footer .page_footer_links li {padding:0 5px;}
 
-.UIRoundedImage {background-color:#C4CDE0;display:block;overflow:hidden;position:relative;}
-.UIRoundedImage_LARGE {width:50px;height:50px;}
-.UIRoundedImage_SMALL {width:35px;height:35px;}
-.UIRoundedImage_SMALL .UIRoundedImage_Image {height:35px;width:35px;}
-.UIRoundedImage_Corners {background:transparent none repeat scroll 0 0;display:block;height:100%;left:0;overflow:hidden;position:absolute;top:0;width:100%;}
-.UIRoundedImage_CornersSprite {background:transparent none repeat scroll 0 0 !important;height:200px !important;width:110px !important;display:block;position:absolute;}
+.UIRoundedImage{display:block;background-color:#C4CDE0;overflow:hidden;position:relative;}
+.UIRoundedImage_Image{display:block;position:absolute;background:transparent !important;top:0px;left:0px;vertical-align:middle;overflow:hidden;background:none !important;}
+.UIRoundedImage_Corners{display:block;position:absolute;background:none;top:0px;left:0px;overflow:hidden;width:100%;height:100%;}
+.UIRoundedImage_CornersSprite{display:block;position:absolute;}
+.UIRoundedImage_CornersSprite{background:transparent !important;width:110px !important;height:200px !important;}
 .UIRoundedImage_CornersSprite img{background:transparent !important;width:110px !important;height:200px !important;}
-.ie6 .UIRoundedImage_CornersSprite{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[theme_url]/Images/UIRoundedImage.png',sizingMethod="scale");}
-.UIRoundedImage_LARGE .UIRoundedImage_CornersSprite {left:0;}
-.UIRoundedImage_WHITE .UIRoundedImage_CornersSprite {top:0;}
-.UIRoundedImage_SMALL .UIRoundedImage_CornersSprite {left:-50px;}
-.UIRoundedImage_GIRLIE .UIRoundedImage_CornersSprite {top:-50px;}
-.UIRoundedImage_MEDIA .UIRoundedImage_CornersSprite {top:-150px;}
+span.UIRoundedImage_CornersSprite{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='[theme_url]/Images/UIRoundedImage.png',sizingMethod="scale");}
+.UIRoundedImage_CornersSprite .invisible_png{display:block;width:100%;height:100%;background:transparent url([theme_url]/Images/UIRoundedImage.png)0px 0px no-repeat;}
+.UIRoundedImage_NONE .UIRoundedImage_Corners{display:none;}
+.UIRoundedImage_WHITE .UIRoundedImage_CornersSprite{top:0px;}
+.UIRoundedImage_GIRLIE .UIRoundedImage_CornersSprite{top:-50px;}
+.UIRoundedImage_DARK .UIRoundedImage_CornersSprite{top:-100px;}
+.UIRoundedImage_MEDIA .UIRoundedImage_CornersSprite{top:-150px;}
+.UIRoundedImage_LARGE{width:50px;height:50px;}
+.UIRoundedImage_LARGE .UIRoundedImage_Image{width:50px;height:50px;}
+.UIRoundedImage_SMALL{width:32px;height:32px;}
+.UIRoundedImage_SMALL .UIRoundedImage_Image{width:32px;height:32px;}
+.UIRoundedImage_TINY{width:25px;height:25px;}
+.UIRoundedImage_TINY .UIRoundedImage_Image{width:25px;height:25px;}
+.UIRoundedImage_LARGE .UIRoundedImage_CornersSprite{left:0px;}
+.UIRoundedImage_SMALL .UIRoundedImage_CornersSprite{left:-50px;}
+.UIRoundedImage_TINY .UIRoundedImage_CornersSprite{left:-85px;}

@@ -166,10 +166,10 @@ return array(
 	'CALLBACK_LOAD_PATH'	=>	'',				
 	'UPLOAD_FILE_RULE'		=>	'uniqid',			
 	'LIKE_MATCH_FIELDS'		=>	'', 
-	'ACTION_JUMP_TMPL'=>	'Public:success', 
-	'ACTION_404_TMPL'=>	'Public:404',   
+	'ACTION_JUMP_TMPL'=>	'Public:error', 
+	'ACTION_404_TMPL'=>	'Public:error',   
     'TOKEN_ON'                    =>   true,   
-    'TOKEN_NAME'                =>   'think_html_token', 
+    'TOKEN_NAME'                =>   'fb_html_token', 
     'TOKEN_TYPE'                 =>    'md5', 
     'APP_DOMAIN_DEPLOY'     =>  false, 
 );

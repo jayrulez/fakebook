@@ -74,7 +74,9 @@ CREATE TABLE IF NOT EXISTS `fb_comment` (
 CREATE TABLE IF NOT EXISTS `fb_group` (
   `id` int(100) NOT NULL auto_increment,
   `name` varchar(100) NOT NULL,
-  `pic` varchar(100) NULL,
+  `pic_big` varchar(100),
+  `pic_small` varchar(100),
+  `pic_square` varchar(100),
   `description` text NULL,
   `group_type` varchar(100) NULL,
   `group_subtype` varchar(100) NULL,

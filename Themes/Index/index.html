@@ -4,7 +4,7 @@
 <title>{&SITE_NAME} | {$Think.lang.index_pagename}</title>
 <include file="../Public/header"/>
 </head>
-<body class="WelcomePage {:css_browser_id()} {&LANG_ID}">
+<body class="WelcomePage {$browser_id} {&LANG_ID}">
   <div id="non_footer" >
     <div id="page_height">
       <div id="menubar_container">
@@ -60,7 +60,7 @@
               <div class="WelcomePage_MainSellCenter clearfix">
                 <div class="WelcomePage_MainSellLeft">
                   <div class="WelcomePage_MainMessage">{$Think.lang._menubar_signup_info}</div>
-                  <div class="WelcomePage_MainMap"> </div>
+                  <div class="WelcomePage_MainMap">&nbsp;</div>
                 </div>
                 <div class="WelcomePage_MainSellRight">
                   <div class="WelcomePage_SignUpMessage">

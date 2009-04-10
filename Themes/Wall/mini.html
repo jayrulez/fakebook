@@ -22,9 +22,13 @@
                 <div class="picture">
                   <a href="{:url('','','profile','app',array('id'=>$post['fromid']))}">
                     <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
-                      <img alt="" src="../Public/Images/silhouette_s.jpg"/>
+                      <img alt="" src="{$post['fromid']|getProfilePicture=###,'square'}"/>
                       <span class="UIRoundedImage_Corners">
-                        <img src="../Public/Images/UIRoundedImage.png" alt="" class="UIRoundedImage_CornersSprite" />
+                        <if condition="$browser_id eq ie6">
+                        <div class="transparent_png UIRoundedImage_CornersSprite" style="_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../Public/Images/UIRoundedImage.png',sizingMethod='scale');"> </div>
+                        <else />
+                        <img src="../Public/Images/UIRoundedImage.png" alt="" class="invisible_png" />
+                        </if>
                       </span>
                     </span>
                   </a>
