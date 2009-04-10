@@ -201,7 +201,7 @@ function getGroupPicture($gid,$size='big')
 function getGroupMember($gid)
 {
 	$map['gid'] = $gid;
-	$groupMember = D('GroupMember')->findAll($map);
+	$groupMember = D('GroupMember')->order('title desc')->findAll($map);
 	return $groupMember;
 }
 
