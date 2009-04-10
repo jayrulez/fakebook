@@ -24,7 +24,7 @@
 
 .feed {padding:5px 0;}
 .feed_icon {display:block;float:left;width:16px;height:18px;}
-.spritemap_icons {background-image:url([theme_url]/Images/Icons/Icons.png);background-repeat:no-repeat;width:16px;height:16px;}
+.spritemap_icons {background-image:url([theme_url]/Images/Icons/icons.png);background-repeat:no-repeat;width:16px;height:16px;}
 .sx_friend {background-position:0 -753px;}
 .sx_group {background-position:0 -882px;height:14px !important}
 .sx_photo {background-position:0 -1272px;}
