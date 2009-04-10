@@ -38,6 +38,12 @@ class ProfileAction extends BaseAction
 			}
 		}
 		
+		$this->assign('profile',$Profile);
+		
+		
+		/*
+		 * get user wall
+		 */
 		$listRows = 5;
 		$WallCls = new WallAction;
 		$Wall = $WallCls->getWall($uid,'u',$listRows,1);
@@ -45,7 +51,42 @@ class ProfileAction extends BaseAction
 		
 		$this->assign('wall',$Wall);
 		$this->assign('wallSubheader',$wallSubheader);
-		$this->assign('profile',$Profile);
+		
+		
+		/*
+		 * get user friends
+		 */
+		$userFriend = getFriend($uid);
+		
+		foreach($userFriend as &$key)
+		{
+			$key = current(array_diff($key,array($uid)));
+		}
+		
+		$this->assign('userFriend',$userFriend);
+		
+		
+		/*
+		 * get friend subheader
+		 */
+		$friendCount = count($userFriend);
+		
+		if(!$userFriend)
+		{
+			$friendSubheader = L('_friend_subheader3');
+		}
+		else if($friendCount > 1)
+		{
+			$friendSubheader = '<a href="'.url('','','friends').'">'.sprintf(L('_friend_subheader1'),$friendCount).'</a>';
+		}
+		else
+		{
+			$friendSubheader = '<a href="'.url('','','friends').'">'.sprintf(L('_friend_subheader2'),$friendCount).'</a>';
+		}
+
+		
+		$this->assign('friendSubheader',$friendSubheader);
+		
 		
 		$this->display();
 	}
