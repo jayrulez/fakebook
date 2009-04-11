@@ -9,6 +9,8 @@ return array
 	'_friend_subheader2'	=>	'%s friend',
 	'_friend_subheader3'	=>	'no friends',
 	'_friend_find'			=>	'Find people you know',
+
+	'_group_header'		=>	'Groups',
 );
 
 ?>

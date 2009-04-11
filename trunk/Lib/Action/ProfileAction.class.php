@@ -88,6 +88,14 @@ class ProfileAction extends BaseAction
 		$this->assign('friendSubheader',$friendSubheader);
 		
 		
+		/*
+		 * get user group
+		 */
+		$userGroup = getUserGroup($uid);
+		
+		$this->assign('userGroup',$userGroup);
+		
+		
 		$this->display();
 	}
 	

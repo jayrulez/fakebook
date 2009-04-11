@@ -154,6 +154,13 @@ function getFriend($uid)
 	return $userFriend;
 }
 
+function getUserGroup($uid)
+{
+	$map['uid'] = $uid;
+	$userGroup = D('GroupMember')->findAll($map);
+	return $userGroup;
+}
+
 /* get group info by id */
 function getGroupInfo($gid)
 {

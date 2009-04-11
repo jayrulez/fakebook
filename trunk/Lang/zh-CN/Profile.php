@@ -9,6 +9,8 @@ return array
 	'_friend_subheader2'	=>	'%s个朋友',
 	'_friend_subheader3'	=>	'没有朋友',
 	'_friend_find'			=>	'查找您认识的人',
+
+	'_group_header'		=>	'群组',
 );
 
 ?>

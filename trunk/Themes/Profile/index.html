@@ -60,12 +60,14 @@
               </div>
             </div>
             <div id="user_groups" class="user_groups">
-              <div class="box_header">Groups</div>
+              <div class="box_header">{$Think.lang._group_header}</div>
               <div class="box_content">
                 <ul>
+                <iterate name="userGroup" id="vo">
                   <li>
-                    <a class="group_name" href="{:url('','','group','app',array('id'=>49911))}">Jilin University</a>
+                    <a class="group_name" href="{:url('','','group','',array('id'=>$vo['gid']))}">{$vo['gid']|getGroupName}</a>
                   </li>
+                </iterate>
                 </ul>
               </div>
             </div>
