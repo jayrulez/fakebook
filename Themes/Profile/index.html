@@ -45,9 +45,11 @@
                 <span class="subheader">
                   {$friendSubheader}
                 </span>
+                <if condition="$currentUserFriend">
                 <span class="seeall">
                   <a href="{:url('','','friends','',array('id'=>$profile['id']))}">{$Think.lang._ACTION_SEEALL}</a>
                 </span>
+                </if>
               </div>
               <div class="box_content clearfix">
                 <if condition="$currentUserFriend">
