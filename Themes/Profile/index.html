@@ -19,10 +19,22 @@
           </div>
           <div id="profile_actions">
             <ul>
-              <li><a href="#">View Photos of Tom (2)</a></li>
-              <li><a href="#">Suggest Friends for Tom</a></li>
-              <li><a href="#">Send Tom a Message</a></li>
-              <li><a href="#">Poke Tom</a></li>
+            <switch name="userRelation">
+              <case value="me">
+                <li><a href="#">View Photos of me</a></li>
+                <li><a href="#">Edit Profile</a></li>
+              </case>
+              <case value="friend">
+                <li><a href="#">View Photos of {$profile['name']}</a></li>
+                <li><a href="#">Suggest Friends for {$profile['name']}</a></li>
+                <li><a href="#">Send {$profile['name']} a Message</a></li>
+                <li><a href="#">Poke {$profile['name']}</a></li>
+              </case>
+              <case value="friendrequest">
+                <li><a href="#">Confirm Friend</a></li>
+                <li><a href="#">Send {$profile['name']} a Message</a></li>
+              </case>
+            </switch>
             </ul>
           </div>
           <div class="roundbox">
@@ -32,13 +44,15 @@
                 {$friendSubheader}
               </div>
               <div class="box_content clearfix">
-                <if condition="$userFriend">
-                <ul>
-                  <iterate name="userFriend" id="vo">
-                  <li>
-                    <a href="{:url('','','profile','',array('id'=>$vo))}">
+                <if condition="$currentUserFriend">
+                  <iterate name="currentUserFriend" id="vo">
+                  <if condition="$vo['key'] eq 0">
+                    <div class="row clearfix">
+                  </if>
+                  <div class="person">
+                    <a href="{:url('','','profile','',array('id'=>$vo['uid']))}">
                       <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
-                        <img alt="" src="{$vo|getProfilePicture=###,'square'}"/>
+                        <img alt="" src="{$vo['uid']|getProfilePicture=###,'square'}"/>
                         <span class="UIRoundedImage_Corners">
                           <if condition="$browser_id eq ie6">
                             <div class="transparent_png UIRoundedImage_CornersSprite" style="_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../Public/Images/UIRoundedImage.png',sizingMethod='scale');"> </div>
@@ -48,12 +62,16 @@
                         </span>
                       </span>
                     </a>
-                    <a href="{:url('','','profile','',array('id'=>$vo))}">
-                      <span class="user_name">{$vo|getUserName}</span>
+                    <a href="{:url('','','profile','',array('id'=>$vo['uid']))}">
+                      <span class="user_name">{$vo['uid']|getUserName}</span>
                     </a>
-                  </li>
+                  </div>
+                  <if condition="$vo['key'] eq 2">
+                    </div>
+                  <elseif condition="$vo['id'] eq $friendCount" />
+                    </div>
+                  </if>
                   </iterate>
-                </ul>
                 <else />
                   <a class="find_friend" href="#findfriends.php">{$Think.lang._friend_find}</a>
                 </if>

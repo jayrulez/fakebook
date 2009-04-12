@@ -18,9 +18,9 @@
 .narrowcolumn .box_content a {line-height:20px;}
 .narrowcolumn .actions {padding-left:10px;}
 
-.narrowcolumn #user_friends .box_content li {float:left;padding:3px 13px 3px 0;}
-.narrowcolumn #user_friends .box_content li .UIRoundedImage {margin-bottom:3px;}
-.narrowcolumn #user_friends .box_content li .user_name {width:50px;display:block;overflow:hidden;line-height:20px;text-align:center;}
+.narrowcolumn #user_friends .box_content .person {float:left;padding:3px 13px 3px 0;}
+.narrowcolumn #user_friends .box_content .person .UIRoundedImage {margin-bottom:3px;}
+.narrowcolumn #user_friends .box_content .person .user_name {width:50px;display:block;overflow:hidden;line-height:20px;text-align:center;}
 
 .feed {padding:5px 0;}
 .feed_icon {display:block;float:left;width:16px;height:18px;}
