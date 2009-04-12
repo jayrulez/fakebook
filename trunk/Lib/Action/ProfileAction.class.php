@@ -93,11 +93,11 @@ class ProfileAction extends BaseAction
 		}
 		else if($friendCount > 1)
 		{
-			$friendSubheader = '<a href="'.url('','','friends').'">'.sprintf(L('_friend_subheader1'),$friendCount).'</a>';
+			$friendSubheader = '<a href="'.url('','','friends','',array('id'=>$uid)).'">'.sprintf(L('_friend_subheader1'),$friendCount).'</a>';
 		}
 		else
 		{
-			$friendSubheader = '<a href="'.url('','','friends').'">'.sprintf(L('_friend_subheader2'),$friendCount).'</a>';
+			$friendSubheader = '<a href="'.url('','','friends','',array('id'=>$uid)).'">'.sprintf(L('_friend_subheader2'),$friendCount).'</a>';
 		}
 
 		$this->assign('friendCount',$friendCount);

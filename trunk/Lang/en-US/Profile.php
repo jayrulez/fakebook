@@ -18,7 +18,9 @@ return array
 	'_action_suggest_friend'		=>	'Suggest Friends for %s',
 	'_action_send_message'			=>	'Send %s a Message',
 	'_action_poke_someone'			=>	'Poke %s',
-	'_action_confirm_friend'		=>	'Confirm Friend',
+	'_action_confirm_friend'		=>	'Confirm Friend Request',
+
+	'_action_remove_friend'	=>	'Remove Friend',
 );
 
 ?>
