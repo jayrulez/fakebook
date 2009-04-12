@@ -54,24 +54,40 @@ class ProfileAction extends BaseAction
 		
 		
 		/*
-		 * get user friends
+		 * get current user's friends
 		 */
-		$userFriend = getFriend($uid);
+		$currentUserFriend = getFriend($uid);
+		shuffle($currentUserFriend);
+		$i = 0;
+		$j = 1;
 		
-		foreach($userFriend as &$key)
+		foreach($currentUserFriend as &$key)
 		{
-			$key = current(array_diff($key,array($uid)));
+			$key = array('uid'=>current(array_diff($key,array($uid))));
+			$key = $key + array('key'=>$i);
+			$key = $key + array('id'=>$j);
+			
+			$j++;
+			
+			if($i == 2)
+			{
+				$i = 0;
+			}
+			else
+			{
+				$i++;
+			}
 		}
 		
-		$this->assign('userFriend',$userFriend);
+		$this->assign('currentUserFriend',$currentUserFriend);
 		
 		
 		/*
 		 * get friend subheader
 		 */
-		$friendCount = count($userFriend);
+		$friendCount = count($currentUserFriend);
 		
-		if(!$userFriend)
+		if(!$currentUserFriend)
 		{
 			$friendSubheader = L('_friend_subheader3');
 		}
@@ -84,7 +100,7 @@ class ProfileAction extends BaseAction
 			$friendSubheader = '<a href="'.url('','','friends').'">'.sprintf(L('_friend_subheader2'),$friendCount).'</a>';
 		}
 
-		
+		$this->assign('friendCount',$friendCount);
 		$this->assign('friendSubheader',$friendSubheader);
 		
 		
@@ -95,6 +111,30 @@ class ProfileAction extends BaseAction
 		
 		$this->assign('userGroup',$userGroup);
 		
+		
+		/*
+		 * if current user is my friend
+		 */
+		if($uid == $this->userId)
+		{
+			$userRelation = 'me';
+		}
+		else if(in_array($uid,$this->userFriend))
+		{
+			$userRelation = 'friend';
+		}
+		else
+		{
+			$map['uid_from'] = $uid;
+			$map['uid_to'] = $this->userId;
+			$friendRequest = D('FriendRequest')->find($map);
+			if($friendRequest)
+			{
+				$userRelation = 'friendrequest';
+			}
+		}
+		
+		$this->assign('userRelation',$userRelation);
 		
 		$this->display();
 	}

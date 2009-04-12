@@ -10,6 +10,7 @@ class BaseAction extends Action
 
 		$this->userId   = Session::get(C('USER_AUTH_KEY'));
 		$this->userInfo = Session::get('userInfo');
+		$this->userFriend = Session::get('userFriend');
 		
 		if(empty($this->userId))
 		{

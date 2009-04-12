@@ -2,7 +2,7 @@
 
 class FriendModel extends Model
 {
-	//group
+	//friend
 
 }
 

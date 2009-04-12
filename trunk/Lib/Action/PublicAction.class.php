@@ -72,7 +72,17 @@ class PublicAction extends BaseAction
 					{
 						Session::set(C('USER_AUTH_KEY'),$user['id']);
 						Session::set('userInfo',$user);
-
+						
+						//get friends
+						$userFriend = getFriend($user['id']);
+		
+						foreach($userFriend as &$key)
+						{
+							$key = current(array_diff($key,array($user['id'])));
+						}
+						
+						Session::set('userFriend',$userFriend);
+						
 						$userDao->setField('signinTime',time(),'id='.$user['id']);
 
 						if($autosignin)
