@@ -32,6 +32,7 @@
               </case>
               <case value="friendrequest">
                 <li><a href="#">{$Think.lang._action_confirm_friend}</a></li>
+                <li><a href="#">{$Think.lang._action_suggest_friend|sprintf=###,$profile['name']}</a></li>
                 <li><a href="#">{$Think.lang._action_send_message|sprintf=###,$profile['name']}</a></li>
               </case>
             </switch>
@@ -40,12 +41,17 @@
           <div class="roundbox">
             <div id="user_friends" class="user_friends">
               <div class="box_header">{$Think.lang._friend_header}</div>
-              <div class="box_subheader">
-                {$friendSubheader}
+              <div class="box_subheader clearfix">
+                <span class="subheader">
+                  {$friendSubheader}
+                </span>
+                <span class="seeall">
+                  <a href="{:url('','','friends','',array('id'=>$profile['id']))}">{$Think.lang._ACTION_SEEALL}</a>
+                </span>
               </div>
               <div class="box_content clearfix">
                 <if condition="$currentUserFriend">
-                  <iterate name="currentUserFriend" id="vo">
+                  <iterate name="currentUserFriend" id="vo" offset="0" length='6'>
                   <if condition="$vo['key'] eq 0">
                     <div class="row clearfix">
                   </if>
@@ -72,11 +78,14 @@
                     </div>
                   </if>
                   </iterate>
-                <else />
+                <elseif condition="$profile['id'] eq $userId" />
                   <a class="find_friend" href="#findfriends.php">{$Think.lang._friend_find}</a>
+                <else />
+                  <a href="#">{$Think.lang._action_suggest_friend|sprintf=###,$profile['name']}</a>
                 </if>
               </div>
             </div>
+            <if condition="$userGroup">
             <div id="user_groups" class="user_groups">
               <div class="box_header">{$Think.lang._group_header}</div>
               <div class="box_content">
@@ -89,7 +98,13 @@
                 </ul>
               </div>
             </div>
+            </if>
           </div>
+          <if condition="$userRelation eq friend">
+          <div class="actions">
+            <a onclick="#">{$Think.lang._action_remove_friend}</a>
+          </div>
+          </if>
         </div>
         <div class="widecolumn">
           <div class="profile_name_and_status">

@@ -19,6 +19,8 @@ return array
 	'_action_send_message'			=>	'给 %s 发消息',
 	'_action_poke_someone'			=>	'和 %s 打个招呼',
 	'_action_confirm_friend'		=>	'确认朋友请求',
+
+	'_action_remove_friend'	=>	'从朋友中删除',
 );
 
 ?>
