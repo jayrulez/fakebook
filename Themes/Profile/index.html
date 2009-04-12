@@ -21,18 +21,18 @@
             <ul>
             <switch name="userRelation">
               <case value="me">
-                <li><a href="#">View Photos of me</a></li>
-                <li><a href="#">Edit Profile</a></li>
+                <li><a href="#">{$Think.lang._action_view_photo_me}</a></li>
+                <li><a href="#">{$Think.lang._action_edit_profile}</a></li>
               </case>
               <case value="friend">
-                <li><a href="#">View Photos of {$profile['name']}</a></li>
-                <li><a href="#">Suggest Friends for {$profile['name']}</a></li>
-                <li><a href="#">Send {$profile['name']} a Message</a></li>
-                <li><a href="#">Poke {$profile['name']}</a></li>
+                <li><a href="#">{$Think.lang._action_view_photo_someone|sprintf=###,$profile['name']}</a></li>
+                <li><a href="#">{$Think.lang._action_suggest_friend|sprintf=###,$profile['name']}</a></li>
+                <li><a href="#">{$Think.lang._action_send_message|sprintf=###,$profile['name']}</a></li>
+                <li><a href="#">{$Think.lang._action_poke_someone|sprintf=###,$profile['name']}</a></li>
               </case>
               <case value="friendrequest">
-                <li><a href="#">Confirm Friend</a></li>
-                <li><a href="#">Send {$profile['name']} a Message</a></li>
+                <li><a href="#">{$Think.lang._action_confirm_friend}</a></li>
+                <li><a href="#">{$Think.lang._action_send_message|sprintf=###,$profile['name']}</a></li>
               </case>
             </switch>
             </ul>
