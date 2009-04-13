@@ -89,3 +89,12 @@
 #content .dialog_body ul li .inactive {color:#BBB;height:13px;padding:3px 5px;display:block;border-bottom:1px solid #D8DFEA;}
 #content .dialog_body ul li a {height:13px;padding:3px 5px;display:block;text-decoration:none;border-bottom:1px solid #D8DFEA;}
 #content .dialog_body ul li a:hover {background-color:#3B5998;color:#FFF;}
+
+/*people*/
+.widecolumn .profile_name_and_status {}
+.widecolumn .user_friends {margin-top:14px;}
+.widecolumn .user_friends p {color:#777;margin-bottom:7px;}
+.widecolumn .user_friends .person_list {}
+.widecolumn .user_friends .person_list .person {float:left;padding:3px 17px 3px 0;}
+.widecolumn .user_friends .person_list .person .UIRoundedImage {margin-bottom:3px;}
+.widecolumn .user_friends .person_list .person .user_name {width:50px;display:block;overflow:hidden;line-height:20px;text-align:center;}

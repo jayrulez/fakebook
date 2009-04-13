@@ -21,6 +21,8 @@ return array
 	'_action_confirm_friend'		=>	'确认朋友请求',
 
 	'_action_remove_friend'	=>	'从朋友中删除',
+
+	'_people_some_friends'	=>	'下面是  <strong>%s</strong> 的几个朋友:',
 );
 
 ?>
