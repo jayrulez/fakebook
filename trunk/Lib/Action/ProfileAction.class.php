@@ -197,8 +197,8 @@ class ProfileAction extends BaseAction
 			}
 			else
 			{
-				$map['uid_to'] = $uid;
-				$map['uid_from'] = $this->userId;
+				$map['uid_from'] = $uid;
+				$map['uid_to'] = $this->userId;
 				$friend = D('FriendRequest')->find($map);
 				if($friend)
 				{
