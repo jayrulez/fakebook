@@ -42,18 +42,6 @@ class ProfileAction extends BaseAction
 		
 		
 		/*
-		 * get user wall
-		 */
-		$listRows = 5;
-		$WallCls = new WallAction;
-		$Wall = $WallCls->getWall($uid,'u',$listRows,1);
-		$wallSubheader = $WallCls->getWallHeader($Wall['count'],$listRows,$uid,'u');
-		
-		$this->assign('wall',$Wall);
-		$this->assign('wallSubheader',$wallSubheader);
-		
-		
-		/*
 		 * get current user's friends
 		 */
 		$currentUserFriend = getFriend($uid);
@@ -80,6 +68,56 @@ class ProfileAction extends BaseAction
 		}
 		
 		$this->assign('currentUserFriend',$currentUserFriend);
+		
+		
+		/*
+		 * if current user is my friend
+		 */
+		if($uid == $this->userId)
+		{
+			$userRelation = 'me';
+		}
+		else if(in_array($uid,$this->userFriend))
+		{
+			$userRelation = 'friend';
+		}
+		else
+		{
+			$map['uid_from'] = $uid;
+			$map['uid_to'] = $this->userId;
+			$friend = D('FriendRequest')->find($map);
+			if($friend)
+			{
+				$userRelation = 'request';
+			}
+			else
+			{
+				$map['uid_to'] = $uid;
+				$map['uid_from'] = $this->userId;
+				$friend = D('FriendRequest')->find($map);
+				if($friend)
+				{
+					$userRelation = 'confirm';
+				}
+				else
+				{
+					$userRelation = 'stranger';
+				}
+				
+			}
+		}
+		
+		$this->assign('userRelation',$userRelation);
+		
+		
+		/*
+		 * show stranger the people page
+		 */
+		if($userRelation == 'stranger')
+		{
+			$this->display('people');
+			exit();
+		}
 		
 		
 		/*
@@ -113,28 +151,16 @@ class ProfileAction extends BaseAction
 		
 		
 		/*
-		 * if current user is my friend
+		 * get user wall
 		 */
-		if($uid == $this->userId)
-		{
-			$userRelation = 'me';
-		}
-		else if(in_array($uid,$this->userFriend))
-		{
-			$userRelation = 'friend';
-		}
-		else
-		{
-			$map['uid_from'] = $uid;
-			$map['uid_to'] = $this->userId;
-			$friendRequest = D('FriendRequest')->find($map);
-			if($friendRequest)
-			{
-				$userRelation = 'friendrequest';
-			}
-		}
+		$listRows = 5;
+		$WallCls = new WallAction;
+		$Wall = $WallCls->getWall($uid,'u',$listRows,1);
+		$wallSubheader = $WallCls->getWallHeader($Wall['count'],$listRows,$uid,'u');
 		
-		$this->assign('userRelation',$userRelation);
+		$this->assign('wall',$Wall);
+		$this->assign('wallSubheader',$wallSubheader);
+
 		
 		$this->display();
 	}
@@ -163,6 +189,22 @@ class ProfileAction extends BaseAction
 		}
 		
 		$this->assign('profile',$Profile);
+		
+		
+		/*
+		 * get current user's friends
+		 */
+		$currentUserFriend = getFriend($uid);
+		shuffle($currentUserFriend);
+		
+		foreach($currentUserFriend as &$key)
+		{
+			$key = array('uid'=>current(array_diff($key,array($uid))));
+		}
+		
+		$this->assign('currentUserFriend',$currentUserFriend);
+		
+		
 		$this->display();
 	}
 	

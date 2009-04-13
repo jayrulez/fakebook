@@ -21,6 +21,8 @@ return array
 	'_action_confirm_friend'		=>	'Confirm Friend Request',
 
 	'_action_remove_friend'	=>	'Remove Friend',
+
+	'_people_some_friends'	=>	'Here are some of <strong>%s\'s</strong> friends:',
 );
 
 ?>
