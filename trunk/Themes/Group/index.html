@@ -47,9 +47,11 @@
             <div class="box_header">{$Think.lang._gm_header}</div>
             <div class="box_subheader clearfix">
               <span class="subtitle">{$groupMemberHeader}</span>
+              <if condition="$groupMember AND $groupAccess neq GUEST">
               <span class="actionlink">
                 <a href="{:url('','','members','',array('id'=>$groupInfo['id']))}">{$Think.lang._ACTION_SEEALL}</a>
               </span>
+              </if>
             </div>
             <div class="box_content clearfix">
               <ul>
@@ -95,16 +97,27 @@
           </div>
           <div id="profile_actions">
             <ul>
-{/*
-              <li><a href="#">Message All Members</a></li>
-              <li><a href="#">Edit Group</a></li>
-              <li><a href="#">Edit Members</a></li>
-              <li><a href="#">Edit Group Officers</a></li>
-              <li><a href="#">Invite People to Join</a></li>
-*/}
-              <li><a href="{:url('','','members','',array('id'=>$groupInfo['id']))}">View All Members</a></li>
-              <li><a href="#">Leave Group</a></li>
-            <ul/>
+              <switch name="groupAccess">
+                <case value="CREATOR|ADMIN">
+                  <li><a href="#">Message All Members</a></li>
+                  <li><a href="#">Edit Group</a></li>
+                  <li><a href="#">Edit Members</a></li>
+                  <li><a href="#">Edit Group Officers</a></li>
+                  <li><a href="#">Invite People to Join</a></li>
+                  <li><a href="#">Leave Group</a></li>
+                </case>
+                <case value="MEMBER">
+                  <li><a href="#">Message All Members</a></li>
+                  <if condition="$groupInfo['privacy'] eq OPEN">
+                  <li><a href="#">Invite People to Join</a></li>
+                  </if>
+                  <li><a href="#">Leave Group</a></li>
+                </case>
+                <case value="USER_GUEST">
+                  <li><a href="#">Join this Group</a></li>
+                </case>
+              </switch>
+            </ul>
           </div>
           <div class="roundbox">
             <div class="UIProfileBox_Container">

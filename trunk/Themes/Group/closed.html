@@ -1,0 +1,80 @@
+<include file="../Public/pghead"/>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+<title>{&SITE_NAME} | {$groupInfo['name']}</title>
+<include file="../Public/header"/>
+</head>
+<body class="{$browser_id} {&LANG_ID}">
+  <div id="non_footer" >
+    <div id="page_height">
+      <div id="menubar_container">
+      <include file="../Public/menubar"/>
+      </div>
+      <div id="content" class="clearfix">
+        <div class="UIFullPage_Container">
+        <div class="widecolumn">
+          <div class="group_title">
+            <h2>{$groupInfo['name']}</h2>
+            {/* Global */}
+          </div>
+          <div class="group_info_section">
+            <h4>{$Think.lang._bi_header}</h4>
+            <dl class="clearfix">
+              <dt>{$Think.lang._bi_type}</dt>
+              <dd>
+                <a href="#">{$Think.lang._bi_type_student}</a> - <a href="#">{$Think.lang._bi_subtype_alumni}</a>
+              </dd>
+              <if condition="$groupInfo['description']">
+              <dt>{$Think.lang._bi_description}</dt>
+              <dd>
+                {$groupInfo['description']|htmlspecialchars|nl2br}
+              </dd>
+              </if>
+            </dl>
+{/*
+            <h4>Contact Info</h4>
+            <dl class="clearfix">
+              <dt>Email:</dt>
+              <dd>name@domain.com</dd>
+              <dt>Website:</dt>
+              <dd>http://www.domain.com</dd>
+              <dt>Location:</dt>
+              <dd>Jilin Changchun</dd>
+            </dl>
+*/}
+          </div>
+        </div>
+        <div class="narrowcolumn">
+          <div class="picture">
+            <img alt="" src="{$groupInfo['id']|getGroupPicture=###,'big'}"/>
+          </div>
+          <div id="profile_actions">
+            <ul>
+              <li><a href="#">Request to Join Group</a></li>
+            <ul/>
+          </div>
+          <div class="roundbox">
+            <div class="UIProfileBox_Container">
+              <div class="box_header">{$Think.lang._gt_header}</div>
+              <div class="box_content clearfix">
+                <if condition="$groupInfo['privacy'] eq OPEN">
+                  {$Think.lang._gt_open}
+                <elseif condition="$groupInfo['privacy'] eq CLOSED" />
+                  {$Think.lang._gt_closed}
+                <else />
+                  {$Think.lang._gt_secret}
+                </if>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="adcolumn">
+          //ad
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<include file="../Public/footer"/>
+</body>
+<include file="../Public/pgfoot"/>

@@ -21,6 +21,11 @@ return array
 	'_gm_header'		=>	'Members',
 	'_gm_subheader1'	=>	'Displaying %4$s of %1$s%2$s members%3$s',
 	'_gm_subheader2'	=>	'Displaying %s%s members%s',
+	'_gm_subheader3'	=>	'No Members',
+
+	/* members */
+	'_index_header'		=>	'Displaying %s\'s members',
+	'_index_subheader'	=>	'%s has %s members',
 );
 
 ?>
