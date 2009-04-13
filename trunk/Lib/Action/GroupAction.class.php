@@ -14,10 +14,9 @@ class GroupAction extends BaseAction
 		$groupInfo = getGroupInfo($gid);
 		$this->assign('groupInfo',$groupInfo);
 		
+		
 		/*
-		 * 
 		 * group member
-		 * 
 		 */
 		
 		//get members
@@ -41,9 +40,7 @@ class GroupAction extends BaseAction
 		
 		
 		/*
-		 * 
 		 * mini wall
-		 * 
 		 */
 		$listRows = 5;
 		$WallCls = new WallAction;
@@ -51,13 +48,29 @@ class GroupAction extends BaseAction
 		$wallSubheader = $WallCls->getWallHeader($Wall['count'],$listRows,$gid,'g');
 		$this->assign('wall',$Wall);
 		$this->assign('wallSubheader',$wallSubheader);
-
-		//display tmpl
+		
+		
 		$this->display();
 	}
 	
 	public function members()
 	{
+		$gid = (int)$_GET['id'];
+		
+		//redirect if isnt group
+		if(!$gid || !getGroupInfo($gid))
+			$this->redirect('','','home');
+		
+		//get group info
+		$groupInfo = getGroupInfo($gid);
+		$this->assign('groupInfo',$groupInfo);
+		
+		
+		//get members
+		$groupMember = getGroupMember($gid);
+		
+		$this->assign('groupMember',$groupMember);
+		
 		$this->display();
 	}
 	
