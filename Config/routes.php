@@ -13,7 +13,7 @@ return array
 	'index'		=>	array('Index','index'),
 	'home'		=>	array('Home','index'),
 	'profile'	=>	array('Profile','index','id'),
-	'people'	=>	array('Profile','people','username,id'),
+	'people'	=>	array('Profile','people','name,id'),
 	'group'		=>	array('Group','index','id'),
 	'members'	=>	array('Group','members','id'),
 	'groups'	=>	array('Groups','index'),
