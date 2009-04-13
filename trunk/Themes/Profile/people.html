@@ -27,7 +27,7 @@
             <div class="person_list">
               <iterate name="currentUserFriend" id="vo" offset="0" length='8'>
                  <div class="person">
-                   <a href="{:url('','','profile','',array('id'=>$vo['uid']))}">
+                   <a href="{:url('','','people','',array('name'=>str_replace(' ','-',getUserName($vo['uid'])),'id'=>$vo['uid']))}">
                      <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
                        <img alt="" src="{$vo['uid']|getProfilePicture=###,'square'}"/>
                        <span class="UIRoundedImage_Corners">
@@ -39,7 +39,7 @@
                        </span>
                      </span>
                    </a>
-                   <a href="{:url('','','profile','',array('id'=>$vo['uid']))}">
+                   <a href="{:url('','','people','',array('name'=>str_replace(' ','-',getUserName($vo['uid'])),'id'=>$vo['uid']))}">
                      <span class="user_name">{$vo['uid']|getUserName}</span>
                    </a>
                  </div>
