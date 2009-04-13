@@ -21,6 +21,11 @@ return array
 	'_gm_header'		=>	'成员',
 	'_gm_subheader1'	=>	'显示 %s%s位成员%s 中的%s位',
 	'_gm_subheader2'	=>	'显示 %s%s位成员%s',
+	'_gm_subheader3'	=>	'没有成员',
+
+	/* members */
+	'_index_header'		=>	'显示 %s 的群组成员',
+	'_index_subheader'	=>	'%s 共有 %s 个成员',
 );
 
 ?>

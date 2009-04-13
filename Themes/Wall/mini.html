@@ -6,6 +6,7 @@
                 <a href="{:url('','','wall','app',array('type'=>$wall['type'],'id'=>$wall['wid']))}">{$Think.lang._ACTION_SEEALL}</a>
               </span>
             </div>
+            <if condition="$userId AND $groupAccess neq (GUEST OR USER_GUEST)">
             <div id="inputarea">
               <form action="{:url('insert','Wall')}" method="post" name="form">
                 <textarea name="content"></textarea>
@@ -16,11 +17,12 @@
                 <input type="hidden" value="{$wall['type']}" name="type"/>
               </form>
             </div>
+            </if>
             <div id="posts">
               <iterate name="wall.list" id="post">
               <div class="post_item clearfix">
                 <div class="picture">
-                  <a href="{:url('','','profile','app',array('id'=>$post['fromid']))}">
+                  <a href="{:url('','','profile','',array('id'=>$post['fromid']))}">
                     <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
                       <img alt="" src="{$post['fromid']|getProfilePicture=###,'square'}"/>
                       <span class="UIRoundedImage_Corners">
@@ -35,7 +37,7 @@
                 </div>
                 <div class="item">
                   <div class="user">
-                    <a href="{:url('','','profile','app',array('id'=>$post['fromid']))}">{$post['fromid']|getUserName}</a> {$Think.lang.wall_wrote}
+                    <a href="{:url('','','profile','',array('id'=>$post['fromid']))}">{$post['fromid']|getUserName}</a> {$Think.lang.wall_wrote}
                     <br/>
                     <span class="DateAndTime">{$post['time']|formatDate=###,$userInfo['timezone']}</span>
                   </div>
