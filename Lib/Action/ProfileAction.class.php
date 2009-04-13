@@ -73,7 +73,9 @@ class ProfileAction extends BaseAction
 		/*
 		 * get friend relation
 		 */
-		$this->assign('userRelation',$this->getFriendRelation($uid));
+		$userRelation = $this->getFriendRelation($uid);
+		
+		$this->assign('userRelation',$userRelation);
 		
 		
 		/*
