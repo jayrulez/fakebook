@@ -14,18 +14,45 @@
         <div class="UIFullPage_Container">
           <div class="maincolumn">
             <div class="friends_header">
-              <h2>Showing <a href="{:url('','','profile')}">User1</a>'s friends.</h2>
+              <h2>{$pageHeader}</h2>
             </div>
             <div class="friends_subheader">
-              <a href="{:url('','','profile')}">User1</a> has 2 friends.
+              {$pageSubheader}
             </div>
             <div class="friend_item clearfix">
-              <div class="image">
-                <a href="{:url('','','profile')}"><img alt="" src="../Public/Images/silhouette_s.jpg"/></a>
-              </div>
-              <div class="text">
-                <a href="{:url('','','profile')}">Friend1</a>
-              </div>
+              <if condition="$currentUserFriend">
+                <iterate name="currentUserFriend" id="vo">
+                <if condition="$vo['key'] eq 0">
+                  <div class="row clearfix">
+                </if>
+                <div class="person">
+                  <a href="{:url('','','profile','',array('id'=>$vo['uid']))}">
+                    <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
+                      <img alt="" src="{$vo['uid']|getProfilePicture=###,'square'}"/>
+                      <span class="UIRoundedImage_Corners">
+                        <if condition="$browser_id eq ie6">
+                          <div class="transparent_png UIRoundedImage_CornersSprite" style="_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../Public/Images/UIRoundedImage.png',sizingMethod='scale');"> </div>
+                        <else />
+                          <img src="../Public/Images/UIRoundedImage.png" alt="" class="UIRoundedImage_CornersSprite" />
+                        </if>
+                      </span>
+                    </span>
+                  </a>
+                  <a href="{:url('','','profile','',array('id'=>$vo['uid']))}">
+                    <span class="user_name">{$vo['uid']|getUserName}</span>
+                  </a>
+                </div>
+                <if condition="$vo['key'] eq 9">
+                  </div>
+                <elseif condition="$vo['id'] eq $friendCount" />
+                  </div>
+                </if>
+                </iterate>
+              <elseif condition="$profile['id'] eq $userId" />
+                <a class="find_friend" href="#findfriends.php">{$Think.lang._friend_find}</a>
+              <else />
+                <a href="#">{$Think.lang._action_suggest_friend|sprintf=###,$profile['name']}</a>
+              </if>
             </div>
           </div>
           <div class="adcolumn">

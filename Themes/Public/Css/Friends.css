@@ -3,7 +3,12 @@
 
 .maincolumn .friends_header {padding:10px;}
 .maincolumn .friends_subheader {padding:30px 10px 4px;border:1px solid #DDD;}
-.maincolumn .friend_item {border:1px solid #DDD;border-top:none;background-color:#FFF;padding:6px 10px;}
+.maincolumn .friend_item {padding:20px 0 0 23px;border:1px solid #DDD;border-top:none;}
+.maincolumn .friend_item .row {margin-bottom:20px;}
+.maincolumn .friend_item .person {float:left;padding:3px 23px 3px 0;}
+.maincolumn .friend_item .person .UIRoundedImage {margin-bottom:3px;}
+.maincolumn .friend_item .person .user_name {width:50px;display:block;overflow:hidden;line-height:20px;text-align:center;}
+
 .maincolumn .image {margin-right:10px;float:left;}
 .maincolumn .text {float:left;}
 .maincolumn .friend_item_full {border:1px solid #DDD;border-top:none;display:none;background-color:#FBFDFF;}

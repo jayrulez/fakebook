@@ -71,43 +71,9 @@ class ProfileAction extends BaseAction
 		
 		
 		/*
-		 * if current user is my friend
+		 * get friend relation
 		 */
-		if($uid == $this->userId)
-		{
-			$userRelation = 'me';
-		}
-		else if(in_array($uid,$this->userFriend))
-		{
-			$userRelation = 'friend';
-		}
-		else
-		{
-			$map['uid_from'] = $uid;
-			$map['uid_to'] = $this->userId;
-			$friend = D('FriendRequest')->find($map);
-			if($friend)
-			{
-				$userRelation = 'request';
-			}
-			else
-			{
-				$map['uid_to'] = $uid;
-				$map['uid_from'] = $this->userId;
-				$friend = D('FriendRequest')->find($map);
-				if($friend)
-				{
-					$userRelation = 'confirm';
-				}
-				else
-				{
-					$userRelation = 'stranger';
-				}
-				
-			}
-		}
-		
-		$this->assign('userRelation',$userRelation);
+		$this->assign('userRelation',$this->getFriendRelation($uid));
 		
 		
 		/*
@@ -206,6 +172,45 @@ class ProfileAction extends BaseAction
 		
 		
 		$this->display();
+	}
+	
+	public function getFriendRelation($uid)
+	{
+		if($uid == $this->userId)
+		{
+			$userRelation = 'me';
+		}
+		else if(in_array($uid,$this->userFriend))
+		{
+			$userRelation = 'friend';
+		}
+		else
+		{
+			$map['uid_from'] = $uid;
+			$map['uid_to'] = $this->userId;
+			$friend = D('FriendRequest')->find($map);
+			if($friend)
+			{
+				$userRelation = 'request';
+			}
+			else
+			{
+				$map['uid_to'] = $uid;
+				$map['uid_from'] = $this->userId;
+				$friend = D('FriendRequest')->find($map);
+				if($friend)
+				{
+					$userRelation = 'confirm';
+				}
+				else
+				{
+					$userRelation = 'stranger';
+				}
+				
+			}
+		}
+		
+		return $userRelation;
 	}
 	
 	public function _empty()
