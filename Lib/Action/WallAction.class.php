@@ -9,19 +9,67 @@ class WallAction extends BaseAction
 		
 		$type = $_GET['type'];
 		
-		if($type == 'u' && getUserName($wid))
+		if($type == 'u')
 		{
-			$title = getUserName($wid);
-			$map['type'] = 'u';
+			if($this->userId)
+			{
+				$user = new ProfileAction;
+				$userRelation = $user->getFriendRelation($wid);
+			
+				if($userRelation == 'me' OR $userRelation == 'friend')
+				{
+					$title = getUserName($wid);
+				}
+				else
+				{
+					$this->redirect('','','home');
+				}
+			}
+			else
+			{
+				$this->redirect('','','index');
+			}
 		}
-		else if ($type == 'g' && getGroupName($wid))
+		else if ($type == 'g')
 		{
-			$title = getGroupName($wid);
-			$map['type'] = 'g';
+			$map = array();
+			$map['id'] = $wid;
+			$group = D('Group')->find($map);
+			if(empty($group))
+			{
+				$this->redirect('','','home');
+			}
+			else if($group['type'] == 'OPEN')
+			{
+				$title = $group['name'];
+			}
+			else
+			{
+				if(empty($this->userId))
+				{
+					$this->redirect('','','index');
+				}
+				else
+				{
+					$map = array();
+					$map['uid'] = $this->userId;
+					$map['gid'] = $wid;
+					$member = D('GroupMember')->findAll($map);
+				
+					if(empty($member))
+					{
+						$this->redirect('','','home');
+					}
+					else
+					{
+						$title = $group['name'];
+					}
+				}
+			}
 		}
 		else
 		{
-			redirect(url('','','home'));
+			$this->redirect('','','home');
 		}
 		
 		$listRows  =  10;
@@ -75,23 +123,54 @@ class WallAction extends BaseAction
 		redirect($_SERVER["HTTP_REFERER"]);
 	}
 	
-	public function isOwner($id,$wid=0,$fromid=0)
+	public function isOwner($id)
 	{
-		if(!$wid)
-		{
-			if(!$post = D('Wall')->find($id))
-				return false;
-			$wid = $post['wid'];
-			$fromid = $post['fromid'];
-		}
+		if(!$post = D('Wall')->find($id))
+			return false;
+		$wid = $post['wid'];
+		$fromId = $post['fromid'];
+		$type = $post['type'];
 
-		if($this->userId == $fromid)
-			return true;
+		if($type == 'u')
+		{
+			if($this->userId == $fromId)
+				return true;
 	
-		if($this->userId == $wid)
-			return true;
-		
-		/* group wall */
+			if($this->userId == $wid)
+				return true;
+				
+			return false;
+		}
+		else if($type == 'g')
+		{
+			if(empty($this->userId))
+			{
+				return false;
+			}
+			else
+			{
+				$map = array();
+				$map['uid'] = $this->userId;
+				$map['gid'] = $wid;
+				$member = D('GroupMember')->find($map);
+				
+				if(empty($member))
+				{
+					return false;
+				}
+				else if($member['title'] == 'creator' OR $member['title'] == 'admin')
+				{
+					return true;
+				}
+				else
+				{
+					if($this->userId == $fromId)
+						return true;
+						
+					return false;
+				}
+			}
+		}
 
 		return false;
 	}
@@ -99,6 +178,7 @@ class WallAction extends BaseAction
 	public function getWall($wid,$type,$listRows=10,$page=1)
 	{
 		$dao = D('Wall');
+		$map = array();
 		$map['wid'] = $wid;
 		$map['del'] = 0;
 		$map['type'] = $type;

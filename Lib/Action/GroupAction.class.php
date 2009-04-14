@@ -14,7 +14,7 @@ class GroupAction extends BaseAction
 		$groupInfo = getGroupInfo($gid);
 		$this->assign('groupInfo',$groupInfo);
 		
-				
+		
 		//get members
 		$groupMember = getGroupMember($gid);
 		
