@@ -95,9 +95,7 @@
                 <iterate name="userGroup" id="vo">
                   <li>
                     <a class="group_name" href="{:url('','','group','',array('id'=>$vo['gid']))}">{$vo['info']['name']}</a>
-                    <if condition="$vo['info']['privacy'] eq SECRET">
-                    *
-                    </if>
+                    <if condition="$vo['info']['privacy'] eq SECRET">*</if>
                   </li>
                 </iterate>
                 </ul>
