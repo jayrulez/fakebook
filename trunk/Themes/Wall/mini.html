@@ -6,7 +6,7 @@
                 <a href="{:url('','','wall','app',array('type'=>$wall['type'],'id'=>$wall['wid']))}">{$Think.lang._ACTION_SEEALL}</a>
               </span>
             </div>
-            <if condition="$userId AND $groupAccess neq (GUEST OR USER_GUEST)">
+            <if condition="$userId AND $groupAccess neq GUEST AND $groupAccess neq USER_GUEST">
             <div id="inputarea">
               <form action="{:url('insert','Wall')}" method="post" name="form">
                 <textarea name="content"></textarea>

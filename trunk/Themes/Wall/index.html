@@ -21,7 +21,11 @@
           <else />
             <a href="{:url('','','group','app',array('id'=>$wid))}">
           </if>
+            <if condition="$userId">
             <span class="UIRoundedImage  UIRoundedImage_MEDIA UIRoundedImage_LARGE">
+            <else />
+            <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
+            </if>
               <if condition="$type eq u">
               <img alt="" src="{$wall['wid']|getProfilePicture=###,'square'}"/>
               <else />
@@ -45,7 +49,7 @@
         </div>
         <div class="widecolumn">
           <div id="wall">
-            <if condition="$userId">
+            <if condition="$userId AND $groupAccess neq GUEST AND $groupAccess neq USER_GUEST">
             <div id="inputarea">
               <form action="{:url('insert','Wall')}" method="post" name="form">
                 <textarea name="content"></textarea>

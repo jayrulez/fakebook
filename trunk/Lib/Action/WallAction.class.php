@@ -6,7 +6,6 @@ class WallAction extends BaseAction
 	{
 		$wid = (int)$_GET['wid'];
 		$page = (int)$_GET['page'];
-		
 		$type = $_GET['type'];
 		
 		if($type == 'u')
@@ -39,15 +38,19 @@ class WallAction extends BaseAction
 			{
 				$this->redirect('','','home');
 			}
-			else if($group['type'] == 'OPEN')
-			{
-				$title = $group['name'];
-			}
 			else
 			{
 				if(empty($this->userId))
 				{
-					$this->redirect('','','index');
+					if($group['privacy'] == 'OPEN')
+					{
+						$title = $group['name'];
+						$groupAccess = 'GUEST';
+					}
+					else
+					{
+						$this->redirect('','','index');
+					}
 				}
 				else
 				{
@@ -56,13 +59,19 @@ class WallAction extends BaseAction
 					$map['gid'] = $wid;
 					$member = D('GroupMember')->findAll($map);
 				
-					if(empty($member))
+					if(empty($member) && $group['privacy'] != 'OPEN')
 					{
 						$this->redirect('','','home');
+					}
+					else if(empty($member) && $group['privacy'] == 'OPEN')
+					{
+						$title = $group['name'];
+						$groupAccess = 'USER_GUEST';
 					}
 					else
 					{
 						$title = $group['name'];
+						$groupAccess = strtoupper($member['title']);
 					}
 				}
 			}
@@ -79,6 +88,7 @@ class WallAction extends BaseAction
 		$this->assign('wall',$Wall);
 		$this->assign('type',$type);
 		$this->assign('title',$title);
+		$this->assign('groupAccess',$groupAccess);
 		
 		$this->display();
 	}
