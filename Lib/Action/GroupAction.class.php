@@ -55,6 +55,7 @@ class GroupAction extends BaseAction
 				{
 					$isMember = true;
 					$groupAccess = strtoupper($key['title']);
+					break;
 				}
 			}
 			
@@ -171,6 +172,7 @@ class GroupAction extends BaseAction
 				if($this->userId == $key['uid'])
 				{
 					$isMember = true;
+					break;
 				}
 			}
 			
