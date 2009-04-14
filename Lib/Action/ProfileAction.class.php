@@ -113,7 +113,38 @@ class ProfileAction extends BaseAction
 		/*
 		 * get user group
 		 */
-		$userGroup = getUserGroup($uid);
+		$userGroupAll = getUserGroup($uid);
+		$userGroup = array();
+		
+		if(empty($userGroupAll))
+		{
+			$userGroup = $userGroupAll;
+		}
+		else if($this->userId == $uid)
+		{
+			$userGroup = $userGroupAll;
+			foreach($userGroup as &$key)
+			{
+				$map['id'] = $key['gid'];
+				$info = D('Group')->find($map);
+				$key += array('info'=>$info);
+			}
+		}
+		else
+		{
+			$j = 0;
+			for($i=0;$i < count($userGroupAll);$i++)
+			{
+				$map['id'] = $userGroupAll[$i]['gid'];
+				$info = D('Group')->find($map);
+				
+				if($info['privacy'] != 'SECRET')
+				{
+					$userGroup[$j] = $userGroupAll[$i]+array('info'=>$info);
+					$j++;
+				}
+			}
+		}
 		
 		$this->assign('userGroup',$userGroup);
 		
