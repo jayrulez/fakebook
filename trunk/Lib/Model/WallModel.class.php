@@ -10,8 +10,8 @@ class WallModel extends Model
 			'foreign_key'=>'fromid',
 			'mapping_name'=>'User',
 		),
-	);*/
-
+	);
+	*/
 }
 
 ?>
