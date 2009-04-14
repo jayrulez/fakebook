@@ -110,6 +110,19 @@ CREATE TABLE IF NOT EXISTS `fb_group_member` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `fb_group_request`
+--
+
+CREATE TABLE IF NOT EXISTS `fb_group_request` (
+  `uid` int(100) NOT NULL,
+  `gid` int(100) NOT NULL,
+  PRIMARY KEY  (`uid`,`gid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
+
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `fb_friend`
 --
 
