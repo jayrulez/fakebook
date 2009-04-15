@@ -100,9 +100,9 @@ class GroupAction extends BaseAction
 			}
 
 			if($count > 8){
-				$groupMemberHeader = sprintf(L('_gm_subheader1'),$a1,number_format($count),$a2,8);
+				$groupMemberHeader = sprintf(L('_member_subheader1'),$a1,number_format($count),$a2,8);
 			} else {
-				$groupMemberHeader = sprintf(L('_gm_subheader2'),$a1,$count,$a2);
+				$groupMemberHeader = sprintf(L('_member_subheader2'),$a1,$count,$a2);
 			}
 		
 			shuffle($groupMember);
@@ -110,7 +110,7 @@ class GroupAction extends BaseAction
 		}
 		else
 		{
-			$groupMemberHeader = L('_gm_subheader3');
+			$groupMemberHeader = L('_member_subheader3');
 		}
 		
 		$this->assign('groupMemberHeader',$groupMemberHeader);
@@ -218,8 +218,8 @@ class GroupAction extends BaseAction
 		 */
 		$name = '<a href="'.url('','','group','',array('id'=>$gid)).'">'.$groupInfo['name'].'</a>';
 		
-		$pageHeader = sprintf(L('_index_header'),$name);
-		$pageSubheader = sprintf(L('_index_subheader'),$name,$memberCount);
+		$pageHeader = sprintf(L('_members_header'),$name);
+		$pageSubheader = sprintf(L('_members_subheader'),$name,$memberCount);
 		
 		$this->assign('pageHeader',$pageHeader);
 		$this->assign('pageSubheader',$pageSubheader);

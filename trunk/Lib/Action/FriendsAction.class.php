@@ -84,15 +84,15 @@ class FriendsAction extends BaseAction
 		 */
 		$name = '<a href="'.url('','','profile','',array('id'=>$uid)).'">'.$Profile['name'].'</a>';
 		
-		$pageHeader = sprintf(L('_index_header'),$name);
+		$pageHeader = sprintf(L('_friends_header'),$name);
 		
 		if($currentUserFriend)
 		{
-			$pageSubheader = sprintf(L('_index_subheader1'),$name,$friendCount);
+			$pageSubheader = sprintf(L('_friends_subheader1'),$name,$friendCount);
 		}
 		else
 		{
-			$pageSubheader = sprintf(L('_index_subheader2'),$name);
+			$pageSubheader = sprintf(L('_friends_subheader2'),$name);
 		}
 		
 		
