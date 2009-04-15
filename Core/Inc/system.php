@@ -22,7 +22,7 @@ return array(
 
 	/* PlugIn Config */
 	'THINK_PLUGIN_ON'		=>	false,
-    'APP_AUTO_SETUP'		=>	false,
+	'APP_AUTO_SETUP'		=>	false,
 
 	'LIMIT_RESFLESH_ON'		=>	false,
 	'LIMIT_REFLESH_TIMES'	=>	3,
@@ -31,7 +31,7 @@ return array(
 	'DEBUG_MODE'			=>	false,	 
 	'ERROR_MESSAGE'			=>	L('_ERROR_MESSAGE_'),	
 	'ERROR_PAGE'			=>	'',
-    'SHOW_ERROR_MSG'        =>	true,
+	'SHOW_ERROR_MSG'        =>	true,
 
 	/* Var Config */
 	'VAR_PATHINFO'			=>	's',
@@ -47,8 +47,8 @@ return array(
 
 	'DEFAULT_MODULE'		=>	'Index',
 	'DEFAULT_ACTION'		=>	'index',
-    'MODULE_REDIRECT'		=>	'',
-    'ACTION_REDIRECT'		=>	'',
+	'MODULE_REDIRECT'		=>	'',
+	'ACTION_REDIRECT'		=>	'',
 
 	/* Template Config */
 	'TMPL_CACHE_ON'			=>	true,
@@ -61,9 +61,9 @@ return array(
 	'OUTPUT_CHARSET'		=>	'utf-8',
 	'OUTPUT_CONTENT_TYPE'	=>	'utf-8',
 	'XML_ENCODING'			=>	'utf-8',
-    'DEFAULT_LAYOUT'		=> 	'Layout:index',
-    'AUTO_DETECT_THEME'		=>	false,
-    'TMPL_VAR_IDENTIFY'		=>	'',
+	'DEFAULT_LAYOUT'		=> 	'Layout:index',
+	'AUTO_DETECT_THEME'		=>	false,
+	'TMPL_VAR_IDENTIFY'		=>	'',
 
 	'CONTR_CLASS_PREFIX'	=>	'',
 	'CONTR_CLASS_SUFFIX'	=>	'Action',
@@ -71,8 +71,8 @@ return array(
 	'ACTION_SUFFIX'			=>	'',
 	'MODEL_CLASS_PREFIX'	=>	'',
 	'MODEL_CLASS_SUFFIX'	=>	'Model',
-    'AUTO_NAME_IDENTIFY'	=>	true,
-    'DEFAULT_MODEL_APP'     =>	'@',
+	'AUTO_NAME_IDENTIFY'	=>	true,
+	'DEFAULT_MODEL_APP'     =>	'@',
 
 	/* Html Config */
 	'HTML_FILE_SUFFIX'		=>	'.shtml',
@@ -83,8 +83,8 @@ return array(
 
 	/* Lang Config */
 	'LANG_SWITCH_ON'		=>	true,
-    'AUTO_DETECT_LANG'      =>	true,
-    'LANG_CACHE_ON'			=>	true,
+	'AUTO_DETECT_LANG'      =>	true,
+	'LANG_CACHE_ON'			=>	true,
 	'DEFAULT_LANGUAGE'		=>	'en-US',
 	'LANG_ID'				=>	'en',
 	'HTM_LANG_ID'			=>	'en',
@@ -107,16 +107,16 @@ return array(
 	/* DB Config */
 	'DB_CHARSET'			=>	'utf8',
 	'DB_DEPLOY_TYPE'		=>	0,
-    'DB_RW_SEPARATE'		=>	false,
+	'DB_RW_SEPARATE'		=>	false,
 	'SQL_DEBUG_LOG'			=>	false,
 	'DB_FIELDS_CACHE'		=>	true,
-    'SQL_MODE'				=>	'',
-    'FIELDS_DEPR'			=>	',',
-    'TABLE_DESCRIBE_SQL'	=>	'',
-    'FETCH_TABLES_SQL'		=>  '',
-    'DB_TRIGGER_PREFIX'		=>	'tr_',
-    'DB_SEQUENCE_PREFIX'	=>	'seq_',
-    'DB_CASE_LOWER'			=>	true, 
+	'SQL_MODE'				=>	'',
+	'FIELDS_DEPR'			=>	',',
+	'TABLE_DESCRIBE_SQL'	=>	'',
+	'FETCH_TABLES_SQL'		=>  '',
+	'DB_TRIGGER_PREFIX'		=>	'tr_',
+	'DB_SEQUENCE_PREFIX'	=>	'seq_',
+	'DB_CASE_LOWER'			=>	true, 
 
 	/* DATA CACHE Config */
 	'DATA_CACHE_TIME'		=>	-1,
@@ -168,9 +168,9 @@ return array(
 	'LIKE_MATCH_FIELDS'		=>	'',
 	'ACTION_JUMP_TMPL'		=>	'Public:error',
 	'ACTION_404_TMPL'		=>	'Public:error',
-    'TOKEN_ON'				=>	true,
-    'TOKEN_NAME'			=>	'fb_html_token',
-    'TOKEN_TYPE'			=>	'md5',
-    'APP_DOMAIN_DEPLOY'		=>	false,
+	'TOKEN_ON'				=>	true,
+	'TOKEN_NAME'			=>	'fb_html_token',
+	'TOKEN_TYPE'			=>	'md5',
+	'APP_DOMAIN_DEPLOY'		=>	false,
 );
 ?>
