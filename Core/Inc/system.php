@@ -11,7 +11,7 @@ return array(
 	'ROUTER_ON'				=>	true,
 	'COMPONENT_DEPR'		=>	'@',
 	'COMPONENT_TYPE'		=>	1,
-    'URL_CASE_INSENSITIVE'	=>   false,
+	'URL_CASE_INSENSITIVE'	=>   false,
 	'URL_AUTO_REDIRECT'		=>   false,
 	'CHECK_FILE_CASE'		=>   false,
 
@@ -31,7 +31,7 @@ return array(
 	'DEBUG_MODE'			=>	false,	 
 	'ERROR_MESSAGE'			=>	L('_ERROR_MESSAGE_'),	
 	'ERROR_PAGE'			=>	'',
-	'SHOW_ERROR_MSG'        =>	true,
+	'SHOW_ERROR_MSG'		=>	true,
 
 	/* Var Config */
 	'VAR_PATHINFO'			=>	's',
@@ -72,7 +72,7 @@ return array(
 	'MODEL_CLASS_PREFIX'	=>	'',
 	'MODEL_CLASS_SUFFIX'	=>	'Model',
 	'AUTO_NAME_IDENTIFY'	=>	true,
-	'DEFAULT_MODEL_APP'     =>	'@',
+	'DEFAULT_MODEL_APP'		=>	'@',
 
 	/* Html Config */
 	'HTML_FILE_SUFFIX'		=>	'.shtml',
