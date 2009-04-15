@@ -13,6 +13,7 @@
       <div id="content" class="clearfix">
       <div class="UIFullPage_Container">
         <div id="home_left_column">
+{/*
           <div id="home_filter">
             <div class="UIFilterList UIFilterList_BottomMargin">
               <div class="UIFilterList_Item UIFilterList_FirstItem UIFilterList_Selected">
@@ -84,6 +85,7 @@
               </div>
             </div>
           </div>
+*/}
           <div id="home_stream">
             <div class="UIComposer UIComposer_STATE_PIC_OUTSIDE">
               <a class="UIComposer_Pic" href="profile.php?id=40">
@@ -141,9 +143,9 @@
             
             
               <div id="div_story_26482718214011122_61558172300" class="UIStory UIIntentionalStory actor_517012567 commentable_item no_comments autoexpand_mode collapsed_comments hidden_add_button">
-                <a class="UIIntentionalStory_Pic" href="http://www.facebook.com/profile.php?id=517012567&ref=nf">
+                <a class="UIIntentionalStory_Pic" href="#">
                   <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
-                    <img class="UIRoundedImage_Image" alt="" src="http://profile.ak.facebook.com/v228/2012/11/q517012567_5406.jpg"/>
+                    <img class="UIRoundedImage_Image" alt="" src="{$userId|getProfilePicture=###,'square'}"/>
                     <span class="UIRoundedImage_Corners">
                       <img class="UIRoundedImage_CornersSprite" alt="" src="../Public/Images/UIRoundedImage.png"/>
                     </span>
@@ -161,7 +163,7 @@
                         <div class="UIMediaItem">
                           <a href="#">
                             <div class="UIMediaItem_Wrapper" style="">
-                              <img alt="" src="http://platform.ak.facebook.com/www.new/app_full_proxy.php?app=2439131959&v=1&size=f&cksum=1c1214f6ac0a13f5efc5a8756b718985&src=http%3A%2F%2Fs3.amazonaws.com%2Fgraffiti%2Fe8fbb1319742c6cf78c083739caaab06P_315x168.png"/>
+                              <img alt="" src="../Public/Images/silhouette_s.jpg"/>
                             </div>
                           </a>
                         </div>
@@ -189,7 +191,7 @@
                       <span class="action_links_bottom">
                         <a class="">Comment</a>
                         <span class="action_link_dash action_link_dash_1"> · </span>
-                        <span id="like_link_26482718214011122_61558172300_id_49c25958391864c66943249" class="like_link like_not_exists">
+                        <span class="like_link like_not_exists">
                           <a class="like_component_not_exists">Like</a>
                           <a class="like_component_exists">Unlike</a>
                         </span>
@@ -217,7 +219,7 @@
                             <div id="add_comment_wrapper_26482718214011122_61558172300" class="wallcommentbox one_row_add_box clearfix">
                               <div class="comments_add_box_image">
                                 <span class="UIRoundedImage UIRoundedImage_GIRLIE UIRoundedImage_SMALL">
-                                  <img class="UIRoundedImage_Image" alt="" src="http://profile.ak.facebook.com/v228/2012/11/q517012567_5406.jpg"/>
+                                  <img class="UIRoundedImage_Image" alt="" src="{$userId|getProfilePicture=###,'square'}"/>
                                   <span class="UIRoundedImage_Corners">
                                     <img class="UIRoundedImage_CornersSprite" alt="" src="../Public/Images/UIRoundedImage.png"/>
                                   </span>

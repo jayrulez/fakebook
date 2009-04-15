@@ -116,6 +116,22 @@ CREATE TABLE IF NOT EXISTS `fb_group_member` (
 CREATE TABLE IF NOT EXISTS `fb_group_request` (
   `uid` int(100) NOT NULL,
   `gid` int(100) NOT NULL,
+  `time` int(100) NULL,
+  PRIMARY KEY  (`uid`,`gid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fb_group_invite`
+--
+
+CREATE TABLE IF NOT EXISTS `fb_group_invite` (
+  `uid` int(100) NOT NULL,
+  `gid` int(100) NOT NULL,
+  `uid_from` int(100) NOT NULL,
+  `time` int(100) NULL,
   PRIMARY KEY  (`uid`,`gid`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
 
@@ -142,6 +158,7 @@ CREATE TABLE IF NOT EXISTS `fb_friend` (
 CREATE TABLE IF NOT EXISTS `fb_friend_request` (
   `uid_from` int(100) NOT NULL,
   `uid_to` int(100) NOT NULL,
+  `time` int(100) NULL,
   PRIMARY KEY  (`uid_from`,`uid_to`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
 
@@ -185,6 +202,22 @@ CREATE TABLE IF NOT EXISTS `fb_photo_tag` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `fb_feed`
+--
+
+CREATE TABLE IF NOT EXISTS `fb_feed` (
+  `id` int(100) NOT NULL auto_increment,
+  `type` enum('wall','photo','album','comment','group','friend','language') NOT NULL,
+  `parameter` text NULL,
+  `uid` int(100) NOT NULL,
+  `time` int(100) NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
+
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `fb_report`
 --
 
@@ -195,6 +228,5 @@ CREATE TABLE IF NOT EXISTS `fb_report` (
   `uid` int(100) NOT NULL,
   `status` tinyint(1) default '0',
   `time` int(100) NULL,
-
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;

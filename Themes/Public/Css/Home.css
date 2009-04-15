@@ -31,7 +31,8 @@
 #home_left_column #home_filter .UIFilterList_Selected .UIFilterList_ItemRight {background:transparent url([theme_url]/Images/UIFilterList_Selected_ltr.gif) no-repeat scroll left -27px;display:block;height:27px;position:absolute;right:0;top:0;width:9px;}
 
 /*  Start Temp  */
-#home_left_column #home_stream {float:left;padding-left:14px;width:530px;}
+/* #home_left_column #home_stream {float:left;padding-left:14px;width:530px;} */
+#home_left_column #home_stream {float:left;width:100%;}
 .UIComposer_Pic {position:absolute;}
 .UIComposer_STATE_PIC_OUTSIDE .UIComposer_UIRoundedBox {padding-left:59px;}
 .UIComposer{margin-bottom:10px;overflow:hidden;}

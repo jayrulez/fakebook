@@ -4,6 +4,11 @@ class HomeAction extends BaseAction
 {
 	public function index()
 	{
+		if(empty($this->userId))
+		{
+			$this->redirect('','','index');
+		}
+		
 		$this->display();
 	}
 	
