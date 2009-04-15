@@ -49,7 +49,7 @@
         </div>
         <div class="widecolumn">
           <div id="wall">
-            <if condition="$userId AND $groupAccess neq GUEST AND $groupAccess neq USER_GUEST">
+            <if condition="$userId AND $groupAccess neq GUEST AND $groupAccess neq USER_GUEST AND $userRelation neq request">
             <div id="inputarea">
               <form action="{:url('insert','Wall')}" method="post" name="form">
                 <textarea name="content"></textarea>

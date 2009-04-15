@@ -15,7 +15,7 @@ class WallAction extends BaseAction
 				$user = new ProfileAction;
 				$userRelation = $user->getFriendRelation($wid);
 			
-				if($userRelation == 'me' OR $userRelation == 'friend')
+				if($userRelation == ('me' || 'friend' || 'request'))
 				{
 					$title = getUserName($wid);
 				}
@@ -89,6 +89,7 @@ class WallAction extends BaseAction
 		$this->assign('type',$type);
 		$this->assign('title',$title);
 		$this->assign('groupAccess',$groupAccess);
+		$this->assign('userRelation',$userRelation);
 		
 		$this->display();
 	}
