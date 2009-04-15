@@ -2,11 +2,13 @@
             <div class="box_header">{$Think.lang.wall_header}</div>
             <div class="box_subheader clearfix">
               <span class="subtitle">{$wallSubheader}</span>
+              <if condition="$wall['list']">
               <span class="actionlink">
-                <a href="{:url('','','wall','app',array('type'=>$wall['type'],'id'=>$wall['wid']))}">{$Think.lang._ACTION_SEEALL}</a>
+                <a href="{:url('','','wall','',array('type'=>$wall['type'],'id'=>$wall['wid']))}">{$Think.lang._ACTION_SEEALL}</a>
               </span>
+              </if>
             </div>
-            <if condition="$userId AND $groupAccess neq GUEST AND $groupAccess neq USER_GUEST">
+            <if condition="$userId AND $groupAccess neq GUEST AND $groupAccess neq USER_GUEST AND $userRelation neq request">
             <div id="inputarea">
               <form action="{:url('insert','Wall')}" method="post" name="form">
                 <textarea name="content"></textarea>
