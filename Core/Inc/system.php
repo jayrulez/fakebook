@@ -12,12 +12,12 @@ return array(
 	'COMPONENT_DEPR'		=>	'@',
 	'COMPONENT_TYPE'		=>	1,
     'URL_CASE_INSENSITIVE'	=>   false,
-    'URL_AUTO_REDIRECT'		=>   false,
-    'CHECK_FILE_CASE'		=>   false,
+	'URL_AUTO_REDIRECT'		=>   false,
+	'CHECK_FILE_CASE'		=>   false,
 
 	/* Log Config */
 	'WEB_LOG_RECORD'		=>	false,
-    'LOG_RECORD_LEVEL'		=>	array('EMERG','ALERT','CRIT','ERR'),
+	'LOG_RECORD_LEVEL'		=>	array('EMERG','ALERT','CRIT','ERR'),
 	'LOG_FILE_SIZE'			=>	2097152,
 
 	/* PlugIn Config */
@@ -152,7 +152,7 @@ return array(
 	'COOKIE_DOMAIN'			=>	'',
 	'COOKIE_PATH'			=>	'/',
 	'COOKIE_PREFIX'			=>	'fb_',
-    'COOKIE_SECRET_KEY'     =>	'',
+	'COOKIE_SECRET_KEY'     =>	'',
 
 	/* Page List Config */
 	'PAGE_NUMBERS'			=>	5,
