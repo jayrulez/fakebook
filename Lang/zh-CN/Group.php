@@ -21,7 +21,7 @@ return array
 	'_member_subheader2'	=>	'显示 %s%s位成员%s',
 	'_member_subheader3'	=>	'没有成员',
 
-	'_action_report_group'	=>	'举报此群组',
+	'_action_report_group'	=>	'举报群组',
 
 	/* members */
 	'_members_pagename'	=>	'群组成员',
