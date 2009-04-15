@@ -18,14 +18,14 @@
             {/* Global */}
           </div>
           <div class="group_info_section">
-            <h4>{$Think.lang._bi_header}</h4>
+            <h4>{$Think.lang._info_header}</h4>
             <dl class="clearfix">
-              <dt>{$Think.lang._bi_type}</dt>
+              <dt>{$Think.lang._info_type}</dt>
               <dd>
-                <a href="#">{$Think.lang._bi_type_student}</a> - <a href="#">{$Think.lang._bi_subtype_alumni}</a>
+                <a href="#">{$Think.lang._info_type_student}</a> - <a href="#">{$Think.lang._info_subtype_alumni}</a>
               </dd>
               <if condition="$groupInfo['description']">
-              <dt>{$Think.lang._bi_description}</dt>
+              <dt>{$Think.lang._info_description}</dt>
               <dd>
                 {$groupInfo['description']|htmlspecialchars|nl2br}
               </dd>
@@ -55,14 +55,14 @@
           </div>
           <div class="roundbox">
             <div class="UIProfileBox_Container">
-              <div class="box_header">{$Think.lang._gt_header}</div>
+              <div class="box_header">{$Think.lang._type_header}</div>
               <div class="box_content clearfix">
                 <if condition="$groupInfo['privacy'] eq OPEN">
-                  {$Think.lang._gt_open}
+                  {$Think.lang._type_open}
                 <elseif condition="$groupInfo['privacy'] eq CLOSED" />
-                  {$Think.lang._gt_closed}
+                  {$Think.lang._type_closed}
                 <else />
-                  {$Think.lang._gt_secret}
+                  {$Think.lang._type_secret}
                 </if>
               </div>
             </div>
