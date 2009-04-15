@@ -83,7 +83,7 @@ class PublicAction extends BaseAction
 						
 						Session::set('userFriend',$userFriend);
 						
-						$userDao->setField('signinTime',time(),'id='.$user['id']);
+						$userDao->setField('update_time',time(),'id='.$user['id']);
 
 						if($autosignin)
 						{
