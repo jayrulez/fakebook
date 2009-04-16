@@ -83,11 +83,11 @@ class GroupAction extends BaseAction
 		/*
 		 * group member
 		 */
-		
-		//get header
 		if($groupMember)
 		{
 			$count = count($groupMember);
+			shuffle($groupMember);
+			
 			if($groupAccess == 'GUEST')
 			{
 				$a1 = '';
@@ -104,9 +104,20 @@ class GroupAction extends BaseAction
 			} else {
 				$groupMemberHeader = sprintf(L('_member_subheader2'),$a1,$count,$a2);
 			}
-		
-			shuffle($groupMember);
-			$this->assign('groupMemberShuffle',$groupMember);
+
+			//get user info
+			for($i=0;$i<$count;$i++)
+			{
+				$uid = $groupMember[$i]['uid'];
+				$groupMemberShuffle[$i]['uid'] = $uid;
+				$groupMemberShuffle[$i]['userInfo'] = getUserBasicInfo($uid);
+				if($i == 7)
+				{
+					break;
+				}
+			}
+				
+			$this->assign('groupMemberShuffle',$groupMemberShuffle);
 		}
 		else
 		{

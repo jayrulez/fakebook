@@ -27,7 +27,7 @@
             <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
             </if>
               <if condition="$type eq u">
-              <img alt="" src="{$wall['wid']|getProfilePicture=###,'square'}"/>
+              <img alt="" src="{$pic}"/>
               <else />
               <img alt="" src="../Public/Images/group_s.jpg"/>
               </if>
@@ -67,7 +67,7 @@
                 <div class="picture">
                   <a href="{:url('','','profile','app',array('id'=>$post['fromid']))}">
                     <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
-                      <img alt="" src="{$post['fromid']|getProfilePicture=###,'square'}"/>
+                      <img alt="" src="{$post['userInfo']['pic_square']}"/>
                       <span class="UIRoundedImage_Corners">
                         <if condition="$browser_id eq ie6">
                           <div class="transparent_png UIRoundedImage_CornersSprite" style="_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../Public/Images/UIRoundedImage.png',sizingMethod='scale');"> </div>
@@ -80,7 +80,7 @@
                 </div>
                 <div class="item">
                   <div class="user">
-                    <a href="{:url('','','profile','app',array('id'=>$post['fromid']))}">{$post['fromid']|getUserName}</a> {$Think.lang.wall_wrote}
+                    <a href="{:url('','','profile','app',array('id'=>$post['fromid']))}">{$post['userInfo']['name']}</a> {$Think.lang.wall_wrote}
                     <br/>
                     <span class="DateAndTime">{$post['time']|formatDate=###,$userInfo['timezone']}</span>
                   </div>

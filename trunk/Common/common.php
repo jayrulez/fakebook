@@ -99,14 +99,25 @@ function getUserInfo($uid)
 	return $info;
 }
 
+function getUserBasicInfo($uid)
+{
+	$info = D('User')->find($uid);
+	
+	$basic['name'] = $info['name'];
+	$basic['pic_square'] = getUserPicture($info['pic_square'],'square');
+	
+	return $basic;
+}
+
 function getUserName($uid)
 {
-	$info = getUserInfo($uid);
+	$info = D('User')->find($uid);
 	return $info['name'];
 }
 
-function getProfilePicture($uid,$size='big')
+function getUserPicture($pic,$size)
 {
+	/*
 	$info = getUserInfo($uid);
 	
 	switch($size)
@@ -121,7 +132,7 @@ function getProfilePicture($uid,$size='big')
 			$pic = $info['pic_square'];
 			break;
 	}
-	
+	*/
 	if($pic)
 	{
 		$pic = C('SITE_URL').'/Data/Uploads/'.$pic;

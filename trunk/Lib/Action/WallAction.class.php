@@ -17,7 +17,9 @@ class WallAction extends BaseAction
 			
 				if($userRelation == ('me' || 'friend' || 'request'))
 				{
-					$title = getUserName($wid);
+					$info = getUserBasicInfo($wid);
+					$title = $info['name'];
+					$pic = $info['pic_square'];
 				}
 				else
 				{
@@ -88,6 +90,7 @@ class WallAction extends BaseAction
 		$this->assign('wall',$Wall);
 		$this->assign('type',$type);
 		$this->assign('title',$title);
+		$this->assign('pic',$pic);
 		$this->assign('groupAccess',$groupAccess);
 		$this->assign('userRelation',$userRelation);
 		
@@ -226,6 +229,9 @@ class WallAction extends BaseAction
 			}
 			
 			$key += array('action'=>$action);
+			
+			//get user info
+			$key += array('userInfo'=>getUserBasicInfo($key['fromid']));
 		}
 
 		$array = array();

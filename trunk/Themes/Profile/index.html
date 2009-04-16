@@ -15,7 +15,7 @@
       <div class="UIFullPage_Container">
         <div class="narrowcolumn">
           <div class="picture">
-            <img alt="" src="{$profile['id']|getProfilePicture=###,'big'}"/>
+            <img alt="" src="{$profile['pic_big']|getUserPicture=###,'big'}"/>
           </div>
           <div id="profile_actions">
             <ul>
@@ -60,7 +60,7 @@
                   <div class="person">
                     <a href="{:url('','','profile','',array('id'=>$vo['uid']))}">
                       <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
-                        <img alt="" src="{$vo['uid']|getProfilePicture=###,'square'}"/>
+                        <img alt="" src="{$vo['userInfo']['pic_square']}"/>
                         <span class="UIRoundedImage_Corners">
                           <if condition="$browser_id eq ie6">
                             <div class="transparent_png UIRoundedImage_CornersSprite" style="_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../Public/Images/UIRoundedImage.png',sizingMethod='scale');"> </div>
@@ -71,7 +71,7 @@
                       </span>
                     </a>
                     <a href="{:url('','','profile','',array('id'=>$vo['uid']))}">
-                      <span class="user_name">{$vo['uid']|getUserName}</span>
+                      <span class="user_name">{$vo['userInfo']['name']}</span>
                     </a>
                   </div>
                   <if condition="$vo['key'] eq 2">
