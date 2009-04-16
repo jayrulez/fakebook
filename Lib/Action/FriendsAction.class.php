@@ -54,8 +54,9 @@ class FriendsAction extends BaseAction
 		foreach($currentUserFriend as &$key)
 		{
 			$key = array('uid'=>current(array_diff($key,array($uid))));
-			$key = $key + array('key'=>$i);
-			$key = $key + array('id'=>$j);
+			$key += array('userInfo'=>getUserBasicInfo($key['uid']));
+			$key += array('key'=>$i);
+			$key += array('id'=>$j);
 			
 			$j++;
 			

@@ -45,30 +45,10 @@ class ProfileAction extends BaseAction
 		 * get current user's friends
 		 */
 		$currentUserFriend = getFriend($uid);
-		shuffle($currentUserFriend);
-		$i = 0;
-		$j = 1;
-		
 		foreach($currentUserFriend as &$key)
 		{
 			$key = array('uid'=>current(array_diff($key,array($uid))));
-			$key = $key + array('key'=>$i);
-			$key = $key + array('id'=>$j);
-			
-			$j++;
-			
-			if($i == 2)
-			{
-				$i = 0;
-			}
-			else
-			{
-				$i++;
-			}
 		}
-		
-		$this->assign('currentUserFriend',$currentUserFriend);
-		
 		
 		/*
 		 * get friend relation
@@ -79,7 +59,7 @@ class ProfileAction extends BaseAction
 		
 		
 		/*
-		 * show stranger the people page
+		 * redirect for stranger
 		 */
 		if($userRelation == 'stranger')
 		{
@@ -108,6 +88,34 @@ class ProfileAction extends BaseAction
 		$this->assign('friendCount',$friendCount);
 		$this->assign('friendSubheader',$friendSubheader);
 		
+		
+		/*
+		 * get user info
+		 */
+		shuffle($currentUserFriend);
+		$j = 0;
+		for($i = 0;$i < $friendCount;$i++)
+		{
+			$friend_uid = $currentUserFriend[$i]['uid'];
+			$currentUserFriendShuffle[$i]['uid'] = $friend_uid;
+			$currentUserFriendShuffle[$i]['userInfo'] = getUserBasicInfo($friend_uid);
+			$currentUserFriendShuffle[$i]['key'] = $j;
+			$currentUserFriendShuffle[$i]['id'] = $i + 1;
+			if($j == 2)
+			{
+				$j = 0;
+			}
+			else
+			{
+				$j++;
+			}
+			if($i == 5)
+			{
+				break;
+			}
+		}
+		
+		$this->assign('currentUserFriend',$currentUserFriendShuffle);
 		
 		/*
 		 * get user group
@@ -200,7 +208,19 @@ class ProfileAction extends BaseAction
 			$key = array('uid'=>current(array_diff($key,array($uid))));
 		}
 		
-		$this->assign('currentUserFriend',$currentUserFriend);
+		//get user info
+		for($i = 0;$i < count($currentUserFriend);$i++)
+		{
+			$friend_uid = $currentUserFriend[$i]['uid'];
+			$currentUserFriendShuffle[$i]['uid'] = $friend_uid;
+			$currentUserFriendShuffle[$i]['userInfo'] = getUserBasicInfo($friend_uid);
+			if($i == 7)
+			{
+				break;
+			}
+		}
+		
+		$this->assign('currentUserFriend',$currentUserFriendShuffle);
 		
 		
 		$this->display();
@@ -236,7 +256,19 @@ class ProfileAction extends BaseAction
 			$key = array('uid'=>current(array_diff($key,array($uid))));
 		}
 		
-		$this->assign('currentUserFriend',$currentUserFriend);
+		//get user info
+		for($i = 0;$i < count($currentUserFriend);$i++)
+		{
+			$friend_uid = $currentUserFriend[$i]['uid'];
+			$currentUserFriendShuffle[$i]['uid'] = $friend_uid;
+			$currentUserFriendShuffle[$i]['userInfo'] = getUserBasicInfo($friend_uid);
+			if($i == 7)
+			{
+				break;
+			}
+		}
+		
+		$this->assign('currentUserFriend',$currentUserFriendShuffle);
 		
 		
 		$this->display();
