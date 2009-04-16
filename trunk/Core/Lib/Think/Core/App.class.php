@@ -203,7 +203,7 @@ class App extends Base
     {
 		$defaultLang = C('DEFAULT_LANGUAGE');
         if(C('LANG_SWITCH_ON')) {
-            if(C('AUTO_DETECT_LANG')) {
+            if(C('AUTO_DETECT_LANG')){
                 /*if(isset($_GET[C('VAR_LANGUAGE')])) {
                     $langSet = $_GET[C('VAR_LANGUAGE')];*/
             	if(Session::get('userInfo') != NULL){
@@ -211,27 +211,24 @@ class App extends Base
             		$langSet = $userInfo['language'];
                 }elseif ( Cookie::is_set('language') ) {
                     $langSet = Cookie::get('language');
-                }else if(isset($_SERVER['HTTP_ACCEPT_LANGUAGE']))
-				{
+                }else if(isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])){
                     preg_match('/^([a-z\-]+)/i', $_SERVER['HTTP_ACCEPT_LANGUAGE'], $matches);
                     $langSet = $matches[1];
                 }else{
                     $langSet = $defaultLang;
                 }
-				if(!is_dir(LANG_PATH.$langSet))
-				{
+				if(!is_dir(LANG_PATH.$langSet)){
 					$langSet = $defaultLang;
 				}
-            }else{
-                $langSet = $defaultLang;
-            }
+			}else{
+				$langSet = $defaultLang;
+			}
 			//Cookie::set('language',$langSet,C('COOKIE_EXPIRE'));
 			
-            define('LANG_SET',$langSet);
-            if(C('LANG_CACHE_ON') && is_file(RUNTIME_PATH.MODULE_NAME.'_'.LANG_SET.'_lang.php')) {
-
-                L(include RUNTIME_PATH.MODULE_NAME.'_'.LANG_SET.'_lang.php');
-            }else{
+			define('LANG_SET',$langSet);
+			if(C('LANG_CACHE_ON') && is_file(RUNTIME_PATH.MODULE_NAME.'_'.LANG_SET.'_lang.php')) {
+				L(include RUNTIME_PATH.MODULE_NAME.'_'.LANG_SET.'_lang.php');
+			}else{
                 if (file_exists_case(CORE_PATH.'Lang'.DS.LANG_SET.'.php')){
                     L(include CORE_PATH.'Lang'.DS.LANG_SET.'.php');
                 }else{
