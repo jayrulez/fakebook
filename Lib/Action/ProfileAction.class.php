@@ -83,8 +83,7 @@ class ProfileAction extends BaseAction
 		 */
 		if($userRelation == 'stranger')
 		{
-			$this->display('people');
-			exit();
+			$this->redirect('','','s','',array('id'=>$uid));
 		}
 		
 		
@@ -185,6 +184,42 @@ class ProfileAction extends BaseAction
 			{
 				$this->redirect('','','profile','',array('id'=>$uid));
 			}
+		}
+		
+		$this->assign('profile',$Profile);
+		
+		
+		/*
+		 * get current user's friends
+		 */
+		$currentUserFriend = getFriend($uid);
+		shuffle($currentUserFriend);
+		
+		foreach($currentUserFriend as &$key)
+		{
+			$key = array('uid'=>current(array_diff($key,array($uid))));
+		}
+		
+		$this->assign('currentUserFriend',$currentUserFriend);
+		
+		
+		$this->display();
+	}
+	
+	public function stranger()
+	{
+		$uid = (int)$_GET['id'];
+		
+		if(empty($uid))
+		{
+			$this->redirect('','','index');
+		}
+		else
+		{
+			$dao = D('User');
+			$Profile = $dao->find($uid);
+			if(empty($Profile))
+				$this->redirect('','','index');
 		}
 		
 		$this->assign('profile',$Profile);
