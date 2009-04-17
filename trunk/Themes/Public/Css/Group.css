@@ -65,7 +65,7 @@
 .maincolumn .friend_item .row {margin-bottom:20px;}
 .maincolumn .friend_item .person {float:left;padding:3px 23px 3px 0;}
 .maincolumn .friend_item .person .UIRoundedImage {margin-bottom:3px;}
-.maincolumn .friend_item .person .user_name {width:50px;display:block;overflow:hidden;line-height:20px;text-align:center;}
+.maincolumn .friend_item .person .user_name {width:50px;display:block;overflow:hidden;text-align:center;padding:5px 0;}
 
 .maincolumn .image {margin-right:10px;float:left;}
 .maincolumn .text {float:left;}
