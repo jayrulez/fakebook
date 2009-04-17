@@ -17,12 +17,12 @@
 .narrowcolumn .box_subheader .subheader {display:block;float:left;}
 .narrowcolumn .box_subheader .seeall {display:block;float:right;}
 .narrowcolumn .box_content {padding:8px 0 15px 8px;border-right:1px solid #D8DFEA;overflow:hidden;}
-.narrowcolumn .box_content a {line-height:20px;}
+.narrowcolumn .box_content li {line-height:18px;}
 .narrowcolumn .actions {padding-left:10px;}
 
 .narrowcolumn #user_friends .box_content .person {float:left;padding:3px 13px 3px 0;}
 .narrowcolumn #user_friends .box_content .person .UIRoundedImage {margin-bottom:3px;}
-.narrowcolumn #user_friends .box_content .person .user_name {width:50px;display:block;overflow:hidden;line-height:20px;text-align:center;}
+.narrowcolumn #user_friends .box_content .person .user_name {width:50px;display:block;overflow:hidden;text-align:center;padding:5px 0;}
 
 .feed {padding:5px 0;}
 .feed_icon {display:block;float:left;width:16px;height:18px;}
@@ -97,4 +97,4 @@
 .widecolumn .user_friends .person_list {}
 .widecolumn .user_friends .person_list .person {float:left;padding:3px 17px 3px 0;}
 .widecolumn .user_friends .person_list .person .UIRoundedImage {margin-bottom:3px;}
-.widecolumn .user_friends .person_list .person .user_name {width:50px;display:block;overflow:hidden;line-height:20px;text-align:center;}
+.widecolumn .user_friends .person_list .person .user_name {width:50px;display:block;overflow:hidden;text-align:center;padding:5px 0;}
