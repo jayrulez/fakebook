@@ -90,7 +90,7 @@
             <div class="UIComposer UIComposer_STATE_PIC_OUTSIDE">
               <a class="UIComposer_Pic" href="profile.php?id=40">
                 <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
-                  <img alt="" src="../Public/Images/silhouette_s.jpg"/>
+                  <img alt="" src="{$userInfo['pic_square']|getUserPicture=###,'square'}"/>
                   <span class="UIRoundedImage_Corners">
                     <img src="../Public/Images/UIRoundedImage.png" alt="" class="UIRoundedImage_CornersSprite" />
                   </span>
@@ -145,7 +145,7 @@
               <div id="div_story_26482718214011122_61558172300" class="UIStory UIIntentionalStory actor_517012567 commentable_item no_comments autoexpand_mode collapsed_comments hidden_add_button">
                 <a class="UIIntentionalStory_Pic" href="#">
                   <span class="UIRoundedImage UIRoundedImage_WHITE UIRoundedImage_LARGE">
-                    <img class="UIRoundedImage_Image" alt="" src="{$userId|getProfilePicture=###,'square'}"/>
+                    <img class="UIRoundedImage_Image" alt="" src="{$userInfo['pic_square']|getUserPicture=###,'square'}"/>
                     <span class="UIRoundedImage_Corners">
                       <img class="UIRoundedImage_CornersSprite" alt="" src="../Public/Images/UIRoundedImage.png"/>
                     </span>
@@ -219,7 +219,7 @@
                             <div id="add_comment_wrapper_26482718214011122_61558172300" class="wallcommentbox one_row_add_box clearfix">
                               <div class="comments_add_box_image">
                                 <span class="UIRoundedImage UIRoundedImage_GIRLIE UIRoundedImage_SMALL">
-                                  <img class="UIRoundedImage_Image" alt="" src="{$userId|getProfilePicture=###,'square'}"/>
+                                  <img class="UIRoundedImage_Image" alt="" src="{$userInfo['pic_square']|getUserPicture=###,'square'}"/>
                                   <span class="UIRoundedImage_Corners">
                                     <img class="UIRoundedImage_CornersSprite" alt="" src="../Public/Images/UIRoundedImage.png"/>
                                   </span>
